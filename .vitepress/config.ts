@@ -555,9 +555,6 @@ export default defineConfig({
     /^https?:\/\/localhost/,
   ],
   srcExclude: ['README.md', 'SECURITY.md'],
-  sitemap: {
-    hostname: 'https://openkey.openselfhosting.com',
-  },
 
   head: [
     ['meta', { property: 'og:title', content: 'OpenKey' }],
