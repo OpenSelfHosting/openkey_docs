@@ -1,0 +1,10 @@
+node_modules
+.vitepress/dist
+.vitepress/cache
+.playwright-cli
+.shots
+.env
+.env.*
+.dockerignore
+Dockerfile
+docker-compose.yml

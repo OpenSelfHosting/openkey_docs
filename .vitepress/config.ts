@@ -548,6 +548,9 @@ export default defineConfig({
   title: 'OpenKey',
   cleanUrls: true,
   lastUpdated: true,
+  sitemap: {
+    hostname: 'https://openkey.openselfhosting.com',
+  },
   ignoreDeadLinks: [
     /^https?:\/\/localhost/,
   ],

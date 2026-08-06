@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    image: openselfhosting-openkey-docs:prod
+    container_name: openselfhosting-openkey-docs
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${APP_HOST_PORT:-8021}:80"
+    environment:
+      NODE_ENV: production
