@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 360" role="img" aria-labelledby="title desc">
+  <title id="title">How the CLI chooses a backend</title>
+  <desc id="desc">Vault commands prefer the desktop bridge, then OPENKEY_SESSION, otherwise they fail with unlock tips.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4faf7"/>
+      <stop offset="100%" stop-color="#e6f4ee"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#187a64"/>
+    </marker>
+  </defs>
+  <rect width="920" height="360" rx="20" fill="url(#bg)"/>
+  <rect x="16" y="16" width="888" height="328" rx="16" fill="none" stroke="#c5e4d7" stroke-width="1.5"/>
+
+  <rect x="40" y="40" width="180" height="70" rx="12" fill="#0d5445"/>
+  <text x="130" y="82" text-anchor="middle" fill="#f4faf7" font-family="system-ui,Segoe UI,sans-serif" font-size="16" font-weight="700">Vault command</text>
+
+  <path d="M220 75 L290 75" stroke="#187a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="290" y="40" width="200" height="70" rx="12" fill="#ffffff" stroke="#187a64" stroke-width="2"/>
+  <text x="390" y="72" text-anchor="middle" fill="#0d5445" font-family="system-ui,Segoe UI,sans-serif" font-size="15" font-weight="700">Bridge up?</text>
+  <text x="390" y="94" text-anchor="middle" fill="#3d6b5c" font-family="system-ui,Segoe UI,sans-serif" font-size="12">desktop unlocked</text>
+
+  <!-- Yes path -->
+  <path d="M490 60 L560 60" stroke="#187a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="515" y="50" fill="#0d5445" font-family="system-ui,Segoe UI,sans-serif" font-size="12" font-weight="700">yes</text>
+  <rect x="560" y="30" width="200" height="60" rx="12" fill="#187a64"/>
+  <text x="660" y="55" text-anchor="middle" fill="#f4faf7" font-family="system-ui,Segoe UI,sans-serif" font-size="15" font-weight="700">Native mode</text>
+  <text x="660" y="75" text-anchor="middle" fill="#d5f0e6" font-family="system-ui,Segoe UI,sans-serif" font-size="12">talk to desktop vault</text>
+
+  <!-- No path down -->
+  <path d="M390 110 L390 160" stroke="#187a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="405" y="140" fill="#0d5445" font-family="system-ui,Segoe UI,sans-serif" font-size="12" font-weight="700">no</text>
+
+  <rect x="290" y="160" width="200" height="70" rx="12" fill="#ffffff" stroke="#5eb89a" stroke-width="2"/>
+  <text x="390" y="192" text-anchor="middle" fill="#0d5445" font-family="system-ui,Segoe UI,sans-serif" font-size="15" font-weight="700">OPENKEY_SESSION?</text>
+  <text x="390" y="214" text-anchor="middle" fill="#3d6b5c" font-family="system-ui,Segoe UI,sans-serif" font-size="12">after unlock</text>
+
+  <path d="M490 180 L560 180" stroke="#187a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="515" y="170" fill="#0d5445" font-family="system-ui,Segoe UI,sans-serif" font-size="12" font-weight="700">yes</text>
+  <rect x="560" y="155" width="200" height="60" rx="12" fill="#0d5445"/>
+  <text x="660" y="180" text-anchor="middle" fill="#f4faf7" font-family="system-ui,Segoe UI,sans-serif" font-size="15" font-weight="700">Session mode</text>
+  <text x="660" y="200" text-anchor="middle" fill="#a8dcc9" font-family="system-ui,Segoe UI,sans-serif" font-size="12">local ciphertext cache</text>
+
+  <path d="M390 230 L390 280" stroke="#187a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="405" y="260" fill="#0d5445" font-family="system-ui,Segoe UI,sans-serif" font-size="12" font-weight="700">no</text>
+
+  <rect x="290" y="280" width="200" height="50" rx="12" fill="#ffffff" stroke="#c45c4a" stroke-width="2"/>
+  <text x="390" y="311" text-anchor="middle" fill="#8a3a2e" font-family="system-ui,Segoe UI,sans-serif" font-size="14" font-weight="700">Error + unlock tip</text>
+
+  <text x="40" y="320" fill="#3d6b5c" font-family="system-ui,Segoe UI,sans-serif" font-size="12">Exception: openkey gen never needs a backend.</text>
+</svg>

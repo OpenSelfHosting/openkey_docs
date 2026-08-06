@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 360" role="img" aria-labelledby="title desc">
+  <title id="title">CJA J.*'1 CLI 'D.DAJ)</title>
+  <desc id="desc">#H'E1 'D.2F) *A6QD ,31 37- 'DEC*( +E OPENKEY_SESSION H%D' *A4D E9 *DEJ- DDA*-.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4faf7"/>
+      <stop offset="100%" stop-color="#e6f4ee"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#187a64"/>
+    </marker>
+  </defs>
+  <rect width="920" height="360" rx="20" fill="url(#bg)"/>
+  <rect x="16" y="16" width="888" height="328" rx="16" fill="none" stroke="#c5e4d7" stroke-width="1.5"/>
+
+  <rect x="40" y="40" width="180" height="70" rx="12" fill="#0d5445"/>
+  <text x="130" y="82" text-anchor="middle" fill="#f4faf7" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="16" font-weight="700">#E1 .2F)</text>
+
+  <path d="M220 75 L290 75" stroke="#187a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="290" y="40" width="200" height="70" rx="12" fill="#ffffff" stroke="#187a64" stroke-width="2"/>
+  <text x="390" y="72" text-anchor="middle" fill="#0d5445" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="15" font-weight="700">'D,31 E*'-</text>
+  <text x="390" y="94" text-anchor="middle" fill="#3d6b5c" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="12">37- 'DEC*( EA*H-</text>
+
+  <path d="M490 60 L560 60" stroke="#187a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="515" y="50" fill="#0d5445" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="12" font-weight="700">F9E</text>
+  <rect x="560" y="30" width="200" height="60" rx="12" fill="#187a64"/>
+  <text x="660" y="55" text-anchor="middle" fill="#f4faf7" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="15" font-weight="700">H69 'D,31</text>
+  <text x="660" y="75" text-anchor="middle" fill="#d5f0e6" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="12">'D*-/+ E9 .2F) 37- 'DEC*(</text>
+
+  <path d="M390 110 L390 160" stroke="#187a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="405" y="140" fill="#0d5445" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="12" font-weight="700">D'</text>
+
+  <rect x="290" y="160" width="200" height="70" rx="12" fill="#ffffff" stroke="#5eb89a" stroke-width="2"/>
+  <text x="390" y="192" text-anchor="middle" fill="#0d5445" font-family="ui-monospace,Menlo,monospace" font-size="13" font-weight="700">OPENKEY_SESSION</text>
+  <text x="390" y="214" text-anchor="middle" fill="#3d6b5c" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="12">(9/ unlock</text>
+
+  <path d="M490 180 L560 180" stroke="#187a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="515" y="170" fill="#0d5445" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="12" font-weight="700">F9E</text>
+  <rect x="560" y="155" width="200" height="60" rx="12" fill="#0d5445"/>
+  <text x="660" y="180" text-anchor="middle" fill="#f4faf7" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="15" font-weight="700">H69 'D,D3)</text>
+  <text x="660" y="200" text-anchor="middle" fill="#a8dcc9" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="12">0'C1) F5 E4AQ1 E-DJ)</text>
+
+  <path d="M390 230 L390 280" stroke="#187a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="405" y="260" fill="#0d5445" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="12" font-weight="700">D'</text>
+
+  <rect x="290" y="280" width="200" height="50" rx="12" fill="#ffffff" stroke="#c45c4a" stroke-width="2"/>
+  <text x="390" y="311" text-anchor="middle" fill="#8a3a2e" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="14" font-weight="700">.7# + *DEJ- DDA*-</text>
+
+  <text x="40" y="320" fill="#3d6b5c" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="12">'3*+F'!: openkey gen D' J-*', #J .DAJ).</text>
+</svg>

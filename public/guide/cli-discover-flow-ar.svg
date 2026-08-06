@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" role="img" aria-labelledby="title desc">
+  <title id="title">*/AQB 'D'C*4'A</title>
+  <desc id="desc">JE3- discover 'DE5'/1 'DE-DJ) HJ*.7I 'DEC11'* +E J-A8 'D#31'1 'D,/J/) AJ E,EH9) ,G'2 /'.D 'D.2F).</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4faf7"/>
+      <stop offset="100%" stop-color="#e6f4ee"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#187a64"/>
+    </marker>
+  </defs>
+  <rect width="920" height="280" rx="20" fill="url(#bg)"/>
+  <rect x="16" y="16" width="888" height="248" rx="16" fill="none" stroke="#c5e4d7" stroke-width="1.5"/>
+
+  <rect x="40" y="90" width="150" height="80" rx="12" fill="#ffffff" stroke="#5eb89a" stroke-width="2"/>
+  <text x="115" y="125" text-anchor="middle" fill="#0d5445" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="15" font-weight="700">1. E3-</text>
+  <text x="115" y="148" text-anchor="middle" fill="#3d6b5c" font-family="ui-monospace,Menlo,monospace" font-size="11">SSH � env � AWS � .env</text>
+
+  <path d="M190 130 L240 130" stroke="#187a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="240" y="90" width="150" height="80" rx="12" fill="#ffffff" stroke="#187a64" stroke-width="2"/>
+  <text x="315" y="125" text-anchor="middle" fill="#0d5445" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="15" font-weight="700">2. E9'JF)</text>
+  <text x="315" y="148" text-anchor="middle" fill="#3d6b5c" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="11">BJE EBFQ9) � dry-run</text>
+
+  <path d="M390 130 L440 130" stroke="#187a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="440" y="90" width="160" height="80" rx="12" fill="#ffffff" stroke="#187a64" stroke-width="2"/>
+  <text x="520" y="125" text-anchor="middle" fill="#0d5445" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="15" font-weight="700">3. %2'D) *C1'1</text>
+  <text x="520" y="148" text-anchor="middle" fill="#3d6b5c" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="11">*.7QJ 'D(5E'* 'DEH,H/)</text>
+
+  <path d="M600 130 L650 130" stroke="#187a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="650" y="80" width="220" height="100" rx="12" fill="#0d5445"/>
+  <text x="760" y="120" text-anchor="middle" fill="#f4faf7" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="15" font-weight="700">4. -A8 AJ 'D.2F)</text>
+  <text x="760" y="145" text-anchor="middle" fill="#a8dcc9" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="12">'D#31'1 � E,EH9) 'D,G'2</text>
+  <text x="760" y="165" text-anchor="middle" fill="#5eb89a" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="11">J-*', A*- 'DBAD</text>
+
+  <text x="40" y="230" fill="#3d6b5c" font-family="Noto Sans Arabic, system-ui, sans-serif" font-size="13">J*HBA dry-run (9/ 'D.7H) 2. 'D'3*J1'/ J-*', ,31 37- 'DEC*( #H ,D3) CLI.</text>
+</svg>

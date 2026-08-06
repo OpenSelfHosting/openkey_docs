@@ -1,0 +1,111 @@
+- generic [ref=e3]:
+  - link "Skip to content" [ref=e4] [cursor=pointer]:
+    - /url: "#VPContent"
+  - banner:
+    - generic:
+      - generic:
+        - generic:
+          - link "OpenKey OpenKey" [ref=e6] [cursor=pointer]:
+            - /url: /
+            - img "OpenKey" [ref=e7]
+            - generic [ref=e8]: OpenKey
+          - generic [ref=e9]:
+            - button "Search" [ref=e12] [cursor=pointer]:
+              - generic [ref=e16]:
+                - generic [ref=e17]: ⌘
+                - generic [ref=e18]: K
+            - navigation "Main Navigation" [ref=e19]:
+              - button "Guide" [ref=e22] [cursor=pointer]
+              - link "Blog" [ref=e26] [cursor=pointer]:
+                - /url: /blog/
+              - link "GitHub" [ref=e28] [cursor=pointer]:
+                - /url: https://github.com/OpenSelfHosting
+            - button "Change language" [ref=e31] [cursor=pointer]
+            - link "github" [ref=e37] [cursor=pointer]:
+              - /url: https://github.com/OpenSelfHosting
+            - generic [ref=e39]:
+              - button "Customize" [expanded] [ref=e40] [cursor=pointer]
+              - dialog "Customize" [ref=e57]:
+                - generic [ref=e58]:
+                  - generic [ref=e59]:
+                    - img "OpenKey" [ref=e60]
+                    - generic [ref=e61]:
+                      - strong [ref=e62]: Customize
+                      - paragraph [ref=e63]: Icon, theme, and font
+                  - button "Reset" [ref=e64] [cursor=pointer]
+                - generic [ref=e65]:
+                  - heading "Icon theme" [level=3] [ref=e66]
+                  - generic [ref=e67]:
+                    - button "Forest" [ref=e68] [cursor=pointer]:
+                      - img "Forest" [ref=e69]
+                    - button "Ocean" [active] [ref=e71] [cursor=pointer]:
+                      - img "Ocean" [ref=e72]
+                    - button "Ember" [ref=e74] [cursor=pointer]:
+                      - img "Ember" [ref=e75]
+                    - button "Violet" [ref=e77] [cursor=pointer]:
+                      - img "Violet" [ref=e78]
+                    - button "Slate" [ref=e80] [cursor=pointer]:
+                      - img "Slate" [ref=e81]
+                - generic [ref=e83]:
+                  - heading "Icon mode" [level=3] [ref=e84]
+                  - generic [ref=e85]:
+                    - button "Auto Day/night from theme" [ref=e86] [cursor=pointer]:
+                      - generic [ref=e87]: Auto
+                      - generic [ref=e88]: Day/night from theme
+                    - button "Day Always day icon" [ref=e89] [cursor=pointer]:
+                      - generic [ref=e90]: Day
+                      - generic [ref=e91]: Always day icon
+                    - button "Night Always night icon" [ref=e92] [cursor=pointer]:
+                      - generic [ref=e93]: Night
+                      - generic [ref=e94]: Always night icon
+                - generic [ref=e95]:
+                  - heading "Site theme" [level=3] [ref=e96]
+                  - generic [ref=e97]:
+                    - button "System Match device" [ref=e98] [cursor=pointer]:
+                      - generic [ref=e99]: System
+                      - generic [ref=e100]: Match device
+                    - button "Light Bright surface" [ref=e101] [cursor=pointer]:
+                      - generic [ref=e102]: Light
+                      - generic [ref=e103]: Bright surface
+                    - button "Dark Dim surface" [ref=e104] [cursor=pointer]:
+                      - generic [ref=e105]: Dark
+                      - generic [ref=e106]: Dim surface
+                - generic [ref=e107]:
+                  - heading "Font" [level=3] [ref=e108]
+                  - generic [ref=e109]:
+                    - button "Aa Default" [ref=e110] [cursor=pointer]:
+                      - generic [ref=e111]: Aa
+                      - generic [ref=e112]: Default
+                    - button "أب Arabic" [ref=e113] [cursor=pointer]:
+                      - generic [ref=e114]: أب
+                      - generic [ref=e115]: Arabic
+                    - button "</> Developer" [ref=e116] [cursor=pointer]:
+                      - generic [ref=e117]: </>
+                      - generic [ref=e118]: Developer
+                    - button "01 Technical" [ref=e119] [cursor=pointer]:
+                      - generic [ref=e120]: "01"
+                      - generic [ref=e121]: Technical
+                    - button "Aa Standard" [ref=e122] [cursor=pointer]:
+                      - generic [ref=e123]: Aa
+                      - generic [ref=e124]: Standard
+                    - button "Aa Figtree" [ref=e125] [cursor=pointer]:
+                      - generic [ref=e126]: Aa
+                      - generic [ref=e127]: Figtree
+                    - button "Aa Roboto Flex" [ref=e128] [cursor=pointer]:
+                      - generic [ref=e129]: Aa
+                      - generic [ref=e130]: Roboto Flex
+                - generic [ref=e131] [cursor=pointer]:
+                  - generic [ref=e132]:
+                    - generic [ref=e133]: High contrast
+                    - generic [ref=e134]: Stronger text and borders
+                  - checkbox "High contrast Stronger text and borders" [ref=e136]
+  - generic [ref=e48]:
+    - img "OpenKey" [ref=e50]
+    - generic [ref=e51]:
+      - heading "OpenKey" [level=1] [ref=e52]
+      - paragraph [ref=e53]: Self-hosted password manager. Ciphertext only on the server.
+      - generic [ref=e54]:
+        - link "Get started" [ref=e55] [cursor=pointer]:
+          - /url: /guide/quick-start
+        - link "View on GitHub" [ref=e56] [cursor=pointer]:
+          - /url: https://github.com/OpenSelfHosting

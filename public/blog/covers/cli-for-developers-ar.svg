@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label=":D'A H',G) 371 'D#H'E1 DDE7H1JF">
+  <defs>
+    <linearGradient id="bg" x1="100%" y1="0%" x2="20%" y2="100%">
+      <stop offset="0%" stop-color="#052e26"/>
+      <stop offset="50%" stop-color="#0d5445"/>
+      <stop offset="100%" stop-color="#187a64"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(244,250,247,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="1000" cy="120" r="200" fill="rgba(94,184,154,0.15)"/>
+  <circle cx="150" cy="520" r="220" fill="rgba(94,184,154,0.12)"/>
+
+  <g transform="translate(590 130)">
+    <rect x="0" y="0" width="520" height="340" rx="16" fill="#061f19" stroke="rgba(94,184,154,0.4)" stroke-width="2"/>
+    <rect x="0" y="0" width="520" height="40" rx="16" fill="rgba(94,184,154,0.12)"/>
+    <rect x="0" y="24" width="520" height="16" fill="rgba(94,184,154,0.12)"/>
+    <circle cx="454" cy="20" r="6" fill="#5eb89a"/>
+    <circle cx="474" cy="20" r="6" fill="rgba(244,250,247,0.3)"/>
+    <circle cx="494" cy="20" r="6" fill="rgba(244,250,247,0.18)"/>
+    <text x="28" y="80" fill="#5eb89a" font-family="ui-monospace, Menlo, monospace" font-size="18">$</text>
+    <text x="52" y="80" fill="#f4faf7" font-family="ui-monospace, Menlo, monospace" font-size="18">openkey gen -l 24</text>
+    <text x="28" y="118" fill="rgba(244,250,247,0.65)" font-family="ui-monospace, Menlo, monospace" font-size="16">kX9mP2&wQ7nR4</text>
+    <text x="28" y="170" fill="#5eb89a" font-family="ui-monospace, Menlo, monospace" font-size="18">$</text>
+    <text x="52" y="170" fill="#f4faf7" font-family="ui-monospace, Menlo, monospace" font-size="18">openkey discover -y</text>
+    <text x="28" y="208" fill="rgba(244,250,247,0.55)" font-family="ui-monospace, Menlo, monospace" font-size="15"> SSH � .env � API tokens</text>
+    <text x="28" y="260" fill="#5eb89a" font-family="ui-monospace, Menlo, monospace" font-size="18">$</text>
+    <text x="52" y="260" fill="#f4faf7" font-family="ui-monospace, Menlo, monospace" font-size="18">openkey secret list</text>
+    <rect x="28" y="320" width="12" height="22" fill="#5eb89a">
+      <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <text x="540" y="280" fill="#f4faf7" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" text-anchor="end">H',G) 371 #H'E1</text>
+  <text x="540" y="350" fill="#f4faf7" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" text-anchor="end">DDE7H1JF</text>
+  <text x="540" y="420" fill="rgba(244,250,247,0.75)" font-family="system-ui, sans-serif" font-size="22" text-anchor="end">#31'1 EF 'D71AJ) E4AQ1) /'&E'K</text>
+  <text x="540" y="530" fill="rgba(244,250,247,0.5)" font-family="system-ui, sans-serif" font-size="20" letter-spacing="0.12em" text-anchor="end">OPENKEY</text>
+</svg>

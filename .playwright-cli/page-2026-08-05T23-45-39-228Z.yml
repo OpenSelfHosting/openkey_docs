@@ -1,0 +1,158 @@
+- generic [ref=e3]:
+  - link "Skip to content" [ref=e4] [cursor=pointer]:
+    - /url: "#VPContent"
+  - banner:
+    - generic:
+      - generic:
+        - generic:
+          - link "OpenKey OpenKey" [ref=e6] [cursor=pointer]:
+            - /url: /
+            - img "OpenKey" [ref=e7]
+            - generic [ref=e8]: OpenKey
+          - generic [ref=e9]:
+            - button "Search" [ref=e12] [cursor=pointer]:
+              - generic [ref=e16]:
+                - generic [ref=e17]: ⌘
+                - generic [ref=e18]: K
+            - navigation "Main Navigation" [ref=e19]:
+              - button "Guide" [ref=e22] [cursor=pointer]
+              - link "Blog" [ref=e26] [cursor=pointer]:
+                - /url: /blog/
+              - link "GitHub" [ref=e28] [cursor=pointer]:
+                - /url: https://github.com/OpenSelfHosting
+            - button "Change language" [ref=e31] [cursor=pointer]
+            - button "Customize" [ref=e36] [cursor=pointer]
+  - generic [ref=e43]:
+    - generic [ref=e45]:
+      - generic [ref=e48]:
+        - article [ref=e49]:
+          - img "Zero-knowledge" [ref=e50]
+          - generic [ref=e51]: Zero-knowledge
+        - article [ref=e52]:
+          - img "Self-host" [ref=e53]
+          - generic [ref=e54]: Self-host
+        - article [ref=e55]:
+          - img "CLI" [ref=e56]
+          - generic [ref=e57]: CLI
+        - article [ref=e58]:
+          - img "Passkeys" [ref=e59]
+          - generic [ref=e60]: Passkeys
+        - img "OpenKey" [ref=e67]
+        - generic [ref=e69]: AES-256-GCM
+        - generic [ref=e70]: Argon2id
+        - generic [ref=e71]: ciphertext only
+      - generic [ref=e72]:
+        - paragraph [ref=e73]: Open · Self-hosted · Encrypted
+        - heading "OpenKey" [level=1] [ref=e74]
+        - paragraph [ref=e75]: Self-hosted password manager. Ciphertext only on the server.
+        - generic [ref=e76]:
+          - link "Get started" [ref=e77] [cursor=pointer]:
+            - /url: /guide/quick-start
+          - link "View on GitHub" [ref=e78] [cursor=pointer]:
+            - /url: https://github.com/OpenSelfHosting
+        - list "Highlights" [ref=e79]:
+          - listitem [ref=e80]: Self-hosted
+          - listitem [ref=e81]: Zero-knowledge
+          - listitem [ref=e82]: MIT
+          - listitem [ref=e83]: E2E encrypted
+    - generic [ref=e84]:
+      - region [ref=e85]:
+        - generic [ref=e86]:
+          - generic [ref=e87]:
+            - paragraph [ref=e88]: Why OpenKey
+            - heading "Your vault. Your server. Ciphertext only." [level=2] [ref=e89]
+            - paragraph [ref=e90]: Encrypt on the device. Sync optionally. Never hand plaintext to a cloud you do not run.
+          - list [ref=e91]:
+            - listitem [ref=e92]:
+              - img "Zero-knowledge" [ref=e94]
+              - generic [ref=e95]: "01"
+              - heading "Zero-knowledge" [level=3] [ref=e96]
+              - paragraph [ref=e97]: Argon2id on the client. The server sees auth hashes and opaque blobs — never your master password or vault key.
+            - listitem [ref=e98]:
+              - img "Self-hosted sync" [ref=e100]
+              - generic [ref=e101]: "02"
+              - heading "Self-hosted sync" [level=3] [ref=e102]
+              - paragraph [ref=e103]: Run FastAPI + PostgreSQL on your machine or VPS. Availability is yours; confidentiality stays on the client.
+            - listitem [ref=e104]:
+              - img "One vault, many surfaces" [ref=e106]
+              - generic [ref=e107]: "03"
+              - heading "One vault, many surfaces" [level=3] [ref=e108]
+              - paragraph [ref=e109]: App, browser extension, and CLI share the same encrypted model — including Nearby LAN sync without a server.
+      - region [ref=e110]:
+        - generic [ref=e111]:
+          - generic [ref=e112]:
+            - paragraph [ref=e113]: How it works
+            - heading "Three steps. No shortcuts." [level=2] [ref=e114]
+            - paragraph [ref=e115]: A short path from master password to sync — still ciphertext the whole way.
+          - list [ref=e116]:
+            - listitem [ref=e117]:
+              - generic [ref=e118]: "1"
+              - heading "Derive on device" [level=3] [ref=e119]
+              - paragraph [ref=e120]: Your master password unlocks keys locally. Nothing leaves in plaintext.
+            - listitem [ref=e121]:
+              - generic [ref=e122]: "2"
+              - heading "Encrypt, then send" [level=3] [ref=e123]
+              - paragraph [ref=e124]: Names, entries, and attachments are AES-GCM ciphertext before they touch the network.
+            - listitem [ref=e125]:
+              - generic [ref=e126]: "3"
+              - heading "Unlock where you trust" [level=3] [ref=e127]
+              - paragraph [ref=e128]: Phone, desktop, extension, or CLI — same vault, same rules.
+      - region [ref=e129]:
+        - generic [ref=e130]:
+          - generic [ref=e131]:
+            - paragraph [ref=e132]: Open stack
+            - heading "Everything you need to run it" [level=2] [ref=e133]
+            - paragraph [ref=e134]: MIT packages you can build, host, and audit.
+          - generic [ref=e135]:
+            - link "Open stack App Mobile and desktop vault — logins, cards, crypto, secrets, orgs, Nearby. Using the app →" [ref=e136] [cursor=pointer]:
+              - /url: /guide/app
+              - generic [ref=e138]: Open stack
+              - strong [ref=e139]: App
+              - paragraph [ref=e140]: Mobile and desktop vault — logins, cards, crypto, secrets, orgs, Nearby.
+              - generic [ref=e141]: Using the app →
+            - link "Server Zero-knowledge sync API with short-lived JWTs and rotating refresh tokens. Server setup →" [ref=e142] [cursor=pointer]:
+              - /url: /guide/server
+              - generic [ref=e144]: Server
+              - paragraph [ref=e145]: Zero-knowledge sync API with short-lived JWTs and rotating refresh tokens.
+              - generic [ref=e146]: Server setup →
+            - link "Extension MV3 autofill and passkeys for Chrome and Firefox. Packages →" [ref=e147] [cursor=pointer]:
+              - /url: /guide/packages
+              - generic [ref=e149]: Extension
+              - paragraph [ref=e150]: MV3 autofill and passkeys for Chrome and Firefox.
+              - generic [ref=e151]: Packages →
+            - link "CLI Generate passwords, discover local secrets, sync when you need it. CLI guide →" [ref=e152] [cursor=pointer]:
+              - /url: /guide/cli
+              - generic [ref=e154]: CLI
+              - paragraph [ref=e155]: Generate passwords, discover local secrets, sync when you need it.
+              - generic [ref=e156]: CLI guide →
+      - region [ref=e157]:
+        - generic [ref=e158]:
+          - generic [ref=e159]:
+            - paragraph [ref=e160]: Security
+            - heading "Designed so the server cannot read your vault" [level=2] [ref=e161]
+            - paragraph [ref=e162]: Strong master password. HTTPS in production. Locked vault when idle. No recovery if you lose the key — by design.
+            - link "Read the threat model" [ref=e163] [cursor=pointer]:
+              - /url: /guide/security
+          - generic [ref=e164]:
+            - generic [ref=e169]:
+              - generic [ref=e170]: Master password
+              - strong [ref=e171]: device only
+            - generic [ref=e172]:
+              - generic [ref=e173]: Vault payloads
+              - strong [ref=e174]: AES-256-GCM
+            - generic [ref=e175]:
+              - generic [ref=e176]: Server storage
+              - strong [ref=e177]: ciphertext
+            - generic [ref=e178]:
+              - generic [ref=e179]: KDF
+              - strong [ref=e180]: Argon2id
+      - region [ref=e181]:
+        - generic [ref=e183]:
+          - generic [ref=e184]:
+            - heading "Run your own vault" [level=2] [ref=e185]
+            - paragraph [ref=e186]: Spin up the stack locally in minutes, then point the app at your server.
+          - generic [ref=e187]:
+            - link "Quick start" [ref=e188] [cursor=pointer]:
+              - /url: /guide/quick-start
+            - link "Overview" [ref=e189] [cursor=pointer]:
+              - /url: /guide/overview
