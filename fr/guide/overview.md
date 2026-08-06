@@ -25,4 +25,6 @@ OpenKey est un **gestionnaire de mots de passe chiffré de bout en bout auto-hé
 | `openkey_extension` | Extension navigateur MV3 (Chrome / Firefox) |
 | `openkey_cli` | CLI développeur (secrets, gén. mots de passe, sync) |
 
+<img src="/guide/overview-ecosystem.svg" alt="OpenKey ecosystem: app, browser extension, and CLI encrypt on device; optional sync via self-hosted server (ciphertext only) or Nearby LAN pairing" class="ok-diagram" width="920" height="440" />
+
 L'**application OpenKey** mobile et bureau est traitée séparément. Voir [Utiliser l'application](./app) pour l'usage produit, [Paquets](./packages) pour la configuration, [Configuration du serveur](./server) pour installer la sync, et [Démarrage rapide](./quick-start) pour exécuter la pile localement.

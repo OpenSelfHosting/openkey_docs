@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 360" role="img" aria-labelledby="title desc">
+  <title id="title">تدفّق اقتران Nearby وربط الخزنة</title>
+  <desc id="desc">اقترن الأجهزة على الشبكة لمشاركة مفتاح جلسة. اربط الخزنة صراحةً لمشاركة مفتاحها ثم زامن النص المشفّر بقاعدة آخر كتابة. الاقتران وحده لا يشارك مفتاح الخزنة.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4faf7"/>
+      <stop offset="100%" stop-color="#e6f4ee"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0d5445" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#187a64"/>
+    </marker>
+  </defs>
+  <rect width="920" height="360" rx="20" fill="url(#bg)"/>
+  <rect x="16" y="16" width="888" height="328" rx="16" fill="none" stroke="#c5e4d7" stroke-width="1.5"/>
+
+  <!-- Steps -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="60" width="180" height="120" rx="14" fill="#ffffff" stroke="#187a64" stroke-width="2"/>
+    <circle cx="70" cy="90" r="14" fill="#0d5445"/>
+    <text x="70" y="95" text-anchor="middle" fill="#f4faf7" font-family="system-ui,Segoe UI,sans-serif" font-size="14" font-weight="700">1</text>
+    <text x="130" y="120" text-anchor="middle" fill="#0d5445" font-family="system-ui,Segoe UI,sans-serif" font-size="16" font-weight="700">اقتران</text>
+    <text x="130" y="146" text-anchor="middle" fill="#3d6b5c" font-family="system-ui,Segoe UI,sans-serif" font-size="12">QR أو رمز قصير</text>
+    <text x="130" y="166" text-anchor="middle" fill="#5eb89a" font-family="system-ui,Segoe UI,sans-serif" font-size="11">مفتاح جلسة فقط</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="260" y="60" width="180" height="120" rx="14" fill="#0d5445"/>
+    <circle cx="290" cy="90" r="14" fill="#5eb89a"/>
+    <text x="290" y="95" text-anchor="middle" fill="#0d5445" font-family="system-ui,Segoe UI,sans-serif" font-size="14" font-weight="700">2</text>
+    <text x="350" y="120" text-anchor="middle" fill="#f4faf7" font-family="system-ui,Segoe UI,sans-serif" font-size="16" font-weight="700">ربط الخزنة</text>
+    <text x="350" y="146" text-anchor="middle" fill="#a8dcc9" font-family="system-ui,Segoe UI,sans-serif" font-size="12">نقرة صريحة</text>
+    <text x="350" y="166" text-anchor="middle" fill="#5eb89a" font-family="system-ui,Segoe UI,sans-serif" font-size="11">مشاركة مفتاح الخزنة</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="480" y="60" width="180" height="120" rx="14" fill="#ffffff" stroke="#187a64" stroke-width="2"/>
+    <circle cx="510" cy="90" r="14" fill="#0d5445"/>
+    <text x="510" y="95" text-anchor="middle" fill="#f4faf7" font-family="system-ui,Segoe UI,sans-serif" font-size="14" font-weight="700">3</text>
+    <text x="570" y="120" text-anchor="middle" fill="#0d5445" font-family="system-ui,Segoe UI,sans-serif" font-size="16" font-weight="700">مزامنة</text>
+    <text x="570" y="146" text-anchor="middle" fill="#3d6b5c" font-family="system-ui,Segoe UI,sans-serif" font-size="12">نص مشفّر على LAN</text>
+    <text x="570" y="166" text-anchor="middle" fill="#5eb89a" font-family="system-ui,Segoe UI,sans-serif" font-size="11">LWW حسب المراجعة</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="700" y="60" width="180" height="120" rx="14" fill="#ffffff" stroke="#5eb89a" stroke-width="2"/>
+    <circle cx="730" cy="90" r="14" fill="#0d5445"/>
+    <text x="730" y="95" text-anchor="middle" fill="#f4faf7" font-family="system-ui,Segoe UI,sans-serif" font-size="14" font-weight="700">+</text>
+    <text x="790" y="120" text-anchor="middle" fill="#0d5445" font-family="system-ui,Segoe UI,sans-serif" font-size="16" font-weight="700">إرسال عنصر</text>
+    <text x="790" y="146" text-anchor="middle" fill="#3d6b5c" font-family="system-ui,Segoe UI,sans-serif" font-size="12">دفع لمرة واحدة</text>
+    <text x="790" y="166" text-anchor="middle" fill="#5eb89a" font-family="system-ui,Segoe UI,sans-serif" font-size="11">أقران مقترنون</text>
+  </g>
+
+  <path d="M220 120 L260 120" fill="none" stroke="#187a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M440 120 L480 120" fill="none" stroke="#187a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M660 120 L700 120" fill="none" stroke="#5eb89a" stroke-width="2.5" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+
+  <!-- Devices -->
+  <g filter="url(#shadow)">
+    <rect x="120" y="230" width="280" height="80" rx="14" fill="#ffffff" stroke="#c5e4d7" stroke-width="1.5"/>
+    <text x="260" y="266" text-anchor="middle" fill="#0d5445" font-family="system-ui,Segoe UI,sans-serif" font-size="15" font-weight="700">الجهاز أ</text>
+    <text x="260" y="290" text-anchor="middle" fill="#3d6b5c" font-family="system-ui,Segoe UI,sans-serif" font-size="12">مفتوح · Nearby مفعّل</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="520" y="230" width="280" height="80" rx="14" fill="#ffffff" stroke="#c5e4d7" stroke-width="1.5"/>
+    <text x="660" y="266" text-anchor="middle" fill="#0d5445" font-family="system-ui,Segoe UI,sans-serif" font-size="15" font-weight="700">الجهاز ب</text>
+    <text x="660" y="290" text-anchor="middle" fill="#3d6b5c" font-family="system-ui,Segoe UI,sans-serif" font-size="12">نفس الشبكة · Pro / LAN Pro</text>
+  </g>
+  <path d="M400 270 L520 270" fill="none" stroke="#187a64" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="460" y="258" text-anchor="middle" fill="#0d5445" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="600">بدون خادم سحابي</text>
+</svg>

@@ -25,4 +25,6 @@ OpenKey — **self-hosted менеджер паролей с end-to-end шифр
 | `openkey_extension` | MV3 расширение браузера (Chrome / Firefox) |
 | `openkey_cli` | Developer CLI (секреты, генерация паролей, sync) |
 
+<img src="/guide/overview-ecosystem.svg" alt="OpenKey ecosystem: app, browser extension, and CLI encrypt on device; optional sync via self-hosted server (ciphertext only) or Nearby LAN pairing" class="ok-diagram" width="920" height="440" />
+
 **Приложение OpenKey** для mobile и desktop описано отдельно. См. [Использование приложения](./app) для использования продукта, [Пакеты](./packages) для setup, [Настройка сервера](./server) для установки sync и [Быстрый старт](./quick-start) для локального запуска.

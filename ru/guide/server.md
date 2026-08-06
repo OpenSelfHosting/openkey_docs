@@ -89,4 +89,6 @@ openkey sync
 3. На каждом новом устройстве: установите клиент → задайте тот же URL → login с тем же email и мастер-паролем → sync.
 4. Регулярно делайте offline-резервные копии (export / local backup) — сервер не восстанавливает забытый мастер-пароль.
 
+<img src="/guide/server-sync-topology.svg" alt="Sync topology: app, extension, and CLI send auth_hash and ciphertext to openkey_server (FastAPI), which stores opaque rows in PostgreSQL" class="ok-diagram" width="920" height="400" />
+
 Далее: [Использование приложения](./app) · [CLI](./cli) · [Безопасность](./security)

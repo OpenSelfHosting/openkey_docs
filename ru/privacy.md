@@ -4,6 +4,6 @@
 
 OpenKey — zero-knowledge: мастер-пароль и открытый сейф не покидают устройство. Опциональный sync отправляет только шифротекст на **ваш** сервер.
 
-Контакт: openkey@asimawdah.com
+Контакт: openkey@openselfhosting.com
 
 Далее: [Условия](./terms) · [Безопасность](./guide/security)

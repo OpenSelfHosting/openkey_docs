@@ -70,4 +70,6 @@ En mode autonome (serveur), l’[extension navigateur](./extension) peut lister/
 
 Voir le README de `openkey_server` : `/orgs`, `/invites/*`, `/shares`, plus `POST /auth/lookup-public-key` pour envelopper des clés par email.
 
+<img src="/guide/sharing-key-wrap.svg" alt="Sharing model: publish identity keys, wrap org keys for live shared collections, or wrap entry shares as frozen ciphertext snapshots; server stores opaque blobs only" class="ok-diagram" width="920" height="400" />
+
 Suivant : [Utiliser l’application](./app) · [Import et export](./import-export) · [FAQ](./faq) · [Installer le serveur](./server)

@@ -70,4 +70,6 @@
 
 انظر README لـ `openkey_server`: `/orgs`، `/invites/*`، `/shares`، إضافة إلى `POST /auth/lookup-public-key` لتغليف المفاتيح بالبريد.
 
+<img src="/guide/sharing-key-wrap-ar.svg" alt="نموذج المشاركة: نشر مفاتيح الهوية، تغليف مفاتيح المنظمة للمجموعات الحية، أو لقطات عناصر ثابتة؛ الخادم يخزّن كتلاً غير شفافة فقط" class="ok-diagram" width="920" height="400" />
+
 التالي: [استخدام التطبيق](./app) · [الاستيراد والتصدير](./import-export) · [الأسئلة الشائعة](./faq) · [تثبيت الخادم](./server)

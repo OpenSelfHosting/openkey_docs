@@ -2,6 +2,8 @@
 
 适用于 **Chrome**、**Edge**、**Brave** 和 **Firefox** 的 MV3 扩展。可对[自托管服务器](./server)解锁（独立模式），或通过已解锁的 **桌面应用**（原生消息）填充。
 
+<img src="/guide/extension-unlock-modes.svg" alt="Two unlock modes: standalone sync with the self-hosted server, or desktop app bridge via native messaging without a separate extension vault unlock" class="ok-diagram" width="920" height="400" />
+
 主机名：`com.openselfhosting.openkey`
 
 ## 功能

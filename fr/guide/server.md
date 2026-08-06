@@ -150,4 +150,6 @@ Voir [CLI](./cli) pour la découverte de secrets sans serveur (pont application 
 3. Sur chaque nouvel appareil : installez le client → définissez la même URL serveur → connectez-vous avec le même email et mot de passe principal → sync.
 4. Conservez des sauvegardes hors ligne régulières (export / sauvegarde locale) — le serveur n’est pas une voie de récupération pour un mot de passe principal oublié.
 
+<img src="/guide/server-sync-topology.svg" alt="Sync topology: app, extension, and CLI send auth_hash and ciphertext to openkey_server (FastAPI), which stores opaque rows in PostgreSQL" class="ok-diagram" width="920" height="400" />
+
 Suivant : [Télécharger](./download) · [Utiliser l’application](./app) · [Extension navigateur](./extension) · [FAQ](./faq) · [CLI](./cli) · [Sécurité](./security)

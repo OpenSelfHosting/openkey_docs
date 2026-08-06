@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import BrandIcon from './BrandIcon.vue'
+import DownloadPicker from './DownloadPicker.vue'
 import { useSitePrefs } from '../composables/useSitePrefs'
 
 const props = withDefaults(
@@ -43,20 +44,11 @@ const { isDark, prefs } = useSitePrefs()
       <div class="ok-hero__content">
         <h1 class="ok-hero__brand">OpenKey</h1>
         <p class="ok-hero__tagline">{{ props.tagline }}</p>
-        <div class="ok-hero__actions">
-          <a
-            class="ok-hero__cta ok-hero__cta--primary"
-            :href="props.downloadLink"
-          >
-            {{ props.ctaPrimary }}
-          </a>
-          <a
-            class="ok-hero__cta ok-hero__cta--ghost"
-            :href="props.quickStartLink"
-          >
-            {{ props.ctaSecondary }}
-          </a>
-        </div>
+        <DownloadPicker
+          layout="hero"
+          :quick-start-link="props.quickStartLink"
+          :cta-secondary="props.ctaSecondary"
+        />
       </div>
     </div>
   </section>

@@ -1,4 +1,8 @@
-# Télécharger et installer
+---
+title: Télécharger et installer
+---
+
+<DownloadPicker layout="page" />
 
 Obtenez l’application OpenKey, puis connectez optionnellement un [serveur auto-hébergé](./server), l’[extension navigateur](./extension) ou la [CLI](./cli).
 

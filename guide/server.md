@@ -2,6 +2,8 @@
 
 OpenKey Server is an optional **zero-knowledge sync API**. It stores ciphertext only so you can sync vaults across your own devices. Master passwords and plaintext vault keys never leave the client.
 
+<img src="/guide/server-sync-topology.svg" alt="Sync topology: app, extension, and CLI send auth_hash and ciphertext to openkey_server (FastAPI), which stores opaque rows in PostgreSQL" class="ok-diagram" width="920" height="400" />
+
 ## Requirements
 
 - Docker and Docker Compose (recommended), **or** Python 3.12+ with PostgreSQL 16

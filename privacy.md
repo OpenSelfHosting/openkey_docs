@@ -3,7 +3,7 @@
 **Last updated:** 6 August 2026  
 **Product:** OpenKey (`com.openselfhosting.openkey`)  
 **Publisher:** OpenSelfHosting  
-**Contact:** [openkey@asimawdah.com](mailto:openkey@asimawdah.com) · Security: [security@openselfhosting.com](mailto:security@openselfhosting.com)
+**Contact:** [openkey@openselfhosting.com](mailto:openkey@openselfhosting.com) · Security: [security@openselfhosting.com](mailto:security@openselfhosting.com)
 
 This Privacy Policy describes how the **OpenKey** mobile and desktop app handles information. OpenKey is designed as a **zero-knowledge** password manager: vault secrets are encrypted on your device before they leave it.
 
@@ -77,7 +77,7 @@ Where Pro is sold through an app store, payment processing, receipts, and relate
 
 ## Diagnostics and support
 
-OpenKey does not include a mandatory third-party analytics SDK that uploads vault content. If you email support ([openkey@asimawdah.com](mailto:openkey@asimawdah.com)) or Telegram community channels, you choose what to include (for example app version). Do not send master passwords or vault exports in cleartext email.
+OpenKey does not include a mandatory third-party analytics SDK that uploads vault content. If you email support ([openkey@openselfhosting.com](mailto:openkey@openselfhosting.com)) or Telegram community channels, you choose what to include (for example app version). Do not send master passwords or vault exports in cleartext email.
 
 ## Children’s privacy
 
@@ -108,8 +108,8 @@ We may update this policy as the product changes. The “Last updated” date wi
 
 ## Contact
 
-- Product / support: [openkey@asimawdah.com](mailto:openkey@asimawdah.com)
+- Product / support: [openkey@openselfhosting.com](mailto:openkey@openselfhosting.com)
 - Security reports: [security@openselfhosting.com](mailto:security@openselfhosting.com) — see [Reporting vulnerabilities](/guide/security#reporting-vulnerabilities)
-- Organization: [OpenSelfHosting](https://github.com/OpenSelfHosting) · Homepage: [openselfhosting.com](https://openselfhosting.com)
+- Organization: [OpenSelfHosting](https://github.com/OpenSelfHosting) · Product: [openkey.openselfhosting.com](https://openkey.openselfhosting.com) · Company: [openselfhosting.com](https://openselfhosting.com)
 
 Next: [Terms of Service](/terms) · [Security](/guide/security) · [Using the app](/guide/app)

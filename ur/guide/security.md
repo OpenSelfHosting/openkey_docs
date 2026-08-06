@@ -4,6 +4,8 @@ OpenKey اس طرح بنایا گیا ہے کہ سرور آپ کا وولٹ نہ
 
 ## کلید کا اخذ
 
+<img src="/guide/security-key-derivation.svg" alt="Key derivation: Argon2id turns email and master password into a master key, which yields an auth hash for login and a wrapped vault key for AES-256-GCM ciphertext" class="ok-diagram" width="920" height="400" />
+
 1. `Argon2id(email + master_password, salt)` ماسٹر کلید بناتا ہے۔
 2. ماسٹر کلید **auth hash** (لاگ اِن کے لیے سرور کو بھیجا جاتا ہے) اخذ کرتی ہے اور **وولٹ کلید** لپیٹتی ہے۔
 3. وولٹ کلید کلیکشن نام اور انٹری پے لوڈز مرموز کرتی ہے (**AES-256-GCM**).

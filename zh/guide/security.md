@@ -4,6 +4,8 @@ OpenKey 的设计目标是：服务器无法读取你的保险库。
 
 ## 密钥派生
 
+<img src="/guide/security-key-derivation.svg" alt="Key derivation: Argon2id turns email and master password into a master key, which yields an auth hash for login and a wrapped vault key for AES-256-GCM ciphertext" class="ok-diagram" width="920" height="400" />
+
 1. `Argon2id(email + master_password, salt)` 生成主密钥。
 2. 主密钥派生用于登录的 **auth hash**，并包装 **保险库密钥**。
 3. 保险库密钥加密集合名称与条目载荷（**AES-256-GCM**）。

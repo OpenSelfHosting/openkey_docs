@@ -29,7 +29,7 @@ title: OpenKey
   cta-title="Start on your own infrastructure"
   cta-body="Download the app, point it at your server, or pair Nearby for LAN-only sync."
   cta-primary="Download"
-  cta-secondary="Get started"
+  cta-secondary="शुरू करें"
   cta-security="Read the threat model"
   download-link="/hi/guide/download"
   quick-start-link="/hi/guide/quick-start"

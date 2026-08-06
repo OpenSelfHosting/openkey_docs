@@ -73,4 +73,6 @@ Nearby **不是**备份。请同时保留 Pro 的[加密 `.okbak`](./import-expo
 - [常见问题](./faq)
 - [安全](./security)
 
+<img src="/guide/nearby-pair-link-flow.svg" alt="Nearby flow: pair with QR or code for a session key, explicitly link vault to share the vault key, then sync ciphertext on the LAN; optional send-entry for one-off pushes" class="ok-diagram" width="920" height="360" />
+
 下一步：[使用应用](./app) · [共享](./sharing) · [常见问题](./faq)

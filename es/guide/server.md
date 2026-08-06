@@ -150,4 +150,6 @@ Consulta [CLI](./cli) para descubrimiento de secretos sin servidor (puente de la
 3. En cada dispositivo nuevo: instala el cliente → configura la misma URL → inicia sesión con el mismo email y contraseña maestra → sync.
 4. Mantén copias offline regulares (exportación / copia local) — el servidor no es una vía de recuperación para una contraseña maestra olvidada.
 
+<img src="/guide/server-sync-topology.svg" alt="Sync topology: app, extension, and CLI send auth_hash and ciphertext to openkey_server (FastAPI), which stores opaque rows in PostgreSQL" class="ok-diagram" width="920" height="400" />
+
 Siguiente: [Descargar](./download) · [Usar la app](./app) · [Extensión del navegador](./extension) · [FAQ](./faq) · [CLI](./cli) · [Seguridad](./security)

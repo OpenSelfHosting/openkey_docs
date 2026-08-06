@@ -2,6 +2,8 @@
 
 **OpenKey Pro** can sync the same vault across devices on your local Wi‑Fi **without a self-hosted server**. Ciphertext moves over a paired LAN session; the vault key is shared only after you explicitly **Link vault**.
 
+<img src="/guide/nearby-pair-link-flow.svg" alt="Nearby flow: pair with QR or code for a session key, explicitly link vault to share the vault key, then sync ciphertext on the LAN; optional send-entry for one-off pushes" class="ok-diagram" width="920" height="360" />
+
 This page covers pairing, QR codes, vault link, send-entry, LAN Pro, and trust rules. Short troubleshooting: [FAQ](./faq#nearby-does-not-find-the-other-device-pro). Threat model: [Security](./security).
 
 ## Requirements

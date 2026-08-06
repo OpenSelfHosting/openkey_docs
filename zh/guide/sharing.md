@@ -70,4 +70,6 @@
 
 参见 `openkey_server` README：`/orgs`、`/invites/*`、`/shares`，以及用于按邮箱封装密钥的 `POST /auth/lookup-public-key`。
 
+<img src="/guide/sharing-key-wrap.svg" alt="Sharing model: publish identity keys, wrap org keys for live shared collections, or wrap entry shares as frozen ciphertext snapshots; server stores opaque blobs only" class="ok-diagram" width="920" height="400" />
+
 下一步：[使用应用](./app) · [导入与导出](./import-export) · [常见问题](./faq) · [服务器安装](./server)

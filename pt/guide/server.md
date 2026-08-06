@@ -89,4 +89,6 @@ Veja [CLI](./cli) para descoberta de segredos sem servidor (ponte do app desktop
 3. Em cada novo dispositivo: instale o cliente → defina a mesma URL → login com o mesmo email e senha mestra → sync.
 4. Mantenha backups offline regulares (exportação / backup local) — o servidor não é caminho de recuperação para senha mestra esquecida.
 
+<img src="/guide/server-sync-topology.svg" alt="Sync topology: app, extension, and CLI send auth_hash and ciphertext to openkey_server (FastAPI), which stores opaque rows in PostgreSQL" class="ok-diagram" width="920" height="400" />
+
 Próximo: [Usar o app](./app) · [CLI](./cli) · [Segurança](./security)

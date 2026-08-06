@@ -1,4 +1,9 @@
-# Download e instalação
+---
+title: Download e instalação
+---
+
+<DownloadPicker layout="page" />
+
 
 Full guide: [English](/guide/download) · [العربية](/ar/guide/download) · [Español](/es/guide/download) · [Français](/fr/guide/download)
 

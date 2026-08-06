@@ -4,6 +4,8 @@ OpenKey इस तरह डिज़ाइन किया गया है क
 
 ## कुंजी व्युत्पत्ति
 
+<img src="/guide/security-key-derivation.svg" alt="Key derivation: Argon2id turns email and master password into a master key, which yields an auth hash for login and a wrapped vault key for AES-256-GCM ciphertext" class="ok-diagram" width="920" height="400" />
+
 1. `Argon2id(email + master_password, salt)` मास्टर कुंजी बनाता है।
 2. मास्टर कुंजी **auth hash** (लॉगिन के लिए सर्वर को भेजा जाता है) व्युत्पन्न करती है और **वॉल्ट कुंजी** को रैप करती है।
 3. वॉल्ट कुंजी संग्रह नाम और एंट्री पेलोड एन्क्रिप्ट करती है (**AES-256-GCM**)।

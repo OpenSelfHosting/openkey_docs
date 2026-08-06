@@ -2,6 +2,8 @@
 
 Share individual items or work in **organizations** with other OpenKey users on the **same self-hosted server**. Everything the server stores for orgs and shares stays **ciphertext** — clients wrap keys for recipients; the API never decrypts names or payloads.
 
+<img src="/guide/sharing-key-wrap.svg" alt="Sharing model: publish identity keys, wrap org keys for live shared collections, or wrap entry shares as frozen ciphertext snapshots; server stores opaque blobs only" class="ok-diagram" width="920" height="400" />
+
 **Requires OpenKey Pro** and a configured [server](./server) account (register / login + sync). Publish identity keys before inviting or sharing so peers can wrap keys for you.
 
 ## Prerequisites

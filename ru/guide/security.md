@@ -4,6 +4,8 @@ OpenKey спроектирован так, чтобы сервер не мог �
 
 ## Вывод ключей
 
+<img src="/guide/security-key-derivation.svg" alt="Key derivation: Argon2id turns email and master password into a master key, which yields an auth hash for login and a wrapped vault key for AES-256-GCM ciphertext" class="ok-diagram" width="920" height="400" />
+
 1. `Argon2id(email + master_password, salt)` создаёт мастер-ключ.
 2. Мастер-ключ выводит **auth hash** (отправляется на сервер) и оборачивает **ключ сейфа**.
 3. Ключ сейфа шифрует имена коллекций и payload'ы записей (**AES-256-GCM**).

@@ -1,4 +1,8 @@
-# 下载与安装
+---
+title: 下载与安装
+---
+
+<DownloadPicker layout="page" />
 
 获取 OpenKey 应用，然后可选连接[自托管服务器](./server)、[浏览器扩展](./extension)或 [CLI](./cli)。
 

@@ -3,7 +3,7 @@
 **Last updated:** 6 August 2026  
 **Product:** OpenKey (`com.openselfhosting.openkey`)  
 **Publisher:** OpenSelfHosting  
-**Contact:** [openkey@asimawdah.com](mailto:openkey@asimawdah.com)
+**Contact:** [openkey@openselfhosting.com](mailto:openkey@openselfhosting.com)
 
 These Terms of Service (“Terms”) govern your use of the **OpenKey** application and related official packages published by OpenSelfHosting. By downloading, installing, or using OpenKey, you agree to these Terms.
 
@@ -94,8 +94,8 @@ These Terms are governed by the laws applicable to OpenSelfHosting’s principal
 
 ## 15. Contact
 
-- Support: [openkey@asimawdah.com](mailto:openkey@asimawdah.com)
+- Support: [openkey@openselfhosting.com](mailto:openkey@openselfhosting.com)
 - Security: [security@openselfhosting.com](mailto:security@openselfhosting.com)
-- Web: [openselfhosting.com](https://openselfhosting.com) · [GitHub](https://github.com/OpenSelfHosting)
+- Product: [openkey.openselfhosting.com](https://openkey.openselfhosting.com) · Company: [openselfhosting.com](https://openselfhosting.com) · [GitHub](https://github.com/OpenSelfHosting)
 
 Next: [Privacy Policy](/privacy) · [Download](/guide/download) · [FAQ](/guide/faq)

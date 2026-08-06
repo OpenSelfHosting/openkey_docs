@@ -73,4 +73,6 @@ Solo empareja y vincula con dispositivos y personas de confianza. Detalles: [Seg
 - [FAQ](./faq)
 - [Seguridad](./security)
 
+<img src="/guide/nearby-pair-link-flow.svg" alt="Nearby flow: pair with QR or code for a session key, explicitly link vault to share the vault key, then sync ciphertext on the LAN; optional send-entry for one-off pushes" class="ok-diagram" width="920" height="360" />
+
 Siguiente: [Usar la app](./app) · [Compartir](./sharing) · [FAQ](./faq)

@@ -1,4 +1,9 @@
-# ڈاؤن لوڈ اور انسٹال
+---
+title: ڈاؤن لوڈ اور انسٹال
+---
+
+<DownloadPicker layout="page" />
+
 
 Full guide: [English](/guide/download) · [العربية](/ar/guide/download) · [Español](/es/guide/download) · [Français](/fr/guide/download)
 

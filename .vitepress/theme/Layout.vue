@@ -4,6 +4,7 @@ import { useData, useRouter, withBase, inBrowser } from 'vitepress'
 import { watch } from 'vue'
 import AppearanceMenu from './components/AppearanceMenu.vue'
 import BrandIcon from './components/BrandIcon.vue'
+import NavDownload from './components/NavDownload.vue'
 
 const { Layout } = DefaultTheme
 const { frontmatter, page } = useData()
@@ -33,6 +34,7 @@ watch(
       <BrandIcon size="nav" class="ok-nav-brand" />
     </template>
     <template #nav-bar-content-after>
+      <NavDownload />
       <AppearanceMenu />
     </template>
     <template #doc-before>

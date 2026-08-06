@@ -4,6 +4,8 @@ O OpenKey é projetado para que o servidor não possa ler seu cofre.
 
 ## Derivação de chaves
 
+<img src="/guide/security-key-derivation.svg" alt="Key derivation: Argon2id turns email and master password into a master key, which yields an auth hash for login and a wrapped vault key for AES-256-GCM ciphertext" class="ok-diagram" width="920" height="400" />
+
 1. `Argon2id(email + master_password, salt)` produz uma chave mestra.
 2. A chave mestra deriva um **auth hash** (enviado ao servidor) e envolve a **chave do cofre**.
 3. A chave do cofre criptografa nomes de coleções e payloads de entradas (**AES-256-GCM**).

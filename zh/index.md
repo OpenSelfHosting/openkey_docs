@@ -30,7 +30,7 @@ title: OpenKey
   cta-title="在自己的基础设施上开始"
   cta-body="下载应用、连接你的服务器，或用 Nearby 做局域网同步。"
   cta-primary="下载"
-  cta-secondary="快速开始"
+  cta-secondary="开始使用"
   cta-security="阅读威胁模型"
   download-link="/zh/guide/download"
   quick-start-link="/zh/guide/quick-start"

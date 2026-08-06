@@ -4,6 +4,8 @@ OpenKey is designed so the server cannot read your vault.
 
 ## Key derivation
 
+<img src="/guide/security-key-derivation.svg" alt="Key derivation: Argon2id turns email and master password into a master key, which yields an auth hash for login and a wrapped vault key for AES-256-GCM ciphertext" class="ok-diagram" width="920" height="400" />
+
 1. `Argon2id(email + master_password, salt)` produces a master key.
 2. The master key derives an **auth hash** (sent to the server for login) and wraps the **vault key**.
 3. The vault key encrypts collection names and entry payloads (**AES-256-GCM**).

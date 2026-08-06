@@ -3,7 +3,7 @@
 **آخر تحديث:** 6 أغسطس 2026  
 **المنتج:** OpenKey (`com.openselfhosting.openkey`)  
 **الناشر:** OpenSelfHosting  
-**التواصل:** [openkey@asimawdah.com](mailto:openkey@asimawdah.com)
+**التواصل:** [openkey@openselfhosting.com](mailto:openkey@openselfhosting.com)
 
 تحكم شروط الخدمة هذه («الشروط») استخدامك لتطبيق **OpenKey** والحزم الرسمية ذات الصلة من OpenSelfHosting. بتنزيل OpenKey أو تثبيته أو استخدامه، فإنك توافق على هذه الشروط.
 
@@ -94,8 +94,8 @@ OpenKey مدير كلمات مرور يشفّر بيانات الخزنة على
 
 ## 15. التواصل
 
-- الدعم: [openkey@asimawdah.com](mailto:openkey@asimawdah.com)
+- الدعم: [openkey@openselfhosting.com](mailto:openkey@openselfhosting.com)
 - الأمان: [security@openselfhosting.com](mailto:security@openselfhosting.com)
-- الويب: [openselfhosting.com](https://openselfhosting.com) · [GitHub](https://github.com/OpenSelfHosting)
+- المنتج: [openkey.openselfhosting.com](https://openkey.openselfhosting.com) · الشركة: [openselfhosting.com](https://openselfhosting.com) · [GitHub](https://github.com/OpenSelfHosting)
 
 التالي: [سياسة الخصوصية](/ar/privacy) · [التنزيل](/ar/guide/download) · [الأسئلة الشائعة](/ar/guide/faq)

@@ -4,6 +4,8 @@ MV3 extension for **Chrome**, **Edge**, **Brave**, and **Firefox**. It can unloc
 
 Host name: `com.openselfhosting.openkey`
 
+<img src="/guide/extension-unlock-modes.svg" alt="Two unlock modes: standalone sync with the self-hosted server, or desktop app bridge via native messaging without a separate extension vault unlock" class="ok-diagram" width="920" height="400" />
+
 ## What it does
 
 1. **Standalone vault** — unlock with email + master password; sync ciphertext from your server

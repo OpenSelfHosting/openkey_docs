@@ -555,10 +555,14 @@ export default defineConfig({
     /^https?:\/\/localhost/,
   ],
   srcExclude: ['README.md', 'SECURITY.md'],
+  sitemap: {
+    hostname: 'https://openkey.openselfhosting.com',
+  },
 
   head: [
     ['meta', { property: 'og:title', content: 'OpenKey' }],
     ['meta', { property: 'og:description', content: 'Self-hosted, end-to-end encrypted password manager. Ciphertext only on the server.' }],
+    ['meta', { property: 'og:url', content: 'https://openkey.openselfhosting.com' }],
     ['meta', { property: 'og:image', content: '/app_icon.png' }],
     ['link', { rel: 'icon', type: 'image/png', href: '/icons/forest_day.png' }],
     ['link', { rel: 'apple-touch-icon', href: '/icons/forest_day.png' }],
@@ -580,14 +584,12 @@ export default defineConfig({
 
   themeConfig: {
     siteTitle: 'OpenKey',
-    socialLinks: [
-      { icon: 'github', link: github },
-    ],
+    socialLinks: [],
     footer: {
       message:
         'MIT License · Ciphertext only on the server · <a href="/pricing">Pricing</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>',
       copyright:
-        'Copyright © 2026 OpenSelfHosting · Report security issues to security@openselfhosting.com',
+        'Copyright © 2026 <a href="https://openselfhosting.com">OpenSelfHosting</a> · <a href="https://openkey.openselfhosting.com">openkey.openselfhosting.com</a> · Report security issues to security@openselfhosting.com',
     },
     search: {
       provider: 'local',

@@ -147,4 +147,6 @@ openkey sync
 
 完整 OpenAPI：[`http://localhost:8000/docs`](http://localhost:8000/docs)。
 
+<img src="/guide/server-sync-topology.svg" alt="Sync topology: app, extension, and CLI send auth_hash and ciphertext to openkey_server (FastAPI), which stores opaque rows in PostgreSQL" class="ok-diagram" width="920" height="400" />
+
 下一步：[下载](./download) · [使用应用](./app) · [浏览器扩展](./extension) · [常见问题](./faq) · [CLI](./cli) · [安全](./security)

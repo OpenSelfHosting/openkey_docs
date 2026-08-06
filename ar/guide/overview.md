@@ -25,4 +25,6 @@ OpenKey هو **مدير كلمات مرور مشفّر من طرف إلى طرف
 | `openkey_extension` | امتداد متصفح MV3 (Chrome / Firefox) |
 | `openkey_cli` | CLI للمطوّرين (أسرار، توليد كلمات مرور، مزامنة) |
 
+<img src="/guide/overview-ecosystem-ar.svg" alt="منظومة OpenKey: التطبيق وامتداد المتصفح وCLI يشفّرون على الجهاز؛ مزامنة اختيارية عبر خادم مستضاف ذاتياً أو Nearby" class="ok-diagram" width="920" height="440" />
+
 تطبيق OpenKey للجوال وسطح المكتب موضّح بشكل منفصل. راجع [التنزيل](./download)، [استخدام التطبيق](./app)، [امتداد المتصفح](./extension)، [الحزم](./packages)، [إعداد الخادم](./server)، [الأسئلة الشائعة](./faq)، [سجل التغييرات](./changelog)، و[بداية سريعة](./quick-start).

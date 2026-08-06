@@ -25,4 +25,6 @@ OpenKey একটি **স্ব-হোস্টেড, end-to-end এনক্�
 | `openkey_extension` | MV3 ব্রাউজার এক্সটেনশন (Chrome / Firefox) |
 | `openkey_cli` | ডেভেলপার CLI (সিক্রেট, পাস জেন, সিঙ্ক) |
 
+<img src="/guide/overview-ecosystem.svg" alt="OpenKey ecosystem: app, browser extension, and CLI encrypt on device; optional sync via self-hosted server (ciphertext only) or Nearby LAN pairing" class="ok-diagram" width="920" height="440" />
+
 মোবাইল ও ডেস্কটপ **OpenKey অ্যাপ** আলাদাভাবে বর্ণিত। পণ্য ব্যবহারের জন্য [অ্যাপ ব্যবহার](./app), সেটআপের জন্য [প্যাকেজ](./packages), সিঙ্ক ইনস্টলের জন্য [সার্ভার সেটআপ](./server), এবং স্থানীয়ভাবে স্ট্যাক চালাতে [Quick start](./quick-start) দেখুন।

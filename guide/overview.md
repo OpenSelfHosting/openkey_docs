@@ -2,6 +2,8 @@
 
 OpenKey is a **self-hosted, end-to-end encrypted password manager**. Clients encrypt vault data before it leaves the device. The optional sync server stores **ciphertext only** — master passwords and plaintext vault keys never leave the client.
 
+<img src="/guide/overview-ecosystem.svg" alt="OpenKey ecosystem: app, browser extension, and CLI encrypt on device; optional sync via self-hosted server (ciphertext only) or Nearby LAN pairing" class="ok-diagram" width="920" height="440" />
+
 ## What you get
 
 - Local encrypted vault (collections, logins, cards, crypto wallets, developer secrets)

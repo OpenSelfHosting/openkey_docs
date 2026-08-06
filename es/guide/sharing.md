@@ -70,4 +70,6 @@ En modo independiente (servidor) la [extensión del navegador](./extension) pued
 
 Consulta el README de `openkey_server`: `/orgs`, `/invites/*`, `/shares`, más `POST /auth/lookup-public-key` para envolver claves por email.
 
+<img src="/guide/sharing-key-wrap.svg" alt="Sharing model: publish identity keys, wrap org keys for live shared collections, or wrap entry shares as frozen ciphertext snapshots; server stores opaque blobs only" class="ok-diagram" width="920" height="400" />
+
 Siguiente: [Usar la app](./app) · [Importar y exportar](./import-export) · [FAQ](./faq) · [Configuración del servidor](./server)

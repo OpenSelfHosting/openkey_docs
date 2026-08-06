@@ -4,6 +4,8 @@ OpenKey est conçu pour que le serveur ne puisse pas lire votre coffre.
 
 ## Dérivation des clés
 
+<img src="/guide/security-key-derivation.svg" alt="Key derivation: Argon2id turns email and master password into a master key, which yields an auth hash for login and a wrapped vault key for AES-256-GCM ciphertext" class="ok-diagram" width="920" height="400" />
+
 1. `Argon2id(email + master_password, salt)` produit une clé maître.
 2. La clé maître dérive un **auth hash** (envoyé au serveur pour la connexion) et enveloppe la **clé de coffre**.
 3. La clé de coffre chiffre les noms de collections et les charges d’entrées (**AES-256-GCM**).

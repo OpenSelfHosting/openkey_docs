@@ -3,7 +3,7 @@
 **آخر تحديث:** 6 أغسطس 2026  
 **المنتج:** OpenKey (`com.openselfhosting.openkey`)  
 **الناشر:** OpenSelfHosting  
-**التواصل:** [openkey@asimawdah.com](mailto:openkey@asimawdah.com) · الأمان: [security@openselfhosting.com](mailto:security@openselfhosting.com)
+**التواصل:** [openkey@openselfhosting.com](mailto:openkey@openselfhosting.com) · الأمان: [security@openselfhosting.com](mailto:security@openselfhosting.com)
 
 تصف سياسة الخصوصية هذه كيف يتعامل تطبيق **OpenKey** للجوال وسطح المكتب مع المعلومات. صُمّم OpenKey كمدير كلمات مرور **بلا معرفة**: تُشفَّر أسرار الخزنة على جهازك قبل أن تغادره.
 
@@ -108,8 +108,8 @@ OpenKey غير موجّه لمن دون 13 عاماً (أو الحد الأدن�
 
 ## التواصل
 
-- المنتج / الدعم: [openkey@asimawdah.com](mailto:openkey@asimawdah.com)
+- المنتج / الدعم: [openkey@openselfhosting.com](mailto:openkey@openselfhosting.com)
 - تقارير الأمان: [security@openselfhosting.com](mailto:security@openselfhosting.com) — انظر [الإبلاغ عن الثغرات](/ar/guide/security)
-- المنظمة: [OpenSelfHosting](https://github.com/OpenSelfHosting) · الموقع: [openselfhosting.com](https://openselfhosting.com)
+- المنظمة: [OpenSelfHosting](https://github.com/OpenSelfHosting) · المنتج: [openkey.openselfhosting.com](https://openkey.openselfhosting.com) · الشركة: [openselfhosting.com](https://openselfhosting.com)
 
 التالي: [شروط الخدمة](/ar/terms) · [الأمان](/ar/guide/security) · [استخدام التطبيق](/ar/guide/app)

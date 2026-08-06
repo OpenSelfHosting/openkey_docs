@@ -2,6 +2,8 @@
 
 Extension MV3 pour **Chrome**, **Edge**, **Brave** et **Firefox**. Elle peut se déverrouiller contre votre [serveur auto-hébergé](./server) (autonome) ou remplir via l’**application bureau** déverrouillée (messagerie native).
 
+<img src="/guide/extension-unlock-modes.svg" alt="Two unlock modes: standalone sync with the self-hosted server, or desktop app bridge via native messaging without a separate extension vault unlock" class="ok-diagram" width="920" height="400" />
+
 Nom d’hôte : `com.openselfhosting.openkey`
 
 ## Ce qu’elle fait

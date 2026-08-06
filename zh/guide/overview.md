@@ -25,4 +25,6 @@ OpenKey 是一款 **自托管、端到端加密的密码管理器**。客户端�
 | `openkey_extension` | MV3 浏览器扩展（Chrome / Firefox） |
 | `openkey_cli` | 开发者 CLI（密钥、密码生成、同步） |
 
+<img src="/guide/overview-ecosystem.svg" alt="OpenKey ecosystem: app, browser extension, and CLI encrypt on device; optional sync via self-hosted server (ciphertext only) or Nearby LAN pairing" class="ok-diagram" width="920" height="440" />
+
 移动与桌面 **OpenKey 应用** 另有说明。产品使用请参阅 [使用应用](./app)，设置请参阅 [软件包](./packages)，安装同步请参阅 [服务器设置](./server)，本地运行请参阅 [快速开始](./quick-start)。

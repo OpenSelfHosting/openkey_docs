@@ -88,4 +88,6 @@ Server کے بغیر secrets discovery: [CLI](./cli) (desktop app bridge)۔
 3. ہر نئے device پر: client install → same server URL → same email اور master password → sync۔
 4. Regular offline backups رکھیں (export / local backup) — بھولا master password server recovery path نہیں۔
 
+<img src="/guide/server-sync-topology.svg" alt="Sync topology: app, extension, and CLI send auth_hash and ciphertext to openkey_server (FastAPI), which stores opaque rows in PostgreSQL" class="ok-diagram" width="920" height="400" />
+
 اگلا: [ایپ کا استعمال](./app) · [CLI](./cli) · [Security](./security)

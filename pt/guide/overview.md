@@ -25,4 +25,6 @@ OpenKey é um **gerenciador de senhas criptografado de ponta a ponta auto-hosped
 | `openkey_extension` | Extensão MV3 (Chrome / Firefox) |
 | `openkey_cli` | CLI de desenvolvedor (segredos, geração de senhas, sync) |
 
+<img src="/guide/overview-ecosystem.svg" alt="OpenKey ecosystem: app, browser extension, and CLI encrypt on device; optional sync via self-hosted server (ciphertext only) or Nearby LAN pairing" class="ok-diagram" width="920" height="440" />
+
 O **app OpenKey** mobile e desktop é coberto separadamente. Veja [Usar o app](./app) para uso do produto, [Pacotes](./packages) para configuração, [Configuração do servidor](./server) para instalar sync, e [Início rápido](./quick-start) para executar a stack localmente.

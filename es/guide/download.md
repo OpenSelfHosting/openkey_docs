@@ -1,4 +1,8 @@
-# Descargar e instalar
+---
+title: Descargar e instalar
+---
+
+<DownloadPicker layout="page" />
 
 Obtén la app OpenKey y, opcionalmente, conecta un [servidor autoalojado](./server), la [extensión del navegador](./extension) o la [CLI](./cli).
 

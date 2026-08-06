@@ -25,4 +25,6 @@ OpenKey एक **self-hosted, end-to-end encrypted पासवर्ड मै�
 | `openkey_extension` | MV3 ब्राउज़र एक्सटेंशन (Chrome / Firefox) |
 | `openkey_cli` | Developer CLI (secrets, password gen, sync) |
 
+<img src="/guide/overview-ecosystem.svg" alt="OpenKey ecosystem: app, browser extension, and CLI encrypt on device; optional sync via self-hosted server (ciphertext only) or Nearby LAN pairing" class="ok-diagram" width="920" height="440" />
+
 मोबाइल और डेस्कटॉप **OpenKey ऐप** अलग से कवर है। उत्पाद उपयोग के लिए [ऐप का उपयोग](./app), setup के लिए [पैकेज](./packages), sync इंस्टॉल के लिए [सर्वर सेटअप](./server), और स्थानीय रूप से stack चलाने के लिए [Quick start](./quick-start) देखें।

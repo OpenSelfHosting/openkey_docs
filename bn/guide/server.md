@@ -88,4 +88,6 @@ openkey sync
 3. প্রতিটি নতুন ডিভাইসে: ক্লায়েন্ট ইনস্টল → একই সার্ভার URL → একই email ও মাস্টার পাসওয়ার্ড → sync।
 4. নিয়মিত অফলাইন ব্যাকআপ রাখুন (export / local backup) — ভুলে যাওয়া মাস্টার পাসওয়ার্ডের জন্য সার্ভার recovery path নয়।
 
+<img src="/guide/server-sync-topology.svg" alt="Sync topology: app, extension, and CLI send auth_hash and ciphertext to openkey_server (FastAPI), which stores opaque rows in PostgreSQL" class="ok-diagram" width="920" height="400" />
+
 পরবর্তী: [অ্যাপ ব্যবহার](./app) · [CLI](./cli) · [Security](./security)
