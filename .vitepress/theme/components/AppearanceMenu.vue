@@ -9,9 +9,8 @@ import {
   iconPath,
   resolveIconNight,
   useSitePrefs,
-  type PaletteId,
-  type ThemeMode,
 } from '../composables/useSitePrefs'
+import { appearanceCopy } from '../composables/appearanceCopy'
 
 const { lang } = useData()
 const open = ref(false)
@@ -26,61 +25,7 @@ const {
   reset,
 } = useSitePrefs()
 
-const copy = computed(() => {
-  if (lang.value === 'ar') {
-    return {
-      title: 'التخصيص',
-      subtitle: 'الأيقونة والسمة والخط',
-      theme: 'سمة الموقع',
-      palette: 'سمة الأيقونة',
-      font: 'الخط',
-      contrast: 'تباين عالٍ',
-      contrastHint: 'نص أوضح وحدود أقوى',
-      reset: 'إعادة ضبط',
-      themes: {
-        auto: { title: 'النظام', hint: 'يتبع الجهاز' },
-        light: { title: 'فاتح', hint: 'خلفية مضيئة' },
-        dark: { title: 'داكن', hint: 'خلفية داكنة' },
-      } as Record<ThemeMode, { title: string; hint: string }>,
-      fonts: {
-        default: 'افتراضي',
-        arabic: 'عربي',
-        developer: 'مطوّر',
-        technical: 'تقني',
-        standard: 'قياسي',
-        figtree: 'Figtree',
-        robotoFlex: 'Roboto Flex',
-      } as Record<string, string>,
-      palettes: {
-        forest: 'غابة',
-        ocean: 'محيط',
-        ember: 'جمر',
-        violet: 'بنفسجي',
-        slate: 'رمادي',
-      } as Record<PaletteId, string>,
-    }
-  }
-  return {
-    title: 'Customize',
-    subtitle: 'Icon, theme, and font',
-    theme: 'Site theme',
-    palette: 'Icon theme',
-    font: 'Font',
-    contrast: 'High contrast',
-    contrastHint: 'Stronger text and borders',
-    reset: 'Reset',
-    themes: {
-      auto: { title: 'System', hint: 'Match device' },
-      light: { title: 'Light', hint: 'Bright surface' },
-      dark: { title: 'Dark', hint: 'Dim surface' },
-    } as Record<ThemeMode, { title: string; hint: string }>,
-    fonts: Object.fromEntries(FONT_OPTIONS.map((f) => [f.id, f.label])) as Record<string, string>,
-    palettes: Object.fromEntries(PALETTE_OPTIONS.map((p) => [p.id, p.label])) as Record<
-      PaletteId,
-      string
-    >,
-  }
-})
+const copy = computed(() => appearanceCopy(lang.value))
 
 function tileSrc(palette: PaletteId) {
   const night = resolveIconNight(prefs)

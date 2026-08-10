@@ -1,6 +1,6 @@
 # FAQ और समस्या निवारण
 
-Full guide: [English](/guide/faq) · [العربية](/ar/guide/faq)
+पूर्ण गाइड: [English](/guide/faq) · [العربية](/ar/guide/faq)
 
 **Quick answers**
 

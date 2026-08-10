@@ -1,6 +1,6 @@
 # Importar e exportar
 
-Full guide: [English](/guide/import-export) · [العربية](/ar/guide/import-export) · [Español](/es/guide/import-export) · [Français](/fr/guide/import-export)
+Guia completo: [English](/guide/import-export) · [العربية](/ar/guide/import-export) · [Español](/es/guide/import-export) · [Français](/fr/guide/import-export)
 
 | Action | Free | Pro |
 |--------|------|-----|

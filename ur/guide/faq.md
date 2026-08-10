@@ -1,6 +1,6 @@
 # عمومی سوالات اور ازالہ
 
-Full guide: [English](/guide/faq) · [العربية](/ar/guide/faq)
+مکمل گائیڈ: [English](/guide/faq) · [العربية](/ar/guide/faq)
 
 **Quick answers**
 

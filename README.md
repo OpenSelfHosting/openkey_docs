@@ -1,6 +1,6 @@
 # OpenKey Docs
 
-Product site and documentation for [OpenKey](../README.md) — a self-hosted, end-to-end encrypted password manager.
+Product site and documentation for [OpenKey](https://github.com/OpenSelfHosting) — a self-hosted, end-to-end encrypted password manager.
 
 Supports the same locales as the Flutter app: English, Chinese, Hindi, Spanish, French, Arabic, Bengali, Portuguese, Russian, and Urdu (RTL for Arabic and Urdu).
 
@@ -35,4 +35,3 @@ npm run preview
 ```
 
 Static output lands in `.vitepress/dist`.
-# openkey_docs

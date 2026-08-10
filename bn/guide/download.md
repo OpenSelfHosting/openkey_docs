@@ -5,7 +5,7 @@ title: ডাউনলোড ও ইনস্টল
 <DownloadPicker layout="page" />
 
 
-Full guide: [English](/guide/download) · [العربية](/ar/guide/download) · [Español](/es/guide/download) · [Français](/fr/guide/download)
+সম্পূর্ণ গাইড: [English](/guide/download) · [العربية](/ar/guide/download) · [Español](/es/guide/download) · [Français](/fr/guide/download)
 
 | Package | Path / notes |
 |---------|--------------|

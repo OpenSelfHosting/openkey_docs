@@ -1,6 +1,6 @@
 # امپورٹ اور ایکسپورٹ
 
-Full guide: [English](/guide/import-export) · [العربية](/ar/guide/import-export) · [Español](/es/guide/import-export) · [Français](/fr/guide/import-export)
+مکمل گائیڈ: [English](/guide/import-export) · [العربية](/ar/guide/import-export) · [Español](/es/guide/import-export) · [Français](/fr/guide/import-export)
 
 | Action | Free | Pro |
 |--------|------|-----|
