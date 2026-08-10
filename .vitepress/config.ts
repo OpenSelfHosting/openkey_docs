@@ -175,6 +175,10 @@ function localeConfig(ui: LocaleUi): LocaleSpecificConfig<DefaultTheme.Config> &
     lang: ui.lang,
     dir: ui.dir,
     description: ui.description,
+    head: [
+      ['meta', { property: 'og:description', content: ui.description }],
+      ['meta', { property: 'og:locale', content: ui.lang === 'en' ? 'en_US' : ui.lang }],
+    ],
     themeConfig: {
       nav: nav(prefix, ui.labels),
       sidebar,
