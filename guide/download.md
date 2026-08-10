@@ -16,7 +16,7 @@ Store listings and GitHub Releases roll out per platform. Until a store link is 
 
 | Channel | Notes |
 |---------|--------|
-| [Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) {#android-play} | `com.openselfhosting.openkey` — search **OpenKey** by OpenSelfHosting once the listing is public |
+| Google Play {#android-play} | `com.openselfhosting.openkey` — search **OpenKey** by OpenSelfHosting once the listing is public |
 | Sideload APK/AAB {#android-apk} | From `build_all/android/` (`OpenKey-*-android.apk`) |
 
 ### iOS {#ios}

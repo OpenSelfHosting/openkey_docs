@@ -36,10 +36,20 @@ npm run preview
 
 Static output lands in `.vitepress/dist`.
 
-## Download URLs from GitHub Releases
+## Download URLs (GitHub Releases + stores)
 
-Desktop and APK download buttons resolve from the **latest release** on [OpenSelfHosting/openkey_app](https://github.com/OpenSelfHosting/openkey_app) by default. Before each build, `npm run sync:releases` fetches release assets and writes `.vitepress/theme/downloads/releaseUrls.generated.ts`. Asset names should follow the `build_all/` pattern (e.g. `OpenKey-*-windows-x64-setup.exe`, `OpenKey-*-macos-arm64.dmg`, `OpenKey-*-linux-x64.deb`).
+Before each build, `npm run sync:downloads` refreshes `.vitepress/theme/downloads/downloadUrls.generated.ts`:
 
-- Override repo: `OPENKEY_RELEASE_REPO=org/repo npm run sync:releases`
-- Private repo: set `GITHUB_TOKEN` or `GH_TOKEN` with `contents:read` on that repository
-- Until a release ships (or a variant has no matching asset), the download page hash anchors are used as fallback
+| Source | Config | When URLs appear |
+|--------|--------|------------------|
+| **GitHub Releases** | `OpenSelfHosting/openkey_app` (override: `OPENKEY_RELEASE_REPO`) | Matching assets on the latest release (`OpenKey-*-windows-x64-setup.exe`, etc.) |
+| **App stores** | `scripts/store-urls.config.json` | Set `live: true`, `appleId`, or `productId` when a listing goes public |
+
+**Store config** (`scripts/store-urls.config.json`):
+
+- `android-play` — set `live: true` when Google Play listing is public (uses `appId`)
+- `ios-appstore` / `macos-appstore` — set `appleId` when App Store / Mac App Store is live
+- `windows-store` — set `productId` for Microsoft Store
+- `linux-flathub` / `linux-snap` — set `live: true` when published
+
+Until a channel is live, the download picker falls back to in-page guide anchors. Private release repo: `GITHUB_TOKEN` with `contents:read`.

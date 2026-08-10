@@ -3,7 +3,7 @@
  * Prefer live store / release URLs when set; otherwise deep-link the download page.
  */
 
-import { RELEASE_ARTIFACT_URLS } from './releaseUrls.generated'
+import { RELEASE_ARTIFACT_URLS, STORE_URLS } from './downloadUrls.generated'
 
 export type OsId = 'windows' | 'macos' | 'linux' | 'android' | 'ios'
 export type ArchId = 'x64' | 'arm64' | 'arm32' | 'universal'
@@ -106,15 +106,15 @@ export function findVariant(
 }
 
 /**
- * Desktop / mobile artifacts default to the latest GitHub Release on openkey_app.
- * `npm run sync:releases` (also runs before build) refreshes releaseUrls.generated.ts.
- * Hash anchors remain the fallback when a variant has no matching release asset yet.
+ * Desktop artifacts → latest GitHub Release on openkey_app.
+ * Store listings → scripts/store-urls.config.json (flip live / set ids when published).
+ * Hash anchors remain when a URL is not available yet.
  */
-function applyReleaseUrls(platforms: DownloadPlatform[]): DownloadPlatform[] {
+function applyDownloadUrls(platforms: DownloadPlatform[]): DownloadPlatform[] {
   return platforms.map((platform) => ({
     ...platform,
     variants: platform.variants.map((variant) => {
-      const url = RELEASE_ARTIFACT_URLS[variant.id]
+      const url = STORE_URLS[variant.id] ?? RELEASE_ARTIFACT_URLS[variant.id]
       if (!url) return variant
       return { ...variant, href: url, external: true }
     }),
@@ -140,6 +140,12 @@ const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
         labelKey: 'windowsArm64',
         arch: 'arm64',
         href: '#windows-arm64',
+      },
+      {
+        id: 'windows-store',
+        labelKey: 'windowsStore',
+        arch: 'universal',
+        href: '#windows-store',
       },
     ],
   },
@@ -167,6 +173,12 @@ const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
         labelKey: 'macosUniversal',
         arch: 'universal',
         href: '#macos-universal',
+      },
+      {
+        id: 'macos-appstore',
+        labelKey: 'macosAppStore',
+        arch: 'universal',
+        href: '#macos-appstore',
       },
     ],
   },
@@ -201,6 +213,18 @@ const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
         arch: 'arm64',
         href: '#linux-tar-arm64',
       },
+      {
+        id: 'linux-flathub',
+        labelKey: 'linuxFlathub',
+        arch: 'universal',
+        href: '#linux-flathub',
+      },
+      {
+        id: 'linux-snap',
+        labelKey: 'linuxSnap',
+        arch: 'universal',
+        href: '#linux-snap',
+      },
     ],
   },
   {
@@ -213,8 +237,7 @@ const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
         id: 'android-play',
         labelKey: 'androidPlay',
         arch: 'universal',
-        href: 'https://play.google.com/store/apps/details?id=com.openselfhosting.openkey',
-        external: true,
+        href: '#android-play',
         recommended: true,
       },
       {
@@ -242,4 +265,4 @@ const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
   },
 ]
 
-export const DOWNLOAD_PLATFORMS = applyReleaseUrls(DOWNLOAD_PLATFORMS_BASE)
+export const DOWNLOAD_PLATFORMS = applyDownloadUrls(DOWNLOAD_PLATFORMS_BASE)
