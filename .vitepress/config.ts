@@ -1,4 +1,5 @@
 import { defineConfig, type DefaultTheme, type LocaleSpecificConfig } from 'vitepress'
+import { blogPosts } from './blogPosts'
 
 type GuideLabels = {
   guide: string
@@ -41,27 +42,6 @@ type LocaleUi = {
 
 const github = 'https://github.com/OpenSelfHosting'
 
-const blogPosts = {
-  en: [
-    { text: 'Welcome to OpenKey', link: '/blog/welcome-to-openkey' },
-    { text: 'Zero-knowledge sync explained', link: '/blog/zero-knowledge-sync' },
-    { text: 'Why self-host your password vault', link: '/blog/self-host-your-vault' },
-    { text: 'Nearby without a server', link: '/blog/nearby-without-a-server' },
-    { text: 'OpenKey Pro — what unlocks', link: '/blog/openkey-pro' },
-    { text: 'Passkeys and autofill in the browser', link: '/blog/passkeys-and-autofill' },
-    { text: 'A CLI for developer secrets', link: '/blog/cli-for-developers' },
-  ],
-  ar: [
-    { text: 'مرحباً بـ OpenKey', link: '/ar/blog/welcome-to-openkey' },
-    { text: 'مزامنة بلا معرفة — كيف تعمل', link: '/ar/blog/zero-knowledge-sync' },
-    { text: 'لماذا تستضيف خزنة كلمات المرور بنفسك', link: '/ar/blog/self-host-your-vault' },
-    { text: 'Nearby بلا خادم', link: '/ar/blog/nearby-without-a-server' },
-    { text: 'OpenKey Pro — ماذا يُفتح', link: '/ar/blog/openkey-pro' },
-    { text: 'Passkeys والتعبئة التلقائية في المتصفح', link: '/ar/blog/passkeys-and-autofill' },
-    { text: 'واجهة سطر أوامر لأسرار المطورين', link: '/ar/blog/cli-for-developers' },
-  ],
-} as const
-
 function guideSidebar(prefix: string, labels: GuideLabels): DefaultTheme.SidebarItem[] {
   const p = prefix === '/' ? '' : prefix
   return [
@@ -92,8 +72,7 @@ function guideSidebar(prefix: string, labels: GuideLabels): DefaultTheme.Sidebar
 
 function blogSidebar(lang: string, labels: GuideLabels): DefaultTheme.SidebarItem[] {
   const prefix = lang === 'en' ? '' : `/${lang}`
-  // Untranslated locales keep an index page, then link into the English posts.
-  const posts = lang === 'ar' ? blogPosts.ar : blogPosts.en
+  const posts = blogPosts[lang as keyof typeof blogPosts] ?? blogPosts.en
   return [
     {
       text: labels.blog,

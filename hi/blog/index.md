@@ -7,6 +7,5 @@ sidebar: false
 # ब्लॉग
 
 Zero-knowledge sync, self-hosting, autofill और developer CLI पर अपडेट।
-नीचे के लेख वर्तमान OpenKey ऐप, सर्वर, एक्सटेंशन और CLI को दर्शाते हैं (अंग्रेज़ी; अन्य भाषाएँ मूल पर जा सकती हैं)।
 
 <BlogList />

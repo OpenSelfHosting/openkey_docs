@@ -4,7 +4,7 @@
 
 Os preços da loja são definidos por região na cobrança da Apple / Google / Microsoft e exibidos no app no momento da compra. Esta página explica **o que você recebe** e **como comprar** — não é uma tabela fixa em USD (as lojas localizam moeda e impostos).
 
-Relacionado: [Usar o app](/pt/guide/app#grátis-vs-openkey-pro) · [OpenKey Pro explicado](/blog/openkey-pro) · [Download](/pt/guide/download) · [Termos](/pt/terms)
+Relacionado: [Usar o app](/pt/guide/app#grátis-vs-openkey-pro) · [OpenKey Pro explicado](/pt/blog/openkey-pro) · [Download](/pt/guide/download) · [Termos](/pt/terms)
 
 ## Planos
 
@@ -89,4 +89,4 @@ As lojas podem alterar preços regionais. A paywall no app sempre mostra a ofert
 
 - [Baixar OpenKey](/pt/guide/download)
 - [Início rápido](/pt/guide/quick-start)
-- [Nearby sem servidor](/blog/nearby-without-a-server) (Pro)
+- [Nearby sem servidor](/pt/blog/nearby-without-a-server) (Pro)

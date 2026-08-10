@@ -4,7 +4,7 @@
 
 Цены в магазине задаются по региону в биллинге Apple / Google / Microsoft и показываются в приложении при покупке. Эта страница объясняет **что вы получаете** и **как купить** — а не фиксированную таблицу в USD (магазины локализуют валюту и налоги).
 
-См. также: [Использование приложения](/ru/guide/app#бесплатно-и-openkey-pro) · [OpenKey Pro](/blog/openkey-pro) · [Загрузка](/ru/guide/download) · [Условия](/ru/terms)
+См. также: [Использование приложения](/ru/guide/app#бесплатно-и-openkey-pro) · [OpenKey Pro](/ru/blog/openkey-pro) · [Загрузка](/ru/guide/download) · [Условия](/ru/terms)
 
 ## Планы
 
@@ -89,4 +89,4 @@ Web-сборки **пока не требуют Pro**. Сборки магази
 
 - [Скачать OpenKey](/ru/guide/download)
 - [Быстрый старт](/ru/guide/quick-start)
-- [Nearby без сервера](/blog/nearby-without-a-server) (Pro)
+- [Nearby без сервера](/ru/blog/nearby-without-a-server) (Pro)

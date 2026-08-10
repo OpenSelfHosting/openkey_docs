@@ -4,7 +4,7 @@
 
 商店价格在 Apple / Google / Microsoft 各区域计费中设定，并在应用内购买时显示。本页说明**您能获得什么**以及**如何购买**——并非固定的美元价目表（商店会本地化货币和税费）。
 
-相关：[使用应用](/zh/guide/app#free-vs-openkey-pro) · [OpenKey Pro 说明](/blog/openkey-pro) · [下载](/zh/guide/download) · [服务条款](/zh/terms)
+相关：[使用应用](/zh/guide/app#free-vs-openkey-pro) · [OpenKey Pro 说明](/zh/blog/openkey-pro) · [下载](/zh/guide/download) · [服务条款](/zh/terms)
 
 ## 计划
 
@@ -89,4 +89,4 @@ Web 构建**尚未强制 Pro**。移动版和桌面商店版会强制。
 
 - [下载 OpenKey](/zh/guide/download)
 - [快速入门](/zh/guide/quick-start)
-- [无服务器的 Nearby](/blog/nearby-without-a-server)（Pro）
+- [无服务器的 Nearby](/zh/blog/nearby-without-a-server)（Pro）

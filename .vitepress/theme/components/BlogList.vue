@@ -2,12 +2,12 @@
 import { computed } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { data as posts } from '../blog.data'
-import type { BlogPost } from '../blog.data'
+import type { BlogLang } from '../blog.data'
 
 const { lang } = useData()
 
 const localePosts = computed(() => {
-  const want: BlogPost['lang'] = lang.value === 'ar' ? 'ar' : 'en'
+  const want = (lang.value || 'en') as BlogLang
   return posts.filter((post) => post.lang === want)
 })
 
@@ -15,7 +15,8 @@ function formatDate(value: string, locale: string) {
   if (!value) return ''
   const date = new Date(`${value}T00:00:00`)
   if (Number.isNaN(date.getTime())) return value
-  return new Intl.DateTimeFormat(locale === 'ar' ? 'ar' : 'en', {
+  const dateLocale = locale === 'en' ? 'en' : locale
+  return new Intl.DateTimeFormat(dateLocale, {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
