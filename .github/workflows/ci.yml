@@ -20,5 +20,8 @@ jobs:
           cache: npm
 
       - run: npm ci
+      - run: npm run sync:releases
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npm run typecheck
       - run: npm run build

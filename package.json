@@ -5,6 +5,8 @@
   "type": "module",
   "description": "OpenKey product site and documentation",
   "scripts": {
+    "sync:releases": "node scripts/sync-release-urls.mjs",
+    "prebuild": "npm run sync:releases",
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",

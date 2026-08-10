@@ -3,6 +3,8 @@
  * Prefer live store / release URLs when set; otherwise deep-link the download page.
  */
 
+import { RELEASE_ARTIFACT_URLS } from './releaseUrls.generated'
+
 export type OsId = 'windows' | 'macos' | 'linux' | 'android' | 'ios'
 export type ArchId = 'x64' | 'arm64' | 'arm32' | 'universal'
 
@@ -104,11 +106,22 @@ export function findVariant(
 }
 
 /**
- * Channels today: Play Store is the only live public URL.
- * Desktop / iOS variants deep-link the download guide with arch anchors
- * until GitHub Releases / store IDs are published.
+ * Desktop / mobile artifacts default to the latest GitHub Release on openkey_app.
+ * `npm run sync:releases` (also runs before build) refreshes releaseUrls.generated.ts.
+ * Hash anchors remain the fallback when a variant has no matching release asset yet.
  */
-export const DOWNLOAD_PLATFORMS: DownloadPlatform[] = [
+function applyReleaseUrls(platforms: DownloadPlatform[]): DownloadPlatform[] {
+  return platforms.map((platform) => ({
+    ...platform,
+    variants: platform.variants.map((variant) => {
+      const url = RELEASE_ARTIFACT_URLS[variant.id]
+      if (!url) return variant
+      return { ...variant, href: url, external: true }
+    }),
+  }))
+}
+
+const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
   {
     id: 'windows',
     labelKey: 'windows',
@@ -228,3 +241,5 @@ export const DOWNLOAD_PLATFORMS: DownloadPlatform[] = [
     ],
   },
 ]
+
+export const DOWNLOAD_PLATFORMS = applyReleaseUrls(DOWNLOAD_PLATFORMS_BASE)
