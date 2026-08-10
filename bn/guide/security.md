@@ -48,4 +48,13 @@ API বিস্তারিত জানতে `openkey_server` README এব�
 - LAN Pro শুধু স্টোর IAP ছাড়া প্ল্যাটফর্মে।
 - HTTPS, শক্তিশালী `JWT_SECRET`, স্পষ্ট `CORS_ORIGINS` (কখনো `*` নয়)।
 
-দুর্বলতা ব্যক্তিগতভাবে রিপোর্ট করুন — **security@openselfhosting.com**।
+## দুর্বলতা রিপোর্ট {#reporting-vulnerabilities}
+
+আপনি যদি মনে করেন OpenKey-তে (সার্ভার, এক্সটেনশন, CLI, ডক্স বা অ্যাপ) নিরাপত্তা সমস্যা পেয়েছেন, **ব্যক্তিগতভাবে** রিপোর্ট করুন।
+
+**পাবলিক** GitHub issue খুলবেন না।
+
+- ইমেইল: **security@openselfhosting.com**
+- অথবা [OpenSelfHosting](https://github.com/OpenSelfHosting)-এ **প্রাইভেট** security advisory খুলুন
+
+প্রভাবিত প্যাকেজ, সংস্করণ/কমিট, পুনরুৎপাদনের ধাপ ও প্রভাব অন্তর্ভুক্ত করুন। আমরা **৭ দিনের** মধ্যে স্বীকার করার লক্ষ্য রাখি। সম্পূর্ণ নীতি: `SECURITY.md` (monorepo রুটেও)।

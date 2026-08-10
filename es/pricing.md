@@ -17,7 +17,7 @@ Relacionado: [Usar la app](/es/guide/app#free-vs-openkey-pro) · [OpenKey Pro ex
 
 Los importes exactos aparecen en **Ajustes → OpenKey Pro** en Android, iOS y macOS (y otras plataformas IAP cuando estén listadas).
 
-## Gratis frente a Pro
+## Gratis frente a Pro {#free-vs-openkey-pro}
 
 | | Gratis | Pro |
 |--|------|-----|

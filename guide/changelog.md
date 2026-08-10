@@ -38,16 +38,17 @@ First public documentation cut aligned with app **1.0.0+1** and the open package
 - VitePress product site in 10 locales (RTL for Arabic and Urdu)
 - Guides: overview, security, quick start, download, server (incl. HTTPS reverse proxy + API overview), app, **Nearby**, extension, CLI, sharing, import/export, FAQ, packages, changelog
 - **Chinese (zh), Spanish (es), and French (fr)** full guide sets aligned with EN/AR for major pages
-- Blog posts (full EN + AR; other locales index to English) including **Nearby without a server** and **OpenKey Pro**
-- **Pricing** (`/pricing`): Free vs Pro matrix, Monthly / Yearly / Lifetime, store IAP + LAN Pro notes (full EN + AR; stubs elsewhere)
-- Privacy & Terms for store / About links
+- Blog posts in all 10 locales (7 articles each), including **Nearby without a server** and **OpenKey Pro**
+- **Pricing** (`/pricing`): Free vs Pro matrix in all locales (zh abbreviated); stable `#free-vs-openkey-pro` anchors
+- Privacy & Terms in all locales (zh summarized)
 - Home page: hero + feature / platforms / how-it-works / CTA sections
 - Site footer + GitHub social link
 
 ## Unreleased / next
 
-- Live store listing URLs once each channel is published
-- Fuller translations for hi / bn / pt / ru / ur longer guides (enriched stubs today)
+- Live GitHub Release artifacts + store listing URLs once each channel is published (`scripts/store-urls.config.json`)
+- Fuller changelog and security guides for hi / bn / pt / ru / ur
+- FAQ heading polish for hi / bn (some English H2/H3 skeletons remain)
 - Changelog entries per package as standalone remotes ship tagged releases
 - Product screenshots beyond brand icon / wordmark
 

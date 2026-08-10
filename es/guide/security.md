@@ -73,7 +73,7 @@ Los elementos del vault eliminados de forma suave permanecen como **tombstones**
 - Empareja dispositivos Nearby solo con personas/dispositivos de confianza; **Vincular vault** comparte material de la clave del vault por la sesión LAN — desempareja para revocar reclamaciones LAN Pro y detener la sync.
 - Informa vulnerabilidades en privado — ver [Informar vulnerabilidades](#informar-vulnerabilidades).
 
-## Informar vulnerabilidades
+## Informar vulnerabilidades {#reporting-vulnerabilities}
 
 Si crees haber encontrado un problema de seguridad en OpenKey (servidor, extensión, CLI, docs o app), infórmalo en **privado**.
 

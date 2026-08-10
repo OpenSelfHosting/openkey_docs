@@ -17,7 +17,7 @@ Store prices Apple / Google / Microsoft billing में region के अन�
 
 सटीक amounts Android, iOS, और macOS (और जहाँ listed अन्य IAP platforms) पर **Settings → OpenKey Pro** के तहत दिखते हैं।
 
-## Free vs Pro
+## Free vs Pro {#free-vs-openkey-pro}
 
 | | Free | Pro |
 |--|------|-----|

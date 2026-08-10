@@ -13,7 +13,7 @@ OpenKey হল Android, iOS, macOS, Linux এবং Windows-এর জন্য 
 
 
 
-## ফ্রি বনাম OpenKey Pro
+## ফ্রি বনাম OpenKey Pro {#free-vs-openkey-pro}
 
 মূল ভল্ট ফিচার সাবস্ক্রিপশন ছাড়াই অফলাইনে চলে। Android, iOS, macOS, Windows ও Linux-এ Pro সীমা বাড়ায় ও অতিরিক্ত ফিচার খোলে। Web বিল্ড এখনো Pro প্রয়োগ করে না। **স্টোর IAP ছাড়া** প্ল্যাটফর্মে (সাধারণত Windows/Linux) পেয়ার Nearby **LAN Pro** অ্যাটেস্টেশন শেয়ার করতে পারে — শুধু সুবিধা, ক্রয়ের ক্রিপ্টো প্রমাণ নয়।
 

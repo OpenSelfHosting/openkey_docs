@@ -48,7 +48,7 @@ Full vault sync की प्रतीक्षा बिना एक paired pe
 
 LAN पर one-off shares के लिए उपयोग करें; peers एक ही self-hosted server उपयोग करते हों तो [organizations & sharing](./sharing) प्राथमिक।
 
-## LAN Pro attestation
+## LAN Pro attestation {#lan-pro-attestation}
 
 Store in-app purchase **बिना** प्लेटफ़ॉर्म पर (आमतौर पर Windows / Linux), **vault-linked** Pro peer **LAN Pro** status साझा कर सकता है ताकि दूसरा डिवाइस Nearby पर Pro limits unlock करे। Pairing अकेले काफ़ी नहीं — पहले **Link vault** टैप करें।
 

@@ -13,7 +13,7 @@ Les paquets associés de ce projet incluent le [serveur](./server), l'[extension
 
 
 
-## Gratuit vs OpenKey Pro
+## Gratuit vs OpenKey Pro {#free-vs-openkey-pro}
 
 Les fonctions de base du coffre marchent hors ligne sans abonnement. Sur Android, iOS, macOS, Windows et Linux, Pro relève les plafonds et débloque des extras. Les builds web n’appliquent pas encore Pro. Sur les plateformes **sans** IAP magasin (souvent Windows/Linux), un pair Nearby peut partager une attestation **LAN Pro** — confort uniquement, pas une preuve d’achat cryptographique (les plateformes IAP ignorent le LAN Pro).
 

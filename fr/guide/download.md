@@ -8,26 +8,57 @@ Obtenez l’application OpenKey, puis connectez optionnellement un [serveur auto
 
 Identifiant d’application : `com.openselfhosting.openkey` · Org : [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-Les fiches magasin et les GitHub Releases se déploient par plateforme. Tant qu’un lien magasin n’est pas en ligne, compilez depuis le monorepo ou utilisez un artefact bureau de votre propre run `build_all/`. Les pages magasin publiques peuvent encore être en revue même lorsque les scripts de packaging produisent localement des bundles Play / App Store / Flathub.
+Les fiches magasin et les GitHub Releases se déploient par plateforme. Tant qu’un lien magasin n’est pas en ligne, compilez depuis le monorepo ou utilisez un artefact bureau de votre propre run `build_all/`.
 
 ## Mobile
 
-| Plateforme | Canal | Notes |
-|----------|---------|--------|
-| **Android** | Google Play (`com.openselfhosting.openkey`) une fois listé · sideload APK/AAB depuis `build_all/` | Recherchez **OpenKey** par OpenSelfHosting une fois la fiche publique |
-| **iOS** | App Store une fois listé · archive Xcode | Recherchez **OpenKey** par OpenSelfHosting une fois la fiche approuvée |
+### Android {#android}
+
+| Channel | Notes |
+|---------|--------|
+| Google Play {#android-play} | `com.openselfhosting.openkey` — Recherchez **OpenKey** par OpenSelfHosting une fois la fiche publique |
+| Sideload APK/AAB {#android-apk} | Sideload APK/AAB depuis `build_all/android/` (`OpenKey-*-android.apk`) |
+
+### iOS {#ios}
+
+| Channel | Notes |
+|---------|--------|
+| App Store | Recherchez **OpenKey** par OpenSelfHosting une fois la fiche approuvée |
+| Xcode archive | Archive Xcode locale `build_all/ios/` |
 
 Activez **Réglages → Saisie automatique** pour qu’OpenKey remplisse mots de passe et passkeys à l’échelle du système.
 
 ## Bureau
 
-| Plateforme | Canal | Artefact / notes |
-|----------|---------|------------------|
-| **macOS** | Mac App Store (une fois listé) · `.dmg` / `.zip` directs | Builds Apple Silicon et Intel depuis le packaging (`build_all/macos/`) |
-| **Windows** | Microsoft Store (une fois listé) · installateur Inno Setup · `.zip` portable | Le paquet magasin est `.msix` ; le sideload utilise `*-setup.exe` lorsque Inno Setup est disponible |
-| **Linux** | Flathub · Snap Store (une fois listés) · `.tar.gz` / `.deb` | Id Flatpak / Snap : `com.openselfhosting.openkey`. Pas d’AppImage pour l’instant — utilisez le tarball portable ou le `.deb` depuis `build_all/` / scripts de packaging |
+### macOS {#macos}
 
-L’Autofill bureau enregistre l’**hôte de messagerie native** utilisé par l’[extension navigateur](./extension). Gardez le coffre déverrouillé pendant le remplissage depuis le navigateur.
+| Build | Artifact |
+|-------|----------|
+| Apple Silicon {#macos-arm64} | `OpenKey-*-macos-arm64.dmg` / `.zip` from `build_all/macos/` |
+| Intel Chip {#macos-x64} | `OpenKey-*-macos-x64.dmg` / `.zip` |
+| Universal {#macos-universal} | Prefer arch-matched `.dmg`; Mac App Store when listed |
+| Mac App Store {#macos-appstore} | When listed |
+
+### Windows {#windows}
+
+| Build | Artifact |
+|-------|----------|
+| x64 installer {#windows-x64} | `OpenKey-*-windows-x64-setup.exe` · portable `.zip` · optional `.msix` |
+| Arm64 {#windows-arm64} | When published on GitHub Releases / Microsoft Store |
+| Microsoft Store {#windows-store} | When listed |
+
+### Linux {#linux}
+
+| Build | Artifact |
+|-------|----------|
+| `.deb` x64 {#linux-deb-x64} | `OpenKey-*-linux-x64.deb` |
+| `.deb` Arm64 {#linux-deb-arm64} | `OpenKey-*-linux-arm64.deb` |
+| `.tar.gz` x64 {#linux-tar-x64} | Portable tarball from `build_all/linux/` |
+| `.tar.gz` Arm64 {#linux-tar-arm64} | Portable tarball (arm64) |
+| Flathub {#linux-flathub} | When listed (`com.openselfhosting.openkey`) |
+| Snap Store {#linux-snap} | When listed (`openkey`) |
+
+Desktop Autofill registers the **native messaging host** used by the [browser extension](./extension). Keep the vault unlocked while filling from the browser.
 
 ### Compiler le bureau vous-même
 
@@ -36,7 +67,7 @@ cd openkey_app
 ./build_all.sh --desktop    # or --macos / host-specific flags
 ```
 
-Voir `openkey_app/packaging/README.md` pour le packaging magasin (Play, App Store, Microsoft Store, Snap, Flathub).
+See `openkey_app/packaging/README.md` for store packaging (Play, App Store, Microsoft Store, Snap, Flathub).
 
 ## Extension navigateur
 
@@ -47,22 +78,22 @@ cd openkey_extension
 npm install && npm run build
 ```
 
-Puis chargez `dist/` dans `chrome://extensions` ou Firefox `about:debugging`. Configuration complète : [Extension navigateur](./extension).
+Then load `dist/` in `chrome://extensions` or Firefox `about:debugging`. Full setup: [Extension navigateur](./extension).
 
 ## Serveur et CLI
 
-| Paquet | Installation |
+| Package | Install |
 |---------|---------|
-| **Serveur** | Docker Compose dans `openkey_server` — [Installer le serveur](./server) |
-| **CLI** | Node 20+ dans `openkey_cli` (`npm link`) — [CLI](./cli) |
+| **Serveur** | Docker Compose in `openkey_server` — [Serveur](./server) |
+| **CLI** | Node 20+ in `openkey_cli` (`npm link`) — [CLI](./cli) |
 
-Stack locale rapide : [Démarrage rapide](./quick-start).
+Quick local stack: [Quick start](./quick-start).
 
 ## Après l’installation
 
-1. Créez ou déverrouillez un coffre avec un mot de passe principal fort ([Utiliser l’application](./app)).
-2. Optionnel : pointez **Réglages → Données → Serveur auto-hébergé** vers l’URL de votre API et synchronisez.
-3. Optionnel (Pro) : appariez des appareils avec **Nearby** pour la sync de coffre sur le LAN sans serveur — [Guide Nearby](./nearby).
-4. Sur bureau : connectez l’[extension](./extension) via Saisie automatique / Réglages Extension navigateur.
+1. Create or unlock a vault with a strong master password ([App](./app)).
+2. Optional: point **Settings → Data → Self-hosted server** at your API URL and sync.
+3. Optional (Pro): pair devices with **Nearby** for LAN vault sync without a server — [Nearby](./nearby).
+4. On desktop: connect the [extension](./extension) via Autofill / Browser extension settings.
 
 Suivant : [Utiliser l’application](./app) · [Nearby](./nearby) · [Extension navigateur](./extension) · [Installer le serveur](./server)

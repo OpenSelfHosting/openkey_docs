@@ -13,7 +13,7 @@ Los paquetes relacionados de este proyecto incluyen el [servidor](./server), la 
 
 
 
-## Gratis frente a OpenKey Pro
+## Gratis frente a OpenKey Pro {#free-vs-openkey-pro}
 
 Las funciones básicas del vault funcionan sin conexión y sin suscripción. En Android, iOS, macOS, Windows y Linux, Pro sube los límites y desbloquea extras. Las builds web aún no aplican Pro. En plataformas **sin** IAP de tienda (típicamente Windows/Linux), un par Nearby puede compartir una certificación **LAN Pro** — solo comodidad, no prueba criptográfica de compra (las plataformas con IAP ignoran LAN Pro).
 

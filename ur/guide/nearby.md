@@ -48,7 +48,7 @@ Nearby **backup نہیں**۔ Pro [encrypted `.okbak`](./import-export#encrypted-
 
 LAN پر one-off shares کے لیے استعمال کریں؛ جب peers ایک ہی self-hosted سرور استعمال کریں تو [organizations & sharing](./sharing) ترجیح دیں۔
 
-## LAN Pro attestation
+## LAN Pro attestation {#lan-pro-attestation}
 
 **بغیر** store in-app purchase والے پلیٹ فارمز پر (عام طور پر Windows / Linux)، vault-linked Pro peer **LAN Pro** status شیئر کر سکتا ہے تاکہ دوسری ڈیوائس Nearby پر Pro limits unlock کرے۔ صرف pairing کافی نہیں — پہلے **Link vault** دبائیں۔
 

@@ -13,7 +13,7 @@ OpenKey Android, iOS, macOS, Linux और Windows के लिए मोबा�
 
 
 
-## मुफ़्त बनाम OpenKey Pro
+## मुफ़्त बनाम OpenKey Pro {#free-vs-openkey-pro}
 
 मुख्य vault सुविधाएँ बिना सब्सक्रिप्शन ऑफ़लाइन चलती हैं। Android, iOS, macOS, Windows और Linux पर Pro सीमाएँ बढ़ाता और अतिरिक्त सुविधाएँ खोलता है। Web बिल्ड अभी Pro लागू नहीं करते। **स्टोर IAP रहित** प्लेटफ़ॉर्म (आमतौर पर Windows/Linux) पर पेयर Nearby **LAN Pro** attestation साझा कर सकता है — सुविधा मात्र, खरीदारी का क्रिप्टो प्रमाण नहीं।
 

@@ -17,7 +17,7 @@
 
 具体金额见 Android、iOS 和 macOS 上的 **设置 → OpenKey Pro**（及其他列出的 IAP 平台）。
 
-## 免费与 Pro
+## 免费与 Pro {#free-vs-openkey-pro}
 
 | | 免费 | Pro |
 |--|------|-----|

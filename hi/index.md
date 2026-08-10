@@ -16,21 +16,22 @@ title: OpenKey
 />
 
 <HomeSections
-  features-title="Why OpenKey"
+  features-title="OpenKey क्यों"
   :features="[
-    { title: 'Ciphertext only', body: 'Argon2id on device. The server never sees your master password or vault key.', href: '/hi/guide/security', linkLabel: 'Security model' },
-    { title: 'Self-host or Nearby', body: 'Sync through your Docker API — or pair devices on LAN with QR, no server required.', href: '/hi/guide/nearby', linkLabel: 'Nearby guide' },
-    { title: 'Autofill & passkeys', body: 'System Autofill plus a browser extension with fill shortcut and WebAuthn.', href: '/hi/guide/extension', linkLabel: 'Browser extension' },
-    { title: 'Teams still zero-knowledge', body: 'Orgs and shares encrypt with keys the server cannot unwrap.', href: '/hi/guide/sharing', linkLabel: 'Sharing & orgs' }
+    { title: 'केवल सिफरटेक्स्ट', body: 'डिवाइस पर Argon2id। सर्वर आपका मास्टर पासवर्ड या वॉल्ट कुंजी कभी नहीं देखता।', href: '/hi/guide/security', linkLabel: 'सुरक्षा मॉडल' },
+    { title: 'सेल्फ-होस्ट या Nearby', body: 'Docker API से सिंक करें — या QR से LAN पर डिवाइस पेयर करें, सर्वर की जरूरत नहीं।', href: '/hi/guide/nearby', linkLabel: 'Nearby गाइड' },
+    { title: 'Autofill और passkeys', body: 'सिस्टम Autofill के साथ ब्राउज़र एक्सटेंशन, फिल शॉर्टकट और WebAuthn।', href: '/hi/guide/extension', linkLabel: 'ब्राउज़र एक्सटेंशन' },
+    { title: 'टीमें भी ज़ीरो-नॉलेज', body: 'ऑर्ग और शेयर ऐसी कुंजियों से एन्क्रिप्ट होते हैं जिन्हें सर्वर अनरैप नहीं कर सकता।', href: '/hi/guide/sharing', linkLabel: 'शेयरिंग और ऑर्ग' }
   ]"
-  platforms-title="Runs where you do"
-  how-title="How sync stays zero-knowledge"
-  :how-steps="['Derive keys from email + master password with Argon2id', 'Send only an auth hash to log in', 'Encrypt names, entries, and attachments before upload', 'Server stores opaque ciphertext — never the vault key']"
-  cta-title="Start on your own infrastructure"
-  cta-body="Download the app, point it at your server, or pair Nearby for LAN-only sync."
-  cta-primary="Download"
+  platforms-title="जहाँ आप काम करते हैं"
+  :platforms="['Android', 'iOS', 'macOS', 'Windows', 'Linux', 'Chrome / Firefox', 'Docker सर्वर', 'CLI']"
+  how-title="सिंक ज़ीरो-नॉलेज कैसे रहता है"
+  :how-steps="['Argon2id से ईमेल + मास्टर पासवर्ड से कुंजियाँ व्युत्पन्न करें', 'लॉगिन के लिए केवल auth hash भेजें', 'अपलोड से पहले नाम, एंट्री और अटैचमेंट एन्क्रिप्ट करें', 'सर्वर अपारदर्शी सिफरटेक्स्ट रखता है — वॉल्ट कुंजी कभी नहीं']"
+  cta-title="अपने इन्फ्रा पर शुरू करें"
+  cta-body="ऐप डाउनलोड करें, सर्वर पर पॉइंट करें, या LAN-only सिंक के लिए Nearby पेयर करें।"
+  cta-primary="डाउनलोड"
   cta-secondary="शुरू करें"
-  cta-security="Read the threat model"
+  cta-security="थ्रेट मॉडल पढ़ें"
   download-link="/hi/guide/download"
   quick-start-link="/hi/guide/quick-start"
   security-link="/hi/guide/security"
