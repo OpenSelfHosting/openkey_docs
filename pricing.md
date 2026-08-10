@@ -17,7 +17,7 @@ Related: [Using the app](/guide/app#free-vs-openkey-pro) · [OpenKey Pro explain
 
 Exact amounts appear under **Settings → OpenKey Pro** on Android, iOS, and macOS (and other IAP platforms when listed).
 
-## Free vs Pro
+## Free vs Pro {#free-vs-openkey-pro}
 
 | | Free | Pro |
 |--|------|-----|

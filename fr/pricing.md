@@ -17,7 +17,7 @@ Voir aussi : [Utiliser l’application](/fr/guide/app#free-vs-openkey-pro) · [O
 
 Les montants exacts apparaissent sous **Réglages → OpenKey Pro** sur Android, iOS et macOS (et autres plateformes IAP lorsqu’elles sont listées).
 
-## Gratuit vs Pro
+## Gratuit vs Pro {#free-vs-openkey-pro}
 
 | | Gratuit | Pro |
 |--|------|-----|

@@ -17,7 +17,7 @@
 
 درست رقمیں Android، iOS اور macOS پر **Settings → OpenKey Pro** کے تحت (اور دیگر IAP پلیٹ فارمز پر جب فہرست میں ہوں)۔
 
-## مفت بمقابلہ Pro
+## مفت بمقابلہ Pro {#free-vs-openkey-pro}
 
 | | مفت | Pro |
 |--|------|-----|

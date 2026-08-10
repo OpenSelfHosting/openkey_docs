@@ -46,7 +46,7 @@ Nearby **不是**备份。请同时保留 Pro 的[加密 `.okbak`](./import-expo
 
 适合局域网上的一次性分享；若对端使用同一自托管服务器，更推荐[组织与共享](./sharing)。
 
-## LAN Pro 证明
+## LAN Pro 证明 {#lan-pro-attestation}
 
 在 **没有** 商店内购的平台（通常是 Windows / Linux）上，Pro 对端可共享 **LAN Pro** 状态，使另一台设备通过 Nearby 解锁 Pro 限额。
 

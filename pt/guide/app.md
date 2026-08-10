@@ -13,7 +13,7 @@ Os pacotes relacionados deste projeto incluem o [servidor](./server), a [extens�
 
 
 
-## Grátis vs OpenKey Pro
+## Grátis vs OpenKey Pro {#free-vs-openkey-pro}
 
 Os recursos básicos do cofre funcionam offline sem assinatura. No Android, iOS, macOS, Windows e Linux, o Pro aumenta limites e libera extras. Builds web ainda não aplicam Pro. Em plataformas **sem** IAP da loja (em geral Windows/Linux), um par Nearby pode compartilhar atestação **LAN Pro** — apenas conveniência, não prova criptográfica de compra.
 

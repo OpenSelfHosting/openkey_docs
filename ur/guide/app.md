@@ -13,7 +13,7 @@ OpenKey Android، iOS، macOS، Linux اور Windows کے لیے موبائل ا
 
 
 
-## مفت بمقابلہ OpenKey Pro
+## مفت بمقابلہ OpenKey Pro {#free-vs-openkey-pro}
 
 بنیادی والٹ خصوصیات بغیر سبسکرپشن آف لائن چلتی ہیں۔ Android، iOS، macOS، Windows اور Linux پر Pro حدیں بڑھاتا اور اضافی خصوصیات کھولتا ہے۔ Web بلڈز ابھی Pro نافذ نہیں کرتے۔ **اسٹور IAP کے بغیر** پلیٹ فارمز (عام طور پر Windows/Linux) پر جوڑا Nearby **LAN Pro** attestation شیئر کر سکتا ہے — صرف سہولت، خریداری کا کرپٹو ثبوت نہیں۔
 

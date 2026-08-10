@@ -48,7 +48,7 @@ Você pode enviar um único login a um par emparelhado sem esperar uma sincroniz
 
 Use isso para compartilhamentos pontuais na LAN; prefira [organizações e compartilhamento](./sharing) quando os pares usam o mesmo servidor auto-hospedado.
 
-## Atestação LAN Pro
+## Atestação LAN Pro {#lan-pro-attestation}
 
 Em plataformas **sem** compra dentro do app da loja (tipicamente Windows / Linux), um par Pro com cofre vinculado pode compartilhar um status **LAN Pro** para que o outro dispositivo desbloqueie os limites Pro pelo Nearby. O emparelhamento sozinho não basta — você deve tocar **Vincular cofre** primeiro.
 

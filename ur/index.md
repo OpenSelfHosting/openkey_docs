@@ -18,16 +18,17 @@ title: OpenKey
 <HomeSections
   features-title="OpenKey کیوں"
   :features="[
-    { title: 'Ciphertext only', body: 'Argon2id on device. The server never sees your master password or vault key.', href: '/ur/guide/security', linkLabel: 'Security model' },
-    { title: 'Self-host or Nearby', body: 'Sync through your Docker API — or pair devices on LAN with QR, no server required.', href: '/ur/guide/nearby', linkLabel: 'Nearby guide' },
-    { title: 'Autofill & passkeys', body: 'System Autofill plus a browser extension with fill shortcut and WebAuthn.', href: '/ur/guide/extension', linkLabel: 'Browser extension' },
-    { title: 'Teams still zero-knowledge', body: 'Orgs and shares encrypt with keys the server cannot unwrap.', href: '/ur/guide/sharing', linkLabel: 'Sharing & orgs' }
+    { title: 'صرف سائفر ٹیکسٹ', body: 'ڈیوائس پر Argon2id۔ سرور آپ کا ماسٹر پاس ورڈ یا والٹ کی کبھی نہیں دیکھتا۔', href: '/ur/guide/security', linkLabel: 'سیکیورٹی ماڈل' },
+    { title: 'سیلف ہوسٹ یا Nearby', body: 'Docker API سے سنک — یا QR سے LAN پر ڈیوائسز جوڑیں، سرور کی ضرورت نہیں۔', href: '/ur/guide/nearby', linkLabel: 'Nearby گائیڈ' },
+    { title: 'Autofill اور passkeys', body: 'سسٹم Autofill کے ساتھ براؤزر ایکسٹینشن، فل شارٹ کٹ اور WebAuthn۔', href: '/ur/guide/extension', linkLabel: 'براؤزر ایکسٹینشن' },
+    { title: 'ٹیمیں بھی زیرو نالج', body: 'Orgs اور shares ایسی کیز سے encrypt جو سرور unwrap نہیں کر سکتا۔', href: '/ur/guide/sharing', linkLabel: 'شیئرنگ اور orgs' }
   ]"
   platforms-title="جہاں آپ کام کرتے ہیں"
+  :platforms="['Android', 'iOS', 'macOS', 'Windows', 'Linux', 'Chrome / Firefox', 'Docker سرور', 'CLI']"
   how-title="سنک زیرو نالج کیسے رہتی ہے"
-  :how-steps="['Derive keys from email + master password with Argon2id', 'Send only an auth hash to log in', 'Encrypt names, entries, and attachments before upload', 'Server stores opaque ciphertext — never the vault key']"
+  :how-steps="['Argon2id سے ای میل + ماسٹر پاس ورڈ سے کیز بنائیں', 'لاگ ان کے لیے صرف auth hash بھیجیں', 'اپ لوڈ سے پہلے نام، entries اور attachments encrypt کریں', 'سرور opaque ciphertext رکھتا ہے — والٹ کی کبھی نہیں']"
   cta-title="اپنی انفرا پر شروع کریں"
-  cta-body="ایپ ڈاؤن لوڈ کریں، سرور لگائیں، یا Nearby سے LAN سنک۔"
+  cta-body="ایپ ڈاؤن لوڈ کریں، سرور لگائیں، یا LAN-only سنک کے لیے Nearby جوڑیں۔"
   cta-primary="ڈاؤن لوڈ"
   cta-secondary="شروع کریں"
   cta-security="تھریٹ ماڈل پڑھیں"

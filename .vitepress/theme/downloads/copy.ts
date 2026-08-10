@@ -190,18 +190,286 @@ const ar: DownloadCopy = {
   variant: {
     windowsX64: 'المثبّت (x64)',
     windowsArm64: 'المثبّت (Arm64)',
+    windowsStore: 'Microsoft Store',
     macosArm64: '.dmg Apple Silicon',
     macosX64: '.dmg Intel',
     macosUniversal: '.dmg Universal',
+    macosAppStore: 'Mac App Store',
     linuxDebX64: '.deb x64',
     linuxDebArm64: '.deb Arm64',
     linuxTarX64: '.tar.gz x64',
     linuxTarArm64: '.tar.gz Arm64',
+    linuxFlathub: 'Flathub',
+    linuxSnap: 'Snap Store',
     androidPlay: 'Google Play',
     androidApk: 'APK (تثبيت جانبي)',
     iosAppStore: 'App Store',
   },
   installSteps: arInstall,
+}
+
+const zhInstall: Record<OsId, string[]> = {
+  windows: [
+    '从“下载”文件夹打开安装程序（或 .zip）。',
+    '若出现 Windows SmartScreen，对已签名的 OpenSelfHosting 构建选择“更多信息”→“仍要运行”。',
+    '完成安装后启动 OpenKey，创建或解锁保险库。',
+    '可选：在设置中启用自动填充，以便浏览器扩展填充密码。',
+  ],
+  macos: [
+    '打开 .dmg，将 OpenKey 拖入“应用程序”。',
+    '首次启动时，若 Gatekeeper 提示，请右键→打开以确认。',
+    '用强主密码创建或解锁保险库。',
+    '可选：在系统设置 / OpenKey 设置中启用自动填充。',
+  ],
+  linux: [
+    '用包管理器安装 .deb，或将 .tar.gz 解压到您拥有的目录。',
+    '从应用菜单或解压后的二进制文件启动 openkey_app。',
+    '创建或解锁保险库，可选在设置→数据中指向您的服务器。',
+    '桌面自动填充会为浏览器扩展注册原生消息主机。',
+  ],
+  android: [
+    '从 Google Play 安装，或使用直接构建侧载 APK。',
+    '打开 OpenKey 并创建或解锁保险库。',
+    '在系统设置中启用自动填充，以便 OpenKey 填充密码与通行密钥。',
+    '可选：连接自托管服务器或在局域网配对 Nearby。',
+  ],
+  ios: [
+    'App Store 上架后从商店安装。',
+    '打开 OpenKey 并创建或解锁保险库。',
+    '在 iOS 设置中为 OpenKey 启用自动填充 / 密码提供程序。',
+    '可选：连接服务器或使用 Nearby 做局域网同步（Pro）。',
+  ],
+}
+
+const esInstall: Record<OsId, string[]> = {
+  windows: [
+    'Abre el instalador (o .zip) descargado desde la carpeta Descargas.',
+    'Si aparece SmartScreen, elige Más información → Ejecutar de todos modos para una build firmada de OpenSelfHosting.',
+    'Termina la instalación, inicia OpenKey y crea o desbloquea tu vault.',
+    'Opcional: activa Autocompletar en Ajustes para que la extensión del navegador rellene contraseñas.',
+  ],
+  macos: [
+    'Abre el .dmg y arrastra OpenKey a Aplicaciones.',
+    'En el primer inicio, clic derecho → Abrir si Gatekeeper pide confirmación.',
+    'Crea o desbloquea tu vault con una contraseña maestra fuerte.',
+    'Opcional: activa Autocompletar en Ajustes del sistema / OpenKey.',
+  ],
+  linux: [
+    'Instala el .deb con tu gestor de paquetes o extrae el .tar.gz a una carpeta tuya.',
+    'Inicia openkey_app desde el menú de aplicaciones o el binario extraído.',
+    'Crea o desbloquea tu vault; opcionalmente apunta Ajustes → Datos a tu servidor.',
+    'Autocompletar de escritorio registra el host de mensajería nativa para la extensión.',
+  ],
+  android: [
+    'Instala desde Google Play o sideload el APK si usas una build directa.',
+    'Abre OpenKey y crea o desbloquea tu vault.',
+    'Activa Autocompletar en ajustes del sistema para que OpenKey rellene contraseñas y passkeys.',
+    'Opcional: conecta tu servidor autoalojado o empareja Nearby en la LAN.',
+  ],
+  ios: [
+    'Instala desde App Store cuando la ficha esté activa.',
+    'Abre OpenKey y crea o desbloquea tu vault.',
+    'Activa Autocompletar / proveedor de contraseñas para OpenKey en Ajustes de iOS.',
+    'Opcional: conecta tu servidor o usa Nearby para sync en LAN (Pro).',
+  ],
+}
+
+const frInstall: Record<OsId, string[]> = {
+  windows: [
+    'Ouvrez l’installateur (ou .zip) téléchargé depuis le dossier Téléchargements.',
+    'Si SmartScreen apparaît, choisissez Plus d’infos → Exécuter quand même pour une build signée OpenSelfHosting.',
+    'Terminez l’installation, lancez OpenKey et créez ou déverrouillez votre coffre.',
+    'Optionnel : activez Saisie automatique dans Réglages pour l’extension navigateur.',
+  ],
+  macos: [
+    'Ouvrez le .dmg et glissez OpenKey dans Applications.',
+    'Au premier lancement, clic droit → Ouvrir si Gatekeeper demande confirmation.',
+    'Créez ou déverrouillez votre coffre avec un mot de passe principal fort.',
+    'Optionnel : activez Saisie automatique dans Réglages système / OpenKey.',
+  ],
+  linux: [
+    'Installez le .deb avec votre gestionnaire de paquets ou extrayez le .tar.gz dans un dossier que vous possédez.',
+    'Lancez openkey_app depuis le menu ou le binaire extrait.',
+    'Créez ou déverrouillez votre coffre ; pointez optionnellement Réglages → Données vers votre serveur.',
+    'L’Autofill bureau enregistre l’hôte de messagerie native pour l’extension.',
+  ],
+  android: [
+    'Installez depuis Google Play ou sideload l’APK si vous utilisez une build directe.',
+    'Ouvrez OpenKey et créez ou déverrouillez votre coffre.',
+    'Activez Saisie automatique dans les réglages système pour remplir mots de passe et passkeys.',
+    'Optionnel : connectez votre serveur auto-hébergé ou appariez Nearby sur le LAN.',
+  ],
+  ios: [
+    'Installez depuis l’App Store lorsque la fiche est en ligne.',
+    'Ouvrez OpenKey et créez ou déverrouillez votre coffre.',
+    'Activez Saisie automatique / fournisseur de mots de passe pour OpenKey dans Réglages iOS.',
+    'Optionnel : connectez votre serveur ou utilisez Nearby pour la sync LAN (Pro).',
+  ],
+}
+
+const hiInstall: Record<OsId, string[]> = {
+  windows: [
+    'डाउनलोड फ़ोल्डर से इंस्टॉलर (या .zip) खोलें।',
+    'SmartScreen आए तो OpenSelfHosting साइन्ड बिल्ड के लिए अधिक जानकारी → फिर भी चलाएँ।',
+    'सेटअप पूरा करें, OpenKey चलाएँ और वॉल्ट बनाएँ या अनलॉक करें।',
+    'वैकल्पिक: सेटिंग्स में Autofill सक्षम करें ताकि एक्सटेंशन पासवर्ड भर सके।',
+  ],
+  macos: [
+    '.dmg खोलें और OpenKey को Applications में खींचें।',
+    'पहली बार चलाते समय Gatekeeper पूछे तो राइट-क्लिक → खोलें।',
+    'मजबूत मास्टर पासवर्ड से वॉल्ट बनाएँ या अनलॉक करें।',
+    'वैकल्पिक: सिस्टम सेटिंग्स / OpenKey में Autofill सक्षम करें।',
+  ],
+  linux: [
+    '.deb पैकेज मैनेजर से इंस्टॉल करें, या .tar.gz अपने फ़ोल्डर में निकालें।',
+    'ऐप मेनू या बाइनरी से openkey_app चलाएँ।',
+    'वॉल्ट बनाएँ/अनलॉक करें; वैकल्पिक सेटिंग्स → डेटा में सर्वर सेट करें।',
+    'डेस्कटॉप Autofill ब्राउज़र एक्सटेंशन के लिए native messaging host रजिस्टर करता है।',
+  ],
+  android: [
+    'Google Play से इंस्टॉल करें, या सीधे APK साइडलोड करें।',
+    'OpenKey खोलें और वॉल्ट बनाएँ/अनलॉक करें।',
+    'सिस्टम सेटिंग्स में Autofill सक्षम करें।',
+    'वैकल्पिक: सर्वर कनेक्ट करें या LAN पर Nearby पेयर करें।',
+  ],
+  ios: [
+    'App Store लिस्टिंग के बाद इंस्टॉल करें।',
+    'OpenKey खोलें और वॉल्ट बनाएँ/अनलॉक करें।',
+    'iOS सेटिंग्स में OpenKey के लिए Autofill सक्षम करें।',
+    'वैकल्पिक: सर्वर या Nearby LAN सिंक (Pro)।',
+  ],
+}
+
+const bnInstall: Record<OsId, string[]> = {
+  windows: [
+    'ডাউনলোড ফোল্ডার থেকে ইনস্টলার (বা .zip) খুলুন।',
+    'SmartScreen এলে OpenSelfHosting সাইন্ড বিল্ডের জন্য আরও তথ্য → যাই হোক চালান।',
+    'সেটআপ শেষ করে OpenKey চালু করুন এবং ভল্ট তৈরি/আনলক করুন।',
+    'ঐচ্ছিক: সেটিংসে Autofill চালু করুন যাতে এক্সটেনশন পাসওয়ার্ড পূরণ করে।',
+  ],
+  macos: [
+    '.dmg খুলে OpenKey Applications-এ টানুন।',
+    'প্রথম চালুতে Gatekeeper জিজ্ঞেস করলে রাইট-ক্লিক → খুলুন।',
+    'শক্তিশালী মাস্টার পাসওয়ার্ডে ভল্ট তৈরি/আনলক করুন।',
+    'ঐচ্ছিক: সিস্টেম সেটিংস / OpenKey-তে Autofill চালু করুন।',
+  ],
+  linux: [
+    'প্যাকেজ ম্যানেজারে .deb ইনস্টল করুন বা .tar.gz নিজের ফোল্ডারে এক্সট্র্যাক্ট করুন।',
+    'অ্যাপ মেনু বা বাইনারি থেকে openkey_app চালু করুন।',
+    'ভল্ট তৈরি/আনলক করুন; ঐচ্ছিক সেটিংস → ডেটায় সার্ভার সেট করুন।',
+    'ডেস্কটপ Autofill ব্রাউজার এক্সটেনশনের জন্য native messaging host রেজিস্টার করে।',
+  ],
+  android: [
+    'Google Play থেকে ইনস্টল করুন বা সরাসরি APK সাইডলোড করুন।',
+    'OpenKey খুলে ভল্ট তৈরি/আনলক করুন।',
+    'সিস্টেম সেটিংসে Autofill চালু করুন।',
+    'ঐচ্ছিক: সার্ভার সংযুক্ত করুন বা LAN-এ Nearby পেয়ার করুন।',
+  ],
+  ios: [
+    'App Store লিস্টিংয়ের পর ইনস্টল করুন।',
+    'OpenKey খুলে ভল্ট তৈরি/আনলক করুন।',
+    'iOS সেটিংসে OpenKey-এর জন্য Autofill চালু করুন।',
+    'ঐচ্ছিক: সার্ভার বা Nearby LAN সিঙ্ক (Pro)।',
+  ],
+}
+
+const ptInstall: Record<OsId, string[]> = {
+  windows: [
+    'Abra o instalador (ou .zip) baixado na pasta Downloads.',
+    'Se o SmartScreen aparecer, escolha Mais informações → Executar mesmo assim para build assinada da OpenSelfHosting.',
+    'Conclua a instalação, inicie o OpenKey e crie ou desbloqueie o cofre.',
+    'Opcional: ative Preenchimento automático em Configurações para a extensão preencher senhas.',
+  ],
+  macos: [
+    'Abra o .dmg e arraste o OpenKey para Aplicativos.',
+    'Na primeira execução, clique com o botão direito → Abrir se o Gatekeeper pedir confirmação.',
+    'Crie ou desbloqueie o cofre com uma senha mestra forte.',
+    'Opcional: ative Preenchimento automático nas Configurações do sistema / OpenKey.',
+  ],
+  linux: [
+    'Instale o .deb com o gerenciador de pacotes ou extraia o .tar.gz para uma pasta sua.',
+    'Inicie openkey_app pelo menu ou binário extraído.',
+    'Crie ou desbloqueie o cofre; opcionalmente aponte Configurações → Dados ao servidor.',
+    'Preenchimento automático no desktop registra o host de mensagens nativas para a extensão.',
+  ],
+  android: [
+    'Instale pela Google Play ou sideload o APK se usar build direta.',
+    'Abra o OpenKey e crie ou desbloqueie o cofre.',
+    'Ative Preenchimento automático nas configurações do sistema.',
+    'Opcional: conecte servidor auto-hospedado ou emparelhe Nearby na LAN.',
+  ],
+  ios: [
+    'Instale pela App Store quando a listagem estiver ativa.',
+    'Abra o OpenKey e crie ou desbloqueie o cofre.',
+    'Ative Preenchimento automático / provedor de senhas do OpenKey nas Configurações do iOS.',
+    'Opcional: conecte servidor ou use Nearby para sync na LAN (Pro).',
+  ],
+}
+
+const ruInstall: Record<OsId, string[]> = {
+  windows: [
+    'Откройте установщик (или .zip) из папки «Загрузки».',
+    'Если появится SmartScreen, выберите «Подробнее» → «Выполнить в любом случае» для подписанной сборки OpenSelfHosting.',
+    'Завершите установку, запустите OpenKey и создайте или разблокируйте сейф.',
+    'Необязательно: включите автозаполнение в настройках для расширения браузера.',
+  ],
+  macos: [
+    'Откройте .dmg и перетащите OpenKey в «Программы».',
+    'При первом запуске: правый клик → «Открыть», если Gatekeeper запросит подтверждение.',
+    'Создайте или разблокируйте сейф с надёжным мастер-паролем.',
+    'Необязательно: включите автозаполнение в настройках системы / OpenKey.',
+  ],
+  linux: [
+    'Установите .deb через менеджер пакетов или распакуйте .tar.gz в свою папку.',
+    'Запустите openkey_app из меню приложений или из распакованного бинарника.',
+    'Создайте или разблокируйте сейф; при необходимости укажите сервер в Настройки → Данные.',
+    'Автозаполнение на рабочем столе регистрирует native messaging host для расширения.',
+  ],
+  android: [
+    'Установите из Google Play или sideload APK при прямой сборке.',
+    'Откройте OpenKey и создайте или разблокируйте сейф.',
+    'Включите автозаполнение в настройках системы.',
+    'Необязательно: подключите сервер или спарьте Nearby в LAN.',
+  ],
+  ios: [
+    'Установите из App Store после публикации листинга.',
+    'Откройте OpenKey и создайте или разблокируйте сейф.',
+    'Включите автозаполнение / провайдер паролей OpenKey в настройках iOS.',
+    'Необязательно: подключите сервер или используйте Nearby для синхронизации по LAN (Pro).',
+  ],
+}
+
+const urInstall: Record<OsId, string[]> = {
+  windows: [
+    'ڈاؤن لوڈ فولڈر سے انسٹالر (یا .zip) کھولیں۔',
+    'SmartScreen آئے تو OpenSelfHosting سائنڈ بلڈ کے لیے مزید معلومات → پھر بھی چلائیں۔',
+    'سیٹ اپ مکمل کریں، OpenKey چلائیں اور والٹ بنائیں یا ان لاک کریں۔',
+    'اختیاری: سیٹنگز میں Autofill فعال کریں تاکہ ایکسٹینشن پاس ورڈ بھر سکے۔',
+  ],
+  macos: [
+    '.dmg کھولیں اور OpenKey کو Applications میں کھینچیں۔',
+    'پہلی بار چلاتے وقت Gatekeeper پوچھے تو دائیں کلک → کھولیں۔',
+    'مضبوط ماسٹر پاس ورڈ سے والٹ بنائیں یا ان لاک کریں۔',
+    'اختیاری: سسٹم سیٹنگز / OpenKey میں Autofill فعال کریں۔',
+  ],
+  linux: [
+    '.deb پیکیج مینیجر سے انسٹال کریں، یا .tar.gz اپنے فولڈر میں نکالیں۔',
+    'ایپ مینو یا بائنری سے openkey_app چلائیں۔',
+    'والٹ بنائیں/ان لاک کریں؛ اختیاری سیٹنگز → ڈیٹا میں سرور سیٹ کریں۔',
+    'ڈیسک ٹاپ Autofill براؤزر ایکسٹینشن کے لیے native messaging host رجسٹر کرتا ہے۔',
+  ],
+  android: [
+    'Google Play سے انسٹال کریں، یا براہ راست APK سائیڈلوڈ کریں۔',
+    'OpenKey کھولیں اور والٹ بنائیں/ان لاک کریں۔',
+    'سسٹم سیٹنگز میں Autofill فعال کریں۔',
+    'اختیاری: سرور منسلک کریں یا LAN پر Nearby جوڑیں۔',
+  ],
+  ios: [
+    'App Store لسٹنگ کے بعد انسٹال کریں۔',
+    'OpenKey کھولیں اور والٹ بنائیں/ان لاک کریں۔',
+    'iOS سیٹنگز میں OpenKey کے لیے Autofill فعال کریں۔',
+    'اختیاری: سرور یا Nearby LAN سنک (Pro)۔',
+  ],
 }
 
 const zh: DownloadCopy = {
@@ -239,7 +507,13 @@ const zh: DownloadCopy = {
     windowsArm64: '安装包 (Arm64)',
     androidPlay: 'Google Play',
     androidApk: 'APK（侧载）',
+    iosAppStore: 'App Store',
+    windowsStore: 'Microsoft Store',
+    macosAppStore: 'Mac App Store',
+    linuxFlathub: 'Flathub',
+    linuxSnap: 'Snap 商店',
   },
+  installSteps: zhInstall,
 }
 
 const es: DownloadCopy = {
@@ -251,6 +525,8 @@ const es: DownloadCopy = {
   yourOs: 'Tu SO',
   pickBuild: 'Elige una descarga…',
   platformsHeading: 'Descargar OpenKey',
+  channelsNote:
+    'Las fichas de tienda y las Releases de GitHub se despliegan por plataforma. Hasta que un canal esté activo, la guía abajo cubre tiendas, sideload y compilación desde el código.',
   getStarted: 'Empezar',
   unknownCta: 'Descargar',
   thanksTitle: 'Gracias por descargar OpenKey',
@@ -263,6 +539,7 @@ const es: DownloadCopy = {
   otherBuilds: 'Otras plataformas',
   backToDownload: 'Volver a descargas',
   openGuide: 'Notas de instalación',
+  installSteps: esInstall,
 }
 
 const fr: DownloadCopy = {
@@ -274,6 +551,8 @@ const fr: DownloadCopy = {
   yourOs: 'Votre OS',
   pickBuild: 'Choisir un téléchargement…',
   platformsHeading: 'Télécharger OpenKey',
+  channelsNote:
+    'Les fiches magasin et les GitHub Releases se déploient par plateforme. Tant qu’un canal n’est pas en ligne, le guide ci-dessous couvre magasins, sideload et compilation depuis les sources.',
   getStarted: 'Commencer',
   unknownCta: 'Télécharger',
   thanksTitle: 'Merci d’avoir téléchargé OpenKey',
@@ -286,6 +565,7 @@ const fr: DownloadCopy = {
   otherBuilds: 'Autres plateformes',
   backToDownload: 'Retour au téléchargement',
   openGuide: 'Notes d’installation',
+  installSteps: frInstall,
 }
 
 const hi: DownloadCopy = {
@@ -318,6 +598,7 @@ const hi: DownloadCopy = {
     android: 'Google Play · जरूरत पर APK साइडलोड',
     ios: 'लिस्टिंग के बाद App Store',
   },
+  installSteps: hiInstall,
 }
 
 const bn: DownloadCopy = {
@@ -350,6 +631,7 @@ const bn: DownloadCopy = {
     android: 'Google Play · প্রয়োজনে APK সাইডলোড',
     ios: 'লিস্টিংয়ের পর App Store',
   },
+  installSteps: bnInstall,
 }
 
 const pt: DownloadCopy = {
@@ -375,6 +657,7 @@ const pt: DownloadCopy = {
   otherBuilds: 'Outras plataformas e builds',
   backToDownload: 'Voltar ao download',
   openGuide: 'Notas de instalação',
+  installSteps: ptInstall,
 }
 
 const ru: DownloadCopy = {
@@ -400,6 +683,7 @@ const ru: DownloadCopy = {
   otherBuilds: 'Другие платформы и сборки',
   backToDownload: 'Назад к загрузке',
   openGuide: 'Инструкция по установке',
+  installSteps: ruInstall,
 }
 
 const ur: DownloadCopy = {
@@ -425,6 +709,7 @@ const ur: DownloadCopy = {
   otherBuilds: 'دیگر پلیٹ فارمز اور بلڈز',
   backToDownload: 'ڈاؤن لوڈ پر واپس',
   openGuide: 'انسٹال نوٹس',
+  installSteps: urInstall,
 }
 
 const copyByLang: Record<string, DownloadCopy> = {

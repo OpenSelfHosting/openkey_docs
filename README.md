@@ -13,7 +13,7 @@ npm run dev
 
 Guide pages cover overview, security, quick start, **download & install**, **server install + client linking**, **using the app**, **Nearby LAN sync**, **browser extension**, **CLI**, **sharing & orgs**, **import & export**, **FAQ & troubleshooting**, **changelog**, and open packages.
 
-**Translation policy:** English and Arabic are the full references. **Chinese (zh), Spanish (es), and French (fr)** have full major guides (Nearby, extension, FAQ, sharing, import/export, download, security, changelog, server API). Other locales keep full overview / quick-start / packages / CLI / app / server, with richer stubs that link to EN/AR for the longest pages.
+**Translation policy:** English and Arabic are the full references. **Chinese (zh), Spanish (es), and French (fr)** have full major guides (Nearby, extension, FAQ, sharing, import/export, download, security, changelog, server API). **Hindi, Bengali, Portuguese, Russian, and Urdu** have full overview / quick-start / packages / CLI / app / server / download (with stable install anchors), localized home sections, and blog posts; changelog and security remain partial stubs linking to EN/AR. **Pricing, privacy, and terms** are substantive in all locales (zh legal pages are shorter summaries).
 
 Blog posts live under `blog/` (English) and `ar/blog/` (Arabic), with full translations in every supported locale. Add a Markdown file with `date`, `description`, and `cover` frontmatter, put the image in `public/blog/covers/`, and register the sidebar entry in `.vitepress/blogPosts.ts` (titles are read from frontmatter).
 

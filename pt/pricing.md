@@ -17,7 +17,7 @@ Relacionado: [Usar o app](/pt/guide/app#grátis-vs-openkey-pro) · [OpenKey Pro 
 
 Os valores exatos aparecem em **Configurações → OpenKey Pro** no Android, iOS e macOS (e em outras plataformas IAP quando listadas).
 
-## Grátis vs Pro
+## Grátis vs Pro {#free-vs-openkey-pro}
 
 | | Grátis | Pro |
 |--|------|-----|

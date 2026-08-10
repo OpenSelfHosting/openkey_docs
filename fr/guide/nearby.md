@@ -46,7 +46,7 @@ Vous pouvez pousser une seule connexion vers un pair apparié sans attendre une 
 
 Utilisez ceci pour des partages ponctuels sur le LAN ; préférez [organisations et partage](./sharing) lorsque les pairs utilisent le même serveur auto-hébergé.
 
-## Attestation LAN Pro
+## Attestation LAN Pro {#lan-pro-attestation}
 
 Sur les plateformes **sans** achat in-app magasin (typiquement Windows / Linux), un pair Pro peut partager un statut **LAN Pro** pour que l’autre appareil débloque les limites Pro via Nearby.
 

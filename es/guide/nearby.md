@@ -46,7 +46,7 @@ Puedes enviar un único inicio de sesión a un par emparejado sin esperar una sy
 
 Úsalo para comparticiones puntuales en la LAN; prefiere [organizaciones y compartición](./sharing) cuando los pares usen el mismo servidor autoalojado.
 
-## Certificación LAN Pro
+## Certificación LAN Pro {#lan-pro-attestation}
 
 En plataformas **sin** compra dentro de la app de tienda (típicamente Windows / Linux), un par Pro puede compartir un estado **LAN Pro** para que el otro dispositivo desbloquee los límites Pro por Nearby.
 
