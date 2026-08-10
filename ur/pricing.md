@@ -4,7 +4,7 @@
 
 اسٹور کی قیمتیں علاقے کے مطابق Apple / Google / Microsoft billing میں مقرر ہوتی ہیں اور خرید کے وقت ایپ میں دکھائی جاتی ہیں۔ یہ صفحہ بتاتا ہے کہ **آپ کو کیا ملتا ہے** اور **کیسے خریدیں** — USD کی فکسڈ ٹیبل نہیں (اسٹورز کرنسی اور ٹیکس localize کرتے ہیں)۔
 
-متعلقہ: [ایپ کا استعمال](/ur/guide/app#مفت-بمقابلہ-openkey-pro) · [OpenKey Pro کی وضاحت](/blog/openkey-pro) · [ڈاؤن لوڈ](/ur/guide/download) · [شرائط](/ur/terms)
+متعلقہ: [ایپ کا استعمال](/ur/guide/app#مفت-بمقابلہ-openkey-pro) · [OpenKey Pro کی وضاحت](/ur/blog/openkey-pro) · [ڈاؤن لوڈ](/ur/guide/download) · [شرائط](/ur/terms)
 
 ## منصوبے
 
@@ -89,4 +89,4 @@ Refunds اسٹور کی پالیسیوں کے مطابق۔ دیکھیں [سرو�
 
 - [OpenKey ڈاؤن لوڈ کریں](/ur/guide/download)
 - [فوری آغاز](/ur/guide/quick-start)
-- [بغیر سرور Nearby](/blog/nearby-without-a-server) (Pro)
+- [بغیر سرور Nearby](/ur/blog/nearby-without-a-server) (Pro)

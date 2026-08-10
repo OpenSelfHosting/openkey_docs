@@ -15,7 +15,7 @@ Guide pages cover overview, security, quick start, **download & install**, **ser
 
 **Translation policy:** English and Arabic are the full references. **Chinese (zh), Spanish (es), and French (fr)** have full major guides (Nearby, extension, FAQ, sharing, import/export, download, security, changelog, server API). Other locales keep full overview / quick-start / packages / CLI / app / server, with richer stubs that link to EN/AR for the longest pages.
 
-Blog posts live under `blog/` (English) and `ar/blog/` (Arabic). Every other locale has a `blog/index.md` that lists the English posts (and missing translated post URLs fall back to `/blog/...`). Add a Markdown file with `date`, `description`, and `cover` frontmatter, put the image in `public/blog/covers/`, and register the sidebar entry in `blogPosts` inside `.vitepress/config.ts`.
+Blog posts live under `blog/` (English) and `ar/blog/` (Arabic), with full translations in every supported locale. Add a Markdown file with `date`, `description`, and `cover` frontmatter, put the image in `public/blog/covers/`, and register the sidebar entry in `.vitepress/blogPosts.ts` (titles are read from frontmatter).
 
 Security reporting: see [guide/security.md](./guide/security.md#reporting-vulnerabilities) and `SECURITY.md` in this package / the monorepo root.
 

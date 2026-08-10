@@ -4,7 +4,7 @@
 
 Store prices Apple / Google / Microsoft billing में region के अनुसार सेट होते हैं और purchase time पर app में दिखते हैं। यह पेज **आपको क्या मिलता है** और **कैसे खरीदें** समझाता है — fixed USD table नहीं (stores currency और tax localize करते हैं)।
 
-संबंधित: [ऐप का उपयोग](/hi/guide/app#free-vs-openkey-pro) · [OpenKey Pro explained](/blog/openkey-pro) · [Download](/hi/guide/download) · [शर्तें](/hi/terms)
+संबंधित: [ऐप का उपयोग](/hi/guide/app#free-vs-openkey-pro) · [OpenKey Pro explained](/hi/blog/openkey-pro) · [Download](/hi/guide/download) · [शर्तें](/hi/terms)
 
 ## Plans
 
@@ -89,4 +89,4 @@ Stores regional prices बदल सकते हैं। In-app paywall हम
 
 - [OpenKey download](/hi/guide/download)
 - [Quick start](/hi/guide/quick-start)
-- [Server बिना Nearby](/blog/nearby-without-a-server) (Pro)
+- [Server बिना Nearby](/hi/blog/nearby-without-a-server) (Pro)
