@@ -1,6 +1,6 @@
 # Nearby LAN সিঙ্ক
 
-Guía / guide full text: [English](/guide/nearby) · [العربية](/ar/guide/nearby)
+সম্পূর্ণ গাইড: [English](/guide/nearby) · [العربية](/ar/guide/nearby)
 
 **Quick path:** Pro → Settings → Nearby → prefer QR pair → **Link vault** → same Wi‑Fi. Not a backup (use `.okbak`).
 

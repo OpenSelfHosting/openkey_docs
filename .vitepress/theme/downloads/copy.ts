@@ -284,12 +284,156 @@ const fr: DownloadCopy = {
   openGuide: 'Notes d’installation',
 }
 
+const hi: DownloadCopy = {
+  ...en,
+  detectedLead: 'हमने आपके डिवाइस के लिए सही बिल्ड चुना है — एक क्लिक और शुरू करें।',
+  downloadFor: (platformLabel) => `${platformLabel} के लिए डाउनलोड`,
+  otherDownloads: 'अन्य डाउनलोड',
+  allPlatforms: 'सभी प्लेटफ़ॉर्म',
+  yourOs: 'आपका OS',
+  pickBuild: 'डाउनलोड चुनें…',
+  platformsHeading: 'OpenKey डाउनलोड',
+  channelsNote:
+    'स्टोर लिस्टिंग और GitHub Releases धीरे-धीरे आते हैं। जब तक चैनल लाइव न हो, नीचे का गाइड स्टोर, साइडलोड और सोर्स बिल्ड कवर करता है।',
+  getStarted: 'शुरू करें',
+  unknownCta: 'डाउनलोड',
+  thanksTitle: 'OpenKey डाउनलोड के लिए धन्यवाद',
+  thanksLead: (platformLabel, buildLabel) => `${platformLabel} · ${buildLabel} के लिए तैयार।`,
+  thanksPending:
+    'इस बिल्ड का बाइनरी चैनल अभी सार्वजनिक नहीं है। रिलीज़ लाइव होने पर पुनः प्रयास करें, या नीचे की गाइड देखें।',
+  thanksStarted: 'डाउनलोड स्वचालित रूप से शुरू होना चाहिए। नहीं हुआ तो पुनः प्रयास करें।',
+  installHeading: 'इंस्टॉल करें',
+  retryDownload: 'डाउनलोड पुनः प्रयास',
+  otherBuilds: 'अन्य प्लेटफ़ॉर्म और बिल्ड',
+  backToDownload: 'डाउनलोड पर वापस',
+  openGuide: 'इंस्टॉल नोट्स',
+  requirement: {
+    windows: 'Windows 10 या 11 (64-बिट) आवश्यक',
+    macos: 'macOS 10.15 या नया आवश्यक',
+    linux: 'Debian/Ubuntu · Fedora/RHEL · पोर्टेबल .tar.gz',
+    android: 'Google Play · जरूरत पर APK साइडलोड',
+    ios: 'लिस्टिंग के बाद App Store',
+  },
+}
+
+const bn: DownloadCopy = {
+  ...en,
+  detectedLead: 'আপনার ডিভাইসের জন্য সঠিক বিল্ড বেছে নিয়েছি — এক ক্লিকে শুরু করুন।',
+  downloadFor: (platformLabel) => `${platformLabel}-এর জন্য ডাউনলোড`,
+  otherDownloads: 'অন্যান্য ডাউনলোড',
+  allPlatforms: 'সব প্ল্যাটফর্ম',
+  yourOs: 'আপনার OS',
+  pickBuild: 'ডাউনলোড বেছে নিন…',
+  platformsHeading: 'OpenKey ডাউনলোড',
+  channelsNote:
+    'স্টোর লিস্টিং ও GitHub Releases ধীরে ধীরে আসে। চ্যানেল লাইভ না হওয়া পর্যন্ত নিচের গাইড স্টোর, সাইডলোড ও সোর্স বিল্ড কভার করে।',
+  getStarted: 'শুরু করুন',
+  unknownCta: 'ডাউনলোড',
+  thanksTitle: 'OpenKey ডাউনলোডের জন্য ধন্যবাদ',
+  thanksLead: (platformLabel, buildLabel) => `${platformLabel} · ${buildLabel}-এর জন্য প্রস্তুত।`,
+  thanksPending:
+    'এই বিল্ডের বাইনারি চ্যানেল এখনও সার্বজনীন নয়। রিলিজ লাইভ হলে আবার চেষ্টা করুন, অথবা নিচের গাইড দেখুন।',
+  thanksStarted: 'ডাউনলোড স্বয়ংক্রিয়ভাবে শুরু হওয়া উচিত। না হলে আবার চেষ্টা করুন।',
+  installHeading: 'ইনস্টল করুন',
+  retryDownload: 'ডাউনলোড আবার চেষ্টা',
+  otherBuilds: 'অন্যান্য প্ল্যাটফর্ম ও বিল্ড',
+  backToDownload: 'ডাউনলোডে ফিরে যান',
+  openGuide: 'ইনস্টল নোট',
+  requirement: {
+    windows: 'Windows 10 বা 11 (64-বিট) প্রয়োজন',
+    macos: 'macOS 10.15 বা নতুন প্রয়োজন',
+    linux: 'Debian/Ubuntu · Fedora/RHEL · পোর্টেবল .tar.gz',
+    android: 'Google Play · প্রয়োজনে APK সাইডলোড',
+    ios: 'লিস্টিংয়ের পর App Store',
+  },
+}
+
+const pt: DownloadCopy = {
+  ...en,
+  detectedLead: 'Escolhemos o build certo para o seu dispositivo — um clique e pronto.',
+  downloadFor: (platformLabel) => `Baixar para ${platformLabel}`,
+  otherDownloads: 'Outros downloads',
+  allPlatforms: 'Todas as plataformas',
+  yourOs: 'Seu SO',
+  pickBuild: 'Escolha um download…',
+  platformsHeading: 'Baixar OpenKey',
+  channelsNote:
+    'Listagens nas lojas e GitHub Releases são lançadas por plataforma. Até o canal ficar ativo, o guia abaixo cobre lojas, sideload e build a partir do código.',
+  getStarted: 'Começar',
+  unknownCta: 'Baixar',
+  thanksTitle: 'Obrigado por baixar o OpenKey',
+  thanksLead: (platformLabel, buildLabel) => `Pronto para ${platformLabel} · ${buildLabel}.`,
+  thanksPending:
+    'O canal binário deste build ainda não é público. Tente novamente quando houver release, ou siga o guia abaixo.',
+  thanksStarted: 'O download deve iniciar automaticamente. Se não iniciou, tente novamente.',
+  installHeading: 'Instalar',
+  retryDownload: 'Tentar download novamente',
+  otherBuilds: 'Outras plataformas e builds',
+  backToDownload: 'Voltar ao download',
+  openGuide: 'Notas de instalação',
+}
+
+const ru: DownloadCopy = {
+  ...en,
+  detectedLead: 'Мы выбрали сборку для вашего устройства — один клик и можно начинать.',
+  downloadFor: (platformLabel) => `Скачать для ${platformLabel}`,
+  otherDownloads: 'Другие загрузки',
+  allPlatforms: 'Все платформы',
+  yourOs: 'Ваша ОС',
+  pickBuild: 'Выберите загрузку…',
+  platformsHeading: 'Скачать OpenKey',
+  channelsNote:
+    'Листинги в магазинах и GitHub Releases появляются постепенно. Пока канал не активен, ниже — магазины, sideload и сборка из исходников.',
+  getStarted: 'Начать',
+  unknownCta: 'Скачать',
+  thanksTitle: 'Спасибо за загрузку OpenKey',
+  thanksLead: (platformLabel, buildLabel) => `Готово для ${platformLabel} · ${buildLabel}.`,
+  thanksPending:
+    'Бинарный канал для этой сборки ещё не публичен. Повторите, когда выйдет релиз, или следуйте гайду ниже.',
+  thanksStarted: 'Загрузка должна начаться автоматически. Если нет — нажмите «Повторить».',
+  installHeading: 'Установка',
+  retryDownload: 'Повторить загрузку',
+  otherBuilds: 'Другие платформы и сборки',
+  backToDownload: 'Назад к загрузке',
+  openGuide: 'Инструкция по установке',
+}
+
+const ur: DownloadCopy = {
+  ...en,
+  detectedLead: 'ہم نے آپ کے ڈیوائس کے لیے صحیح بلڈ منتخب کیا — ایک کلک اور شروع کریں۔',
+  downloadFor: (platformLabel) => `${platformLabel} کے لیے ڈاؤن لوڈ`,
+  otherDownloads: 'دیگر ڈاؤن لوڈ',
+  allPlatforms: 'تمام پلیٹ فارمز',
+  yourOs: 'آپ کا OS',
+  pickBuild: 'ڈاؤن لوڈ منتخب کریں…',
+  platformsHeading: 'OpenKey ڈاؤن لوڈ',
+  channelsNote:
+    'اسٹور لسٹنگز اور GitHub Releases آہستہ آہستہ آتے ہیں۔ جب تک چینل لائیو نہ ہو، نیچے کا گائیڈ اسٹور، سائیڈلوڈ اور سورس بلڈ کا احاطہ کرتا ہے۔',
+  getStarted: 'شروع کریں',
+  unknownCta: 'ڈاؤن لوڈ',
+  thanksTitle: 'OpenKey ڈاؤن لوڈ کا شکریہ',
+  thanksLead: (platformLabel, buildLabel) => `${platformLabel} · ${buildLabel} کے لیے تیار۔`,
+  thanksPending:
+    'اس بلڈ کا بائنری چینل ابھی عوامی نہیں۔ ریلیز لائیو ہونے پر دوبارہ کوشش کریں، یا نیچے کا گائیڈ دیکھیں۔',
+  thanksStarted: 'ڈاؤن لوڈ خود بخود شروع ہونا چاہیے۔ نہیں ہوا تو دوبارہ کوشش کریں۔',
+  installHeading: 'انسٹال کریں',
+  retryDownload: 'ڈاؤن لوڈ دوبارہ',
+  otherBuilds: 'دیگر پلیٹ فارمز اور بلڈز',
+  backToDownload: 'ڈاؤن لوڈ پر واپس',
+  openGuide: 'انسٹال نوٹس',
+}
+
 const copyByLang: Record<string, DownloadCopy> = {
   en,
   ar,
   zh,
   es,
   fr,
+  hi,
+  bn,
+  pt,
+  ru,
+  ur,
 }
 
 export function downloadCopy(lang: string): DownloadCopy {

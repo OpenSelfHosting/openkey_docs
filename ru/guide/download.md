@@ -5,7 +5,7 @@ title: Скачать и установить
 <DownloadPicker layout="page" />
 
 
-Full guide: [English](/guide/download) · [العربية](/ar/guide/download) · [Español](/es/guide/download) · [Français](/fr/guide/download)
+Полное руководство: [English](/guide/download) · [العربية](/ar/guide/download) · [Español](/es/guide/download) · [Français](/fr/guide/download)
 
 | Package | Path / notes |
 |---------|--------------|

@@ -137,6 +137,16 @@ function nav(prefix: string, labels: GuideLabels): DefaultTheme.NavItem[] {
   ]
 }
 
+function footer(prefix: string, labels: GuideLabels): DefaultTheme.Footer {
+  const p = prefix === '/' ? '' : prefix
+  return {
+    message:
+      `MIT License · Ciphertext only on the server · <a href="${p}/pricing">${labels.pricing}</a> · <a href="${p}/privacy">${labels.privacy}</a> · <a href="${p}/terms">${labels.terms}</a>`,
+    copyright:
+      'Copyright © 2026 <a href="https://openselfhosting.com">OpenSelfHosting</a> · <a href="https://openkey.openselfhosting.com">openkey.openselfhosting.com</a> · Report security issues to security@openselfhosting.com',
+  }
+}
+
 function localeConfig(ui: LocaleUi): LocaleSpecificConfig<DefaultTheme.Config> & {
   label: string
   link?: string
@@ -168,6 +178,7 @@ function localeConfig(ui: LocaleUi): LocaleSpecificConfig<DefaultTheme.Config> &
     themeConfig: {
       nav: nav(prefix, ui.labels),
       sidebar,
+      footer: footer(prefix, ui.labels),
       outline: { label: ui.outlineLabel },
       returnToTopLabel: ui.returnToTopLabel,
       darkModeSwitchLabel: ui.darkModeSwitchLabel,
@@ -581,13 +592,8 @@ export default defineConfig({
 
   themeConfig: {
     siteTitle: 'OpenKey',
-    socialLinks: [],
-    footer: {
-      message:
-        'MIT License · Ciphertext only on the server · <a href="/pricing">Pricing</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>',
-      copyright:
-        'Copyright © 2026 <a href="https://openselfhosting.com">OpenSelfHosting</a> · <a href="https://openkey.openselfhosting.com">openkey.openselfhosting.com</a> · Report security issues to security@openselfhosting.com',
-    },
+    socialLinks: [{ icon: 'github', link: github }],
+    footer: footer('/', locales.root.labels),
     search: {
       provider: 'local',
       options: {

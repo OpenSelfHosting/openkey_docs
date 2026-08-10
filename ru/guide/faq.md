@@ -1,6 +1,6 @@
 # FAQ и устранение неполадок
 
-Full guide: [English](/guide/faq) · [العربية](/ar/guide/faq)
+Полное руководство: [English](/guide/faq) · [العربية](/ar/guide/faq)
 
 **Quick answers**
 
