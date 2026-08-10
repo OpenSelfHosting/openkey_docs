@@ -1,32 +1,32 @@
 # CLI
 
-The OpenKey CLI (`openkey`) is a command-line interface for developers who keep secrets, API tokens, SSH keys, and `.env` material in an OpenKey vault. It can operate **fully offline** for password generation, talk to an **unlocked OpenKey desktop app** over a local native bridge, and optionally authenticate to a **self-hosted sync server** for ciphertext pull and a short-lived CLI session.
+L’interface en ligne de commande OpenKey (`openkey`) s’adresse aux développeurs qui conservent des secrets, jetons API, clés SSH et contenu `.env` dans un coffre OpenKey. Elle peut fonctionner **entièrement hors ligne** pour la génération de mots de passe, communiquer avec une **application bureau OpenKey déverrouillée** via un pont natif local, et s’authentifier optionnellement auprès d’un **serveur de sync auto-hébergé** pour tirer du ciphertext et obtenir une session CLI de courte durée.
 
-Requires **Node.js 20+**.
+Nécessite **Node.js 20+**.
 
 ## Architecture
 
-The diagram below shows what talks to what. Password generation stays offline. Vault commands prefer the unlocked desktop app. Server sync is optional.
+Le schéma ci-dessous montre qui communique avec quoi. La génération de mots de passe reste hors ligne. Les commandes coffre privilégient l’application bureau déverrouillée. La sync serveur est optionnelle.
 
-<img src="/guide/cli-architecture.svg" alt="OpenKey CLI architecture: CLI talks to desktop app via native bridge, scans this machine for discover, and optionally syncs ciphertext with a self-hosted server" class="ok-diagram" width="920" height="420" />
+<img src="/guide/cli-architecture.svg" alt="Architecture OpenKey CLI : la CLI communique avec l'application bureau via un pont natif, analyse cette machine pour la découverte, et synchronise optionnellement le ciphertext avec un serveur auto-hébergé" class="ok-diagram" width="920" height="420" />
 
-| Mode | When it applies | What it can do |
-|------|-----------------|----------------|
-| **Offline** | Always | `gen` — no app, no server |
-| **Native bridge** | Desktop app unlocked on this machine | Secrets CRUD, discovery import, search/get/copy across secrets and logins |
-| **CLI session** | After `login` + `eval $(openkey unlock)` | Same vault operations against a local ciphertext cache; `sync` pulls from the server |
+| Mode | Quand il s’applique | Ce qu’il peut faire |
+|------|---------------------|---------------------|
+| **Hors ligne** | Toujours | `gen` — sans application, sans serveur |
+| **Pont natif** | Application bureau déverrouillée sur cette machine | CRUD secrets, import par découverte, recherche/get/copy dans les secrets et connexions |
+| **Session CLI** | Après `login` + `eval $(openkey unlock)` | Mêmes opérations sur le coffre contre un cache ciphertext local ; `sync` tire depuis le serveur |
 
-### How a vault command picks a backend
+### Comment une commande coffre choisit un backend
 
-<img src="/guide/cli-backend-choice.svg" alt="Flowchart: vault command checks desktop bridge, then OPENKEY_SESSION, otherwise errors with an unlock tip" class="ok-diagram" width="920" height="360" />
+<img src="/guide/cli-backend-choice.svg" alt="Organigramme : une commande coffre vérifie le pont bureau, puis OPENKEY_SESSION, sinon erreur avec une indication de déverrouillage" class="ok-diagram" width="920" height="360" />
 
-1. If the desktop bridge responds → use **native** mode (preferred; no server registration required).
-2. Else if `OPENKEY_SESSION` is set and valid → use **session** mode (local cache / server-backed material).
-3. Else → commands that need the vault fail with a tip to unlock the app or run `eval $(openkey unlock)`.
+1. Si le pont bureau répond → utiliser le mode **native** (préféré ; aucune inscription serveur requise).
+2. Sinon, si `OPENKEY_SESSION` est défini et valide → utiliser le mode **session** (cache local / matériau adossé au serveur).
+3. Sinon → les commandes qui nécessitent le coffre échouent avec une indication pour déverrouiller l’application ou exécuter `eval $(openkey unlock)`.
 
-The bridge accepts connections **only from the local machine** and only while the vault is unlocked. On Unix it uses a socket under known OpenKey paths (override with `OPENKEY_NATIVE_SOCKET`). On Windows it uses a localhost port file under `%LOCALAPPDATA%\OpenKey\` (override with `OPENKEY_NATIVE_PORT`).
+Le pont n’accepte les connexions **que depuis la machine locale** et uniquement tant que le coffre est déverrouillé. Sous Unix, il utilise un socket sous les chemins OpenKey connus (remplacer avec `OPENKEY_NATIVE_SOCKET`). Sous Windows, il utilise un fichier de port localhost sous `%LOCALAPPDATA%\OpenKey\` (remplacer avec `OPENKEY_NATIVE_PORT`).
 
-## Install
+## Installation
 
 ```bash
 cd openkey_cli
@@ -35,7 +35,7 @@ npm run build
 npm link          # optional: puts `openkey` on your PATH
 ```
 
-Without linking:
+Sans liaison :
 
 ```bash
 npx tsx src/cli.ts --help
@@ -43,26 +43,26 @@ npx tsx src/cli.ts --help
 node dist/cli.js --help
 ```
 
-Verify:
+Vérification :
 
 ```bash
 openkey --version
 openkey status
 ```
 
-## Configuration and storage
+## Configuration et stockage
 
-Local CLI state is stored in a platform config directory (file mode `600` when supported):
+L’état CLI local est stocké dans un répertoire de configuration selon la plateforme (mode fichier `600` lorsque pris en charge) :
 
-| Platform | Path |
-|----------|------|
+| Plateforme | Chemin |
+|------------|--------|
 | macOS | `~/Library/Application Support/OpenKey/config.json` |
-| Linux | `~/.config/openkey/config.json` (or `$XDG_CONFIG_HOME/openkey/`) |
+| Linux | `~/.config/openkey/config.json` (ou `$XDG_CONFIG_HOME/openkey/`) |
 | Windows | `%APPDATA%\OpenKey\config.json` |
 
-The file may contain: server URL, email, access/refresh tokens, salt and KDF params, wrapped vault key, session lock duration, server revision, and a **ciphertext** cache of entries/collections after sync. It does not store the master password in plaintext.
+Le fichier peut contenir : URL serveur, email, jetons d’accès/rafraîchissement, sel et paramètres KDF, clé de coffre enveloppée, durée de verrouillage de session, révision serveur, et un cache **ciphertext** d’entrées/collections après sync. Il ne stocke pas le mot de passe principal en clair.
 
-### `config` commands
+### Commandes `config`
 
 ```bash
 openkey config set-server https://openkey.example.com
@@ -70,21 +70,21 @@ openkey config show
 openkey config set-lock 30    # session lifetime in minutes (1–1440, default 15)
 ```
 
-- `set-server` requires a URL starting with `http://` or `https://` (trailing slash stripped).
-- Default server URL before first set: `http://localhost:8000`.
+- `set-server` requiert une URL commençant par `http://` ou `https://` (barre oblique finale supprimée).
+- URL serveur par défaut avant la première définition : `http://localhost:8000`.
 
-## Global options
+## Options globales
 
-| Flag | Effect |
-|------|--------|
-| `--json` | Machine-readable JSON on stdout for scripting |
-| `--help` / `--version` | Help and version |
+| Option | Effet |
+|--------|-------|
+| `--json` | JSON lisible par machine sur stdout pour les scripts |
+| `--help` / `--version` | Aide et version |
 
-Place `--json` before the subcommand when using Commander globals, e.g. `openkey --json status`.
+Placez `--json` avant la sous-commande pour les options globales Commander, par ex. `openkey --json status`.
 
-## Password generation (`gen`)
+## Génération de mots de passe (`gen`)
 
-Fully offline. Does not require the app or a server.
+Entièrement hors ligne. Ne nécessite ni l’application ni un serveur.
 
 ```bash
 openkey gen
@@ -93,43 +93,43 @@ openkey gen -l 32 -a -c
 openkey --json gen -l 20
 ```
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| `-l, --length <n>` | Length (practical range 4–64) | `20` |
-| `--no-upper` | Exclude uppercase letters | off |
-| `--no-lower` | Exclude lowercase letters | off |
-| `--no-digits` | Exclude digits | off |
-| `--no-symbols` | Exclude symbols | off |
-| `-a, --avoid-ambiguous` | Avoid ambiguous characters `Il1O0o` | off |
-| `-c, --copy` | Copy to clipboard instead of printing | off |
+| Option | Description | Défaut |
+|--------|-------------|--------|
+| `-l, --length <n>` | Longueur (plage pratique 4–64) | `20` |
+| `--no-upper` | Exclure les majuscules | désactivé |
+| `--no-lower` | Exclure les minuscules | désactivé |
+| `--no-digits` | Exclure les chiffres | désactivé |
+| `--no-symbols` | Exclure les symboles | désactivé |
+| `-a, --avoid-ambiguous` | Éviter les caractères ambigus `Il1O0o` | désactivé |
+| `-c, --copy` | Copier dans le presse-papiers au lieu d’afficher | désactivé |
 
-With `-c`, human mode prints a confirmation; JSON mode returns `{ "copied": true, "length": N }`. Without `-c`, the password is printed (or `{ "password": "..." }` in JSON mode).
+Avec `-c`, le mode humain affiche une confirmation ; le mode JSON renvoie `{ "copied": true, "length": N }`. Sans `-c`, le mot de passe est affiché (ou `{ "password": "..." }` en mode JSON).
 
-## Status and hygiene
+## État et hygiène
 
 ```bash
 openkey status
 openkey forget
 ```
 
-**`status`** reports server URL, email, login state, bridge availability, unlock mode (`native` / `session`), remaining session time, and cached entry count.
+**`status`** affiche l’URL serveur, l’email, l’état de connexion, la disponibilité du pont, le mode de déverrouillage (`native` / `session`), le temps de session restant et le nombre d’entrées en cache.
 
-**`forget`** wipes local CLI config and the cached ciphertext. It does not delete secrets inside the desktop app vault. After `forget`, re-run `config set-server` / `login` if you use server mode.
+**`forget`** efface la configuration CLI locale et le ciphertext en cache. Il ne supprime pas les secrets dans le coffre de l’application bureau. Après `forget`, relancez `config set-server` / `login` si vous utilisez le mode serveur.
 
-## Developer secrets (`secret`)
+## Secrets développeur (`secret`)
 
-Secrets live in the vault’s reserved **Secrets** area (`__dev_secrets__`), grouped by **device** (machine label; default hostname). Commands require the desktop app unlocked **or** a valid `OPENKEY_SESSION`.
+Les secrets résident dans la zone réservée **Secrets** du coffre (`__dev_secrets__`), regroupés par **appareil** (libellé de machine ; nom d’hôte par défaut). Les commandes requièrent l’application bureau déverrouillée **ou** une `OPENKEY_SESSION` valide.
 
-### Kinds
+### Types
 
-| Kind | Typical use | Notes |
-|------|-------------|--------|
-| `apiToken` | PAT, API keys | Default |
-| `sshKey` | Private keys | Prefer `--file` / `--public-key-file` |
-| `envSnippet` | Full `.env` bodies | Prefer `--file` |
-| `other` | Catch-all | — |
+| Type | Usage typique | Notes |
+|------|---------------|-------|
+| `apiToken` | PAT, clés API | Par défaut |
+| `sshKey` | Clés privées | Préférez `--file` / `--public-key-file` |
+| `envSnippet` | Corps `.env` complets | Préférez `--file` |
+| `other` | Fourre-tout | — |
 
-Aliases such as `ssh`, `api`, `token`, `env`, `.env` normalize to the kinds above.
+Des alias tels que `ssh`, `api`, `token`, `env`, `.env` sont normalisés vers les types ci-dessus.
 
 ### `secret add`
 
@@ -142,39 +142,71 @@ openkey secret add -n "acme .env" -k envSnippet -f ./apps/api/.env -d laptop
 
 | Option | Description |
 |--------|-------------|
-| `-n, --name` | Display name (**required**) |
+| `-n, --name` | Nom d’affichage (**obligatoire**) |
 | `-k, --kind` | `sshKey` \| `apiToken` \| `envSnippet` \| `other` |
-| `-s, --secret` | Inline secret value |
-| `-f, --file` | Read secret body from a file |
-| `-u, --username` | Optional username |
-| `-H, --host` | Optional host |
-| `-d, --device` | Device collection label (default: hostname) |
-| `--public-key` / `--public-key-file` | SSH public key |
-| `--passphrase` | Key passphrase |
-| `--notes` | Free-form notes |
+| `-s, --secret` | Valeur du secret en ligne (`-` lit stdin) |
+| `-f, --file` | Lire le corps du secret depuis un fichier |
+| `--stdin` | Lire le secret depuis stdin (préférable à mettre des jetons dans argv) |
+| `-u, --username` | Nom d’utilisateur optionnel |
+| `-H, --host` | Hôte optionnel |
+| `-d, --device` | Libellé de collection d’appareil (défaut : nom d’hôte) |
+| `--public-key` / `--public-key-file` | Clé publique SSH |
+| `--passphrase` | Phrase secrète de la clé |
+| `--notes` | Notes libres |
 
-Provide `--secret` or `--file` (non-empty). Created records return a UUID.
+Fournissez `--secret`, `--file` ou `--stdin` (non vide). Les enregistrements créés renvoient un UUID.
 
-### `secret list` / `get` / `copy` / `rm`
+```bash
+printf '%s' "$TOKEN" | openkey secret add -n "CI token" --stdin
+```
+
+### `secret list` / `get` / `copy` / `rm` / `update` / `export` / `devices`
 
 ```bash
 openkey secret list
+openkey secret list -d laptop -k apiToken
 openkey secret get "GitHub"
 openkey secret copy ghp
+openkey secret update "GitHub PAT" --secret ghp_new...
+printf '%s' "$TOKEN" | openkey secret update "GitHub PAT" --stdin
+openkey secret export -d laptop -o .env.local
+openkey secret export --format exports   # for eval
+openkey secret devices
 openkey secret rm "old token" -y
 ```
 
-- **list** — table of UUID prefix, name, kind, device, **masked** secret.
-- **get** / **copy** / **rm** — match by **name**, **host**, or **UUID prefix**. Ambiguous matches error with candidates; refine the query.
-- **get** prints plaintext (or full JSON object in `--json` mode).
-- **copy** writes plaintext to the clipboard.
-- **rm** prompts unless `-y` / `--yes`.
+- **list** — tableau avec préfixe UUID, nom, type, appareil, secret **masqué**. Filtres optionnels `-d/--device` et `-k/--kind`.
+- **get** / **copy** / **rm** / **update** — correspondance par **nom**, **hôte** ou **préfixe UUID**. Quand plusieurs sous-chaînes correspondent, un nom/titre, hôte ou préfixe UUID (≥4 caractères) **exact** l’emporte ; sinon la commande échoue avec les candidats.
+- **update** — ne met à jour que les options passées (`--name`, `--secret`/`--file`/`--stdin`, `--kind`, `--device`, …). Requiert le gestionnaire `updateSecret` du pont bureau (application OpenKey avec cette version) ou une session CLI.
+- **export** — écrit les secrets au format dotenv (`KEY=value` ; corps `envSnippet` intégrés) ou lignes shell `--format exports`. `-o` écrit un fichier en mode `600` lorsque pris en charge.
+- **devices** — liste les libellés de collections d’appareils et les comptages.
+- **get** affiche en clair (ou l’objet JSON complet en mode `--json`).
+- **copy** écrit en clair dans le presse-papiers.
+- **rm** demande confirmation sauf si `-y` / `--yes`.
 
-## Discovery (`discover`)
+## Injecter des secrets dans le shell (`env` / `run`)
 
-Scans this machine and imports **new** secrets into the device group. Deduplicates against values already in the vault (by kind + name + content fingerprint).
+```bash
+# Print export lines for eval (NAME or NAME=query)
+eval $(openkey env DATABASE_URL)
+eval $(openkey env DB=DATABASE_URL GH="GitHub PAT")
 
-<img src="/guide/cli-discover-flow.svg" alt="Discover flow: scan local sources, preview masked values, dedupe fingerprints, then save into the vault device group" class="ok-diagram" width="920" height="280" />
+# Or run a child process with secrets in its environment
+openkey run -e DATABASE_URL -e GH="GitHub PAT" -- npm start
+```
+
+| Forme | Signification |
+|-------|---------------|
+| `NAME` | Variable d’env `NAME` ; recherche l’élément du coffre par ce nom |
+| `NAME=query` | Variable d’env `NAME` ; recherche par `query` (nom / hôte / UUID) |
+
+`--json` sur `env` renvoie des objets avec `env`, `query`, `name`, `uuid` et `value`. `--raw` affiche une seule valeur en clair (exactement une liaison).
+
+## Découverte (`discover`)
+
+Analyse cette machine et importe les secrets **nouveaux** dans le groupe d’appareil. Déduplique par rapport aux valeurs déjà dans le coffre (par type + nom + empreinte de contenu).
+
+<img src="/guide/cli-discover-flow.svg" alt="Flux de découverte : analyser les sources locales, prévisualiser les valeurs masquées, dédupliquer par empreinte, puis enregistrer dans le groupe d'appareil du coffre" class="ok-diagram" width="920" height="280" />
 
 ```bash
 openkey discover --dry-run
@@ -183,50 +215,62 @@ openkey discover -d workstation -p ~/src/acme -p ~/src/labs --depth 3
 openkey discover --no-aws --no-env-vars
 ```
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| `-d, --device` | Device collection name | hostname |
-| `-p, --path <dir>` | Project root(s) for `.env` walk (repeatable) | `cwd` |
-| `--depth <n>` | Max directory depth for `.env` | `4` |
-| `--no-ssh` | Skip `~/.ssh` private keys | scan on |
-| `--no-env-files` | Skip `.env` / `.env.*` files | scan on |
-| `--no-env-vars` | Skip process environment | scan on |
-| `--no-aws` | Skip `~/.aws/credentials` | scan on |
-| `--dry-run` | List only; do not save | off |
-| `-y, --yes` | Import without interactive confirm | off |
+| Option | Description | Défaut |
+|--------|-------------|--------|
+| `-d, --device` | Nom de collection d’appareil | nom d’hôte |
+| `-p, --path <dir>` | Racine(s) de projet pour le parcours `.env` (répétable) | `cwd` |
+| `--depth <n>` | Profondeur maximale de répertoire pour `.env` | `4` |
+| `--no-ssh` | Ignorer les clés privées de `~/.ssh` | analyse activée |
+| `--no-env-files` | Ignorer les fichiers `.env` / `.env.*` | analyse activée |
+| `--no-env-vars` | Ignorer l’environnement du processus | analyse activée |
+| `--no-aws` | Ignorer `~/.aws/credentials` | analyse activée |
+| `--no-gh` | Ignorer les jetons GitHub CLI `hosts.yml` | analyse activée |
+| `--no-docker` | Ignorer l’auth registre `~/.docker/config.json` | analyse activée |
+| `--dry-run` | Lister uniquement ; ne pas enregistrer | désactivé |
+| `-y, --yes` | Importer sans confirmation interactive | désactivé |
 
-### What is scanned
+### Ce qui est analysé
 
-- **SSH** — private keys under `~/.ssh` (skips `known_hosts`, `authorized_keys`, `config`, `.pub` files); attaches sibling `.pub` when present.
-- **Environment variables** — well-known names (`GITHUB_TOKEN`, `OPENAI_API_KEY`, `DATABASE_URL`, …) and names matching secret-like suffixes; skips `PATH`, `HOME`, `OPENKEY_SESSION`, `OPENKEY_PASSWORD`, etc.
-- **AWS** — profiles in `~/.aws/credentials`.
-- **`.env` files** — walk from roots, skipping `node_modules`, `.git`, `dist`, virtualenvs, etc.; size and file-count limits apply.
+- **SSH** — clés privées sous `~/.ssh` (ignore `known_hosts`, `authorized_keys`, `config`, fichiers `.pub`) ; attache le `.pub` jumeau lorsqu’il est présent.
+- **Variables d’environnement** — noms bien connus (`GITHUB_TOKEN`, `OPENAI_API_KEY`, `DATABASE_URL`, …) et noms correspondant à des suffixes de type secret ; ignore `PATH`, `HOME`, `OPENKEY_SESSION`, `OPENKEY_PASSWORD`, etc.
+- **AWS** — profils dans `~/.aws/credentials`.
+- **GitHub CLI** — entrées `oauth_token` / `token` dans `~/.config/gh/hosts.yml`.
+- **Docker** — `auths` décodés depuis `~/.docker/config.json`.
+- **Fichiers `.env`** — parcours depuis les racines, en ignorant `node_modules`, `.git`, `dist`, environnements virtuels, etc. ; des limites de taille et de nombre de fichiers s’appliquent.
 
-Dry-run works even if the vault is locked (listing only). Saving requires bridge or session unlock. Already-imported secrets are reported as skipped.
+L’exécution à blanc fonctionne même si le coffre est verrouillé (liste uniquement). L’enregistrement requiert un pont ou une session déverrouillée. Les secrets déjà importés sont signalés comme ignorés.
 
-## Search across secrets and logins
+## Rechercher dans les secrets et les connexions
 
-These commands search **developer secrets and login entries**:
+Ces commandes recherchent dans les **secrets développeur et les entrées de connexion** :
 
 ```bash
 openkey search github
 openkey get "GitHub"
-openkey copy api.example.com
+openkey get "GitHub" --field username
+openkey copy api.example.com --field totp
+openkey totp "GitHub" -c
+openkey logins
 ```
 
-| Command | Output |
-|---------|--------|
-| `search <query>` | Masked table (or JSON previews) |
-| `get <query>` | Best-match plaintext password/secret |
-| `copy <query>` | Clipboard copy of best match |
+| Commande | Sortie |
+|----------|--------|
+| `search <query>` | Tableau masqué (ou aperçus JSON) ; indique la disponibilité TOTP |
+| `get <query>` | Champ de la meilleure correspondance (`--field password\|username\|url\|totp\|notes`) |
+| `copy <query>` | Copie dans le presse-papiers de ce champ (effacement auto après 45 s ; `--keep` pour désactiver) |
+| `totp <query>` | Code TOTP en direct (`-c` copie, `-w` affichage continu jusqu’à Ctrl+C) |
+| `logins` | Liste les connexions avec nom d’utilisateur / URL / indicateur TOTP |
+| `doctor` | Diagnostique Node, permissions config, pont, session, `/health` serveur, presse-papiers |
 
-Ambiguous matches list UUID, kind, and label — refine the query. Prefer `secret get` / `secret copy` when you only want the Secrets section.
+Les correspondances ambiguës par sous-chaîne privilégient un nom/titre, hôte ou préfixe UUID exact ; sinon elles listent UUID, type et libellé — affinez la requête. Préférez `secret get` / `secret copy` lorsque vous ne voulez que la section Secrets.
 
-## Optional self-hosted server
+Utilisez **`secret set`** pour créer ou mettre à jour par nom + appareil. **`sync --push`** pousse le cache ciphertext local avant de tirer.
 
-Use this path when the desktop app is not available on the machine (for example phone-only vault access via sync), or when you want a CLI ciphertext cache.
+## Serveur auto-hébergé optionnel
 
-<img src="/guide/cli-server-flow.svg" alt="Server flow: set-server, login with auth_hash, pull ciphertext into local cache, then eval unlock to set OPENKEY_SESSION for vault commands" class="ok-diagram" width="920" height="340" />
+Utilisez ce chemin lorsque l’application bureau n’est pas disponible sur la machine (par exemple accès au coffre uniquement via téléphone et sync), ou lorsque vous voulez un cache ciphertext CLI.
+
+<img src="/guide/cli-server-flow.svg" alt="Flux serveur : set-server, login avec auth_hash, tirer le ciphertext dans le cache local, puis eval unlock pour définir OPENKEY_SESSION pour les commandes coffre" class="ok-diagram" width="920" height="340" />
 
 ```bash
 openkey config set-server http://localhost:8000
@@ -235,56 +279,68 @@ eval $(openkey unlock)
 openkey sync
 ```
 
-Server install: [Install the server](./server).
+Installation du serveur : [Installer le serveur](./server).
 
-### Authentication flow
+### Flux d’authentification
 
-1. **`login`** — prompts for email (or `-e`) and master password (or `OPENKEY_PASSWORD`). Performs prelogin for salt/KDF, derives `auth_hash` with Argon2id, obtains JWTs, fetches wrapped vault key material, verifies the password by unwrapping, then **pulls** ciphertext into the local cache. Never send the master password as a CLI flag.
-2. **`unlock`** — derives the vault key again, refreshes tokens/sync when the server is reachable, and prints a shell export for `OPENKEY_SESSION` (use `eval $(openkey unlock)`). Options: `-e/--email`, `--raw` (token only). JSON mode emits the session fields.
-3. **`lock`** — prints `unset OPENKEY_SESSION` (or JSON hint) so you can `eval $(openkey lock)`.
-4. **`logout`** — clears access/refresh tokens; keeps the local ciphertext cache. Pair with `lock` to clear the session env.
-5. **`sync`** — requires login; pulls entries/collections and updates `serverRevision`.
+1. **`login`** — demande l’email (ou `-e`) et le mot de passe principal (ou `OPENKEY_PASSWORD`). Effectue un prelogin pour le sel/KDF, dérive `auth_hash` avec Argon2id, obtient des JWT, récupère le matériau de clé de coffre enveloppée, vérifie le mot de passe en déroulant l’enveloppe, puis **tire** le ciphertext dans le cache local. Ne jamais envoyer le mot de passe principal en argument CLI.
+2. **`unlock`** — dérive à nouveau la clé de coffre, actualise les jetons/la sync lorsque le serveur est joignable, et affiche une exportation shell pour `OPENKEY_SESSION` (utilisez `eval $(openkey unlock)`). Options : `-e/--email`, `--raw` (jeton uniquement). Le mode JSON émet les champs de session.
+3. **`lock`** — affiche `unset OPENKEY_SESSION` (ou indication JSON) pour pouvoir exécuter `eval $(openkey lock)`.
+4. **`logout`** — efface les jetons d’accès/rafraîchissement ; conserve le cache ciphertext local. Associez avec `lock` pour effacer l’env de session.
+5. **`sync`** — requiert une connexion ; tire les entrées/collections et met à jour `serverRevision`.
 
-Session lifetime defaults to **15 minutes** (`config set-lock`). Expired sessions require `unlock` again.
+La durée de vie de session est de **15 minutes** par défaut (`config set-lock`). Les sessions expirées requièrent un nouveau `unlock`.
 
-### Environment variables
+### Variables d’environnement
 
-| Variable | Purpose |
-|----------|---------|
-| `OPENKEY_SESSION` | Short-lived encrypted session blob from `unlock` |
-| `OPENKEY_PASSWORD` | Master password for non-interactive `login` / `unlock` (scripts/CI only) |
-| `OPENKEY_NATIVE_SOCKET` | Override Unix bridge socket path |
-| `OPENKEY_NATIVE_PORT` | Override Windows bridge port |
+| Variable | Rôle |
+|----------|------|
+| `OPENKEY_SESSION` | Blob de session chiffré de courte durée issu de `unlock` |
+| `OPENKEY_PASSWORD` | Mot de passe principal pour `login` / `unlock` non interactifs (scripts/CI uniquement) |
+| `OPENKEY_EMAIL` | Email du compte pour `login` / `unlock` non interactifs |
+| `OPENKEY_NATIVE_SOCKET` | Remplacer le chemin du socket du pont Unix |
+| `OPENKEY_NATIVE_PORT` | Remplacer le port du pont Windows |
 
-Prefer the interactive password prompt on personal machines. Treat `OPENKEY_PASSWORD` and session tokens as secret material in CI logs.
+Préférez l’invite de mot de passe interactive sur les machines personnelles. Traitez `OPENKEY_PASSWORD` et les jetons de session comme du matériel secret dans les journaux CI.
 
-## Command reference
+## Complétions shell
 
-| Command | Needs vault access? | Description |
-|---------|---------------------|-------------|
-| `gen` | No | Offline password generation |
-| `discover` | Save: yes\* / dry-run: no | Scan SSH / `.env` / env / AWS → device group |
-| `secret add\|list\|get\|copy\|rm` | Yes\* | Developer secrets |
-| `get` / `copy` / `search` | Yes\* | Secrets + logins |
-| `status` | No | Bridge / session / server state |
-| `config set-server\|show\|set-lock` | No | CLI configuration |
-| `login` / `logout` | — | Optional server auth |
-| `unlock` / `lock` | — | Optional CLI session |
-| `sync` | Login required | Pull ciphertext from server |
-| `forget` | No | Wipe local CLI config + cache |
+```bash
+eval "$(openkey completion bash)"
+eval "$(openkey completion zsh)"
+openkey completion fish | source
+```
 
-\*Desktop app unlocked, **or** valid `OPENKEY_SESSION` after server login.
+## Référence des commandes
 
-## Security model
+| Commande | Accès coffre requis ? | Description |
+|----------|----------------------|-------------|
+| `gen` | Non | Génération de mots de passe hors ligne |
+| `discover` | Enregistrement : oui\* / dry-run : non | Analyse SSH / `.env` / env / AWS → groupe d’appareil |
+| `secret add\|list\|get\|copy\|rm\|update\|export\|devices` | Oui\* | Secrets développeur |
+| `get` / `copy` / `search` / `totp` / `logins` | Oui\* | Secrets + connexions (TOTP, sélection de champ) |
+| `doctor` | Non | Diagnostiquer pont / session / serveur |
+| `env` / `run` | Oui\* | Exporter des secrets dans le shell / processus enfant |
+| `completion` | Non | Complétions Bash / zsh / fish |
+| `status` | Non | État pont / session / serveur |
+| `config set-server\|show\|set-lock` | Non | Configuration CLI |
+| `login` / `logout` | — | Auth serveur optionnelle |
+| `unlock` / `lock` | — | Session CLI optionnelle |
+| `sync` | Connexion requise | Tirer le ciphertext depuis le serveur |
+| `forget` | Non | Effacer la config CLI locale + le cache |
 
-- List/search commands **mask** values; use `get` / `copy` only when you need plaintext.
-- The sync server stores **ciphertext only**; the CLI derives keys locally like other OpenKey clients.
-- Do not pass the master password as a flag; avoid logging `OPENKEY_PASSWORD` or `OPENKEY_SESSION`.
-- Bridge traffic is local-only and requires an unlocked vault.
-- Session tokens expire; reduce lifetime with `config set-lock` on shared machines.
-- `forget` clears CLI state on disk; rotate server tokens with `logout` if the machine is untrusted afterward.
+\*Application bureau déverrouillée, **ou** `OPENKEY_SESSION` valide après connexion serveur.
 
-## Development
+## Modèle de sécurité
+
+- Les commandes list/search **masquent** les valeurs ; utilisez `get` / `copy` uniquement lorsque vous avez besoin du texte en clair.
+- Le serveur de sync stocke **uniquement du ciphertext** ; la CLI dérive les clés localement comme les autres clients OpenKey.
+- Ne passez pas le mot de passe principal en argument ; évitez de journaliser `OPENKEY_PASSWORD` ou `OPENKEY_SESSION`.
+- Le trafic du pont est local uniquement et requiert un coffre déverrouillé.
+- Les jetons de session expirent ; réduisez la durée avec `config set-lock` sur les machines partagées.
+- `forget` efface l’état CLI sur disque ; faites tourner les jetons serveur avec `logout` si la machine n’est plus de confiance ensuite.
+
+## Développement
 
 ```bash
 cd openkey_cli
@@ -293,9 +349,9 @@ npm run typecheck
 npm run build
 ```
 
-## Related guides
+## Guides connexes
 
-- [Using the app](./app) — desktop unlock, Secrets section, autofill
-- [Install the server](./server) — self-hosted sync
-- [Security](./security) — Argon2id, tokens, threat model
-- [Packages](./packages) — repository layout
+- [Utiliser l’application](./app) — déverrouillage bureau, section Secrets, remplissage automatique
+- [Installer le serveur](./server) — sync auto-hébergée
+- [Sécurité](./security) — Argon2id, jetons, modèle de menace
+- [Paquets](./packages) — organisation du dépôt
