@@ -16,7 +16,7 @@ title: التنزيل والتثبيت
 
 | القناة | ملاحظات |
 |---------|--------|
-| [Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) {#android-play} | `com.openselfhosting.openkey` — ابحث عن **OpenKey** من OpenSelfHosting بعد نشر القائمة |
+| Google Play {#android-play} | `com.openselfhosting.openkey` — ابحث عن **OpenKey** من OpenSelfHosting بعد نشر القائمة |
 | تثبيت جانبي APK/AAB {#android-apk} | من `build_all/android/` (`OpenKey-*-android.apk`) |
 
 ### iOS {#ios}

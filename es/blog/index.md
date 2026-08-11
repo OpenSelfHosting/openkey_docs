@@ -6,7 +6,6 @@ sidebar: false
 
 # Blog
 
-Novedades sobre sincronización de conocimiento cero, autoalojamiento, autocompletado y la CLI para desarrolladores.
-Los artículos reflejan la app, el servidor, la extensión y la CLI de OpenKey actuales (en inglés; otros idiomas pueden redirigir al original).
+Novedades sobre sincronización zero-knowledge, autoalojamiento, autocompletado y la CLI para desarrolladores.
 
 <BlogList />

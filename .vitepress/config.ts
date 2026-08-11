@@ -1,4 +1,5 @@
 import { defineConfig, type DefaultTheme, type LocaleSpecificConfig } from 'vitepress'
+import { blogPosts } from './blogPosts'
 
 type GuideLabels = {
   guide: string
@@ -41,27 +42,6 @@ type LocaleUi = {
 
 const github = 'https://github.com/OpenSelfHosting'
 
-const blogPosts = {
-  en: [
-    { text: 'Welcome to OpenKey', link: '/blog/welcome-to-openkey' },
-    { text: 'Zero-knowledge sync explained', link: '/blog/zero-knowledge-sync' },
-    { text: 'Why self-host your password vault', link: '/blog/self-host-your-vault' },
-    { text: 'Nearby without a server', link: '/blog/nearby-without-a-server' },
-    { text: 'OpenKey Pro — what unlocks', link: '/blog/openkey-pro' },
-    { text: 'Passkeys and autofill in the browser', link: '/blog/passkeys-and-autofill' },
-    { text: 'A CLI for developer secrets', link: '/blog/cli-for-developers' },
-  ],
-  ar: [
-    { text: 'مرحباً بـ OpenKey', link: '/ar/blog/welcome-to-openkey' },
-    { text: 'مزامنة بلا معرفة — كيف تعمل', link: '/ar/blog/zero-knowledge-sync' },
-    { text: 'لماذا تستضيف خزنة كلمات المرور بنفسك', link: '/ar/blog/self-host-your-vault' },
-    { text: 'Nearby بلا خادم', link: '/ar/blog/nearby-without-a-server' },
-    { text: 'OpenKey Pro — ماذا يُفتح', link: '/ar/blog/openkey-pro' },
-    { text: 'Passkeys والتعبئة التلقائية في المتصفح', link: '/ar/blog/passkeys-and-autofill' },
-    { text: 'واجهة سطر أوامر لأسرار المطورين', link: '/ar/blog/cli-for-developers' },
-  ],
-} as const
-
 function guideSidebar(prefix: string, labels: GuideLabels): DefaultTheme.SidebarItem[] {
   const p = prefix === '/' ? '' : prefix
   return [
@@ -92,8 +72,7 @@ function guideSidebar(prefix: string, labels: GuideLabels): DefaultTheme.Sidebar
 
 function blogSidebar(lang: string, labels: GuideLabels): DefaultTheme.SidebarItem[] {
   const prefix = lang === 'en' ? '' : `/${lang}`
-  // Untranslated locales keep an index page, then link into the English posts.
-  const posts = lang === 'ar' ? blogPosts.ar : blogPosts.en
+  const posts = blogPosts[lang as keyof typeof blogPosts] ?? blogPosts.en
   return [
     {
       text: labels.blog,
@@ -137,6 +116,16 @@ function nav(prefix: string, labels: GuideLabels): DefaultTheme.NavItem[] {
   ]
 }
 
+function footer(prefix: string, labels: GuideLabels): DefaultTheme.Footer {
+  const p = prefix === '/' ? '' : prefix
+  return {
+    message:
+      `MIT License · Ciphertext only on the server · <a href="${p}/pricing">${labels.pricing}</a> · <a href="${p}/privacy">${labels.privacy}</a> · <a href="${p}/terms">${labels.terms}</a>`,
+    copyright:
+      'Copyright © 2026 <a href="https://openselfhosting.com">OpenSelfHosting</a> · <a href="https://openkey.openselfhosting.com">openkey.openselfhosting.com</a> · Report security issues to security@openselfhosting.com',
+  }
+}
+
 function localeConfig(ui: LocaleUi): LocaleSpecificConfig<DefaultTheme.Config> & {
   label: string
   link?: string
@@ -165,9 +154,14 @@ function localeConfig(ui: LocaleUi): LocaleSpecificConfig<DefaultTheme.Config> &
     lang: ui.lang,
     dir: ui.dir,
     description: ui.description,
+    head: [
+      ['meta', { property: 'og:description', content: ui.description }],
+      ['meta', { property: 'og:locale', content: ui.lang === 'en' ? 'en_US' : ui.lang }],
+    ],
     themeConfig: {
       nav: nav(prefix, ui.labels),
       sidebar,
+      footer: footer(prefix, ui.labels),
       outline: { label: ui.outlineLabel },
       returnToTopLabel: ui.returnToTopLabel,
       darkModeSwitchLabel: ui.darkModeSwitchLabel,
@@ -581,13 +575,8 @@ export default defineConfig({
 
   themeConfig: {
     siteTitle: 'OpenKey',
-    socialLinks: [],
-    footer: {
-      message:
-        'MIT License · Ciphertext only on the server · <a href="/pricing">Pricing</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>',
-      copyright:
-        'Copyright © 2026 <a href="https://openselfhosting.com">OpenSelfHosting</a> · <a href="https://openkey.openselfhosting.com">openkey.openselfhosting.com</a> · Report security issues to security@openselfhosting.com',
-    },
+    socialLinks: [{ icon: 'github', link: github }],
+    footer: footer('/', locales.root.labels),
     search: {
       provider: 'local',
       options: {

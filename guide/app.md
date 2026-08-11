@@ -14,7 +14,7 @@ OpenKey is the mobile and desktop client for Android, iOS, macOS, Linux, and Win
 
 Related packages in this project include the [server](./server), [browser extension](./extension), and [CLI](./cli).
 
-## Free vs OpenKey Pro
+## Free vs OpenKey Pro {#free-vs-openkey-pro}
 
 Core vault features work offline without a subscription. On Android, iOS, macOS, Windows, and Linux, Pro raises limits and unlocks extras. Web builds do not enforce Pro yet. On platforms **without** store IAP (typically Windows/Linux), a paired Nearby peer can share a **LAN Pro** attestation — convenience only, not a cryptographic proof of purchase (store-IAP platforms ignore LAN Pro).
 

@@ -48,7 +48,7 @@ You can push a single login to a paired peer without waiting for a full vault sy
 
 Use this for one-off shares on the LAN; prefer [organizations & sharing](./sharing) when peers use the same self-hosted server.
 
-## LAN Pro attestation
+## LAN Pro attestation {#lan-pro-attestation}
 
 On platforms **without** store in-app purchase (typically Windows / Linux), a **vault-linked** Pro peer can share a **LAN Pro** status so the other device unlocks Pro limits over Nearby. Pairing alone is not enough — you must tap **Link vault** first.
 

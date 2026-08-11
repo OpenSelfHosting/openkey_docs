@@ -1,31 +1,12 @@
 <script setup lang="ts">
 import DefaultTheme from 'vitepress/theme'
-import { useData, useRouter, withBase, inBrowser } from 'vitepress'
-import { watch } from 'vue'
+import { useData, withBase } from 'vitepress'
 import AppearanceMenu from './components/AppearanceMenu.vue'
 import BrandIcon from './components/BrandIcon.vue'
 import NavDownload from './components/NavDownload.vue'
 
 const { Layout } = DefaultTheme
-const { frontmatter, page } = useData()
-const router = useRouter()
-
-/** Locales with their own translated blog posts. */
-const translatedBlogLocales = new Set(['en', 'ar'])
-
-watch(
-  () => [page.value.isNotFound, router.route.path] as const,
-  ([isNotFound, path]) => {
-    if (!inBrowser || !isNotFound) return
-    const match = path.match(/^\/([a-z]{2})\/blog(\/.*)?\/?$/)
-    if (!match) return
-    const [, locale, rest = '/'] = match
-    if (translatedBlogLocales.has(locale)) return
-    const target = `/blog${rest === '/' ? '/' : rest}`
-    if (target !== path) router.go(target)
-  },
-  { immediate: true },
-)
+const { frontmatter } = useData()
 </script>
 
 <template>
