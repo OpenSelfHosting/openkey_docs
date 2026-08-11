@@ -76,7 +76,7 @@ Soft-deleted vault items remain as **tombstones** until peers sync; last-write-w
 
 App store / About legal pages: [Privacy Policy](/privacy) · [Terms of Service](/terms).
 
-## Reporting vulnerabilities
+## Reporting vulnerabilities {#reporting-vulnerabilities}
 
 If you believe you found a security issue in OpenKey (server, extension, CLI, docs, or app), report it **privately**.
 

@@ -73,7 +73,7 @@ Les éléments de coffre soft-supprimés restent des **tombstones** jusqu’à l
 - N’appariez Nearby qu’avec des personnes/appareils de confiance ; **Lier le coffre** partage le matériau de clé de coffre via la session LAN — dissociez pour révoquer les attestations LAN Pro et arrêter la sync.
 - Signalez les vulnérabilités en privé — voir [Signalement des vulnérabilités](#signalement-des-vulnérabilités).
 
-## Signalement des vulnérabilités
+## Signalement des vulnérabilités {#reporting-vulnerabilities}
 
 Si vous pensez avoir trouvé un problème de sécurité dans OpenKey (serveur, extension, CLI, docs ou app), signalez-le **en privé**.
 

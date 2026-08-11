@@ -5,13 +5,18 @@
   "type": "module",
   "description": "OpenKey product site and documentation",
   "scripts": {
+    "sync:downloads": "node scripts/sync-download-urls.mjs",
+    "sync:releases": "npm run sync:downloads",
+    "prebuild": "npm run sync:downloads",
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "postcss": "^8.5.25",
     "postcss-rtlcss": "^6.0.0",
+    "typescript": "^5.9.2",
     "vitepress": "^1.6.3",
     "vue": "^3.5.13"
   },

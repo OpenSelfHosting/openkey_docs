@@ -7,6 +7,5 @@ sidebar: false
 # ব্লগ
 
 Zero-knowledge সিঙ্ক, self-hosting, autofill এবং ডেভেলপার CLI নিয়ে আপডেট।
-নিচের লেখাগুলো বর্তমান OpenKey অ্যাপ, সার্ভার, এক্সটেনশন ও CLI প্রতিফলিত করে (ইংরেজি; অন্য ভাষা মূলতে যেতে পারে)।
 
 <BlogList />

@@ -1,0 +1,30 @@
+{
+  "appId": "com.openselfhosting.openkey",
+  "stores": {
+    "android-play": {
+      "live": false,
+      "comment": "Set live:true when Google Play listing is public (uses appId)"
+    },
+    "ios-appstore": {
+      "appleId": null,
+      "comment": "Set appleId when App Store Connect listing is live"
+    },
+    "macos-appstore": {
+      "appleId": null,
+      "comment": "Mac App Store — often same appleId as iOS"
+    },
+    "windows-store": {
+      "productId": null,
+      "comment": "Microsoft Store product ID (PackageFamilyName or store detail id)"
+    },
+    "linux-flathub": {
+      "live": false,
+      "comment": "Flathub app id defaults to appId when live:true"
+    },
+    "linux-snap": {
+      "snapName": "openkey",
+      "live": false,
+      "comment": "Snap name on snapcraft.io"
+    }
+  }
+}

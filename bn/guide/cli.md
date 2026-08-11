@@ -1,14 +1,14 @@
 # CLI
 
-The OpenKey CLI (`openkey`) is a command-line interface for developers who keep secrets, API tokens, SSH keys, and `.env` material in an OpenKey vault. It can operate **fully offline** for password generation, talk to an **unlocked OpenKey desktop app** over a local native bridge, and optionally authenticate to a **self-hosted sync server** for ciphertext pull and a short-lived CLI session.
+OpenKey CLI (`openkey`) সেই developers-এর জন্য একটি command-line interface যারা secrets, API tokens, SSH keys, এবং `.env` উপাদান OpenKey ভল্টে রাখেন। এটি password generation-এর জন্য **সম্পূর্ণ offline** চলতে পারে, স্থানীয় native bridge-এ **unlocked OpenKey desktop অ্যাপ**-এর সাথে কথা বলতে পারে, এবং ciphertext pull ও একটি short-lived CLI session-এর জন্য ঐচ্ছিকভাবে **self-hosted sync server**-এ authenticate করতে পারে।
 
-Requires **Node.js 20+**.
+**Node.js 20+** প্রয়োজন।
 
 ## Architecture
 
-The diagram below shows what talks to what. Password generation stays offline. Vault commands prefer the unlocked desktop app. Server sync is optional.
+নিচের diagram দেখায় কে কার সাথে কথা বলে। Password generation offline থাকে। Vault commands unlocked desktop অ্যাপকে অগ্রাধিকার দেয়। Server sync ঐচ্ছিক।
 
-<img src="/guide/cli-architecture.svg" alt="OpenKey CLI architecture: CLI talks to desktop app via native bridge, scans this machine for discover, and optionally syncs ciphertext with a self-hosted server" class="ok-diagram" width="920" height="420" />
+<img src="/guide/cli-architecture.svg" alt="OpenKey CLI architecture: CLI native bridge-এর মাধ্যমে desktop অ্যাপের সাথে কথা বলে, discover-এর জন্য এই মেশিন scan করে, এবং ঐচ্ছিকভাবে self-hosted server-এর সাথে ciphertext sync করে" class="ok-diagram" width="920" height="420" />
 
 | Mode | When it applies | What it can do |
 |------|-----------------|----------------|
@@ -16,15 +16,15 @@ The diagram below shows what talks to what. Password generation stays offline. V
 | **Native bridge** | Desktop app unlocked on this machine | Secrets CRUD, discovery import, search/get/copy across secrets and logins |
 | **CLI session** | After `login` + `eval $(openkey unlock)` | Same vault operations against a local ciphertext cache; `sync` pulls from the server |
 
-### How a vault command picks a backend
+### Vault command backend কীভাবে বেছে নেয়
 
-<img src="/guide/cli-backend-choice.svg" alt="Flowchart: vault command checks desktop bridge, then OPENKEY_SESSION, otherwise errors with an unlock tip" class="ok-diagram" width="920" height="360" />
+<img src="/guide/cli-backend-choice.svg" alt="Flowchart: vault command desktop bridge যাচাই করে, তারপর OPENKEY_SESSION, অন্যথায় unlock tip সহ error" class="ok-diagram" width="920" height="360" />
 
-1. If the desktop bridge responds → use **native** mode (preferred; no server registration required).
-2. Else if `OPENKEY_SESSION` is set and valid → use **session** mode (local cache / server-backed material).
-3. Else → commands that need the vault fail with a tip to unlock the app or run `eval $(openkey unlock)`.
+1. Desktop bridge জবাব দিলে → **native** mode ব্যবহার করুন (অগ্রাধিকার; server registration লাগে না)।
+2. অন্যথায় `OPENKEY_SESSION` সেট ও valid হলে → **session** mode (local cache / server-backed material)।
+3. অন্যথায় → vault লাগে এমন commands unlock tip সহ fail — অ্যাপ unlock করুন বা `eval $(openkey unlock)` চালান।
 
-The bridge accepts connections **only from the local machine** and only while the vault is unlocked. On Unix it uses a socket under known OpenKey paths (override with `OPENKEY_NATIVE_SOCKET`). On Windows it uses a localhost port file under `%LOCALAPPDATA%\OpenKey\` (override with `OPENKEY_NATIVE_PORT`).
+Bridge সংযোগ **শুধু local machine** থেকে গ্রহণ করে এবং শুধু ভল্ট unlocked থাকলে। Unix-এ পরিচিত OpenKey paths-এর নিচে socket (`OPENKEY_NATIVE_SOCKET` দিয়ে override)। Windows-এ `%LOCALAPPDATA%\OpenKey\`-এর নিচে localhost port file (`OPENKEY_NATIVE_PORT` দিয়ে override)।
 
 ## Install
 
@@ -35,7 +35,7 @@ npm run build
 npm link          # optional: puts `openkey` on your PATH
 ```
 
-Without linking:
+Linking ছাড়া:
 
 ```bash
 npx tsx src/cli.ts --help
@@ -52,7 +52,7 @@ openkey status
 
 ## Configuration and storage
 
-Local CLI state is stored in a platform config directory (file mode `600` when supported):
+স্থানীয় CLI state platform config directory-তে সংরক্ষিত (supported হলে file mode `600`):
 
 | Platform | Path |
 |----------|------|
@@ -60,7 +60,7 @@ Local CLI state is stored in a platform config directory (file mode `600` when s
 | Linux | `~/.config/openkey/config.json` (or `$XDG_CONFIG_HOME/openkey/`) |
 | Windows | `%APPDATA%\OpenKey\config.json` |
 
-The file may contain: server URL, email, access/refresh tokens, salt and KDF params, wrapped vault key, session lock duration, server revision, and a **ciphertext** cache of entries/collections after sync. It does not store the master password in plaintext.
+ফাইলে থাকতে পারে: server URL, email, access/refresh tokens, salt ও KDF params, wrapped vault key, session lock duration, server revision, এবং sync-এর পর entries/collections-এর **ciphertext** cache। এটি মাস্টার পাসওয়ার্ড plaintext-এ সংরক্ষণ করে না।
 
 ### `config` commands
 
@@ -70,8 +70,8 @@ openkey config show
 openkey config set-lock 30    # session lifetime in minutes (1–1440, default 15)
 ```
 
-- `set-server` requires a URL starting with `http://` or `https://` (trailing slash stripped).
-- Default server URL before first set: `http://localhost:8000`.
+- `set-server`-এ `http://` বা `https://` দিয়ে শুরু URL লাগে (trailing slash সরানো হয়)।
+- প্রথম set-এর আগে default server URL: `http://localhost:8000`।
 
 ## Global options
 
@@ -80,11 +80,11 @@ openkey config set-lock 30    # session lifetime in minutes (1–1440, default 1
 | `--json` | Machine-readable JSON on stdout for scripting |
 | `--help` / `--version` | Help and version |
 
-Place `--json` before the subcommand when using Commander globals, e.g. `openkey --json status`.
+Commander globals ব্যবহারে `--json` subcommand-এর আগে রাখুন, যেমন `openkey --json status`।
 
 ## Password generation (`gen`)
 
-Fully offline. Does not require the app or a server.
+সম্পূর্ণ offline। অ্যাপ বা server লাগে না।
 
 ```bash
 openkey gen
@@ -103,7 +103,7 @@ openkey --json gen -l 20
 | `-a, --avoid-ambiguous` | Avoid ambiguous characters `Il1O0o` | off |
 | `-c, --copy` | Copy to clipboard instead of printing | off |
 
-With `-c`, human mode prints a confirmation; JSON mode returns `{ "copied": true, "length": N }`. Without `-c`, the password is printed (or `{ "password": "..." }` in JSON mode).
+`-c` সহ human mode confirmation প্রিন্ট করে; JSON mode `{ "copied": true, "length": N }` দেয়। `-c` ছাড়া password প্রিন্ট (বা JSON mode-এ `{ "password": "..." }`)।
 
 ## Status and hygiene
 
@@ -112,13 +112,13 @@ openkey status
 openkey forget
 ```
 
-**`status`** reports server URL, email, login state, bridge availability, unlock mode (`native` / `session`), remaining session time, and cached entry count.
+**`status`** server URL, email, login state, bridge availability, unlock mode (`native` / `session`), বাকি session time, এবং cached entry count রিপোর্ট করে।
 
-**`forget`** wipes local CLI config and the cached ciphertext. It does not delete secrets inside the desktop app vault. After `forget`, re-run `config set-server` / `login` if you use server mode.
+**`forget`** স্থানীয় CLI config ও cached ciphertext মুছে। desktop অ্যাপ ভল্টের ভিতরের secrets মুছে না। `forget`-এর পর server mode ব্যবহার করলে `config set-server` / `login` আবার চালান।
 
 ## Developer secrets (`secret`)
 
-Secrets live in the vault’s reserved **Secrets** area (`__dev_secrets__`), grouped by **device** (machine label; default hostname). Commands require the desktop app unlocked **or** a valid `OPENKEY_SESSION`.
+Secrets ভল্টের reserved **Secrets** অঞ্চলে (`__dev_secrets__`) থাকে, **device** (machine label; default hostname) দিয়ে গোষ্ঠীভুক্ত। Commands-এ desktop অ্যাপ unlocked **অথবা** valid `OPENKEY_SESSION` লাগে।
 
 ### Kinds
 
@@ -129,7 +129,7 @@ Secrets live in the vault’s reserved **Secrets** area (`__dev_secrets__`), gro
 | `envSnippet` | Full `.env` bodies | Prefer `--file` |
 | `other` | Catch-all | — |
 
-Aliases such as `ssh`, `api`, `token`, `env`, `.env` normalize to the kinds above.
+`ssh`, `api`, `token`, `env`, `.env` ইত্যাদি alias উপরের kinds-এ normalize হয়।
 
 ### `secret add`
 
@@ -144,8 +144,9 @@ openkey secret add -n "acme .env" -k envSnippet -f ./apps/api/.env -d laptop
 |--------|-------------|
 | `-n, --name` | Display name (**required**) |
 | `-k, --kind` | `sshKey` \| `apiToken` \| `envSnippet` \| `other` |
-| `-s, --secret` | Inline secret value |
+| `-s, --secret` | Inline secret value (`-` reads stdin) |
 | `-f, --file` | Read secret body from a file |
+| `--stdin` | Read secret from stdin (prefer over putting tokens in argv) |
 | `-u, --username` | Optional username |
 | `-H, --host` | Optional host |
 | `-d, --device` | Device collection label (default: hostname) |
@@ -153,28 +154,59 @@ openkey secret add -n "acme .env" -k envSnippet -f ./apps/api/.env -d laptop
 | `--passphrase` | Key passphrase |
 | `--notes` | Free-form notes |
 
-Provide `--secret` or `--file` (non-empty). Created records return a UUID.
+`--secret`, `--file`, বা `--stdin` (non-empty) দিন। তৈরি records UUID দেয়।
 
-### `secret list` / `get` / `copy` / `rm`
+```bash
+printf '%s' "$TOKEN" | openkey secret add -n "CI token" --stdin
+```
+
+### `secret list` / `get` / `copy` / `rm` / `update` / `export` / `devices`
 
 ```bash
 openkey secret list
+openkey secret list -d laptop -k apiToken
 openkey secret get "GitHub"
 openkey secret copy ghp
+openkey secret update "GitHub PAT" --secret ghp_new...
+printf '%s' "$TOKEN" | openkey secret update "GitHub PAT" --stdin
+openkey secret export -d laptop -o .env.local
+openkey secret export --format exports   # for eval
+openkey secret devices
 openkey secret rm "old token" -y
 ```
 
-- **list** — table of UUID prefix, name, kind, device, **masked** secret.
-- **get** / **copy** / **rm** — match by **name**, **host**, or **UUID prefix**. Ambiguous matches error with candidates; refine the query.
-- **get** prints plaintext (or full JSON object in `--json` mode).
-- **copy** writes plaintext to the clipboard.
-- **rm** prompts unless `-y` / `--yes`.
+- **list** — UUID prefix, name, kind, device, **masked** secret-এর table। ঐচ্ছিক `-d/--device` ও `-k/--kind` filters।
+- **get** / **copy** / **rm** / **update** — **name**, **host**, বা **UUID prefix** দিয়ে match। একাধিক substring match হলে **exact** name/title, host, বা unique UUID prefix (≥4 chars) জয়ী; অন্যথায় command candidates সহ error।
+- **update** — শুধু যে flags দেন সেগুলো patch (`--name`, `--secret`/`--file`/`--stdin`, `--kind`, `--device`, …)। Desktop bridge `updateSecret` handler (এই release-এর OpenKey অ্যাপ) বা CLI session লাগে।
+- **export** — secrets dotenv (`KEY=value`; `envSnippet` bodies inlined) বা `--format exports` shell lines হিসেবে লিখুন। `-o` supported হলে mode-`600` ফাইল লেখে।
+- **devices** — device collection labels ও counts তালিকা।
+- **get** plaintext প্রিন্ট (বা `--json` mode-এ full JSON object)।
+- **copy** plaintext clipboard-এ লেখে।
+- **rm** `-y` / `--yes` ছাড়া prompt।
+
+## Shell-এ secrets inject (`env` / `run`)
+
+```bash
+# Print export lines for eval (NAME or NAME=query)
+eval $(openkey env DATABASE_URL)
+eval $(openkey env DB=DATABASE_URL GH="GitHub PAT")
+
+# Or run a child process with secrets in its environment
+openkey run -e DATABASE_URL -e GH="GitHub PAT" -- npm start
+```
+
+| Form | Meaning |
+|------|---------|
+| `NAME` | Env var `NAME`; vault item সেই name দিয়ে খুঁজুন |
+| `NAME=query` | Env var `NAME`; `query` (name / host / UUID) দিয়ে খুঁজুন |
+
+`env`-এ `--json` `env`, `query`, `name`, `uuid`, ও `value` সহ objects দেয়। `--raw` একটি plaintext value প্রিন্ট (ঠিক এক binding)।
 
 ## Discovery (`discover`)
 
-Scans this machine and imports **new** secrets into the device group. Deduplicates against values already in the vault (by kind + name + content fingerprint).
+এই মেশিন scan করে **নতুন** secrets device group-এ import করে। ভল্টে আগে থাকা values-এর বিরুদ্ধে deduplicate (kind + name + content fingerprint)।
 
-<img src="/guide/cli-discover-flow.svg" alt="Discover flow: scan local sources, preview masked values, dedupe fingerprints, then save into the vault device group" class="ok-diagram" width="920" height="280" />
+<img src="/guide/cli-discover-flow.svg" alt="Discover flow: স্থানীয় sources scan, masked values preview, fingerprints dedupe, তারপর vault device group-এ save" class="ok-diagram" width="920" height="280" />
 
 ```bash
 openkey discover --dry-run
@@ -192,41 +224,53 @@ openkey discover --no-aws --no-env-vars
 | `--no-env-files` | Skip `.env` / `.env.*` files | scan on |
 | `--no-env-vars` | Skip process environment | scan on |
 | `--no-aws` | Skip `~/.aws/credentials` | scan on |
+| `--no-gh` | Skip GitHub CLI `hosts.yml` tokens | scan on |
+| `--no-docker` | Skip `~/.docker/config.json` registry auth | scan on |
 | `--dry-run` | List only; do not save | off |
 | `-y, --yes` | Import without interactive confirm | off |
 
-### What is scanned
+### কী scan হয়
 
-- **SSH** — private keys under `~/.ssh` (skips `known_hosts`, `authorized_keys`, `config`, `.pub` files); attaches sibling `.pub` when present.
-- **Environment variables** — well-known names (`GITHUB_TOKEN`, `OPENAI_API_KEY`, `DATABASE_URL`, …) and names matching secret-like suffixes; skips `PATH`, `HOME`, `OPENKEY_SESSION`, `OPENKEY_PASSWORD`, etc.
-- **AWS** — profiles in `~/.aws/credentials`.
-- **`.env` files** — walk from roots, skipping `node_modules`, `.git`, `dist`, virtualenvs, etc.; size and file-count limits apply.
+- **SSH** — `~/.ssh`-এর নিচে private keys (`known_hosts`, `authorized_keys`, `config`, `.pub` skip); থাকলে sibling `.pub` attach।
+- **Environment variables** — well-known names (`GITHUB_TOKEN`, `OPENAI_API_KEY`, `DATABASE_URL`, …) ও secret-like suffix match; `PATH`, `HOME`, `OPENKEY_SESSION`, `OPENKEY_PASSWORD` ইত্যাদি skip।
+- **AWS** — `~/.aws/credentials`-এ profiles।
+- **GitHub CLI** — `~/.config/gh/hosts.yml`-এ `oauth_token` / `token` entries।
+- **Docker** — `~/.docker/config.json` থেকে decoded `auths`।
+- **`.env` files** — roots থেকে walk, `node_modules`, `.git`, `dist`, virtualenvs ইত্যাদি skip; size ও file-count limits প্রযোজ্য।
 
-Dry-run works even if the vault is locked (listing only). Saving requires bridge or session unlock. Already-imported secrets are reported as skipped.
+Dry-run ভল্ট locked থাকলেও কাজ করে (শুধু listing)। Saving-এ bridge বা session unlock লাগে। আগে import করা secrets skipped হিসেবে রিপোর্ট।
 
-## Search across secrets and logins
+## Secrets ও logins-এ search
 
-These commands search **developer secrets and login entries**:
+এই commands **developer secrets ও login entries** খোঁজে:
 
 ```bash
 openkey search github
 openkey get "GitHub"
-openkey copy api.example.com
+openkey get "GitHub" --field username
+openkey copy api.example.com --field totp
+openkey totp "GitHub" -c
+openkey logins
 ```
 
 | Command | Output |
 |---------|--------|
-| `search <query>` | Masked table (or JSON previews) |
-| `get <query>` | Best-match plaintext password/secret |
-| `copy <query>` | Clipboard copy of best match |
+| `search <query>` | Masked table (বা JSON previews); TOTP availability দেখায় |
+| `get <query>` | Best-match field (`--field password\|username\|url\|totp\|notes`) |
+| `copy <query>` | সেই field-এর clipboard copy (45s-এ auto-clear; `--keep` দিয়ে disable) |
+| `totp <query>` | Live TOTP code (`-c` copy, `-w` watch until Ctrl+C) |
+| `logins` | Username / URL / TOTP flag সহ logins তালিকা |
+| `doctor` | Node, config permissions, bridge, session, server `/health`, clipboard diagnose |
 
-Ambiguous matches list UUID, kind, and label — refine the query. Prefer `secret get` / `secret copy` when you only want the Secrets section.
+অস্পষ্ট substring matches exact name/title, host, বা unique UUID prefix-কে অগ্রাধিকার; অন্যথায় UUID, kind, label তালিকা — query refine করুন। শুধু Secrets section চাইলে `secret get` / `secret copy` অগ্রাধিকার।
 
-## Optional self-hosted server
+Name + device দিয়ে upsert-এ **`secret set`**। **`sync --push`** pull-এর আগে local ciphertext cache push।
 
-Use this path when the desktop app is not available on the machine (for example phone-only vault access via sync), or when you want a CLI ciphertext cache.
+## ঐচ্ছিক self-hosted server
 
-<img src="/guide/cli-server-flow.svg" alt="Server flow: set-server, login with auth_hash, pull ciphertext into local cache, then eval unlock to set OPENKEY_SESSION for vault commands" class="ok-diagram" width="920" height="340" />
+এই path ব্যবহার করুন যখন desktop অ্যাপ মেশিনে নেই (উদাহরণ: sync দিয়ে phone-only vault access), বা CLI ciphertext cache চান।
+
+<img src="/guide/cli-server-flow.svg" alt="Server flow: set-server, auth_hash দিয়ে login, local cache-এ ciphertext pull, তারপর vault commands-এর জন্য OPENKEY_SESSION সেট করতে eval unlock" class="ok-diagram" width="920" height="340" />
 
 ```bash
 openkey config set-server http://localhost:8000
@@ -235,28 +279,37 @@ eval $(openkey unlock)
 openkey sync
 ```
 
-Server install: [Install the server](./server).
+Server install: [সার্ভার ইনস্টল](./server)।
 
 ### Authentication flow
 
-1. **`login`** — prompts for email (or `-e`) and master password (or `OPENKEY_PASSWORD`). Performs prelogin for salt/KDF, derives `auth_hash` with Argon2id, obtains JWTs, fetches wrapped vault key material, verifies the password by unwrapping, then **pulls** ciphertext into the local cache. Never send the master password as a CLI flag.
-2. **`unlock`** — derives the vault key again, refreshes tokens/sync when the server is reachable, and prints a shell export for `OPENKEY_SESSION` (use `eval $(openkey unlock)`). Options: `-e/--email`, `--raw` (token only). JSON mode emits the session fields.
-3. **`lock`** — prints `unset OPENKEY_SESSION` (or JSON hint) so you can `eval $(openkey lock)`.
-4. **`logout`** — clears access/refresh tokens; keeps the local ciphertext cache. Pair with `lock` to clear the session env.
-5. **`sync`** — requires login; pulls entries/collections and updates `serverRevision`.
+1. **`login`** — email (বা `-e`) ও মাস্টার পাসওয়ার্ড (বা `OPENKEY_PASSWORD`) prompt। Salt/KDF-এর জন্য prelogin, Argon2id দিয়ে `auth_hash` derive, JWTs, wrapped vault key material fetch, unwrapping-এ password verify, তারপর local cache-এ ciphertext **pull**। মাস্টার পাসওয়ার্ড CLI flag হিসেবে কখনো পাঠাবেন না।
+2. **`unlock`** — vault key আবার derive, server reachable হলে tokens/sync refresh, `OPENKEY_SESSION`-এর shell export প্রিন্ট (`eval $(openkey unlock)` ব্যবহার)। Options: `-e/--email`, `--raw` (token only)। JSON mode session fields emit।
+3. **`lock`** — `unset OPENKEY_SESSION` প্রিন্ট (বা JSON hint) যাতে `eval $(openkey lock)` চালানো যায়।
+4. **`logout`** — access/refresh tokens সাফ; local ciphertext cache রাখে। Session env সাফ করতে `lock`-এর সাথে pair।
+5. **`sync`** — login লাগে; entries/collections pull ও `serverRevision` update।
 
-Session lifetime defaults to **15 minutes** (`config set-lock`). Expired sessions require `unlock` again.
+Session lifetime default **15 minutes** (`config set-lock`)। Expired sessions-এ আবার `unlock` লাগে।
 
 ### Environment variables
 
 | Variable | Purpose |
 |----------|---------|
-| `OPENKEY_SESSION` | Short-lived encrypted session blob from `unlock` |
-| `OPENKEY_PASSWORD` | Master password for non-interactive `login` / `unlock` (scripts/CI only) |
-| `OPENKEY_NATIVE_SOCKET` | Override Unix bridge socket path |
-| `OPENKEY_NATIVE_PORT` | Override Windows bridge port |
+| `OPENKEY_SESSION` | `unlock` থেকে short-lived encrypted session blob |
+| `OPENKEY_PASSWORD` | non-interactive `login` / `unlock`-এর মাস্টার পাসওয়ার্ড (scripts/CI only) |
+| `OPENKEY_EMAIL` | non-interactive `login` / `unlock`-এর account email |
+| `OPENKEY_NATIVE_SOCKET` | Unix bridge socket path override |
+| `OPENKEY_NATIVE_PORT` | Windows bridge port override |
 
-Prefer the interactive password prompt on personal machines. Treat `OPENKEY_PASSWORD` and session tokens as secret material in CI logs.
+Personal machines-এ interactive password prompt অগ্রাধিকার। CI logs-এ `OPENKEY_PASSWORD` ও session tokens secret material হিসেবে ধরুন।
+
+## Shell completions
+
+```bash
+eval "$(openkey completion bash)"
+eval "$(openkey completion zsh)"
+openkey completion fish | source
+```
 
 ## Command reference
 
@@ -264,8 +317,11 @@ Prefer the interactive password prompt on personal machines. Treat `OPENKEY_PASS
 |---------|---------------------|-------------|
 | `gen` | No | Offline password generation |
 | `discover` | Save: yes\* / dry-run: no | Scan SSH / `.env` / env / AWS → device group |
-| `secret add\|list\|get\|copy\|rm` | Yes\* | Developer secrets |
-| `get` / `copy` / `search` | Yes\* | Secrets + logins |
+| `secret add\|list\|get\|copy\|rm\|update\|export\|devices` | Yes\* | Developer secrets |
+| `get` / `copy` / `search` / `totp` / `logins` | Yes\* | Secrets + logins (TOTP, field select) |
+| `doctor` | No | Diagnose bridge / session / server |
+| `env` / `run` | Yes\* | Export secrets into shell / child process |
+| `completion` | No | Bash / zsh / fish completions |
 | `status` | No | Bridge / session / server state |
 | `config set-server\|show\|set-lock` | No | CLI configuration |
 | `login` / `logout` | — | Optional server auth |
@@ -273,16 +329,16 @@ Prefer the interactive password prompt on personal machines. Treat `OPENKEY_PASS
 | `sync` | Login required | Pull ciphertext from server |
 | `forget` | No | Wipe local CLI config + cache |
 
-\*Desktop app unlocked, **or** valid `OPENKEY_SESSION` after server login.
+\*Desktop অ্যাপ unlocked, **অথবা** server login-এর পর valid `OPENKEY_SESSION`।
 
 ## Security model
 
-- List/search commands **mask** values; use `get` / `copy` only when you need plaintext.
-- The sync server stores **ciphertext only**; the CLI derives keys locally like other OpenKey clients.
-- Do not pass the master password as a flag; avoid logging `OPENKEY_PASSWORD` or `OPENKEY_SESSION`.
-- Bridge traffic is local-only and requires an unlocked vault.
-- Session tokens expire; reduce lifetime with `config set-lock` on shared machines.
-- `forget` clears CLI state on disk; rotate server tokens with `logout` if the machine is untrusted afterward.
+- List/search commands values **mask** করে; plaintext লাগলে তবেই `get` / `copy`।
+- Sync server শুধু **ciphertext** সংরক্ষণ; CLI keys locally derive করে অন্যান্য OpenKey clients-এর মতো।
+- মাস্টার পাসওয়ার্ড flag হিসেবে পাঠাবেন না; `OPENKEY_PASSWORD` বা `OPENKEY_SESSION` log করবেন না।
+- Bridge traffic local-only; unlocked vault লাগে।
+- Session tokens expire; shared machines-এ `config set-lock` দিয়ে lifetime কমান।
+- `forget` disk-এ CLI state সাফ; মেশিন untrusted হলে `logout` দিয়ে server tokens rotate।
 
 ## Development
 
@@ -295,7 +351,7 @@ npm run build
 
 ## Related guides
 
-- [Using the app](./app) — desktop unlock, Secrets section, autofill
-- [Install the server](./server) — self-hosted sync
+- [অ্যাপ ব্যবহার](./app) — desktop unlock, Secrets section, autofill
+- [সার্ভার ইনস্টল](./server) — self-hosted sync
 - [Security](./security) — Argon2id, tokens, threat model
 - [Packages](./packages) — repository layout

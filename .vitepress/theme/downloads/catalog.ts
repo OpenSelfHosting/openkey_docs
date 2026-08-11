@@ -3,6 +3,8 @@
  * Prefer live store / release URLs when set; otherwise deep-link the download page.
  */
 
+import { RELEASE_ARTIFACT_URLS, STORE_URLS } from './downloadUrls.generated'
+
 export type OsId = 'windows' | 'macos' | 'linux' | 'android' | 'ios'
 export type ArchId = 'x64' | 'arm64' | 'arm32' | 'universal'
 
@@ -104,11 +106,22 @@ export function findVariant(
 }
 
 /**
- * Channels today: Play Store is the only live public URL.
- * Desktop / iOS variants deep-link the download guide with arch anchors
- * until GitHub Releases / store IDs are published.
+ * Desktop artifacts → latest GitHub Release on openkey_app.
+ * Store listings → scripts/store-urls.config.json (flip live / set ids when published).
+ * Hash anchors remain when a URL is not available yet.
  */
-export const DOWNLOAD_PLATFORMS: DownloadPlatform[] = [
+function applyDownloadUrls(platforms: DownloadPlatform[]): DownloadPlatform[] {
+  return platforms.map((platform) => ({
+    ...platform,
+    variants: platform.variants.map((variant) => {
+      const url = STORE_URLS[variant.id] ?? RELEASE_ARTIFACT_URLS[variant.id]
+      if (!url) return variant
+      return { ...variant, href: url, external: true }
+    }),
+  }))
+}
+
+const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
   {
     id: 'windows',
     labelKey: 'windows',
@@ -127,6 +140,12 @@ export const DOWNLOAD_PLATFORMS: DownloadPlatform[] = [
         labelKey: 'windowsArm64',
         arch: 'arm64',
         href: '#windows-arm64',
+      },
+      {
+        id: 'windows-store',
+        labelKey: 'windowsStore',
+        arch: 'universal',
+        href: '#windows-store',
       },
     ],
   },
@@ -154,6 +173,12 @@ export const DOWNLOAD_PLATFORMS: DownloadPlatform[] = [
         labelKey: 'macosUniversal',
         arch: 'universal',
         href: '#macos-universal',
+      },
+      {
+        id: 'macos-appstore',
+        labelKey: 'macosAppStore',
+        arch: 'universal',
+        href: '#macos-appstore',
       },
     ],
   },
@@ -188,6 +213,18 @@ export const DOWNLOAD_PLATFORMS: DownloadPlatform[] = [
         arch: 'arm64',
         href: '#linux-tar-arm64',
       },
+      {
+        id: 'linux-flathub',
+        labelKey: 'linuxFlathub',
+        arch: 'universal',
+        href: '#linux-flathub',
+      },
+      {
+        id: 'linux-snap',
+        labelKey: 'linuxSnap',
+        arch: 'universal',
+        href: '#linux-snap',
+      },
     ],
   },
   {
@@ -200,8 +237,7 @@ export const DOWNLOAD_PLATFORMS: DownloadPlatform[] = [
         id: 'android-play',
         labelKey: 'androidPlay',
         arch: 'universal',
-        href: 'https://play.google.com/store/apps/details?id=com.openselfhosting.openkey',
-        external: true,
+        href: '#android-play',
         recommended: true,
       },
       {
@@ -228,3 +264,5 @@ export const DOWNLOAD_PLATFORMS: DownloadPlatform[] = [
     ],
   },
 ]
+
+export const DOWNLOAD_PLATFORMS = applyDownloadUrls(DOWNLOAD_PLATFORMS_BASE)
