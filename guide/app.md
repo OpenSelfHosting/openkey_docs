@@ -4,7 +4,6 @@ OpenKey is the mobile and desktop client for Android, iOS, macOS, Linux, and Win
 
 <p class="ok-app-visual">
   <img src="/app_icon.png" alt="OpenKey app icon" width="120" height="120" />
-  <img src="/logo.png" alt="OpenKey wordmark" width="200" height="60" />
 </p>
 
 ## Install
