@@ -2000,7 +2000,7 @@ button.ok-hero__cta--primary:focus {
   margin: 1.25rem 0 1.75rem;
 }
 
-.ok-app-visual img:first-child {
+.ok-app-visual img {
   width: 120px;
   height: 120px;
   border-radius: 28%;
@@ -2008,10 +2008,13 @@ button.ok-hero__cta--primary:focus {
   background: var(--vp-c-bg-elv);
 }
 
-.ok-app-visual img:last-child {
+.ok-app-visual img + img {
   height: 48px;
   width: auto;
   object-fit: contain;
+  box-shadow: none;
+  border-radius: 0;
+  background: transparent;
 }
 
 .ok-post-cover {
