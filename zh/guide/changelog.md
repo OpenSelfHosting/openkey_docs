@@ -2,6 +2,11 @@
 
 本 monorepo 中 OpenKey 软件包的发行说明。应用版本遵循 `openkey_app`（`pubspec.yaml`）。文档版本跟踪本站点。
 
+
+## 1.0.2 (2026-08-13)
+
+See [English changelog](/guide/changelog#10-02-2026-08-13) — web target removed; app **1.0.2+3**.
+
 ## 1.0.0 (2026)
 
 首次公开文档版本，与应用 **1.0.0+1** 及开源软件包（`openkey_server`、`openkey_extension`、`openkey_cli`、`openkey_docs`）对齐。

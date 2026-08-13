@@ -2,6 +2,11 @@
 
 Notas de publicación de los paquetes OpenKey de este monorepo. La versión de la app sigue `openkey_app` (`pubspec.yaml`). La versión de la documentación sigue este sitio.
 
+
+## 1.0.2 (2026-08-13)
+
+See [English changelog](/guide/changelog#10-02-2026-08-13) — web target removed; app **1.0.2+3**.
+
 ## 1.0.0 (2026)
 
 Primer corte público de documentación alineado con la app **1.0.0+1** y los paquetes abiertos (`openkey_server`, `openkey_extension`, `openkey_cli`, `openkey_docs`).

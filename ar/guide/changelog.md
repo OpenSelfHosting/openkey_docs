@@ -2,6 +2,11 @@
 
 ملاحظات الإصدار لحزم OpenKey في هذا المستودع. إصدار التطبيق يتبع `openkey_app` (`pubspec.yaml`). إصدار التوثيق يتبع هذا الموقع.
 
+
+## 1.0.2 (2026-08-13)
+
+See [English changelog](/guide/changelog#10-02-2026-08-13) — web target removed; app **1.0.2+3**.
+
 ## 1.0.0 (2026)
 
 أول قطع توثيق عام متوافق مع التطبيق **1.0.0+1** والحزم المفتوحة (`openkey_server`، `openkey_extension`، `openkey_cli`، `openkey_docs`).
