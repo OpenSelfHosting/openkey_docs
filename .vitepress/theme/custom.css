@@ -330,6 +330,53 @@ html.dark body {
   filter: blur(18px);
 }
 
+.ok-hero__phone-wrap {
+  position: relative;
+  justify-self: center;
+}
+
+.ok-hero__phone {
+  position: relative;
+  width: min(42vw, 220px);
+  border-radius: 28px;
+  padding: 10px;
+  background: linear-gradient(
+    155deg,
+    color-mix(in srgb, var(--ok-ink) 12%, transparent),
+    color-mix(in srgb, var(--ok-teal) 18%, transparent)
+  );
+  box-shadow:
+    0 28px 56px rgba(16, 36, 28, 0.18),
+    0 0 0 1px color-mix(in srgb, var(--ok-line) 80%, transparent);
+}
+
+.dark .ok-hero__phone {
+  box-shadow:
+    0 28px 56px rgba(0, 0, 0, 0.45),
+    0 0 0 1px color-mix(in srgb, var(--ok-line) 55%, transparent);
+}
+
+.ok-hero__phone::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28%;
+  height: 5px;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--ok-ink) 22%, transparent);
+  z-index: 2;
+}
+
+.ok-hero__phone-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  background: var(--vp-c-bg);
+}
+
 .ok-hero__content {
   position: relative;
   z-index: 1;
@@ -488,6 +535,14 @@ html.dark body {
 
   .ok-hero__icon-wrap {
     justify-self: start;
+  }
+
+  .ok-hero__phone-wrap {
+    justify-self: start;
+  }
+
+  .ok-hero__phone {
+    width: min(52vw, 200px);
   }
 
   .ok-hero__icon {
@@ -1995,26 +2050,26 @@ button.ok-hero__cta--primary:focus {
 .ok-app-visual {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-end;
   gap: 1.25rem 1.75rem;
   margin: 1.25rem 0 1.75rem;
 }
 
 .ok-app-visual img {
-  width: 120px;
-  height: 120px;
-  border-radius: 28%;
-  box-shadow: 0 12px 32px rgba(16, 36, 28, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(16, 36, 28, 0.14);
   background: var(--vp-c-bg-elv);
 }
 
-.ok-app-visual img + img {
-  height: 48px;
-  width: auto;
-  object-fit: contain;
-  box-shadow: none;
-  border-radius: 0;
-  background: transparent;
+.ok-app-shot--phone {
+  width: min(220px, 42vw);
+  height: auto;
+}
+
+.ok-app-shot--desktop {
+  width: min(100%, 520px);
+  height: auto;
+  border-radius: 16px;
 }
 
 .ok-post-cover {
