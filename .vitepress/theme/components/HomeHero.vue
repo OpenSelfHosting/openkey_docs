@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useData } from 'vitepress'
-import BrandIcon from './BrandIcon.vue'
 import DownloadPicker from './DownloadPicker.vue'
 import { useSitePrefs } from '../composables/useSitePrefs'
 
@@ -23,6 +23,13 @@ const props = withDefaults(
 
 const { isDark: vpDark } = useData()
 const { isDark, prefs } = useSitePrefs()
+
+const phoneShot = computed(() => {
+  const dark = isDark.value || vpDark.value
+  return dark
+    ? '/screenshots/openkey-vault-dark.png'
+    : '/screenshots/openkey-vault-light.png'
+})
 </script>
 
 <template>
@@ -37,8 +44,16 @@ const { isDark, prefs } = useSitePrefs()
     </div>
 
     <div class="ok-hero__stage">
-      <div class="ok-hero__icon-wrap">
-        <BrandIcon size="hero" class="ok-hero__icon" />
+      <div class="ok-hero__phone-wrap">
+        <div class="ok-hero__phone" aria-hidden="true">
+          <img
+            class="ok-hero__phone-shot"
+            :src="phoneShot"
+            alt="OpenKey vault screen on mobile"
+            width="390"
+            height="844"
+          />
+        </div>
       </div>
 
       <div class="ok-hero__content">

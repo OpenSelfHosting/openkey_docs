@@ -3,7 +3,27 @@
 OpenKey is the mobile and desktop client for Android, iOS, macOS, Linux, and Windows. Core vault features are free; OpenKey Pro unlocks extras. Your vault lives encrypted on the device; a self-hosted [server](./server) is optional for sync. Install it from the official store or download channel for your platform.
 
 <p class="ok-app-visual">
-  <img src="/app_icon.png" alt="OpenKey app icon" width="120" height="120" />
+  <img
+    src="/screenshots/openkey-vault-light.png"
+    alt="OpenKey vault on mobile — collections and logins"
+    class="ok-app-shot ok-app-shot--phone"
+    width="390"
+    height="844"
+  />
+  <img
+    src="/screenshots/openkey-onboarding-light.png"
+    alt="OpenKey first-run onboarding — trust FAQ before vault setup"
+    class="ok-app-shot ok-app-shot--phone"
+    width="390"
+    height="844"
+  />
+  <img
+    src="/screenshots/openkey-desktop-light.png"
+    alt="OpenKey on desktop — navigation rail and vault list"
+    class="ok-app-shot ok-app-shot--desktop"
+    width="1200"
+    height="750"
+  />
 </p>
 
 ## Install

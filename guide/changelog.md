@@ -14,6 +14,7 @@ Aligned with app **1.0.2+3**.
 ### Docs
 
 - Removed references to a separate web app build; pricing, FAQ, privacy, and terms updated accordingly
+- Product screenshots on the home hero and [Using the app](./app) guide (vault, onboarding, desktop previews)
 
 ## 1.0.0 (2026)
 
@@ -63,7 +64,6 @@ First public documentation cut aligned with app **1.0.0+1** and the open package
 - Fuller changelog and security guides for hi / bn / pt / ru / ur
 - FAQ heading polish for hi / bn (some English H2/H3 skeletons remain)
 - Changelog entries per package as standalone remotes ship tagged releases
-- Product screenshots beyond brand icon / wordmark
 
 ## How versions relate
 
