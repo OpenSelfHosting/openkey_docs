@@ -40,9 +40,6 @@ OpenKey کا بنیادی والٹ سبسکرپشن کے بغیر آف لائن 
 - Android، iOS اور macOS **LAN Pro نظرانداز** کرتے ہیں؛ اس store پر Pro خریدیں یا restore کریں
 - Unpairing attestation روک دیتی ہے
 
-## Web builds
-
-**Web builds ابھی Pro نافذ نہیں کرتے۔** Mobile اور desktop store/desktop builds کرتے ہیں۔ براؤزر میں ٹیسٹ کرتے وقت اس کا خیال رکھیں۔
 
 ## مزید پڑھیں
 

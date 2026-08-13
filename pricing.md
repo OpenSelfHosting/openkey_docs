@@ -55,10 +55,6 @@ In-app purchases are available on **Android, iOS, and macOS**. On Windows and Li
 
 Details: [Nearby → LAN Pro](/guide/nearby#lan-pro-attestation) · [FAQ](/guide/faq)
 
-### Web builds
-
-Web builds **do not enforce Pro yet**. Mobile and desktop store builds do.
-
 ## Manage or cancel
 
 - **Apple:** Settings → Apple ID → Subscriptions (or App Store subscriptions)

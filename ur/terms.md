@@ -44,7 +44,6 @@ OpenKey ایک پاس ورڈ مینیجر ہے جو vault ڈیٹا آپ کے dev
 - کچھ desktop platforms پر Nearby کے ذریعے شیئر شدہ **LAN Pro** peer attestation سہولت ہے، IAP platforms پر store purchase کا متبادل نہیں۔
 - قیمتیں اور feature availability بدل سکتی ہیں؛ اہم product changes documentation یا store listings میں ظاہر کریں گے۔
 
-Web builds mobile/desktop builds جیسے Pro enforce نہیں کر سکتے؛ licensing کے لیے web behaviour پر بھروسہ نہ کریں۔
 
 ## 6. Third-party services
 

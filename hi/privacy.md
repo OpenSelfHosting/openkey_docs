@@ -21,7 +21,7 @@
 
 ## यह किसे कवर करती है
 
-यह policy official OpenKey **app** (Android, iOS, macOS, Windows, Linux, और same product के web builds) पर लागू होती है। अलग packages (self-hosted server, browser extension, CLI, documentation site) same zero-knowledge principles follow करते हैं; self-hosted server के operators उस instance के operational data के controllers हैं (नीचे देखें)।
+यह policy official OpenKey **app** (Android, iOS, macOS, Windows, Linux) पर लागू होती है। अलग packages (self-hosted server, browser extension, CLI, documentation site) same zero-knowledge principles follow करते हैं; self-hosted server के operators उस instance के operational data के controllers हैं (नीचे देखें)।
 
 ## जानकारी जो हम collect नहीं करते
 

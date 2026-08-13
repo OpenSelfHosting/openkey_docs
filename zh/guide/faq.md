@@ -88,9 +88,6 @@ Windows/Linux 上为 `Ctrl+Shift+L`，macOS 上为 `⌘⇧L`。可在浏览器�
 
 软删除的条目作为**墓碑（tombstones）**同步，直到对等方赶上。Last-write-wins 使用每条目的 `revision` — 并发编辑仍可能覆盖。
 
-### Web 构建需要 Pro 吗？
-
-**暂不。** Web 构建目前不强制 Pro 限额。移动与桌面商店/桌面构建会强制。
 
 ### 组织与共享如何工作？
 

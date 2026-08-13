@@ -15,7 +15,7 @@ OpenKey 是适用于 Android、iOS、macOS、Linux 和 Windows 的移动与桌�
 
 ## 免费与 OpenKey Pro {#free-vs-openkey-pro}
 
-核心保险库功能可离线免费使用。在 Android、iOS、macOS、Windows 和 Linux 上，Pro 提高限额并解锁额外功能。Web 构建暂不强制 Pro。在**没有**商店 IAP 的平台（通常是 Windows/Linux）上，已配对的 Nearby 对等方可共享 **LAN Pro** 证明——仅作便利，不是购买的密码学证明（有商店 IAP 的平台会忽略 LAN Pro）。
+核心保险库功能可离线免费使用。在 Android、iOS、macOS、Windows 和 Linux 上，Pro 提高限额并解锁额外功能。在**没有**商店 IAP 的平台（通常是 Windows/Linux）上，已配对的 Nearby 对等方可共享 **LAN Pro** 证明——仅作便利，不是购买的密码学证明（有商店 IAP 的平台会忽略 LAN Pro）。
 
 | | 免费 | Pro |
 |--|------|-----|

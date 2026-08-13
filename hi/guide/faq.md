@@ -88,9 +88,6 @@ Entry पर authenticator secret या `otpauth` URI जोड़ें, य�
 
 Soft-deleted items **tombstones** के रूप में sync जब तक peers catch up। Last-write-wins per-item `revision` उपयोग करता है — concurrent edits अभी overwrite कर सकते हैं।
 
-### Do web builds require Pro?
-
-**अभी नहीं।** Web builds आज Pro limits enforce नहीं करते। Mobile और desktop store/desktop builds करते हैं।
 
 ### How do organizations and shares work?
 

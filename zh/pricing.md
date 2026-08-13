@@ -55,9 +55,6 @@
 
 详情：[Nearby → LAN Pro](/zh/guide/nearby#lan-pro-attestation) · [常见问题](/zh/guide/faq)
 
-### Web 构建
-
-Web 构建**尚未强制 Pro**。移动版和桌面商店版会强制。
 
 ## 管理或取消
 

@@ -44,7 +44,6 @@ Open packages (server, extension, CLI, docs) সাধারণত **MIT License
 - কিছু desktop platforms-এ Nearby-এর over **LAN Pro** peer attestation convenience, IAP platforms-এ store purchase-এর substitute নয়।
 - Prices ও feature availability বদলাতে পারে; material product changes documentation বা store listings-এ reflect করব।
 
-Web builds mobile/desktop builds যেমন Pro enforce নাও করতে পারে; licensing-এর জন্য web behavior-এর উপর rely না করুন।
 
 ## 6. Third-party services
 

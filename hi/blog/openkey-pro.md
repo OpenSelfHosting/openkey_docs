@@ -40,9 +40,6 @@ Free tier caps (Pro enforce करने वाले mobile/desktop builds): **
 - Android, iOS, और macOS LAN Pro **ignore** करते हैं; उस store पर Pro खरीदें या restore करें
 - Unpairing attestation रोकता है
 
-## Web builds
-
-**Web builds अभी Pro enforce नहीं करते।** Mobile और desktop store/desktop builds करते हैं। browser में test करें तो उसी हिसाब से plan करें।
 
 ## और गहराई से
 

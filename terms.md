@@ -44,8 +44,6 @@ Some features require **OpenKey Pro** (for example unlimited items beyond free c
 - **LAN Pro** shared over Nearby on certain desktop platforms is a peer attestation convenience, not a substitute for a store purchase on IAP platforms.
 - Prices and feature availability may change; we will reflect material product changes in documentation or store listings.
 
-Web builds may not enforce Pro the same way as mobile/desktop builds; do not rely on web behavior for licensing.
-
 ## 6. Third-party services
 
 OpenKey may interact with:
