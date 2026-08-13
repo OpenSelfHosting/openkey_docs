@@ -2,6 +2,19 @@
 
 Release notes for OpenKey packages in this monorepo. App version follows `openkey_app` (`pubspec.yaml`). Docs version tracks this site.
 
+## 1.0.2 (2026-08-13)
+
+Aligned with app **1.0.2+3**.
+
+### App
+
+- **Removed Flutter web target** — OpenKey ships as native Android, iOS, macOS, Windows, and Linux only (no `web/` build or `build_all` web artifacts)
+- Pro enforcement applies on all shipped desktop and mobile targets
+
+### Docs
+
+- Removed references to a separate web app build; pricing, FAQ, privacy, and terms updated accordingly
+
 ## 1.0.0 (2026)
 
 First public documentation cut aligned with app **1.0.0+1** and the open packages (`openkey_server`, `openkey_extension`, `openkey_cli`, `openkey_docs`).

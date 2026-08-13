@@ -21,7 +21,7 @@
 
 ## کس پر لاگو ہوتی ہے
 
-یہ پالیسی سرکاری OpenKey **ایپ** (Android، iOS، macOS، Windows، Linux اور اسی پروڈکٹ کی web builds) پر لاگو ہے۔ الگ پیکجز (self-hosted سرور، براؤزر ایکسٹینشن، CLI، دستاویزات سائٹ) وہی zero-knowledge اصولوں پر ہیں؛ self-hosted سرور کے آپریٹرز اس instance کے آپریشنل ڈیٹا کے controllers ہیں (نیچے دیکھیں)۔
+یہ پالیسی سرکاری OpenKey **ایپ** (Android، iOS، macOS، Windows، Linux) پر لاگو ہے۔ الگ پیکجز (self-hosted سرور، براؤزر ایکسٹینشن، CLI، دستاویزات سائٹ) وہی zero-knowledge اصولوں پر ہیں؛ self-hosted سرور کے آپریٹرز اس instance کے آپریشنل ڈیٹا کے controllers ہیں (نیچے دیکھیں)۔
 
 ## معلومات جو ہم جمع نہیں کرتے
 

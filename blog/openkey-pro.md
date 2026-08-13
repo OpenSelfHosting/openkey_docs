@@ -40,10 +40,6 @@ On platforms **without** store in-app purchase (typically Windows / Linux), a Pr
 - Android, iOS, and macOS **ignore** LAN Pro; buy or restore Pro on that store
 - Unpairing stops the attestation
 
-## Web builds
-
-**Web builds do not enforce Pro yet.** Mobile and desktop store/desktop builds do. Plan accordingly if you test in the browser.
-
 ## Dig deeper
 
 - [Pricing](/pricing) — plans, how to buy, cancel

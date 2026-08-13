@@ -40,9 +40,6 @@ Store in-app purchase **নেই** এমন প্ল্যাটফর্ম�
 - Android, iOS ও macOS LAN Pro **উপেক্ষা** করে; সেই store-এ Pro কিনুন বা restore করুন
 - Unpair করলে attestation বন্ধ হয়
 
-## Web build
-
-**Web build এখনো Pro enforce করে না।** Mobile ও desktop store/desktop build করে। ব্রাউজারে test করলে সেই অনুযায়ী পরিকল্পনা করুন।
 
 ## আরও জানুন
 

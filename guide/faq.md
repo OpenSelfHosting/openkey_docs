@@ -88,10 +88,6 @@ Yes — folders can contain other folders (`parent` relationship). Nested logins
 
 Soft-deleted items sync as **tombstones** until peers catch up. Last-write-wins uses per-item `revision` — concurrent edits can still overwrite.
 
-### Do web builds require Pro?
-
-**Not yet.** Web builds do not enforce Pro limits today. Mobile and desktop store/desktop builds do.
-
 ### How do organizations and shares work?
 
 Pro + same self-hosted server. Publish identity keys, then invite to an org or share an entry snapshot. Details: [Sharing & organizations](./sharing).

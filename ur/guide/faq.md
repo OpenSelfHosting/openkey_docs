@@ -88,9 +88,6 @@ Entry پر authenticator secret یا `otpauth` URI، یا سائٹ کے 2FA setu
 
 Soft-deleted items **tombstones** کے طور پر سنک جب تک peers catch up نہ کریں۔ Last-write-wins فی-item `revision` — ہم وقت edits پھر overwrite ہو سکتی ہیں۔
 
-### Web builds Pro چاہتی ہیں؟
-
-**ابھی نہیں۔** Web builds آج Pro limits نافذ نہیں کرتیں۔ Mobile اور desktop store/desktop builds کرتے ہیں۔
 
 ### Organizations اور shares کیسے کام کرتے ہیں؟
 

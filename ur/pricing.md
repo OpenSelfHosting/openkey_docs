@@ -55,10 +55,6 @@ In-app purchases **Android، iOS اور macOS** پر دستیاب ہیں۔ Windo
 
 تفصیل: [Nearby → LAN Pro](/ur/guide/nearby#lan-pro-attestation) · [FAQ](/ur/guide/faq)
 
-### Web builds
-
-Web builds **ابھی Pro نافذ نہیں کرتے**۔ موبائل اور ڈیسک ٹاپ اسٹور builds کرتے ہیں۔
-
 ## منظم یا منسوخ کریں
 
 - **Apple:** Settings → Apple ID → Subscriptions (یا App Store subscriptions)

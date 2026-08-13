@@ -55,10 +55,6 @@ In-app purchases **Android, iOS, এবং macOS**-এ উপলব্ধ। Win
 
 বিস্তারিত: [Nearby → LAN Pro](/bn/guide/nearby#lan-pro-attestation) · [FAQ](/bn/guide/faq)
 
-### Web builds
-
-Web builds **এখনো Pro enforce না করে**। Mobile ও desktop store builds enforce করে।
-
 ## Manage বা cancel
 
 - **Apple:** Settings → Apple ID → Subscriptions (অথবা App Store subscriptions)

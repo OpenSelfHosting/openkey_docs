@@ -88,9 +88,6 @@ Entry-তে authenticator secret বা `otpauth` URI যোগ করুন, �
 
 Soft-deleted items **tombstones** হিসেবে sync যতক্ষণ peers catch up। Last-write-wins per-item `revision` ব্যবহার করে — concurrent edits এখনো overwrite করতে পারে।
 
-### Do web builds require Pro?
-
-**এখনো না।** Web builds আজ Pro limits enforce না করে। Mobile ও desktop store/desktop builds করে।
 
 ### How do organizations and shares work?
 

@@ -21,7 +21,7 @@ Related reading: [Security](/guide/security) · [Terms of Service](/terms)
 
 ## Who this covers
 
-This policy applies to the official OpenKey **app** (Android, iOS, macOS, Windows, Linux, and web builds of the same product). Separate packages (self-hosted server, browser extension, CLI, documentation site) follow the same zero-knowledge principles; operators of a self-hosted server are controllers of that instance’s operational data (see below).
+This policy applies to the official OpenKey **app** (Android, iOS, macOS, Windows, and Linux). Separate packages (self-hosted server, browser extension, CLI, documentation site) follow the same zero-knowledge principles; operators of a self-hosted server are controllers of that instance’s operational data (see below).
 
 ## Information we do not collect
 
