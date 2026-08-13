@@ -68,6 +68,8 @@ Soft-deleted vault items remain as **tombstones** until peers sync; last-write-w
 - Set a strong unique `JWT_SECRET` (min 32 chars; placeholders rejected at startup).
 - Terminate **HTTPS** in front of the API in production.
 - Keep `CORS_ORIGINS` an explicit allow-list (**never `*`**).
+- When running multiple API workers, add **reverse-proxy rate limits** — in-process auth limits are per worker (see [Install the server](./server#production-hardening)).
+- Prefer HTTPS with a valid certificate; clients do not pin certs — HTTP or bad TLS enables MITM on sync/login.
 - Prefer keeping the vault **locked when idle**; enable biometric unlock carefully.
 - Use **Settings → Security → Password health** to find weak/reused passwords; optional HIBP checks send only a SHA-1 hash **prefix** (k-anonymity), never the password.
 - Treat exports / backups as secret material — store offline and encrypted.

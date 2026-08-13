@@ -80,6 +80,32 @@ CORS_ORIGINS=https://openkey.example.com
 
 Point clients at `https://openkey.example.com` (no port). Confirm `https://openkey.example.com/health`.
 
+## Production hardening
+
+Beyond TLS and CORS, self-hosters should plan for **multi-worker deployments** and **client trust**.
+
+### Reverse proxy and TLS
+
+- Terminate **HTTPS** at Caddy, nginx, or your load balancer. Do not expose Postgres or the raw API port publicly.
+- Add **HSTS** at the proxy (`Strict-Transport-Security`) so browsers never fall back to HTTP after the first visit.
+- Set `TRUST_PROXY_HEADERS=true` only when the proxy overwrites `X-Forwarded-For` and you trust that path; otherwise per-IP rate limits follow the proxy, not the end user.
+
+### Rate limiting
+
+The API applies an in-memory sliding-window limiter on auth endpoints (`AUTH_RATE_LIMIT_*` in `.env`). That limit is **per Uvicorn worker process**. With multiple workers or replicas, effective limits multiply unless you add a shared limiter at the reverse proxy (for example `limit_req` in nginx or Caddy rate limits).
+
+### Email enumeration tradeoffs
+
+`POST /auth/prelogin` and `POST /auth/lookup-public-key` return **404** when the email is unknown. That helps legitimate clients (extension login, org key wrapping) but lets an attacker probe which emails are registered. Mitigations:
+
+- Keep auth rate limits strict at the proxy and API.
+- Do not expose the sync API on untrusted networks without TLS.
+- For high-sensitivity deployments, place the API behind VPN or IP allow-lists.
+
+### Client MITM on self-hosted URLs
+
+The OpenKey app, extension, and CLI use the platform TLS stack with **no certificate pinning** by default. Users who type `http://` or accept misconfigured certificates are vulnerable to MITM during login and sync. Always serve HTTPS with a valid certificate and document the server URL for your users.
+
 ## API overview
 
 Interactive OpenAPI: `http://localhost:8000/docs` on a running server. Full tables live in the `openkey_server` package README. Highlights:
