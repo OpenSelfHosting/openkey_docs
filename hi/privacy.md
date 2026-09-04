@@ -60,9 +60,6 @@ OpenKey project का reference server **ciphertext only** store करने �
 
 Nearby आपके local network पर devices pair करता है, और **Link vault** के बाद उन devices के बीच vault ciphertext sync करता है। Pairing और vault-key sharing आपके LAN पर आपके chosen devices के बीच होता है। OpenSelfHosting Nearby traffic receive नहीं करता।
 
-## Optional password health (Have I Been Pwned)
-
-यदि optional breached-password check enable करें, OpenKey Have I Been Pwned range API पर केवल **SHA-1 hash prefix** (k-anonymity) भेज सकता है। आपका password itself कभी upload नहीं होता। यह feature off रख सकते हैं।
 
 ## Autofill, passkeys, और browser extension
 
@@ -97,7 +94,6 @@ Processing आपके devices पर होता है, और यदि syn
 
 - Server बिना fully offline OpenKey उपयोग करें
 - Nearby pairing choose या refuse करें
-- Optional HIBP checks disable करें
 - Local data export या delete करें (export / backup Pro require कर सकता है)
 - Authenticated delete flow के through server account delete करें (server ciphertext हटाता है; local copies wipe करने तक रहते हैं)
 - Store के subscription management के through store subscriptions revoke करें

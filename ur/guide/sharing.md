@@ -15,7 +15,7 @@
 
 ## Organizations
 
-راستہ: **Settings → Data → Organizations**، یا **Items hub → Organizations**۔
+راستہ: براؤزر ایکسٹینشن (standalone/server) اور سرور API — ایپ Settings → Data میں Organizations اسکرین نہیں۔
 
 ### Org بنائیں
 

@@ -24,9 +24,20 @@
 2. وإلا إن وُجد `OPENKEY_SESSION` صالح → وضع **session** (الذاكرة المحلية / مواد مدعومة بالخادم).
 3. وإلا → تفشل الأوامر التي تحتاج الخزنة مع تلميح لفتح قفل التطبيق أو تشغيل `eval $(openkey unlock)`.
 
-يقبل الجسر الاتصالات من **الجهاز المحلي فقط** وطالما الخزنة مفتوحة. على Unix يُستخدم مقبس تحت مسارات OpenKey المعروفة (تجاوز عبر `OPENKEY_NATIVE_SOCKET`). على Windows يُستخدم منفذ localhost من ملف تحت `%LOCALAPPDATA%\OpenKey\` (تجاوز عبر `OPENKEY_NATIVE_PORT`).
+يقبل الجسر الاتصالات من **الجهاز المحلي فقط** وطالما الخزنة مفتوحة. على Unix يُستخدم مقبس تحت مسارات OpenKey المعروفة (تجاوز عبر `OPENKEY_NATIVE_SOCKET`). على Windows **وأندرويد (Termux)** يُستخدم TCP على localhost (`OPENKEY_NATIVE_PORT`) مع `OPENKEY_NATIVE_TOKEN`.
 
 ## التثبيت
+
+**من npm** (موصى به):
+
+```bash
+npm install -g openkey-cli
+openkey --version
+```
+
+يتطلب **Node.js 20+**.
+
+**من المصدر** (للتطوير):
 
 ```bash
 cd openkey_cli
@@ -206,12 +217,15 @@ openkey discover --no-aws --no-env-vars
 
 ## البحث عبر الأسرار وتسجيلات الدخول
 
-تبحث هذه الأوامر في **أسرار المطوّرين وتسجيلات الدخول**:
+تبحث هذه الأوامر في **أسرار المطوّرين وتسجيلات الدخول والبطاقات ومحافظ الكريبتو**:
 
 ```bash
 openkey search github
 openkey get "GitHub"
 openkey copy api.example.com
+openkey logins
+openkey cards
+openkey crypto
 ```
 
 | الأمر | المخرجات |
@@ -219,6 +233,9 @@ openkey copy api.example.com
 | `search <query>` | جدول مقنّع (أو معاينات JSON) |
 | `get <query>` | كلمة المرور/السر للنتيجة الأفضل |
 | `copy <query>` | نسخ أفضل تطابق إلى الحافظة |
+| `logins` | سرد تسجيلات الدخول |
+| `cards` | سرد بطاقات الدفع (الرقم مقنّع) |
+| `crypto` | سرد محافظ الكريبتو (المفاتيح مقنّعة) |
 
 التطابق الغامض يعرض UUID والنوع والتسمية — ضيّق الاستعلام. فضّل `secret get` / `secret copy` عندما تريد قسم الأسرار فقط.
 
@@ -254,9 +271,28 @@ openkey sync
 | `OPENKEY_SESSION` | كتلة جلسة مشفّرة قصيرة العمر من `unlock` |
 | `OPENKEY_PASSWORD` | كلمة المرور الرئيسية لـ `login` / `unlock` غير التفاعلي (سكربتات/CI فقط) |
 | `OPENKEY_NATIVE_SOCKET` | تجاوز مسار مقبس الجسر على Unix |
-| `OPENKEY_NATIVE_PORT` | تجاوز منفذ الجسر على Windows |
+| `OPENKEY_NATIVE_PORT` | منفذ TCP (Windows أو Termux من ورقة التطبيق) |
+| `OPENKEY_NATIVE_TOKEN` | رمز مصادقة الجسر لكل فتح قفل (مطلوب مع المنفذ على Termux) |
 
 فضّل المطالبة التفاعلية بكلمة المرور على أجهزتك الشخصية. عامل `OPENKEY_PASSWORD` ورموز الجلسة كمادة سرية في سجلات CI.
+
+## أندرويد (Termux) {#android-termux}
+
+افتح قفل OpenKey على الهاتف → **الإعدادات ← البيانات ← Termux / CLI**. انسخ الكتلتين:
+
+```bash
+pkg install nodejs
+npm install -g openkey-cli
+```
+
+```bash
+export OPENKEY_NATIVE_PORT=...   # من الورقة
+export OPENKEY_NATIVE_TOKEN=...  # من الورقة
+openkey status
+openkey secret list
+```
+
+المنفذ والرمز صالحان طوال فتح القفل الحالي فقط. انسخهما مجدداً بعد القفل ثم الفتح.
 
 ## مرجع الأوامر
 
@@ -264,8 +300,10 @@ openkey sync
 |------|----------------------|------|
 | `gen` | لا | توليد كلمة مرور دون اتصال |
 | `discover` | الحفظ: نعم\* / dry-run: لا | مسح SSH / `.env` / البيئة / AWS ← مجموعة الجهاز |
-| `secret add\|list\|get\|copy\|rm` | نعم\* | أسرار المطوّرين |
-| `get` / `copy` / `search` | نعم\* | أسرار + تسجيلات دخول |
+| `secret add\|list\|get\|copy\|rm\|update\|export\|devices` | نعم\* | أسرار المطوّرين |
+| `get` / `copy` / `search` / `totp` / `logins` / `cards` / `crypto` | نعم\* | أسرار + تسجيلات دخول + بطاقات + محافظ |
+| `env` / `run` | نعم\* | تصدير الأسرار إلى القشرة / عملية ابن |
+| `completion` | لا | إكمال Bash / zsh / fish |
 | `status` | لا | حالة الجسر / الجلسة / الخادم |
 | `config set-server\|show\|set-lock` | لا | إعداد CLI |
 | `login` / `logout` | — | مصادقة خادم اختيارية |

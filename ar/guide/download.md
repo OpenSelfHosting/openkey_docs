@@ -8,7 +8,7 @@ title: التنزيل والتثبيت
 
 معرّف التطبيق: `com.openselfhosting.openkey` · المنظمة: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-قوائم المتاجر وإصدارات GitHub تُنشر تدريجياً لكل منصة. إلى أن يصبح رابط المتجر حيّاً، ابنِ من المستودع أو استخدم حزمة سطح المكتب من تشغيل `build_all/` لديك. قد تبقى صفحات المتاجر العامة قيد المراجعة حتى بعد أن تنتج سكربتات التعبئة حزم Play / App Store / Flathub محلياً.
+قوائم المتاجر وإصدارات GitHub تُنشر تدريجياً لكل منصة. الباينري الرسمي على [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). **سورس التطبيق الرسمي ليس عاماً.** إلى أن يصبح رابط المتجر حيّاً استخدم حزم ذلك الإصدار.
 
 ## الجوال
 
@@ -17,7 +17,7 @@ title: التنزيل والتثبيت
 | القناة | ملاحظات |
 |---------|--------|
 | Google Play {#android-play} | `com.openselfhosting.openkey` — ابحث عن **OpenKey** من OpenSelfHosting بعد نشر القائمة |
-| تثبيت جانبي APK/AAB {#android-apk} | من `build_all/android/` (`OpenKey-*-android.apk`) |
+| تثبيت جانبي APK/AAB {#android-apk} | من [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases) (`OpenKey-*-android.apk`) |
 
 ### iOS {#ios}
 
@@ -26,7 +26,7 @@ title: التنزيل والتثبيت
 | App Store | عند الإدراج — ابحث عن **OpenKey** من OpenSelfHosting |
 | أرشيف Xcode | محلياً من `build_all/ios/` |
 
-فعّل **الإعدادات ← الملء التلقائي** ليُملأ OpenKey كلمات المرور ومفاتيح المرور على مستوى النظام.
+فعّل **الإعدادات ← الأمان** (الملء التلقائي) ليُملأ OpenKey كلمات المرور ومفاتيح المرور على مستوى النظام.
 
 ## سطح المكتب
 
@@ -49,23 +49,18 @@ title: التنزيل والتثبيت
 
 | البناء | الحزمة |
 |-------|----------|
+| AppImage x64 {#linux-appimage-x64} | `OpenKey-*-linux-x64.AppImage` |
+| AppImage Arm64 {#linux-appimage-arm64} | `OpenKey-*-linux-arm64.AppImage` |
 | `.deb` x64 {#linux-deb-x64} | `OpenKey-*-linux-x64.deb` |
 | `.deb` Arm64 {#linux-deb-arm64} | `OpenKey-*-linux-arm64.deb` |
 | `.tar.gz` x64 {#linux-tar-x64} | أرشيف محمول من `build_all/linux/` |
 | `.tar.gz` Arm64 {#linux-tar-arm64} | أرشيف محمول (arm64) |
 
-أيضاً: Flathub / Snap Store عند الإدراج (`com.openselfhosting.openkey` / `openkey`). لا يوجد AppImage بعد.
+مستخدمو Arch يمكنهم `makepkg -si` مع `PKGBUILD` داخل الأرشيف.
 
 ملء سطح المكتب يسجّل **مضيف الرسائل الأصلية** الذي يستخدمه [امتداد المتصفح](./extension). أبقِ الخزنة مفتوحة القفل أثناء الملء من المتصفح.
 
-### بناء سطح المكتب بنفسك
-
-```bash
-cd openkey_app
-./build_all.sh --desktop    # أو --macos / أعلام خاصة بالمضيف
-```
-
-انظر `openkey_app/packaging/README.md` لتعبئة المتاجر (Play، App Store، Microsoft Store، Snap، Flathub).
+مثبّتات سطح المكتب الرسمية مرفقة بـ [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). سورس تطبيق OpenKey ملكية خاصة — ثبّت الحزم الرسمية، لا تتوقع `flutter build` عاماً.
 
 ## امتداد المتصفح
 

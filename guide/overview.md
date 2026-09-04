@@ -27,4 +27,4 @@ OpenKey is a **self-hosted, end-to-end encrypted password manager**. Clients enc
 | `openkey_extension` | MV3 browser extension (Chrome / Firefox) |
 | `openkey_cli` | Developer CLI (secrets, password gen, sync) |
 
-The mobile and desktop **OpenKey app** is covered separately. See [Download](./download), [Using the app](./app), [Nearby](./nearby), [Browser extension](./extension), [Packages](./packages), [Server setup](./server), [FAQ](./faq), [Changelog](./changelog), and [Quick start](./quick-start).
+The mobile and desktop **OpenKey app** is a proprietary official client of this protocol. See [Download](./download), [Using the app](./app), [Nearby](./nearby), [Browser extension](./extension), [Packages](./packages), [Server setup](./server), [FAQ](./faq), [Changelog](./changelog), and [Quick start](./quick-start). Protocol details: [OpenSelfHosting/OpenKey spec](https://github.com/OpenSelfHosting/OpenKey/tree/main/spec).

@@ -71,7 +71,7 @@ Soft-deleted vault items remain as **tombstones** until peers sync; last-write-w
 - When running multiple API workers, add **reverse-proxy rate limits** — in-process auth limits are per worker (see [Install the server](./server#production-hardening)).
 - Prefer HTTPS with a valid certificate; clients do not pin certs — HTTP or bad TLS enables MITM on sync/login.
 - Prefer keeping the vault **locked when idle**; enable biometric unlock carefully.
-- Use **Settings → Security → Password health** to find weak/reused passwords; optional HIBP checks send only a SHA-1 hash **prefix** (k-anonymity), never the password.
+- Enable **Settings → Security → Autofill** so the OS / browser can fill only after you unlock.
 - Treat exports / backups as secret material — store offline and encrypted.
 - Pair Nearby devices only with people/devices you trust; **Link vault** shares vault-key material over the LAN session — unpair to revoke LAN Pro claims and stop sync.
 - Report vulnerabilities privately — see [Reporting vulnerabilities](#reporting-vulnerabilities).
@@ -98,6 +98,6 @@ Include the affected package, version/commit if known, steps to reproduce, and i
 
 ## Packaging note
 
-Published packages include the **server**, **browser extension**, **CLI**, and **docs** (MIT). This monorepo may contain a development checkout of the mobile/desktop **OpenKey app** used for cross-package work. See the [overview](./overview) and [packages](./packages) guides.
+Published packages include the **server**, **browser extension**, **CLI**, and **docs** (MIT), plus the protocol spec in [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey). The official mobile/desktop **app is proprietary**; install binaries from [Download](./download). See the [overview](./overview) and [packages](./packages) guides.
 
 For API details, see the `openkey_server` package README and `/docs` on a running server.

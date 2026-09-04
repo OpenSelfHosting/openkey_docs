@@ -69,6 +69,7 @@ Available exports: **OpenKey JSON**, **Bitwarden JSON**, **Chrome CSV**, **LastP
 
 - Creates a full-vault `.okbak` (database, settings, attachments) encrypted for restore with your vault credentials.
 - Restore replaces local vault data — confirm before proceeding.
+- On a **new device**, you can pick the `.okbak` on the first-run setup screen instead of creating an empty vault.
 - Nearby / server sync is **not** a backup ([FAQ](./faq)).
 
 ## After migrating from another manager

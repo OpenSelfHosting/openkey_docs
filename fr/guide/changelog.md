@@ -3,6 +3,10 @@
 Notes de version des paquets OpenKey de ce monorepo. La version de l’app suit `openkey_app` (`pubspec.yaml`). La version de la doc suit ce site.
 
 
+## 1.0.6 (2026-08-28)
+
+See [English changelog](/guide/changelog#10-06-2026-08-28) — Linux AppImage/RPM, rounded icons, Nearby, Autofill, Termux CLI; app **1.0.6+7**.
+
 ## 1.0.2 (2026-08-13)
 
 See [English changelog](/guide/changelog#10-02-2026-08-13) — web target removed; app **1.0.2+3**.

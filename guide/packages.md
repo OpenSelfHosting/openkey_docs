@@ -1,18 +1,18 @@
 # Packages
 
-Packages you can self-host and build. Install the app from [Download](./download). Day-to-day usage: [Using the app](./app). Browser setup: [Browser extension](./extension).
+Install the official app from [Download](./download) (binaries / stores). Self-host and build the **open** packages below. Day-to-day usage: [Using the app](./app). Browser setup: [Browser extension](./extension).
 
-Published remotes under [OpenSelfHosting](https://github.com/OpenSelfHosting) may ship packages separately; this docs site describes the open packages in the local monorepo checkout.
+The protocol spec lives in [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey) (`spec/`). Published remotes under [OpenSelfHosting](https://github.com/OpenSelfHosting) ship packages separately.
 
-| Path | Description |
-|------|-------------|
-| `openkey_app` | Flutter client (Android, iOS, desktop) — product app |
-| `openkey_server` | FastAPI zero-knowledge sync API + PostgreSQL |
-| `openkey_extension` | MV3 browser extension (Chrome / Firefox) |
-| `openkey_cli` | Developer CLI — secrets, password generation, sync |
-| `openkey_docs` | This site — product pages and documentation |
+| Path | Source | Description |
+|------|--------|-------------|
+| Official **OpenKey app** | Proprietary | Flutter client (Android, iOS, desktop). Install from [Download](./download) / GitHub Releases — not from public source |
+| `openkey_server` | MIT | FastAPI zero-knowledge sync API + PostgreSQL |
+| `openkey_extension` | MIT | MV3 browser extension (Chrome / Firefox / Edge / Brave / LibreWolf) |
+| `openkey_cli` | MIT | Developer CLI — secrets, password generation, sync; Termux on Android |
+| `openkey_docs` | MIT | This site — product pages and documentation |
 
-Each package has its own README with setup details. Report security issues to **security@openselfhosting.com** — see [Security](./security#reporting-vulnerabilities).
+Each **open** package has its own README with setup details. Report security issues to **security@openselfhosting.com** — see [Security](./security#reporting-vulnerabilities).
 
 ## Server highlights
 
@@ -32,5 +32,5 @@ Full guide: [Browser extension](./extension).
 ## CLI highlights
 
 - Offline password generation
-- Discover SSH keys, `.env` files, and API tokens into the unlocked desktop app
+- Discover SSH keys, `.env` files, and API tokens into the unlocked desktop (or Termux) app
 - Optional login / unlock / sync against your server

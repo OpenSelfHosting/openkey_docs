@@ -68,7 +68,6 @@ Los elementos del vault eliminados de forma suave permanecen como **tombstones**
 - Termina **HTTPS** delante de la API en producción.
 - Mantén `CORS_ORIGINS` como lista blanca explícita (**nunca `*`**).
 - Prefiere mantener el vault **bloqueado en inactividad**; activa el desbloqueo biométrico con cuidado.
-- Usa **Ajustes → Seguridad → Salud de contraseñas** para encontrar contraseñas débiles/reutilizadas; las comprobaciones HIBP opcionales envían solo un **prefijo** del hash SHA-1 (k-anonimato), nunca la contraseña.
 - Trata exportaciones / copias como material secreto — almacena sin conexión y cifrado.
 - Empareja dispositivos Nearby solo con personas/dispositivos de confianza; **Vincular vault** comparte material de la clave del vault por la sesión LAN — desempareja para revocar reclamaciones LAN Pro y detener la sync.
 - Informa vulnerabilidades en privado — ver [Informar vulnerabilidades](#informar-vulnerabilidades).

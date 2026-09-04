@@ -67,8 +67,8 @@ export function thanksHref(
 }
 
 /**
- * Primary CTA / picker links: always the thank-you flow for in-app downloads.
- * Live external stores still go through thanks (opens store from that page).
+ * Primary CTA / picker links use the downloading page, which starts the
+ * matching artifact download and provides install guidance.
  */
 export function variantHref(
   localePath: string,
@@ -106,7 +106,7 @@ export function findVariant(
 }
 
 /**
- * Desktop artifacts → latest GitHub Release on openkey_app.
+ * Desktop artifacts → latest GitHub Release on OpenSelfHosting/OpenKey.
  * Store listings → scripts/store-urls.config.json (flip live / set ids when published).
  * Hash anchors remain when a URL is not available yet.
  */
@@ -189,6 +189,18 @@ const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
     anchor: 'linux',
     variants: [
       {
+        id: 'linux-appimage-x64',
+        labelKey: 'linuxAppImageX64',
+        arch: 'x64',
+        href: '#linux-appimage-x64',
+      },
+      {
+        id: 'linux-appimage-arm64',
+        labelKey: 'linuxAppImageArm64',
+        arch: 'arm64',
+        href: '#linux-appimage-arm64',
+      },
+      {
         id: 'linux-deb-x64',
         labelKey: 'linuxDebX64',
         arch: 'x64',
@@ -212,18 +224,6 @@ const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
         labelKey: 'linuxTarArm64',
         arch: 'arm64',
         href: '#linux-tar-arm64',
-      },
-      {
-        id: 'linux-flathub',
-        labelKey: 'linuxFlathub',
-        arch: 'universal',
-        href: '#linux-flathub',
-      },
-      {
-        id: 'linux-snap',
-        labelKey: 'linuxSnap',
-        arch: 'universal',
-        href: '#linux-snap',
       },
     ],
   },

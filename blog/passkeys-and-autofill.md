@@ -28,7 +28,7 @@ Load the `dist/` folder as an unpacked extension. On desktop, unlock the OpenKey
 
 ## System Autofill too
 
-In the app, enable OpenKey under **Settings → Autofill** as the system password and passkey provider. That path covers apps and browsers that talk to the OS credential store — complementary to the extension, not a replacement for it on every platform.
+In the app, enable OpenKey under **Settings → Security** as the system password and passkey provider. That path covers apps and browsers that talk to the OS credential store — complementary to the extension, not a replacement for it on every platform.
 
 ## Still zero-knowledge
 

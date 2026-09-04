@@ -1,6 +1,6 @@
 # Browser extension
 
-MV3 extension for **Chrome**, **Edge**, **Brave**, and **Firefox**. It can unlock against your [self-hosted server](./server) (standalone) or fill through the unlocked **desktop app** (native messaging).
+MV3 extension for **Chrome**, **Edge**, **Brave**, **Vivaldi**, **LibreWolf**, and **Firefox**. It can unlock against your [self-hosted server](./server) (standalone) or fill through the unlocked **desktop app** (native messaging).
 
 Host name: `com.openselfhosting.openkey`
 
@@ -13,7 +13,7 @@ Host name: `com.openselfhosting.openkey`
 3. **Autofill** — overlays, context menu, and keyboard shortcut for logins and payment cards
 4. **Save / update** — capture new logins from the page into the vault
 5. **Passkeys** — intercept WebAuthn `create` / `get`; store ES256 credentials (extension unlocked)
-6. **Cards, crypto & secrets** — browse and fill/copy reserved vault areas
+6. **Cards, crypto & secrets** — browse, create, edit, fill/copy; card banks and crypto folders; brands match the app (Visa through Mir / Elo / RuPay / UnionPay / Hipercard). Native-bridge mode writes through the unlocked desktop app.
 7. **Attachments** — list and download decrypted attachments for a login (standalone)
 8. **Shares & orgs** — list/accept/revoke shares and org invites (standalone)
 
@@ -66,7 +66,7 @@ Optional: **Settings → Browser extension → Copy offline vault link** in the 
 
 ### Windows
 
-Opening **Settings → Autofill** registers `openkey_native_host.exe` under:
+Opening **Settings → Security** (Autofill toggle) registers `openkey_native_host.exe` under:
 
 `HKCU\Software\...\NativeMessagingHosts\com.openselfhosting.openkey`
 
@@ -80,7 +80,7 @@ Keep the vault unlocked (loopback TCP).
 
 ### macOS
 
-On unlock, OpenKey installs `openkey_native_host.py` and writes manifests under Chrome / Chromium / Edge / Brave / Firefox NativeMessagingHosts folders.
+On unlock, OpenKey installs `openkey_native_host.py` and writes manifests under Chrome / Chromium / Edge / Brave / Vivaldi / Firefox / **LibreWolf** NativeMessagingHosts folders.
 
 1. Load the unpacked extension and copy its ID.
 2. App: **Settings → Browser extension** → paste ID → **Connect extension**.
@@ -90,7 +90,7 @@ Requires **Python 3** on `PATH`.
 
 ### Linux
 
-**Settings → Autofill** writes host manifests under `~/.config/google-chrome/`, Chromium, Edge, and `~/.mozilla/native-messaging-hosts/`.
+**Settings → Security** (Autofill toggle) writes host manifests under `~/.config/google-chrome/` (and Chrome Beta), Chromium, Edge, Brave, Vivaldi, `~/.mozilla/native-messaging-hosts/`, and `~/.librewolf/native-messaging-hosts/`.
 
 Chromium extension ID file:
 

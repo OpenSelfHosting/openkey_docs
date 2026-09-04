@@ -28,7 +28,7 @@ Carga la carpeta `dist/` como extensión sin empaquetar. En escritorio, desbloqu
 
 ## También Autofill del sistema
 
-En la app, activa OpenKey en **Ajustes → Autocompletar** como proveedor del sistema de contraseñas y passkeys. Esa ruta cubre apps y navegadores que hablan con el almacén de credenciales del SO — complementaria a la extensión, no un reemplazo en todas las plataformas.
+En la app, activa OpenKey en **Ajustes → Seguridad** como proveedor del sistema de contraseñas y passkeys. Esa ruta cubre apps y navegadores que hablan con el almacén de credenciales del SO — complementaria a la extensión, no un reemplazo en todas las plataformas.
 
 ## Sigue siendo zero-knowledge
 

@@ -81,7 +81,6 @@ Compartilhe coleções ou itens individuais com outros usuários OpenKey no mesm
 | **Segurança** | Bloqueio / biometria / proteções relacionadas |
 | **Gerador de senhas** | Opções de geração padrão |
 | **Dados** | Sync do servidor, Nearby LAN (Pro), importação/exportação, backups, extensão, compartilhamento |
-| **Preenchimento automático** | Autofill do sistema / Credential Provider (mobile e desktop) e passkeys |
 | **OpenKey Pro** | Gerenciamento de assinatura onde disponível |
 
 ## Conectar um servidor auto-hospedado
@@ -93,7 +92,7 @@ Detalhes: [Instalar o servidor](./server).
 
 ## Preenchimento automático e navegador
 
-- **Autofill mobile / desktop:** ative o OpenKey como provedor do sistema de senhas e passkeys em Configurações → Preenchimento automático.
+- **Autofill mobile / desktop:** ative o OpenKey como provedor do sistema de senhas e passkeys em Configurações → Segurança.
 - **Navegador:** instale a extensão; no desktop, desbloqueie o app e registre o host nativo, ou desbloqueie a extensão contra seu servidor em modo autônomo.
 
 ## Importar, exportar e backup

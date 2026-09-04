@@ -68,7 +68,6 @@ Les éléments de coffre soft-supprimés restent des **tombstones** jusqu’à l
 - Terminez **HTTPS** devant l’API en production.
 - Gardez `CORS_ORIGINS` comme liste d’autorisation explicite (**jamais `*`**).
 - Préférez garder le coffre **verrouillé en inactivité** ; activez le déverrouillage biométrique avec prudence.
-- Utilisez **Réglages → Sécurité → Santé des mots de passe** pour trouver les mots de passe faibles/réutilisés ; les contrôles HIBP optionnels n’envoient qu’un **préfixe** de hash SHA-1 (k-anonymité), jamais le mot de passe.
 - Traitez exports / sauvegardes comme du matériel secret — stockez hors ligne et chiffré.
 - N’appariez Nearby qu’avec des personnes/appareils de confiance ; **Lier le coffre** partage le matériau de clé de coffre via la session LAN — dissociez pour révoquer les attestations LAN Pro et arrêter la sync.
 - Signalez les vulnérabilités en privé — voir [Signalement des vulnérabilités](#signalement-des-vulnérabilités).

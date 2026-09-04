@@ -51,23 +51,20 @@ OpenKey ایپ حاصل کریں، پھر اختیاری طور پر [سیلف-�
 
 | Build | Artifact |
 |-------|----------|
+| AppImage x64 {#linux-appimage-x64} | `OpenKey-*-linux-x64.AppImage` |
+| AppImage Arm64 {#linux-appimage-arm64} | `OpenKey-*-linux-arm64.AppImage` |
 | `.deb` x64 {#linux-deb-x64} | `OpenKey-*-linux-x64.deb` |
 | `.deb` Arm64 {#linux-deb-arm64} | `OpenKey-*-linux-arm64.deb` |
 | `.tar.gz` x64 {#linux-tar-x64} | Portable tarball from `build_all/linux/` |
 | `.tar.gz` Arm64 {#linux-tar-arm64} | Portable tarball (arm64) |
-| Flathub {#linux-flathub} | When listed (`com.openselfhosting.openkey`) |
-| Snap Store {#linux-snap} | When listed (`openkey`) |
+
+Arch: `makepkg -si` with the `PKGBUILD` inside the tarball.
 
 Desktop Autofill registers the **native messaging host** used by the [browser extension](./extension). Keep the vault unlocked while filling from the browser.
 
 ### ڈیسک ٹاپ خود بنائیں
 
-```bash
-cd openkey_app
-./build_all.sh --desktop    # or --macos / host-specific flags
-```
-
-See `openkey_app/packaging/README.md` for store packaging (Play, App Store, Microsoft Store, Snap, Flathub).
+Official desktop installers: [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). Official app source is not public.
 
 ## براؤزر ایکسٹینشن
 

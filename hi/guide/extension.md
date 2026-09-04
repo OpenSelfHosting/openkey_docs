@@ -66,7 +66,7 @@ Fill और save unlocked app के ज़रिए जाते हैं — 
 
 ### Windows
 
-**Settings → Autofill** खोलने पर `openkey_native_host.exe` register होता है:
+**Settings → Security** खोलने पर `openkey_native_host.exe` register होता है:
 
 `HKCU\Software\...\NativeMessagingHosts\com.openselfhosting.openkey`
 
@@ -90,7 +90,7 @@ Unlock पर OpenKey `openkey_native_host.py` install करता है औ�
 
 ### Linux
 
-**Settings → Autofill** host manifests लिखता है `~/.config/google-chrome/`, Chromium, Edge, और `~/.mozilla/native-messaging-hosts/` में।
+**Settings → Security** host manifests लिखता है `~/.config/google-chrome/`, Chromium, Edge, और `~/.mozilla/native-messaging-hosts/` में।
 
 Chromium extension ID file:
 

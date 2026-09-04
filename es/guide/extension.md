@@ -66,7 +66,7 @@ Opcional: **Ajustes → Extensión del navegador → Copiar enlace de vault sin 
 
 ### Windows
 
-Abrir **Ajustes → Autocompletar** registra `openkey_native_host.exe` bajo:
+Abrir **Ajustes → Seguridad** registra `openkey_native_host.exe` bajo:
 
 `HKCU\Software\...\NativeMessagingHosts\com.openselfhosting.openkey`
 
@@ -90,7 +90,7 @@ Requiere **Python 3** en el `PATH`.
 
 ### Linux
 
-**Ajustes → Autocompletar** escribe manifiestos de host bajo `~/.config/google-chrome/`, Chromium, Edge y `~/.mozilla/native-messaging-hosts/`.
+**Ajustes → Seguridad** escribe manifiestos de host bajo `~/.config/google-chrome/`, Chromium, Edge y `~/.mozilla/native-messaging-hosts/`.
 
 Archivo del ID de extensión Chromium:
 

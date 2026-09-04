@@ -66,7 +66,7 @@ npm run build
 
 ### Windows
 
-打开 **设置 → 自动填充** 会在以下位置注册 `openkey_native_host.exe`：
+打开 **设置 → 安全** 会在以下位置注册 `openkey_native_host.exe`：
 
 `HKCU\Software\...\NativeMessagingHosts\com.openselfhosting.openkey`
 
@@ -90,7 +90,7 @@ npm run build
 
 ### Linux
 
-**设置 → 自动填充** 会在 `~/.config/google-chrome/`、Chromium、Edge 与 `~/.mozilla/native-messaging-hosts/` 写入主机清单。
+**设置 → 安全** 会在 `~/.config/google-chrome/`、Chromium、Edge 与 `~/.mozilla/native-messaging-hosts/` 写入主机清单。
 
 Chromium 扩展 ID 文件：
 

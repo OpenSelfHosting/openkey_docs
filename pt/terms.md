@@ -52,7 +52,6 @@ O OpenKey pode interagir com:
 
 - APIs de Autofill / passkeys do sistema operacional
 - Seu servidor de sync auto-hospedado
-- API de intervalo opcional do Have I Been Pwned (apenas prefixo)
 - APIs de cobrança de lojas de apps
 - Pares Nearby que você emparelha
 

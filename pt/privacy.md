@@ -60,9 +60,6 @@ O servidor de referência do projeto OpenKey é projetado para armazenar **apena
 
 O Nearby emparelha dispositivos na sua rede local e, após **Vincular cofre**, sincroniza ciphertext do cofre entre esses dispositivos. O emparelhamento e o compartilhamento da chave do cofre ocorrem na sua LAN entre dispositivos que você escolhe. A OpenSelfHosting não recebe tráfego do Nearby.
 
-## Saúde de senhas opcional (Have I Been Pwned)
-
-Se você ativar a verificação opcional de senhas vazadas, o OpenKey pode enviar apenas um **prefixo de hash SHA-1** (k-anonymity) para a API de intervalo do Have I Been Pwned. Sua senha em si nunca é enviada. Você pode deixar esse recurso desativado.
 
 ## Autofill, passkeys e extensão do navegador
 
@@ -97,7 +94,6 @@ O processamento ocorre nos seus dispositivos e, se você configurar sync, no hos
 
 - Usar o OpenKey totalmente offline sem servidor
 - Aceitar ou recusar emparelhamento Nearby
-- Desativar verificações HIBP opcionais
 - Exportar ou excluir dados locais (exportação / backup pode exigir Pro)
 - Excluir uma conta no servidor pelo fluxo autenticado de exclusão (remove ciphertext do servidor; cópias locais permanecem até você apagá-las)
 - Revogar assinaturas da loja pelo gerenciamento de assinaturas da loja

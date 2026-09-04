@@ -3,6 +3,10 @@
 本 monorepo 中 OpenKey 软件包的发行说明。应用版本遵循 `openkey_app`（`pubspec.yaml`）。文档版本跟踪本站点。
 
 
+## 1.0.6 (2026-08-28)
+
+See [English changelog](/guide/changelog#10-06-2026-08-28) — Linux AppImage/RPM, rounded icons, Nearby, Autofill, Termux CLI; app **1.0.6+7**.
+
 ## 1.0.2 (2026-08-13)
 
 See [English changelog](/guide/changelog#10-02-2026-08-13) — web target removed; app **1.0.2+3**.

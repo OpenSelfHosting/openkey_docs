@@ -62,7 +62,7 @@ Pairing (Pro) کے بعد entry پر **Send to device** یا Nearby peer actions
 
 ### Autofill / passkeys نظر نہیں آتے
 
-**Settings → Autofill** میں OpenKey کو system password & passkey provider بنائیں، پھر vault unlock۔ iOS/macOS پر OS permission prompts دیں۔ Provider بدلنے کے بعد براؤزر یا target app restart۔
+**Settings → Security** میں OpenKey کو system password & passkey provider بنائیں، پھر vault unlock۔ iOS/macOS پر OS permission prompts دیں۔ Provider بدلنے کے بعد براؤزر یا target app restart۔
 
 ### Extension fill shortcut کیا ہے؟
 
@@ -102,7 +102,7 @@ Pro + ایک ہی self-hosted server۔ Identity keys شائع، پھر org می�
 ### Extension desktop app سے بات نہیں کر پاتی
 
 1. Desktop vault unlock اور unlocked رکھیں۔
-2. Native host register کے لیے **Settings → Autofill** (macOS پر **Browser extension**) کھولیں۔
+2. Native host register کے لیے **Settings → Security** (macOS پر **Browser extension**) کھولیں۔
 3. Chromium: platform file میں unpacked extension ID لکھیں ([براؤزر ایکسٹینشن](./extension) دیکھیں)، پھر Autofill دوبارہ۔
 4. Extension میں **Use desktop app** چنیں۔
 5. macOS کو host script کے لیے `PATH` پر Python 3 چاہیے۔
@@ -127,9 +127,9 @@ Default lock 15 منٹ (`openkey config set-lock`)۔ دوبارہ `eval $(openke
 
 ## سیکیورٹی / privacy
 
-### Password health میرے passwords انٹرنیٹ پر بھیجتا ہے؟
+### Autofill ایپ میں کہاں ہے؟
 
-Local weak/reused checks device پر رہتے ہیں۔ اختیاری Have I Been Pwned صرف **SHA-1 prefix k-anonymity** — کبھی مکمل password نہیں۔ [سیکیورٹی](./security) دیکھیں۔
+**Settings → Security** کے تحت — الگ Autofill صفحہ نہیں۔ OpenKey پاس ورڈز Have I Been Pwned کو نہیں بھیجتا اور Password health اسکرین نہیں چلاتا۔
 
 ### کیا Nearby backup ہے؟
 

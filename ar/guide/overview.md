@@ -27,4 +27,4 @@ OpenKey هو **مدير كلمات مرور مشفّر من طرف إلى طرف
 
 <img src="/guide/overview-ecosystem-ar.svg" alt="منظومة OpenKey: التطبيق وامتداد المتصفح وCLI يشفّرون على الجهاز؛ مزامنة اختيارية عبر خادم مستضاف ذاتياً أو Nearby" class="ok-diagram" width="920" height="440" />
 
-تطبيق OpenKey للجوال وسطح المكتب موضّح بشكل منفصل. راجع [التنزيل](./download)، [استخدام التطبيق](./app)، [امتداد المتصفح](./extension)، [الحزم](./packages)، [إعداد الخادم](./server)، [الأسئلة الشائعة](./faq)، [سجل التغييرات](./changelog)، و[بداية سريعة](./quick-start).
+تطبيق OpenKey للجوال وسطح المكتب عميل رسمي ملكية خاصة لهذا البروتوكول. راجع [التنزيل](./download)، [استخدام التطبيق](./app)، [امتداد المتصفح](./extension)، [الحزم](./packages)، [إعداد الخادم](./server)، [الأسئلة الشائعة](./faq)، [سجل التغييرات](./changelog)، و[بداية سريعة](./quick-start). المواصفات: [OpenSelfHosting/OpenKey spec](https://github.com/OpenSelfHosting/OpenKey/tree/main/spec).

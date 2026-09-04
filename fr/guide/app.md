@@ -78,10 +78,9 @@ Partagez des collections ou des éléments individuels avec d'autres utilisateur
 | Zone | Rôle |
 |------|----------------|
 | **Apparence** | Mode de thème et langue (mêmes locales que ce site de documentation) |
-| **Sécurité** | Verrouillage / biométrie / protections associées |
+| **Sécurité** | Verrouillage / biométrie / **saisie automatique système** (pas une page séparée) |
 | **Générateur de mots de passe** | Options de génération par défaut |
 | **Données** | Sync serveur, Nearby LAN (Pro), import/export, sauvegardes, extension, partage |
-| **Saisie automatique** | Autofill système / Credential Provider (mobile et bureau) et passkeys |
 | **OpenKey Pro** | Gestion d'abonnement lorsque disponible |
 
 ## Connecter un serveur auto-hébergé
@@ -93,7 +92,7 @@ Détails : [Installer le serveur](./server).
 
 ## Saisie automatique et navigateur
 
-- **Autofill mobile / bureau :** activez OpenKey comme fournisseur système de mots de passe et passkeys dans Paramètres → Saisie automatique.
+- **Autofill mobile / bureau :** activez OpenKey comme fournisseur système de mots de passe et passkeys dans Paramètres → Sécurité.
 - **Navigateur :** installez l'extension ; sur bureau, déverrouillez l'application et enregistrez l'hôte natif, ou déverrouillez l'extension contre votre serveur en mode autonome.
 
 ## Import, export et sauvegarde

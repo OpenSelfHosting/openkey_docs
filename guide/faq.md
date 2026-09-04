@@ -62,7 +62,21 @@ After pairing (Pro), use **Send to device** on the entry or from Nearby peer act
 
 ### Autofill / passkeys do not appear
 
-Enable OpenKey as the system password & passkey provider under **Settings → Autofill**, then unlock the vault. On iOS/macOS grant OS permission prompts. Restart the browser or target app after changing providers.
+Enable OpenKey as the system password & passkey provider under **Settings → Security**, then unlock the vault. On iOS/macOS grant OS permission prompts. Restart the browser or target app after changing providers. On Android, OpenKey can also offer a generated password and branded datasets in the Autofill picker, plus inline vs popup and biometric-before-fill.
+
+### Which Linux package should I install?
+
+- **AppImage** — any glibc distro (`chmod +x`, then run). Recommended default.
+- **`.deb`** — Debian, Ubuntu, Mint, Pop!_OS.
+- **`.rpm`** — Fedora, RHEL, Rocky, Alma, openSUSE.
+- **`.tar.gz`** — portable; Arch users can `makepkg -si` with the bundled `PKGBUILD`.
+- **Flathub / Snap** — when the listing is live (`com.openselfhosting.openkey` / `openkey`).
+
+Details: [Download → Linux](./download#linux).
+
+### How do I use the CLI from Termux on Android?
+
+Unlock the vault → **Settings → Data → Termux / CLI** → install Node, `npm install -g openkey-cli`, then export `OPENKEY_NATIVE_PORT` and `OPENKEY_NATIVE_TOKEN` from that sheet and run `openkey status`. Guide: [CLI → Android (Termux)](./cli#android-termux).
 
 ### What is the extension fill shortcut?
 
@@ -101,7 +115,7 @@ Under **Settings → Security** you can enable biometric unlock (platform-depend
 ### Extension cannot talk to the desktop app
 
 1. Unlock the desktop vault and leave it unlocked.
-2. Open **Settings → Autofill** (and **Browser extension** on macOS) so the native host registers.
+2. Open **Settings → Security** (Autofill) and **Settings → Data → Browser extension** on macOS so the native host registers.
 3. Chromium: write the unpacked extension ID to the platform file (see [Browser extension](./extension)), then re-open Autofill.
 4. Choose **Use desktop app** in the extension.
 5. macOS needs Python 3 on `PATH` for the host script.
@@ -126,9 +140,9 @@ Default lock is 15 minutes (`openkey config set-lock`). Run `eval $(openkey unlo
 
 ## Security / privacy
 
-### Does Password health send my passwords to the internet?
+### Where is Autofill in the app?
 
-Local weak/reused checks stay on device. Optional Have I Been Pwned uses **SHA-1 prefix k-anonymity** only — never the full password. See [Security](./security).
+Under **Settings → Security** — there is no separate Autofill page. Toggle the system password/passkey provider there. OpenKey does **not** send passwords to Have I Been Pwned or run a Password health screen.
 
 ### Is Nearby a backup?
 

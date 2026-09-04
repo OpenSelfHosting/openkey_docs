@@ -60,9 +60,6 @@ El servidor de referencia del proyecto OpenKey está diseñado para almacenar **
 
 Nearby empareja dispositivos en tu red local y, tras **Vincular vault**, sincroniza el texto cifrado del vault entre esos dispositivos. El emparejamiento y el intercambio de la clave del vault ocurren en tu LAN entre los dispositivos que elijas. OpenSelfHosting no recibe el tráfico de Nearby.
 
-## Salud de contraseñas opcional (Have I Been Pwned)
-
-Si activas la comprobación opcional de contraseñas filtradas, OpenKey puede enviar solo un **prefijo de hash SHA-1** (k-anonimato) a la API de rango de Have I Been Pwned. Tu contraseña en sí nunca se sube. Puedes dejar esta función desactivada.
 
 ## Autofill, passkeys y extensión del navegador
 
@@ -97,7 +94,6 @@ El procesamiento ocurre en tus dispositivos y, si configuras sync, en el host de
 
 - Usar OpenKey totalmente sin conexión sin servidor
 - Aceptar o rechazar el emparejamiento Nearby
-- Desactivar comprobaciones HIBP opcionales
 - Exportar o borrar datos locales (exportar / copia de seguridad puede requerir Pro)
 - Borrar una cuenta de servidor mediante el flujo de borrado autenticado (elimina el texto cifrado del servidor; las copias locales permanecen hasta que las borres)
 - Revocar suscripciones de tienda mediante la gestión de suscripciones de la tienda

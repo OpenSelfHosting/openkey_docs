@@ -28,7 +28,7 @@ npm run build
 
 ## سسٹم Autofill بھی
 
-ایپ میں **Settings → Autofill** کے تحت OpenKey کو سسٹم پاس ورڈ اور passkey provider کے طور پر فعال کریں۔ یہ راستہ ایسی ایپس اور براؤزرز کو cover کرتا ہے جو OS credential store سے بات کرتے ہیں — ایکسٹینشن کی تکمیل، ہر پلیٹ فارم پر اس کی جگہ نہیں۔
+ایپ میں **Settings → Security** کے تحت OpenKey کو سسٹم پاس ورڈ اور passkey provider کے طور پر فعال کریں۔ یہ راستہ ایسی ایپس اور براؤزرز کو cover کرتا ہے جو OS credential store سے بات کرتے ہیں — ایکسٹینشن کی تکمیل، ہر پلیٹ فارم پر اس کی جگہ نہیں۔
 
 ## پھر بھی zero-knowledge
 

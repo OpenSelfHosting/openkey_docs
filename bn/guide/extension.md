@@ -66,7 +66,7 @@ Fill ও save unlocked app-এর মাধ্যমে — সেই flows-এ 
 
 ### Windows
 
-**Settings → Autofill** খুললে `openkey_native_host.exe` register হয়:
+**Settings → Security** খুললে `openkey_native_host.exe` register হয়:
 
 `HKCU\Software\...\NativeMessagingHosts\com.openselfhosting.openkey`
 
@@ -90,7 +90,7 @@ Unlock-এ OpenKey `openkey_native_host.py` install করে এবং Chrome /
 
 ### Linux
 
-**Settings → Autofill** host manifests লিখে `~/.config/google-chrome/`, Chromium, Edge, এবং `~/.mozilla/native-messaging-hosts/`-এ।
+**Settings → Security** host manifests লিখে `~/.config/google-chrome/`, Chromium, Edge, এবং `~/.mozilla/native-messaging-hosts/`-এ।
 
 Chromium extension ID file:
 

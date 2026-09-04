@@ -66,7 +66,7 @@ Optionnel : **Réglages → Extension navigateur → Copier le lien coffre hors 
 
 ### Windows
 
-Ouvrir **Réglages → Saisie automatique** enregistre `openkey_native_host.exe` sous :
+Ouvrir **Réglages → Sécurité** enregistre `openkey_native_host.exe` sous :
 
 `HKCU\Software\...\NativeMessagingHosts\com.openselfhosting.openkey`
 
@@ -90,7 +90,7 @@ Nécessite **Python 3** sur le `PATH`.
 
 ### Linux
 
-**Réglages → Saisie automatique** écrit les manifestes d’hôte sous `~/.config/google-chrome/`, Chromium, Edge, et `~/.mozilla/native-messaging-hosts/`.
+**Réglages → Sécurité** écrit les manifestes d’hôte sous `~/.config/google-chrome/`, Chromium, Edge, et `~/.mozilla/native-messaging-hosts/`.
 
 Fichier d’ID d’extension Chromium :
 

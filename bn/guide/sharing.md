@@ -15,7 +15,7 @@
 
 ## Organizations
 
-Path: **Settings → Data → Organizations**, অথবা **Items hub → Organizations**।
+Path: browser extension (standalone/server) and server API — the app Settings → Data page has no Organizations screen.
 
 ### Create an org
 
