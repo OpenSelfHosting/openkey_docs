@@ -78,10 +78,9 @@ LAN सिंक केवल **ciphertext** भेजता है (revision �
 | क्षेत्र | कार्य |
 |------|----------------|
 | **Appearance** | थीम मोड और भाषा (इस docs साइट के समान locales) |
-| **Security** | लॉक / बायोमेट्रिक्स / संबंधित सुरक्षा |
+| **Security** | लॉक / बायोमेट्रिक्स / **system Autofill** (अलग पेज नहीं) |
 | **Password generator** | डिफ़ॉल्ट जेनरेशन विकल्प |
 | **Data** | सर्वर सिंक, import/export, बैकअप, ब्राउज़र एक्सटेंशन, शेयरिंग |
-| **Autofill** | सिस्टम Autofill / Credential Provider (मोबाइल और डेस्कटॉप) और passkeys |
 | **OpenKey Pro** | उपलब्ध होने पर सब्सक्रिप्शन प्रबंधन |
 
 ## Self-hosted सर्वर कनेक्ट करें
@@ -93,7 +92,7 @@ LAN सिंक केवल **ciphertext** भेजता है (revision �
 
 ## Autofill और ब्राउज़र
 
-- **मोबाइल / डेस्कटॉप Autofill:** Settings → Autofill में OpenKey को सिस्टम पासवर्ड और passkey प्रोवाइडर सक्षम करें।
+- **मोबाइल / डेस्कटॉप Autofill:** Settings → Security में OpenKey को सिस्टम पासवर्ड और passkey प्रोवाइडर सक्षम करें।
 - **ब्राउज़र:** एक्सटेंशन इंस्टॉल करें; डेस्कटॉप पर ऐप अनलॉक कर native host रजिस्टर करें, या standalone मोड में सर्वर के विरुद्ध एक्सटेंशन अनलॉक करें।
 
 ## Import, export और बैकअप

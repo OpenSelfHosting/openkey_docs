@@ -13,7 +13,7 @@ const ROOT = join(__dirname, '..')
 const OUT = join(ROOT, '.vitepress/theme/downloads/downloadUrls.generated.ts')
 const STORE_CONFIG = join(__dirname, 'store-urls.config.json')
 
-export const DEFAULT_REPO = 'OpenSelfHosting/openkey_app'
+export const DEFAULT_REPO = 'OpenSelfHosting/OpenKey'
 
 const REPO = process.env.OPENKEY_RELEASE_REPO || DEFAULT_REPO
 const RELEASE_API = `https://api.github.com/repos/${REPO}/releases/latest`
@@ -35,6 +35,10 @@ const RELEASE_RULES = [
   { id: 'macos-universal', match: (name) => /macos-universal.*\.dmg$/i.test(name) },
   { id: 'linux-deb-x64', match: (name) => /linux-x64\.deb$/i.test(name) },
   { id: 'linux-deb-arm64', match: (name) => /linux-arm64\.deb$/i.test(name) },
+  { id: 'linux-rpm-x64', match: (name) => /linux-x64\.rpm$/i.test(name) },
+  { id: 'linux-rpm-arm64', match: (name) => /linux-arm64\.rpm$/i.test(name) },
+  { id: 'linux-appimage-x64', match: (name) => /linux-x64\.AppImage$/i.test(name) },
+  { id: 'linux-appimage-arm64', match: (name) => /linux-arm64\.AppImage$/i.test(name) },
   { id: 'linux-tar-x64', match: (name) => /linux-x64\.tar\.gz$/i.test(name) },
   { id: 'linux-tar-arm64', match: (name) => /linux-arm64\.tar\.gz$/i.test(name) },
   {
@@ -161,7 +165,7 @@ export const RELEASE_SYNC = {
   syncedAt: ${JSON.stringify(new Date().toISOString())},
 } as const
 
-/** Variant id → browser_download_url from the latest GitHub Release on openkey_app. */
+/** Variant id → browser_download_url from the latest GitHub Release on OpenKey. */
 export const RELEASE_ARTIFACT_URLS: Record<string, string> = ${JSON.stringify(release.urls, null, 2)}
 
 /** Variant id → store listing URL (from scripts/store-urls.config.json). */

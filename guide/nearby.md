@@ -14,6 +14,10 @@ This page covers pairing, QR codes, vault link, send-entry, LAN Pro, and trust r
 
 Nearby is **not** a backup. Keep a Pro [encrypted `.okbak`](./import-export#encrypted-backup-pro) as well.
 
+Discovery beacons include the **device name in the clear** on the LAN. Only accept devices you own. Locking the vault pauses Nearby until you unlock again.
+
+Linux and Windows may prompt once to open LAN ports (**UDP/TCP 47821**, **TCP 47822**). Allow those prompts so peers can find this machine.
+
 ## Pair devices
 
 1. Unlock OpenKey on both devices → **Settings → Nearby devices**.
@@ -27,7 +31,7 @@ If vault keys differ, the receiving device can **adopt** the peer’s key (repla
 
 ### Firewall / dial-back
 
-Some desktops (especially macOS) block inbound TCP. If scanning a QR fails to connect, OpenKey can ask the QR host to dial back to the guest (unicast UDP only — the pairing code is not broadcast on the LAN). Allow local-network / firewall prompts when the OS asks. Prefer the same subnet; VPNs and private relay often break discovery. Too many wrong codes trigger a short lockout.
+Some desktops (especially macOS) block inbound TCP. Linux and Windows builds may prompt once for **UDP/TCP 47821** and **TCP 47822**. If scanning a QR fails to connect, OpenKey can ask the QR host to dial back to the guest (unicast UDP only — the pairing code is not broadcast on the LAN). Allow local-network / firewall prompts when the OS asks. Prefer the same subnet; VPNs and private relay often break discovery. Too many wrong codes trigger a short lockout.
 
 ## After linking
 

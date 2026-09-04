@@ -10,12 +10,12 @@ Share individual items or work in **organizations** with other OpenKey users on 
 
 1. Install the app ([Download](./download)) and unlock your vault.
 2. Connect **Settings → Data → Self-hosted server** and sync.
-3. **Settings → Data → Publish identity keys** (Pro) — uploads opaque public / wrapped private key material used for sharing.
+3. Publish identity keys from the [browser extension](./extension) in standalone (server) mode so peers can wrap keys for you. The app Settings → Data page does not include this action.
 4. Recipients must use the **same server URL** and have published identity keys (or at least a registered account the server can look up).
 
 ## Organizations
 
-Path: **Settings → Data → Organizations**, or **Items hub → Organizations**.
+Path: sharing and organization APIs on your [self-hosted server](./server), and in the [browser extension](./extension) (standalone/server mode). The current OpenKey **app** Settings → Data page covers import/export, backup, the extension, CLI, and the server — it does **not** include an Organizations screen.
 
 ### Create an org
 

@@ -1,18 +1,18 @@
 # الحزم
 
-حزم يمكنك استضافتها وبناءها. ثبّت التطبيق من [التنزيل](./download). الاستخدام اليومي: [استخدام التطبيق](./app). إعداد المتصفح: [امتداد المتصفح](./extension).
+ثبّت التطبيق الرسمي من [التنزيل](./download) (باينري / متاجر). استضف وابنِ الحزم **المفتوحة** أدناه. الاستخدام اليومي: [استخدام التطبيق](./app). إعداد المتصفح: [امتداد المتصفح](./extension).
 
-قد تنشر المستودعات تحت [OpenSelfHosting](https://github.com/OpenSelfHosting) الحزم بشكل منفصل؛ يصف هذا الموقع الحزم المفتوحة في نسخة المونوريبو المحلية.
+مواصفات البروتوكول في [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey) (`spec/`). قد تنشر المستودعات تحت [OpenSelfHosting](https://github.com/OpenSelfHosting) الحزم بشكل منفصل.
 
-| المسار | الوصف |
-|------|-------------|
-| `openkey_app` | عميل Flutter (Android و iOS وسطح المكتب) — تطبيق المنتج |
-| `openkey_server` | واجهة مزامنة FastAPI بلا معرفة + PostgreSQL |
-| `openkey_extension` | امتداد متصفح MV3 (Chrome / Firefox) |
-| `openkey_cli` | CLI للمطوّرين — أسرار وتوليد كلمات مرور ومزامنة |
-| `openkey_docs` | هذا الموقع — صفحات المنتج والتوثيق |
+| المسار | المصدر | الوصف |
+|------|--------|-------------|
+| تطبيق **OpenKey** الرسمي | ملكية خاصة | عميل Flutter. ثبّت من [التنزيل](./download) / GitHub Releases — ليس من سورس عام |
+| `openkey_server` | MIT | واجهة مزامنة FastAPI بلا معرفة + PostgreSQL |
+| `openkey_extension` | MIT | امتداد متصفح MV3 (Chrome / Firefox) |
+| `openkey_cli` | MIT | CLI للمطوّرين — أسرار وتوليد كلمات مرور ومزامنة |
+| `openkey_docs` | MIT | هذا الموقع — صفحات المنتج والتوثيق |
 
-لكل حزمة README خاص بإعدادها. أبلغ عن مشاكل الأمان إلى **security@openselfhosting.com** — انظر [الأمان](./security).
+لكل حزمة **مفتوحة** README خاص بإعدادها. أبلغ عن مشاكل الأمان إلى **security@openselfhosting.com** — انظر [الأمان](./security).
 
 ## أبرز نقاط الخادم
 

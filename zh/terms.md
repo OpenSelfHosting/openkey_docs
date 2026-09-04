@@ -51,7 +51,6 @@ OpenKey 可能与以下服务交互：
 
 - 操作系统自动填充 / 通行密钥 API
 - 您的自托管同步服务器
-- 可选的 Have I Been Pwned 范围 API（仅前缀）
 - 应用商店计费 API
 - 您配对的 Nearby 对等方
 

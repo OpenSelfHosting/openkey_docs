@@ -78,10 +78,9 @@ Comparte colecciones o elementos individuales con otros usuarios de OpenKey en e
 | Área | Función |
 |------|----------------|
 | **Apariencia** | Modo de tema e idioma (mismos idiomas que este sitio de documentación) |
-| **Seguridad** | Bloqueo / biometría / protecciones relacionadas |
+| **Seguridad** | Bloqueo / biometría / **Autofill del sistema** (no es una página aparte) |
 | **Generador de contraseñas** | Opciones de generación predeterminadas |
 | **Datos** | Sync del servidor, importación/exportación, copias de seguridad, extensión del navegador, compartición |
-| **Autocompletar** | Autofill del sistema / Credential Provider (móvil y escritorio) y passkeys |
 | **OpenKey Pro** | Gestión de suscripción donde esté disponible |
 
 ## Conectar un servidor autoalojado
@@ -93,7 +92,7 @@ Detalles: [Instalar el servidor](./server).
 
 ## Autocompletar y navegador
 
-- **Autofill móvil / escritorio:** activa OpenKey como proveedor del sistema de contraseñas y passkeys en Ajustes → Autocompletar.
+- **Autofill móvil / escritorio:** activa OpenKey como proveedor del sistema de contraseñas y passkeys en Ajustes → Seguridad.
 - **Navegador:** instala la extensión; en escritorio, desbloquea la app y registra el host nativo, o desbloquea la extensión contra tu servidor en modo independiente.
 
 ## Importar, exportar y copia de seguridad

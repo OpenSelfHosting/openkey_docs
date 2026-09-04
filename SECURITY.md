@@ -13,7 +13,7 @@ Preferred contact:
 
 Please include:
 
-1. Affected package (`openkey_server`, `openkey_extension`, `openkey_cli`, `openkey_app`, …)
+1. Affected package (`openkey_server`, `openkey_extension`, `openkey_cli`, official app binaries, …)
 2. Version / commit hash if known
 3. Steps to reproduce
 4. Impact (e.g. ciphertext disclosure, auth bypass, local privilege)

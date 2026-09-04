@@ -42,7 +42,7 @@ Before each build, `npm run sync:downloads` refreshes `.vitepress/theme/download
 
 | Source | Config | When URLs appear |
 |--------|--------|------------------|
-| **GitHub Releases** | `OpenSelfHosting/openkey_app` (override: `OPENKEY_RELEASE_REPO`) | Matching assets on the latest release (`OpenKey-*-windows-x64-setup.exe`, etc.) |
+| **GitHub Releases** | `OpenSelfHosting/OpenKey` (override: `OPENKEY_RELEASE_REPO`) | Matching assets on the latest release (`OpenKey-*-windows-x64-setup.exe`, etc.) |
 | **App stores** | `scripts/store-urls.config.json` | Set `live: true`, `appleId`, or `productId` when a listing goes public |
 
 **Store config** (`scripts/store-urls.config.json`):
@@ -52,4 +52,6 @@ Before each build, `npm run sync:downloads` refreshes `.vitepress/theme/download
 - `windows-store` — set `productId` for Microsoft Store
 - `linux-flathub` / `linux-snap` — set `live: true` when published
 
-Until a channel is live, the download picker falls back to in-page guide anchors. Private release repo: `GITHUB_TOKEN` with `contents:read`.
+Until a channel is live, the download picker falls back to in-page guide anchors. Releases are public on `OpenSelfHosting/OpenKey`; a token is only needed if you override `OPENKEY_RELEASE_REPO` to a private repo.
+
+Linux release assets now include `.AppImage` and `.rpm` (plus `.deb` / `.tar.gz`). `scripts/sync-download-urls.mjs` matches those names.

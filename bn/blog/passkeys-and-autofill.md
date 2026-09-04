@@ -28,7 +28,7 @@ npm run build
 
 ## System Autofill-ও
 
-অ্যাপে **Settings → Autofill**-এ OpenKey system password ও passkey provider হিসেবে চালু করুন। OS credential store-এর সাথে কথা বোলা অ্যাপ ও ব্রাউজার cover করে — এক্সটেনশনের পরিপূরক, প্রতিটি প্ল্যাটফর্মে বিকল্প নয়।
+অ্যাপে **Settings → Security**-এ OpenKey system password ও passkey provider হিসেবে চালু করুন। OS credential store-এর সাথে কথা বোলা অ্যাপ ও ব্রাউজার cover করে — এক্সটেনশনের পরিপূরক, প্রতিটি প্ল্যাটফর্মে বিকল্প নয়।
 
 ## এখনো zero-knowledge
 

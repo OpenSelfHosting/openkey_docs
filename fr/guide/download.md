@@ -26,7 +26,7 @@ Les fiches magasin et les GitHub Releases se déploient par plateforme. Tant qu�
 | App Store | Recherchez **OpenKey** par OpenSelfHosting une fois la fiche approuvée |
 | Xcode archive | Archive Xcode locale `build_all/ios/` |
 
-Activez **Réglages → Saisie automatique** pour qu’OpenKey remplisse mots de passe et passkeys à l’échelle du système.
+Activez **Réglages → Sécurité** pour qu’OpenKey remplisse mots de passe et passkeys à l’échelle du système.
 
 ## Bureau
 
@@ -51,23 +51,20 @@ Activez **Réglages → Saisie automatique** pour qu’OpenKey remplisse mots de
 
 | Build | Artifact |
 |-------|----------|
+| AppImage x64 {#linux-appimage-x64} | `OpenKey-*-linux-x64.AppImage` |
+| AppImage Arm64 {#linux-appimage-arm64} | `OpenKey-*-linux-arm64.AppImage` |
 | `.deb` x64 {#linux-deb-x64} | `OpenKey-*-linux-x64.deb` |
 | `.deb` Arm64 {#linux-deb-arm64} | `OpenKey-*-linux-arm64.deb` |
 | `.tar.gz` x64 {#linux-tar-x64} | Portable tarball from `build_all/linux/` |
 | `.tar.gz` Arm64 {#linux-tar-arm64} | Portable tarball (arm64) |
-| Flathub {#linux-flathub} | When listed (`com.openselfhosting.openkey`) |
-| Snap Store {#linux-snap} | When listed (`openkey`) |
+
+Arch: `makepkg -si` with the `PKGBUILD` inside the tarball.
 
 Desktop Autofill registers the **native messaging host** used by the [browser extension](./extension). Keep the vault unlocked while filling from the browser.
 
 ### Compiler le bureau vous-même
 
-```bash
-cd openkey_app
-./build_all.sh --desktop    # or --macos / host-specific flags
-```
-
-See `openkey_app/packaging/README.md` for store packaging (Play, App Store, Microsoft Store, Snap, Flathub).
+Installeurs officiels : [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). Le code source de l’app officielle n’est pas public.
 
 ## Extension navigateur
 

@@ -130,9 +130,9 @@ O bloqueio padrão é 15 minutos (`openkey config set-lock`). Execute `eval $(op
 
 ## Segurança / privacidade
 
-### O Password health envia minhas senhas para a internet?
+### Onde está o Autofill no app?
 
-Verificações locais de fracas/reutilizadas permanecem no dispositivo. Have I Been Pwned opcional usa apenas **k-anonimato de prefixo SHA-1** — nunca a senha completa. Veja [Segurança](./security).
+Em **Definições → Segurança** — não há uma página Autofill separada. O OpenKey não envia senhas ao Have I Been Pwned nem mostra Password health.
 
 ### O Nearby é um backup?
 

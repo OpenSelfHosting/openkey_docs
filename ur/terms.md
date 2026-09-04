@@ -51,7 +51,6 @@ OpenKey ان کے ساتھ تعامل کر سکتا ہے:
 
 - Operating system Autofill / passkey APIs
 - آپ کا self-hosted sync server
-- اختیاری Have I Been Pwned range API (صرف prefix)
 - App store billing APIs
 - آپ کے جوڑے ہوئے Nearby peers
 

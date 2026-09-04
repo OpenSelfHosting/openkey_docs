@@ -8,7 +8,7 @@ Get the OpenKey app, then optionally connect a [self-hosted server](./server), t
 
 Application id: `com.openselfhosting.openkey` · Org: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-Store listings and GitHub Releases roll out per platform. Until a store link is live, build from the monorepo or use a desktop artifact from your own `build_all/` run. Public store pages may still be pending review even when packaging scripts produce Play / App Store / Flathub bundles locally.
+Store listings and GitHub Releases roll out per platform. Official app binaries are published on [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). The official app **source is not public**. Until a store link is live, use those release artifacts. Public store pages may still be pending review.
 
 ## Mobile
 
@@ -17,7 +17,7 @@ Store listings and GitHub Releases roll out per platform. Until a store link is 
 | Channel | Notes |
 |---------|--------|
 | Google Play {#android-play} | `com.openselfhosting.openkey` — search **OpenKey** by OpenSelfHosting once the listing is public |
-| Sideload APK/AAB {#android-apk} | From `build_all/android/` (`OpenKey-*-android.apk`) |
+| Sideload APK/AAB {#android-apk} | From [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases) (`OpenKey-*-android.apk`) |
 
 ### iOS {#ios}
 
@@ -26,7 +26,7 @@ Store listings and GitHub Releases roll out per platform. Until a store link is 
 | App Store | When listed — search **OpenKey** by OpenSelfHosting |
 | Xcode archive | Local `build_all/ios/` |
 
-Enable **Settings → Autofill** so OpenKey can fill passwords and passkeys system-wide.
+Enable **Settings → Security** (Autofill) so OpenKey can fill passwords and passkeys system-wide.
 
 ## Desktop
 
@@ -49,23 +49,18 @@ Enable **Settings → Autofill** so OpenKey can fill passwords and passkeys syst
 
 | Build | Artifact |
 |-------|----------|
-| `.deb` x64 {#linux-deb-x64} | `OpenKey-*-linux-x64.deb` |
+| AppImage x64 {#linux-appimage-x64} | `OpenKey-*-linux-x64.AppImage` — any glibc distro |
+| AppImage Arm64 {#linux-appimage-arm64} | `OpenKey-*-linux-arm64.AppImage` |
+| `.deb` x64 {#linux-deb-x64} | Debian, Ubuntu, Mint, Pop!_OS (`OpenKey-*-linux-x64.deb`) |
 | `.deb` Arm64 {#linux-deb-arm64} | `OpenKey-*-linux-arm64.deb` |
 | `.tar.gz` x64 {#linux-tar-x64} | Portable tarball from `build_all/linux/` |
 | `.tar.gz` Arm64 {#linux-tar-arm64} | Portable tarball (arm64) |
 
-Also: Flathub / Snap Store when listed (`com.openselfhosting.openkey` / `openkey`). No AppImage yet.
+Arch users can `makepkg -si` with the `PKGBUILD` inside the tarball.
 
 Desktop Autofill registers the **native messaging host** used by the [browser extension](./extension). Keep the vault unlocked while filling from the browser.
 
-### Build desktop yourself
-
-```bash
-cd openkey_app
-./build_all.sh --desktop    # or --macos / host-specific flags
-```
-
-See `openkey_app/packaging/README.md` for store packaging (Play, App Store, Microsoft Store, Snap, Flathub).
+Official desktop installers are attached to [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). The OpenKey app source is proprietary — install the official artifacts, do not expect a public `flutter build`.
 
 ## Browser extension
 

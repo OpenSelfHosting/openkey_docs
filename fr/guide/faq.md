@@ -62,7 +62,7 @@ Après appariement (Pro), utilisez **Envoyer à l’appareil** sur l’entrée o
 
 ### Autofill / passkeys n’apparaissent pas
 
-Activez OpenKey comme fournisseur système de mots de passe et passkeys sous **Réglages → Saisie automatique**, puis déverrouillez le coffre. Sur iOS/macOS, accordez les invites de permission OS. Redémarrez le navigateur ou l’app cible après changement de fournisseur.
+Activez OpenKey comme fournisseur système de mots de passe et passkeys sous **Réglages → Sécurité**, puis déverrouillez le coffre. Sur iOS/macOS, accordez les invites de permission OS. Redémarrez le navigateur ou l’app cible après changement de fournisseur.
 
 ### Quel est le raccourci de remplissage de l’extension ?
 
@@ -105,7 +105,7 @@ Sous **Réglages → Sécurité** vous pouvez activer le déverrouillage biomét
 ### L’extension ne parle pas à l’application bureau
 
 1. Déverrouillez le coffre bureau et laissez-le déverrouillé.
-2. Ouvrez **Réglages → Saisie automatique** (et **Extension navigateur** sur macOS) pour enregistrer l’hôte natif.
+2. Ouvrez **Réglages → Sécurité** (et **Extension navigateur** sur macOS) pour enregistrer l’hôte natif.
 3. Chromium : écrivez l’ID de l’extension non empaquetée dans le fichier plateforme (voir [Extension navigateur](./extension)), puis rouvrez Saisie automatique.
 4. Choisissez **Utiliser l’application bureau** dans l’extension.
 5. macOS nécessite Python 3 sur le `PATH` pour le script hôte.
@@ -130,9 +130,9 @@ Le verrouillage par défaut est de 15 minutes (`openkey config set-lock`). Relan
 
 ## Sécurité / vie privée
 
-### Santé des mots de passe envoie-t-elle mes mots de passe sur Internet ?
+### Où est le remplissage automatique dans l’app ?
 
-Les contrôles locaux faibles/réutilisés restent sur l’appareil. Have I Been Pwned optionnel n’utilise que la **k-anonymité de préfixe SHA-1** — jamais le mot de passe complet. Voir [Sécurité](./security).
+Sous **Réglages → Sécurité** — pas de page Autofill séparée. OpenKey n’envoie pas les mots de passe à Have I Been Pwned et n’affiche pas d’écran Santé des mots de passe.
 
 ### Nearby est-il une sauvegarde ?
 

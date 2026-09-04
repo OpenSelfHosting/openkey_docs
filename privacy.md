@@ -60,10 +60,6 @@ The OpenKey project’s reference server is designed to store **ciphertext only*
 
 Nearby pairs devices on your local network and, after **Link vault**, syncs vault ciphertext between those devices. Pairing and vault-key sharing happen on your LAN between devices you choose. OpenSelfHosting does not receive Nearby traffic.
 
-## Optional password health (Have I Been Pwned)
-
-If you enable the optional breached-password check, OpenKey may send only a **SHA-1 hash prefix** (k-anonymity) to the Have I Been Pwned range API. Your password itself is never uploaded. You can leave this feature off.
-
 ## Autofill, passkeys, and the browser extension
 
 - **System Autofill / Credential Provider** shares credentials with apps and sites only through OS-mediated fill flows you initiate or approve.
@@ -97,7 +93,6 @@ Processing occurs on your devices and, if you configure sync, on the server host
 
 - Use OpenKey fully offline without a server
 - Choose or refuse Nearby pairing
-- Disable optional HIBP checks
 - Export or delete local data (export / backup may require Pro)
 - Delete a server account via the authenticated delete flow (removes server ciphertext; local copies remain until you wipe them)
 - Revoke store subscriptions through the store’s subscription management

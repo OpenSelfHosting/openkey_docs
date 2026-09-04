@@ -62,7 +62,7 @@ Pairing (Pro)-এর পর entry-তে অথবা Nearby peer actions-এ **
 
 ### Autofill / passkeys do not appear
 
-**Settings → Autofill**-এ OpenKey system password & passkey provider enable করুন, তারপর vault unlock করুন। iOS/macOS-এ OS permission prompts grant করুন। Providers বদলানোর পর browser বা target app restart করুন।
+**Settings → Security**-এ OpenKey system password & passkey provider enable করুন, তারপর vault unlock করুন। iOS/macOS-এ OS permission prompts grant করুন। Providers বদলানোর পর browser বা target app restart করুন।
 
 ### What is the extension fill shortcut?
 
@@ -102,7 +102,7 @@ Pro + same self-hosted server। Identity keys publish করুন, তার�
 ### Extension cannot talk to the desktop app
 
 1. Desktop vault unlock করুন ও unlocked রাখুন।
-2. **Settings → Autofill** (macOS-এ **Browser extension**) খুলুন যাতে native host register হয়।
+2. **Settings → Security** (macOS-এ **Browser extension**) খুলুন যাতে native host register হয়।
 3. Chromium: unpacked extension ID platform file-এ লিখুন ([Browser extension](./extension) দেখুন), তারপর Autofill আবার খুলুন।
 4. Extension-এ **Use desktop app** বেছে নিন।
 5. macOS-এ host script-এর জন্য `PATH`-এ Python 3 প্রয়োজন।
@@ -127,9 +127,9 @@ Default lock 15 minutes (`openkey config set-lock`)। `eval $(openkey unlock)` 
 
 ## Security / privacy
 
-### Does Password health send my passwords to the internet?
+### Autofill অ্যাপে কোথায়?
 
-Local weak/reused checks device-এ থাকে। Optional Have I Been Pwned শুধু **SHA-1 prefix k-anonymity** — পূর্ণ password কখনো নয়। [Security](./security) দেখুন।
+**Settings → Security**-এ — আলাদা Autofill পেজ নেই। OpenKey পাসवर्ड Have I Been Pwned-এ পাঠায় না এবং Password health স্ক্রিন চালায় না।
 
 ### Is Nearby a backup?
 

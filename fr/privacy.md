@@ -60,9 +60,6 @@ Le serveur de référence du projet OpenKey est conçu pour stocker **uniquement
 
 Nearby apparie des appareils sur votre réseau local et, après **Lier le coffre**, synchronise le ciphertext du coffre entre ces appareils. L’appariement et le partage de clé de coffre se font sur votre LAN entre les appareils que vous choisissez. OpenSelfHosting ne reçoit pas le trafic Nearby.
 
-## Santé des mots de passe optionnelle (Have I Been Pwned)
-
-Si vous activez la vérification optionnelle de mots de passe compromis, OpenKey peut n’envoyer qu’un **préfixe de hachage SHA-1** (k-anonymat) à l’API de plage Have I Been Pwned. Votre mot de passe lui-même n’est jamais téléversé. Vous pouvez laisser cette fonction désactivée.
 
 ## Autofill, passkeys et extension navigateur
 
@@ -97,7 +94,6 @@ Le traitement a lieu sur vos appareils et, si vous configurez la sync, sur l’h
 
 - Utiliser OpenKey entièrement hors ligne sans serveur
 - Accepter ou refuser l’appariement Nearby
-- Désactiver les vérifications HIBP optionnelles
 - Exporter ou supprimer les données locales (export / sauvegarde peut nécessiter Pro)
 - Supprimer un compte serveur via le flux de suppression authentifié (retire le ciphertext serveur ; les copies locales restent jusqu’à effacement)
 - Révoquer les abonnements magasin via la gestion d’abonnements du magasin

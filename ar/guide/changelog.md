@@ -1,7 +1,18 @@
 # سجل التغييرات
 
-ملاحظات الإصدار لحزم OpenKey في هذا المستودع. إصدار التطبيق يتبع `openkey_app` (`pubspec.yaml`). إصدار التوثيق يتبع هذا الموقع.
+ملاحظات الإصدار لـ OpenKey. إصدار التطبيق الرسمي هو وسم GitHub على [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey/releases) (السورس خاص). الحزم المفتوحة تُصدَّر بشكل مستقل. إصدار التوثيق يتبع هذا الموقع.
 
+## 1.0.6 (2026-08-28)
+
+متوافق مع التطبيق **1.0.6+7**. التفاصيل بالإنجليزية: [Changelog](/guide/changelog#10-06-2026-08-28).
+
+- Linux: AppImage و `.deb` و `.rpm` وأرشيف Arch
+- أيقونة بزوايا دائرية على سطح المكتب وموقع التوثيق
+- Nearby: دمج الخزنة على LAN، منافذ 47821/47822، إيقاف عند القفل
+- الملء التلقائي أغنى على أندرويد/iOS/macOS
+- بطاقات إضافية (UnionPay، RuPay، Elo، Hipercard، Mir)
+- استعادة `.okbak` من شاشة الإعداد الأولى
+- CLI من Termux عبر `OPENKEY_NATIVE_PORT` و `OPENKEY_NATIVE_TOKEN`
 
 ## 1.0.2 (2026-08-13)
 
@@ -59,7 +70,7 @@ See [English changelog](/guide/changelog#10-02-2026-08-13) — web target remove
 
 | الحزمة | أين تنظر |
 |---------|----------------|
-| التطبيق | `openkey_app/pubspec.yaml` → `version` |
+| التطبيق | [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases) |
 | الخادم | وسوم Git / صور `openkey_server` |
 | الامتداد / CLI | `package.json` في كل حزمة |
 | التوثيق | هذه الصفحة + نشر الموقع |

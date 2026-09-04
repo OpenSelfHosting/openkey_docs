@@ -1,6 +1,6 @@
 # Terms of Service
 
-**Last updated:** 6 August 2026  
+**Last updated:** 28 August 2026  
 **Product:** OpenKey (`com.openselfhosting.openkey`)  
 **Publisher:** OpenSelfHosting  
 **Contact:** [openkey@openselfhosting.com](mailto:openkey@openselfhosting.com)
@@ -13,7 +13,7 @@ Related: [Privacy Policy](/privacy) · [Security](/guide/security)
 
 OpenKey is a password manager that encrypts vault data on your device. An optional sync API stores **ciphertext only** when you point the app at a server you control (or that someone else operates for you). OpenSelfHosting does not provide a mandatory hosted vault cloud as part of the free core experience described in the docs.
 
-Open packages (server, extension, CLI, docs) are generally available under the **MIT License** as published in their repositories. The mobile/desktop app may be distributed under store terms in addition to these Terms.
+Open packages (server, extension, CLI, docs, and the protocol spec in [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey)) are generally available under the **MIT License** as published in their repositories. The official mobile/desktop **app source is proprietary** (not licensed for copy, modification, or redistribution). Compiled official builds may be distributed under store terms in addition to these Terms.
 
 ## 2. Eligibility
 
@@ -50,7 +50,6 @@ OpenKey may interact with:
 
 - Operating system Autofill / passkey APIs
 - Your self-hosted sync server
-- Optional Have I Been Pwned range API (prefix only)
 - App store billing APIs
 - Nearby peers you pair with
 
@@ -58,7 +57,7 @@ Those services have their own terms. We are not responsible for third-party outa
 
 ## 7. Intellectual property
 
-OpenKey names, logos, and branding are owned by OpenSelfHosting or its licensors. Open-source components remain under their respective licenses. You receive a personal, non-exclusive license to use the app as distributed — not ownership of OpenSelfHosting trademarks.
+OpenKey names, logos, and branding are owned by OpenSelfHosting or its licensors. Open-source components remain under their respective licenses. You receive a personal, non-exclusive license to **use the official app as distributed** — not a license to the app source, and not ownership of OpenSelfHosting trademarks. Do not reverse-engineer the official client except where mandatory law allows.
 
 ## 8. Privacy
 

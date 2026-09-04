@@ -26,7 +26,7 @@ title: 下载与安装
 | App Store | 上架后搜索 OpenSelfHosting 的 **OpenKey** |
 | Xcode archive | 本地 `build_all/ios/` |
 
-启用 **设置 → 自动填充**，以便系统级填充密码与通行密钥。
+启用 **设置 → 安全**，以便系统级填充密码与通行密钥。
 
 ## 桌面端
 
@@ -51,23 +51,20 @@ title: 下载与安装
 
 | Build | Artifact |
 |-------|----------|
+| AppImage x64 {#linux-appimage-x64} | `OpenKey-*-linux-x64.AppImage` |
+| AppImage Arm64 {#linux-appimage-arm64} | `OpenKey-*-linux-arm64.AppImage` |
 | `.deb` x64 {#linux-deb-x64} | `OpenKey-*-linux-x64.deb` |
 | `.deb` Arm64 {#linux-deb-arm64} | `OpenKey-*-linux-arm64.deb` |
 | `.tar.gz` x64 {#linux-tar-x64} | Portable tarball from `build_all/linux/` |
 | `.tar.gz` Arm64 {#linux-tar-arm64} | Portable tarball (arm64) |
-| Flathub {#linux-flathub} | When listed (`com.openselfhosting.openkey`) |
-| Snap Store {#linux-snap} | When listed (`openkey`) |
+
+Arch: `makepkg -si` with the `PKGBUILD` inside the tarball.
 
 Desktop Autofill registers the **native messaging host** used by the [browser extension](./extension). Keep the vault unlocked while filling from the browser.
 
 ### 自行构建桌面版
 
-```bash
-cd openkey_app
-./build_all.sh --desktop    # or --macos / host-specific flags
-```
-
-See `openkey_app/packaging/README.md` for store packaging (Play, App Store, Microsoft Store, Snap, Flathub).
+Official desktop installers: [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). The official app source is not public.
 
 ## 浏览器扩展
 

@@ -62,7 +62,7 @@ Tras emparejar (Pro), usa **Enviar al dispositivo** en la entrada o desde las ac
 
 ### Autocompletar / passkeys no aparecen
 
-Activa OpenKey como proveedor del sistema de contraseñas y passkeys en **Ajustes → Autocompletar**, luego desbloquea el vault. En iOS/macOS concede los avisos de permiso del SO. Reinicia el navegador o la app de destino tras cambiar de proveedor.
+Activa OpenKey como proveedor del sistema de contraseñas y passkeys en **Ajustes → Seguridad**, luego desbloquea el vault. En iOS/macOS concede los avisos de permiso del SO. Reinicia el navegador o la app de destino tras cambiar de proveedor.
 
 ### ¿Cuál es el atajo de relleno de la extensión?
 
@@ -105,7 +105,7 @@ En **Ajustes → Seguridad** puedes activar el desbloqueo biométrico (según pl
 ### La extensión no puede hablar con la app de escritorio
 
 1. Desbloquea el vault de escritorio y déjalo desbloqueado.
-2. Abre **Ajustes → Autocompletar** (y **Extensión del navegador** en macOS) para registrar el host nativo.
+2. Abre **Ajustes → Seguridad** (y **Extensión del navegador** en macOS) para registrar el host nativo.
 3. Chromium: escribe el ID de la extensión descomprimida en el archivo de la plataforma (ver [Extensión del navegador](./extension)), luego vuelve a abrir Autocompletar.
 4. Elige **Usar app de escritorio** en la extensión.
 5. macOS necesita Python 3 en el `PATH` para el script del host.
@@ -130,9 +130,9 @@ El bloqueo predeterminado es 15 minutos (`openkey config set-lock`). Ejecuta `ev
 
 ## Seguridad / privacidad
 
-### ¿Salud de contraseñas envía mis contraseñas a Internet?
+### ¿Dónde está Autofill en la app?
 
-Las comprobaciones locales de débiles/reutilizadas permanecen en el dispositivo. Have I Been Pwned opcional usa solo **k-anonimato de prefijo SHA-1** — nunca la contraseña completa. Ver [Seguridad](./security).
+En **Ajustes → Seguridad** — no hay una página Autofill aparte. OpenKey no envía contraseñas a Have I Been Pwned ni muestra Salud de contraseñas.
 
 ### ¿Nearby es una copia de seguridad?
 

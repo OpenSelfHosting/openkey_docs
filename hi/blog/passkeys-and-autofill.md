@@ -28,7 +28,7 @@ npm run build
 
 ## system Autofill भी
 
-ऐप में **Settings → Autofill** के तहत OpenKey को system password और passkey provider के रूप में सक्षम करें। यह path उन apps और browsers को कवर करता है जो OS credential store से बात करते हैं — एक्सटेंशन के पूरक, हर platform पर प्रतिस्थापन नहीं।
+ऐप में **Settings → Security** के तहत OpenKey को system password और passkey provider के रूप में सक्षम करें। यह path उन apps और browsers को कवर करता है जो OS credential store से बात करते हैं — एक्सटेंशन के पूरक, हर platform पर प्रतिस्थापन नहीं।
 
 ## अभी भी zero-knowledge
 

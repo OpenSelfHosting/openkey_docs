@@ -48,7 +48,7 @@ const STORAGE_KEY = 'openkey-site-prefs'
 const VP_APPEARANCE_KEY = 'vitepress-theme-appearance'
 
 const defaults: SitePrefs = {
-  theme: 'auto',
+  theme: 'light',
   font: 'default',
   palette: 'forest',
   highContrast: false,

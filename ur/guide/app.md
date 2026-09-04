@@ -78,10 +78,9 @@ Master password کبھی plaintext میں device نہیں چھوڑتا۔
 | Area | What it does |
 |------|----------------|
 | **Appearance** | Theme mode اور language (اس docs site کے same locales) |
-| **Security** | Lock / biometrics / related protections |
+| **Security** | Lock / biometrics / **system Autofill** (not a separate page) |
 | **Password generator** | Default generation options |
 | **Data** | Server sync، import/export، backups، browser extension، sharing |
-| **Autofill** | System Autofill / Credential Provider (mobile & desktop) اور passkeys |
 | **OpenKey Pro** | Subscription management جہاں available |
 
 ## Self-hosted server connect کریں
@@ -93,7 +92,7 @@ Master password کبھی plaintext میں device نہیں چھوڑتا۔
 
 ## Autofill اور browser
 
-- **Mobile / desktop Autofill:** Settings → Autofill میں OpenKey کو system password & passkey provider enable کریں۔
+- **Mobile / desktop Autofill:** Settings → Security میں OpenKey کو system password & passkey provider enable کریں۔
 - **Browser:** extension install کریں؛ desktop پر app unlock کر native host register کریں، یا standalone mode میں server کے خلاف extension unlock کریں۔
 
 ## Import، export اور backup

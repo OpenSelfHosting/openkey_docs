@@ -13,7 +13,7 @@ The diagram below shows what talks to what. Password generation stays offline. V
 | Mode | When it applies | What it can do |
 |------|-----------------|----------------|
 | **Offline** | Always | `gen` — no app, no server |
-| **Native bridge** | Desktop app unlocked on this machine | Secrets CRUD, discovery import, search/get/copy across secrets and logins |
+| **Native bridge** | Desktop or Android app unlocked on this machine | Secrets CRUD, discovery import, search/get/copy across secrets and logins |
 | **CLI session** | After `login` + `eval $(openkey unlock)` | Same vault operations against a local ciphertext cache; `sync` pulls from the server |
 
 ### How a vault command picks a backend
@@ -24,9 +24,20 @@ The diagram below shows what talks to what. Password generation stays offline. V
 2. Else if `OPENKEY_SESSION` is set and valid → use **session** mode (local cache / server-backed material).
 3. Else → commands that need the vault fail with a tip to unlock the app or run `eval $(openkey unlock)`.
 
-The bridge accepts connections **only from the local machine** and only while the vault is unlocked. On Unix it uses a socket under known OpenKey paths (override with `OPENKEY_NATIVE_SOCKET`). On Windows it uses a localhost port file under `%LOCALAPPDATA%\OpenKey\` (override with `OPENKEY_NATIVE_PORT`).
+The bridge accepts connections **only from the local machine** and only while the vault is unlocked. On Unix it uses a socket under known OpenKey paths (override with `OPENKEY_NATIVE_SOCKET`). On Windows **and Android (Termux)** it uses loopback TCP (`OPENKEY_NATIVE_PORT`) plus `OPENKEY_NATIVE_TOKEN`. Every request must carry that per-unlock token.
 
 ## Install
+
+**From npm** (recommended):
+
+```bash
+npm install -g openkey-cli
+openkey --version
+```
+
+Requires **Node.js 20+**. Desktop Linux: the in-app **Settings → Data → CLI** sheet prints the matching `apt` / `dnf` / `pacman` / `zypper` / `apk` lines.
+
+**From source** (development):
 
 ```bash
 cd openkey_cli
@@ -242,7 +253,7 @@ Dry-run works even if the vault is locked (listing only). Saving requires bridge
 
 ## Search across secrets and logins
 
-These commands search **developer secrets and login entries**:
+These commands search **developer secrets, login entries, payment cards, and crypto wallets**:
 
 ```bash
 openkey search github
@@ -251,6 +262,8 @@ openkey get "GitHub" --field username
 openkey copy api.example.com --field totp
 openkey totp "GitHub" -c
 openkey logins
+openkey cards
+openkey crypto
 ```
 
 | Command | Output |
@@ -260,6 +273,8 @@ openkey logins
 | `copy <query>` | Clipboard copy of that field (auto-clears in 45s; `--keep` to disable) |
 | `totp <query>` | Live TOTP code (`-c` copy, `-w` watch until Ctrl+C) |
 | `logins` | List logins with username / URL / TOTP flag |
+| `cards` | List payment cards (number masked; includes bank folder) |
+| `crypto` | List crypto wallets (keys masked; includes folder) |
 | `doctor` | Diagnose Node, config permissions, bridge, session, server `/health`, clipboard |
 
 Ambiguous substring matches prefer an exact name/title, host, or unique UUID prefix; otherwise they list UUID, kind, and label — refine the query. Prefer `secret get` / `secret copy` when you only want the Secrets section.
@@ -299,9 +314,28 @@ Session lifetime defaults to **15 minutes** (`config set-lock`). Expired session
 | `OPENKEY_PASSWORD` | Master password for non-interactive `login` / `unlock` (scripts/CI only) |
 | `OPENKEY_EMAIL` | Account email for non-interactive `login` / `unlock` |
 | `OPENKEY_NATIVE_SOCKET` | Override Unix bridge socket path |
-| `OPENKEY_NATIVE_PORT` | Override Windows bridge port |
+| `OPENKEY_NATIVE_PORT` | Loopback TCP port (Windows file, or Android Termux from the app sheet) |
+| `OPENKEY_NATIVE_TOKEN` | Per-unlock bridge auth token (required with the port on Termux) |
 
 Prefer the interactive password prompt on personal machines. Treat `OPENKEY_PASSWORD` and session tokens as secret material in CI logs.
+
+## Android (Termux) {#android-termux}
+
+Unlock OpenKey on the phone → **Settings → Data → Termux / CLI**. Copy the two blocks:
+
+```bash
+pkg install nodejs
+npm install -g openkey-cli
+```
+
+```bash
+export OPENKEY_NATIVE_PORT=...   # from the sheet
+export OPENKEY_NATIVE_TOKEN=...  # from the sheet
+openkey status
+openkey secret list
+```
+
+The port and token are valid only while that vault unlock lasts. Re-copy them after you lock and unlock again. Same Wi‑Fi is not required — Termux talks to the app on `127.0.0.1`.
 
 ## Shell completions
 
@@ -318,7 +352,7 @@ openkey completion fish | source
 | `gen` | No | Offline password generation |
 | `discover` | Save: yes\* / dry-run: no | Scan SSH / `.env` / env / AWS → device group |
 | `secret add\|list\|get\|copy\|rm\|update\|export\|devices` | Yes\* | Developer secrets |
-| `get` / `copy` / `search` / `totp` / `logins` | Yes\* | Secrets + logins (TOTP, field select) |
+| `get` / `copy` / `search` / `totp` / `logins` / `cards` / `crypto` | Yes\* | Secrets + logins + cards + wallets (TOTP, field select) |
 | `doctor` | No | Diagnose bridge / session / server |
 | `env` / `run` | Yes\* | Export secrets into shell / child process |
 | `completion` | No | Bash / zsh / fish completions |
@@ -329,7 +363,7 @@ openkey completion fish | source
 | `sync` | Login required | Pull ciphertext from server |
 | `forget` | No | Wipe local CLI config + cache |
 
-\*Desktop app unlocked, **or** valid `OPENKEY_SESSION` after server login.
+\*Desktop or Android app unlocked, **or** valid `OPENKEY_SESSION` after server login.
 
 ## Security model
 
