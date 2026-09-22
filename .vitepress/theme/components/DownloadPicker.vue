@@ -56,7 +56,12 @@ const platformLabel = computed(() => {
   return copy.value.platform[p.id]
 })
 
-const detectedOs = computed<OsId | 'unknown'>(() => detected.value.os)
+// Keep the CTA icon aligned with the platform selected by detection. The
+// synchronous result is available on the first client render; the mounted
+// pass only refines the build architecture.
+const detectedOs = computed<OsId | 'unknown'>(
+  () => detected.value.platform?.id || detected.value.os,
+)
 
 const primaryHref = computed(() => {
   const { platform, variant } = detected.value
