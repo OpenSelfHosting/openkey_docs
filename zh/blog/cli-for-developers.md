@@ -2,7 +2,7 @@
 title: 面向开发者密钥的 CLI
 description: OpenKey CLI 专业概览 — 离线生成、原生桌面桥接、发现、密钥类型与可选零知识服务器同步。
 date: 2026-08-01
-cover: /blog/covers/cli-for-developers.svg
+cover: /blog/covers/cli-for-developers.png
 ---
 
 # 面向开发者密钥的 CLI

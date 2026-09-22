@@ -2,7 +2,7 @@
 title: اپنا پاس ورڈ vault خود host کیوں کریں
 description: کنٹرول، رازداری، اور sync سرور جو صرف ciphertext رکھتا ہے — Docker کے ساتھ اپنے hardware پر OpenKey کیسے چلائیں۔
 date: 2026-08-03
-cover: /blog/covers/self-host-your-vault.svg
+cover: /blog/covers/self-host-your-vault.png
 ---
 
 # اپنا پاس ورڈ vault خود host کیوں کریں

@@ -563,7 +563,7 @@ export default defineConfig({
       'link',
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;600;700&family=Inconsolata:wght@400;600;700&family=Roboto+Mono:wght@400;500;600&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Figtree:ital,wght@0,400;0,600;0,700;1,400&family=Roboto+Flex:opsz,wght@8..144,400;8..144,600;8..144,700&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;600;700&family=Inconsolata:wght@400;600;700&family=Roboto+Mono:wght@400;500;600&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Figtree:ital,wght@0,400;0,600;0,700;1,400&family=Roboto+Flex:opsz,wght@8..144,400;8..144,600;8..144,700&display=swap',
       },
     ],
     [

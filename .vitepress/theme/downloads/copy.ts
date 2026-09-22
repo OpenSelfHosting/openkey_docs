@@ -94,7 +94,7 @@ const arInstall: Record<OsId, string[]> = {
 
 const en: DownloadCopy = {
   detectedLead: 'We picked the build that fits your machine — one click and you’re in.',
-  downloadFor: (platformLabel) => `Download for ${platformLabel}`,
+  downloadFor: (platformLabel) => `Download For ${platformLabel}`,
   otherDownloads: 'Other downloads',
   allPlatforms: 'All platforms',
   yourOs: 'Your OS',
@@ -102,7 +102,7 @@ const en: DownloadCopy = {
   platformsHeading: 'Download OpenKey',
   channelsNote:
     'Store listings and GitHub Releases roll out per platform. Until a channel is live, the guide below covers stores, sideload artifacts, and building from source.',
-  getStarted: 'Get started',
+  getStarted: 'Get Started',
   unknownCta: 'Download',
   thanksTitle: 'Thanks for downloading OpenKey',
   thanksLead: (platformLabel, buildLabel) =>

@@ -56,7 +56,7 @@ export function artifactUrl(variant: DownloadVariant): string | null {
   return null
 }
 
-/** Navigate here after the user chooses a build — thank-you + install steps. */
+/** Thank-you page used when a selected build has no live release asset. */
 export function thanksHref(
   localePath: string,
   platform: DownloadPlatform,
@@ -67,14 +67,16 @@ export function thanksHref(
 }
 
 /**
- * Primary CTA / picker links use the downloading page, which starts the
- * matching artifact download and provides install guidance.
+ * Live builds download directly from the exact compatible asset selected from
+ * the latest GitHub release. Unpublished builds retain the install-guide flow.
  */
 export function variantHref(
   localePath: string,
   platform: DownloadPlatform,
   variant: DownloadVariant,
 ): string {
+  const url = artifactUrl(variant)
+  if (url) return url
   return thanksHref(localePath, platform, variant)
 }
 
@@ -160,7 +162,6 @@ const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
         labelKey: 'macosArm64',
         arch: 'arm64',
         href: '#macos-arm64',
-        recommended: true,
       },
       {
         id: 'macos-x64',
@@ -173,6 +174,7 @@ const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
         labelKey: 'macosUniversal',
         arch: 'universal',
         href: '#macos-universal',
+        recommended: true,
       },
       {
         id: 'macos-appstore',

@@ -2,7 +2,7 @@
 title: Developer secret-এর জন্য CLI
 description: OpenKey CLI-এর পেশাদারি পরিচিতি — অফলাইন জেনারেশন, native desktop bridge, discovery, secret kind এবং ঐচ্ছিক zero-knowledge server sync।
 date: 2026-08-01
-cover: /blog/covers/cli-for-developers.svg
+cover: /blog/covers/cli-for-developers.png
 ---
 
 # Developer secret-এর জন্য CLI

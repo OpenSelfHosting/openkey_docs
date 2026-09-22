@@ -2,7 +2,7 @@
 title: अपना password vault self-host क्यों करें
 description: नियंत्रण, गोपनीयता, और ciphertext-only sync सर्वर — Docker के साथ अपने हार्डवेयर पर OpenKey कैसे चलाएँ।
 date: 2026-08-03
-cover: /blog/covers/self-host-your-vault.svg
+cover: /blog/covers/self-host-your-vault.png
 ---
 
 # अपना password vault self-host क्यों करें

@@ -2,7 +2,7 @@
 title: مزامنة بلا معرفة — كيف تعمل
 description: كيف يزامن OpenKey الخزائن عبر الأجهزة دون أن يحصل الخادم على نص واضح — Argon2id و hashes المصادقة وتخزين النص المشفّر فقط.
 date: 2026-08-04
-cover: /blog/covers/zero-knowledge-sync-ar.svg
+cover: /blog/covers/zero-knowledge-sync.png
 ---
 
 # مزامنة بلا معرفة — كيف تعمل

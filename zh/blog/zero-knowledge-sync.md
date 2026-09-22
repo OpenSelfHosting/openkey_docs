@@ -2,7 +2,7 @@
 title: 零知识同步详解
 description: OpenKey 如何在不给服务器明文的情况下跨设备同步保险库 — Argon2id、auth hash 与仅密文存储。
 date: 2026-08-04
-cover: /blog/covers/zero-knowledge-sync.svg
+cover: /blog/covers/zero-knowledge-sync.png
 ---
 
 # 零知识同步详解

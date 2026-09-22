@@ -2,7 +2,7 @@
 title: ब्राउज़र में passkeys और autofill
 description: OpenKey ब्राउज़र और system credential provider में logins और passkeys कैसे भरता है — vault डेटा क्लाइंट पर एन्क्रिप्टेड रहते हुए।
 date: 2026-08-02
-cover: /blog/covers/passkeys-and-autofill.svg
+cover: /blog/covers/passkeys-and-autofill.png
 ---
 
 # ब्राउज़र में passkeys और autofill

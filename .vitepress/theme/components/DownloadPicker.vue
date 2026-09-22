@@ -19,11 +19,14 @@ const props = withDefaults(
     layout?: 'hero' | 'page'
     quickStartLink?: string
     ctaSecondary?: string
+    /** Override the default detected-build lead line */
+    lead?: string
   }>(),
   {
     layout: 'hero',
     quickStartLink: '/guide/quick-start',
     ctaSecondary: '',
+    lead: '',
   },
 )
 
@@ -118,7 +121,7 @@ function isDetected(platform: DownloadPlatform) {
   <!-- Hero: compact detected CTA -->
   <div v-if="layout === 'hero'" class="ok-dl ok-dl--hero">
     <p class="ok-dl__lead" :data-ready="ready ? '1' : '0'">
-      {{ copy.detectedLead }}
+      {{ props.lead || copy.detectedLead }}
     </p>
 
     <div class="ok-dl__actions">

@@ -2,7 +2,7 @@
 title: 欢迎使用 OpenKey
 description: 我们为何构建一款仅存储密文的自托管密码管理器 — 以及应用、服务器、扩展与 CLI 各自提供什么。
 date: 2026-08-05
-cover: /blog/covers/welcome-to-openkey.svg
+cover: /blog/covers/welcome-to-openkey.png
 ---
 
 # 欢迎使用 OpenKey

@@ -2,7 +2,7 @@
 title: OpenKey Pro — what unlocks (and what doesn’t)
 description: Free vs Pro limits, Nearby and LAN Pro, store IAP vs desktop, and what stays free on every platform.
 date: 2026-08-06
-cover: /blog/covers/openkey-pro.svg
+cover: /blog/covers/openkey-pro.png
 ---
 
 # OpenKey Pro — what unlocks (and what doesn’t)

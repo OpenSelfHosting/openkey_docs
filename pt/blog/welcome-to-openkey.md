@@ -2,7 +2,7 @@
 title: Bem-vindo ao OpenKey
 description: Por que construímos um gerenciador de senhas auto-hospedado que armazena apenas ciphertext — e o que está disponível no app, servidor, extensão e CLI.
 date: 2026-08-05
-cover: /blog/covers/welcome-to-openkey.svg
+cover: /blog/covers/welcome-to-openkey.png
 ---
 
 # Bem-vindo ao OpenKey

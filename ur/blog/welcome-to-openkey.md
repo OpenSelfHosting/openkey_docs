@@ -2,7 +2,7 @@
 title: OpenKey میں خوش آمدید
 description: ہم نے self-hosted پاس ورڈ مینیجر کیوں بنایا جو صرف ciphertext ذخیرہ کرتا ہے — اور ایپ، سرور، ایکسٹینشن اور CLI میں کیا دستیاب ہے۔
 date: 2026-08-05
-cover: /blog/covers/welcome-to-openkey.svg
+cover: /blog/covers/welcome-to-openkey.png
 ---
 
 # OpenKey میں خوش آمدید

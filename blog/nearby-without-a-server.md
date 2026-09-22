@@ -2,7 +2,7 @@
 title: Nearby without a server
 description: Pair devices on your Wi‑Fi with QR codes, link vaults, and sync ciphertext on the LAN — no self-hosted API required.
 date: 2026-08-06
-cover: /blog/covers/nearby-without-a-server.svg
+cover: /blog/covers/nearby-without-a-server.png
 ---
 
 # Nearby without a server

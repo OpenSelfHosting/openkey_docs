@@ -5,18 +5,18 @@
 export const RELEASE_SOURCE_REPO = "OpenSelfHosting/OpenKey" as const
 
 export const RELEASE_SYNC = {
-  tag: "1.0.6+11",
+  tag: "1.0.6+12",
   publishedAt: "2026-08-28T15:23:19Z",
-  syncedAt: "2026-09-04T07:56:53.159Z",
+  syncedAt: "2026-09-22T14:02:28.980Z",
 } as const
 
 /** Variant id → browser_download_url from the latest GitHub Release on OpenKey. */
 export const RELEASE_ARTIFACT_URLS: Record<string, string> = {
-  "windows-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B11/OpenKey-1.0.6%2B10-windows-x64.exe",
-  "linux-deb-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B11/OpenKey-1.0.6%2B11-linux-x64.deb",
-  "linux-appimage-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B11/OpenKey-1.0.6%2B11-linux-x64.AppImage",
-  "linux-tar-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B11/OpenKey-1.0.6%2B11-linux-x64.tar.gz",
-  "android-apk": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B11/OpenKey-1.0.6%2B11-android-arm64-v8a.apk"
+  "windows-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B12/OpenKey-1.0.6%2B12-windows-x64.exe",
+  "macos-universal": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B12/OpenKey-1.0.6%2B13-macos.pkg",
+  "linux-deb-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B12/OpenKey-1.0.6%2B12-linux-x64.deb",
+  "linux-appimage-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B12/OpenKey-1.0.6%2B12-linux-x64.AppImage",
+  "android-apk": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B12/OpenKey-1.0.6%2B12-android.apk"
 }
 
 /** Variant id → store listing URL (from scripts/store-urls.config.json). */

@@ -2,7 +2,7 @@
 title: Zero-knowledge sync کی وضاحت
 description: OpenKey سرور کو plaintext دیے بغیر ڈیوائسز پر والٹس کیسے sync کرتا ہے — Argon2id، auth hashes، اور صرف ciphertext storage۔
 date: 2026-08-04
-cover: /blog/covers/zero-knowledge-sync.svg
+cover: /blog/covers/zero-knowledge-sync.png
 ---
 
 # Zero-knowledge sync کی وضاحت

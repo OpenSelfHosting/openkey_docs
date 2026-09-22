@@ -2,7 +2,7 @@
 title: OpenKey Pro — কী unlock হয় (আর কী হয় না)
 description: Free বনাম Pro limit, Nearby ও LAN Pro, store IAP বনাম desktop, এবং প্রতিটি প্ল্যাটফর্মে কী free থাকে।
 date: 2026-08-06
-cover: /blog/covers/openkey-pro.svg
+cover: /blog/covers/openkey-pro.png
 ---
 
 # OpenKey Pro — কী unlock হয় (আর কী হয় না)

@@ -2,7 +2,7 @@
 title: OpenKey Pro — 解锁什么（与不解锁什么）
 description: 免费与 Pro 限额、Nearby 与 LAN Pro、商店 IAP 与桌面版，以及各平台仍免费的内容。
 date: 2026-08-06
-cover: /blog/covers/openkey-pro.svg
+cover: /blog/covers/openkey-pro.png
 ---
 
 # OpenKey Pro — 解锁什么（与不解锁什么）

@@ -2,7 +2,7 @@
 title: ব্রাউজারে passkey ও autofill
 description: OpenKey কীভাবে ব্রাউজার ও system credential provider হিসেবে login ও passkey fill করে — ভল্ট ডেটা ক্লায়েন্টে এনক্রিপ্টেড রেখে।
 date: 2026-08-02
-cover: /blog/covers/passkeys-and-autofill.svg
+cover: /blog/covers/passkeys-and-autofill.png
 ---
 
 # ব্রাউজারে passkey ও autofill

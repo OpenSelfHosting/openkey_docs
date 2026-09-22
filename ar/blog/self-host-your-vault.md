@@ -2,7 +2,7 @@
 title: لماذا تستضيف خزنة كلمات المرور بنفسك
 description: التحكم والخصوصية وخادم مزامنة يخزّن النص المشفّر فقط — كيف تشغّل OpenKey على جهازك بـ Docker.
 date: 2026-08-03
-cover: /blog/covers/self-host-your-vault-ar.svg
+cover: /blog/covers/self-host-your-vault.png
 ---
 
 # لماذا تستضيف خزنة كلمات المرور بنفسك

@@ -2,7 +2,7 @@
 title: بغیر سرور Nearby
 description: QR codes سے Wi‑Fi پر ڈیوائسز pair کریں، vaults لنک کریں، اور LAN پر ciphertext sync کریں — self-hosted API درکار نہیں۔
 date: 2026-08-06
-cover: /blog/covers/nearby-without-a-server.svg
+cover: /blog/covers/nearby-without-a-server.png
 ---
 
 # بغیر سرور Nearby

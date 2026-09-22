@@ -32,7 +32,12 @@ const RELEASE_RULES = [
   },
   { id: 'macos-arm64', match: (name) => /macos-arm64.*\.dmg$/i.test(name) },
   { id: 'macos-x64', match: (name) => /macos-x64.*\.dmg$/i.test(name) },
-  { id: 'macos-universal', match: (name) => /macos-universal.*\.dmg$/i.test(name) },
+  {
+    id: 'macos-universal',
+    match: (name) =>
+      /macos-universal.*\.(dmg|pkg)$/i.test(name) ||
+      /-macos\.pkg$/i.test(name),
+  },
   { id: 'linux-deb-x64', match: (name) => /linux-x64\.deb$/i.test(name) },
   { id: 'linux-deb-arm64', match: (name) => /linux-arm64\.deb$/i.test(name) },
   { id: 'linux-rpm-x64', match: (name) => /linux-x64\.rpm$/i.test(name) },
@@ -43,7 +48,11 @@ const RELEASE_RULES = [
   { id: 'linux-tar-arm64', match: (name) => /linux-arm64\.tar\.gz$/i.test(name) },
   {
     id: 'android-apk',
-    match: (name) => /android.*\.apk$/i.test(name) && !/\.apk\./i.test(name),
+    match: (name) =>
+      /-android\.apk$/i.test(name) ||
+      (/android.*\.apk$/i.test(name) &&
+        !/(arm64|armeabi|x86_64)/i.test(name) &&
+        !/\.apk\./i.test(name)),
   },
 ]
 

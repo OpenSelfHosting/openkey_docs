@@ -2,7 +2,7 @@
 title: सर्वर के बिना Nearby
 description: QR codes से Wi‑Fi पर डिवाइस पेयर करें, vaults लिंक करें, और LAN पर ciphertext sync करें — self-hosted API आवश्यक नहीं।
 date: 2026-08-06
-cover: /blog/covers/nearby-without-a-server.svg
+cover: /blog/covers/nearby-without-a-server.png
 ---
 
 # सर्वर के बिना Nearby

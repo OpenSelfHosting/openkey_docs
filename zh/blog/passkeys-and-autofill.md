@@ -2,7 +2,7 @@
 title: 浏览器中的 passkeys 与自动填充
 description: OpenKey 如何在浏览器与系统凭据提供方中填充登录项与 passkeys — 同时保持保险库数据在客户端加密。
 date: 2026-08-02
-cover: /blog/covers/passkeys-and-autofill.svg
+cover: /blog/covers/passkeys-and-autofill.png
 ---
 
 # 浏览器中的 passkeys 与自动填充

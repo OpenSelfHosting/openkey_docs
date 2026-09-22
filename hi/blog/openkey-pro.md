@@ -2,7 +2,7 @@
 title: OpenKey Pro — क्या unlock होता है (और क्या नहीं)
 description: Free बनाम Pro limits, Nearby और LAN Pro, store IAP बनाम desktop, और हर platform पर क्या मुफ़्त रहता है।
 date: 2026-08-06
-cover: /blog/covers/openkey-pro.svg
+cover: /blog/covers/openkey-pro.png
 ---
 
 # OpenKey Pro — क्या unlock होता है (और क्या नहीं)

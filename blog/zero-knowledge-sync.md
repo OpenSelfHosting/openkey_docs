@@ -2,7 +2,7 @@
 title: Zero-knowledge sync explained
 description: How OpenKey syncs vaults across devices without giving the server plaintext — Argon2id, auth hashes, and ciphertext-only storage.
 date: 2026-08-04
-cover: /blog/covers/zero-knowledge-sync.svg
+cover: /blog/covers/zero-knowledge-sync.png
 ---
 
 # Zero-knowledge sync explained

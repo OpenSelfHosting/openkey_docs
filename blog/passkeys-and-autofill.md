@@ -2,7 +2,7 @@
 title: Passkeys and autofill in the browser
 description: How OpenKey fills logins and passkeys in the browser and as a system credential provider — while keeping vault data encrypted on the client.
 date: 2026-08-02
-cover: /blog/covers/passkeys-and-autofill.svg
+cover: /blog/covers/passkeys-and-autofill.png
 ---
 
 # Passkeys and autofill in the browser

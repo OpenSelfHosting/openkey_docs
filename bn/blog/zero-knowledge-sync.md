@@ -2,7 +2,7 @@
 title: Zero-knowledge sync ব্যাখ্যা
 description: OpenKey কীভাবে সার্ভারকে plaintext না দিয়ে ডিভাইস জুড়ে ভল্ট sync করে — Argon2id, auth hash এবং ciphertext-only storage।
 date: 2026-08-04
-cover: /blog/covers/zero-knowledge-sync.svg
+cover: /blog/covers/zero-knowledge-sync.png
 ---
 
 # Zero-knowledge sync ব্যাখ্যা

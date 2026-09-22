@@ -2,7 +2,7 @@
 title: OpenKey Pro — o que desbloqueia (e o que não)
 description: Limites grátis vs Pro, Nearby e LAN Pro, IAP da loja vs desktop, e o que permanece grátis em cada plataforma.
 date: 2026-08-06
-cover: /blog/covers/openkey-pro.svg
+cover: /blog/covers/openkey-pro.png
 ---
 
 # OpenKey Pro — o que desbloqueia (e o que não)

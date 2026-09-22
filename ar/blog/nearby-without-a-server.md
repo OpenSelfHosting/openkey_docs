@@ -2,7 +2,7 @@
 title: Nearby بلا خادم
 description: اقرن الأجهزة على Wi‑Fi برموز QR، اربط الخزنات، وزامن النص المشفّر على الشبكة المحلية — دون واجهة برمجة مستضافة ذاتياً.
 date: 2026-08-06
-cover: /blog/covers/nearby-without-a-server-ar.svg
+cover: /blog/covers/nearby-without-a-server.png
 ---
 
 # Nearby بلا خادم

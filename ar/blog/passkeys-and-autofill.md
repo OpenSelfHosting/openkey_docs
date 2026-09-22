@@ -2,7 +2,7 @@
 title: Passkeys والتعبئة التلقائية في المتصفح
 description: كيف يملأ OpenKey تسجيلات الدخول و Passkeys في المتصفح وكموفّر بيانات اعتماد للنظام — مع إبقاء بيانات الخزنة مشفّرة على العميل.
 date: 2026-08-02
-cover: /blog/covers/passkeys-and-autofill-ar.svg
+cover: /blog/covers/passkeys-and-autofill.png
 ---
 
 # Passkeys والتعبئة التلقائية في المتصفح

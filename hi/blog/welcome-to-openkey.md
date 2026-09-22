@@ -2,7 +2,7 @@
 title: OpenKey में आपका स्वागत है
 description: हमने self-hosted पासवर्ड मैनेजर क्यों बनाया जो केवल ciphertext संग्रहीत करता है — और ऐप, सर्वर, एक्सटेंशन और CLI में क्या उपलब्ध है।
 date: 2026-08-05
-cover: /blog/covers/welcome-to-openkey.svg
+cover: /blog/covers/welcome-to-openkey.png
 ---
 
 # OpenKey में आपका स्वागत है

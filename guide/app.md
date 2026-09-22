@@ -4,21 +4,21 @@ OpenKey is the mobile and desktop client for Android, iOS, macOS, Linux, and Win
 
 <p class="ok-app-visual">
   <img
-    src="/screenshots/openkey-vault-light.png"
+    src="/landing_page/Section_2_Save_Your_Passwords/home_android_screen_light.png"
     alt="OpenKey vault on mobile — collections and logins"
     class="ok-app-shot ok-app-shot--phone"
     width="390"
     height="844"
   />
   <img
-    src="/screenshots/openkey-onboarding-light.png"
+    src="/landing_page/Section_2_Save_Your_Passwords/password_details_android_screen_light.png"
     alt="OpenKey first-run onboarding — trust FAQ before vault setup"
     class="ok-app-shot ok-app-shot--phone"
     width="390"
     height="844"
   />
   <img
-    src="/screenshots/openkey-desktop-light.png"
+    src="/landing_page/Section_4_Stay_in_Sync/sync_devices_screen_light.png"
     alt="OpenKey on desktop — navigation rail and vault list"
     class="ok-app-shot ok-app-shot--desktop"
     width="1200"

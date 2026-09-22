@@ -2,7 +2,7 @@
 title: Welcome to OpenKey
 description: Why we built a self-hosted password manager that stores ciphertext only — and what ships across app, server, extension, and CLI.
 date: 2026-08-05
-cover: /blog/covers/welcome-to-openkey.svg
+cover: /blog/covers/welcome-to-openkey.png
 ---
 
 # Welcome to OpenKey

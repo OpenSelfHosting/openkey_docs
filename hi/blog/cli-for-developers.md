@@ -2,7 +2,7 @@
 title: Developer secrets के लिए CLI
 description: OpenKey CLI का व्यावसायिक अवलोकन — offline generation, native desktop bridge, discovery, secret kinds, और वैकल्पिक zero-knowledge server sync।
 date: 2026-08-01
-cover: /blog/covers/cli-for-developers.svg
+cover: /blog/covers/cli-for-developers.png
 ---
 
 # Developer secrets के लिए CLI

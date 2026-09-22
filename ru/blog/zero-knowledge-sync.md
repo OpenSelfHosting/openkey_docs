@@ -2,7 +2,7 @@
 title: Синхронизация с нулевым разглашением
 description: Как OpenKey синхронизирует хранилища между устройствами, не отдавая серверу открытый текст — Argon2id, auth_hash и хранение только шифротекста.
 date: 2026-08-04
-cover: /blog/covers/zero-knowledge-sync.svg
+cover: /blog/covers/zero-knowledge-sync.png
 ---
 
 # Синхронизация с нулевым разглашением

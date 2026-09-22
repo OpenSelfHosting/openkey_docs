@@ -2,7 +2,7 @@
 title: Добро пожаловать в OpenKey
 description: Зачем мы создали self-hosted менеджер паролей, который хранит только шифротекст — и что доступно в приложении, на сервере, в расширении и CLI.
 date: 2026-08-05
-cover: /blog/covers/welcome-to-openkey.svg
+cover: /blog/covers/welcome-to-openkey.png
 ---
 
 # Добро пожаловать в OpenKey

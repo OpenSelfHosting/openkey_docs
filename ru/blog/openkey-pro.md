@@ -2,7 +2,7 @@
 title: OpenKey Pro — что открывается (и что нет)
 description: Лимиты Free и Pro, Nearby и LAN Pro, покупки в магазине и на десктопе, и что остаётся бесплатным на каждой платформе.
 date: 2026-08-06
-cover: /blog/covers/openkey-pro.svg
+cover: /blog/covers/openkey-pro.png
 ---
 
 # OpenKey Pro — что открывается (и что нет)

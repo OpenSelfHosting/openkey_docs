@@ -2,7 +2,7 @@
 title: Por qué autoalojar tu vault de contraseñas
 description: Control, privacidad y un servidor de sync que solo almacena texto cifrado — cómo ejecutar OpenKey en tu propio hardware con Docker.
 date: 2026-08-03
-cover: /blog/covers/self-host-your-vault.svg
+cover: /blog/covers/self-host-your-vault.png
 ---
 
 # Por qué autoalojar tu vault de contraseñas

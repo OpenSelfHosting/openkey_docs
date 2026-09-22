@@ -2,7 +2,7 @@
 title: CLI для секретов разработчика
 description: Профессиональный обзор OpenKey CLI — офлайн-генерация, нативный мост к десктопу, обнаружение, типы секретов и опциональная синхронизация с сервером с нулевым разглашением.
 date: 2026-08-01
-cover: /blog/covers/cli-for-developers.svg
+cover: /blog/covers/cli-for-developers.png
 ---
 
 # CLI для секретов разработчика

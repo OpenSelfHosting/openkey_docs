@@ -2,7 +2,7 @@
 title: Why self-host your password vault
 description: Control, privacy, and a sync server that stores ciphertext only — how to run OpenKey on your own hardware with Docker.
 date: 2026-08-03
-cover: /blog/covers/self-host-your-vault.svg
+cover: /blog/covers/self-host-your-vault.png
 ---
 
 # Why self-host your password vault

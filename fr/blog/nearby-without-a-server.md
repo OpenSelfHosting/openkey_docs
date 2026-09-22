@@ -2,7 +2,7 @@
 title: Nearby sans serveur
 description: Appariez des appareils sur votre Wi‑Fi avec des QR codes, liez les coffres et synchronisez le ciphertext sur le LAN — sans API auto-hébergée requise.
 date: 2026-08-06
-cover: /blog/covers/nearby-without-a-server.svg
+cover: /blog/covers/nearby-without-a-server.png
 ---
 
 # Nearby sans serveur

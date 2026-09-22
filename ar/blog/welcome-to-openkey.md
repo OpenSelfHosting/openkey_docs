@@ -2,7 +2,7 @@
 title: مرحباً بـ OpenKey
 description: لماذا بنينا مدير كلمات مرور مستضافاً ذاتياً يخزّن النص المشفّر فقط — وما يتوفر عبر التطبيق والخادم والإضافة وواجهة سطر الأوامر.
 date: 2026-08-05
-cover: /blog/covers/welcome-to-openkey-ar.svg
+cover: /blog/covers/welcome-to-openkey.png
 ---
 
 # مرحباً بـ OpenKey
