@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed } from 'vue'
 import { useData, withBase } from 'vitepress'
 import {
   DOWNLOAD_PLATFORMS,
@@ -7,10 +7,9 @@ import {
   variantHref,
   type DownloadPlatform,
   type DownloadVariant,
-  type OsId,
 } from '../downloads/catalog'
 import { downloadCopy } from '../downloads/copy'
-import { detectPlatform, detectPlatformSync } from '../downloads/detectPlatform'
+import { useDetectedPlatform } from '../composables/useDetectedPlatform'
 import PlatformIcon from './PlatformIcon.vue'
 
 const props = withDefaults(
@@ -32,8 +31,7 @@ const props = withDefaults(
 
 const { lang } = useData()
 
-const detected = ref(detectPlatformSync())
-const ready = ref(false)
+const { detected, os: detectedOs, ready } = useDetectedPlatform()
 
 const copy = computed(() => downloadCopy(lang.value))
 
@@ -55,13 +53,6 @@ const platformLabel = computed(() => {
   if (!p) return ''
   return copy.value.platform[p.id]
 })
-
-// Keep the CTA icon aligned with the platform selected by detection. The
-// synchronous result is available on the first client render; the mounted
-// pass only refines the build architecture.
-const detectedOs = computed<OsId | 'unknown'>(
-  () => detected.value.platform?.id || detected.value.os,
-)
 
 const primaryHref = computed(() => {
   const { platform, variant } = detected.value
@@ -96,15 +87,6 @@ function onOtherChange(event: Event) {
   select.selectedIndex = 0
 }
 
-onMounted(async () => {
-  detected.value = await detectPlatform()
-  ready.value = true
-})
-
-watch(lang, async () => {
-  detected.value = await detectPlatform()
-})
-
 function platformTitle(platform: DownloadPlatform) {
   return copy.value.platform[platform.id]
 }
@@ -131,7 +113,12 @@ function isDetected(platform: DownloadPlatform) {
 
     <div class="ok-dl__actions">
       <a class="ok-hero__cta ok-hero__cta--primary" :href="primaryHref">
-        <PlatformIcon class="ok-dl__cta-icon" variant="inline" :os="detectedOs" :size="18" />
+        <PlatformIcon
+          class="ok-dl__cta-icon"
+          variant="inline"
+          :os="detectedOs"
+          :size="18"
+        />
         {{ primaryLabel }}
       </a>
       <a class="ok-hero__cta ok-hero__cta--ghost" :href="resolveHref(quickStartLink)">

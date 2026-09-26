@@ -7,7 +7,7 @@ export const RELEASE_SOURCE_REPO = "OpenSelfHosting/OpenKey" as const
 export const RELEASE_SYNC = {
   tag: "1.0.6+12",
   publishedAt: "2026-08-28T15:23:19Z",
-  syncedAt: "2026-09-22T14:02:28.980Z",
+  syncedAt: "2026-09-26T08:11:35.405Z",
 } as const
 
 /** Variant id → browser_download_url from the latest GitHub Release on OpenKey. */

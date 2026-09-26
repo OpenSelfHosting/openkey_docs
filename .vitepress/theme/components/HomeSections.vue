@@ -2,6 +2,8 @@
 import { computed } from 'vue'
 import { useData } from 'vitepress'
 import { useHomeRevealRoot } from '../composables/useHomeReveal'
+import { useDetectedPlatform } from '../composables/useDetectedPlatform'
+import PlatformIcon from './PlatformIcon.vue'
 
 import saveHome from '/landing_page/Section_2_Save_Your_Passwords/home_android_screen_light.png'
 import saveDetail from '/landing_page/Section_2_Save_Your_Passwords/password_details_android_screen_light.png'
@@ -258,6 +260,9 @@ const downloadLink = computed(
 const quickStartLink = computed(
   () => props.quickStartLink ?? `${localePrefix.value}/guide/quick-start`,
 )
+
+// Matches the hero picker so both download CTAs show the same OS mark.
+const { os: detectedOs } = useDetectedPlatform()
 
 const platformIcons: Array<{ src: string; label: string }> = [
   { src: iconFirefox, label: 'Firefox' },
@@ -517,7 +522,15 @@ const root = useHomeRevealRoot()
           <h2 id="ok-cta-title" class="ok-cta-card__title">{{ ctaTitle }}</h2>
           <p class="ok-cta-card__body">{{ ctaBody }}</p>
           <div class="ok-cta-card__actions">
-            <a class="ok-hero__cta ok-hero__cta--primary" :href="downloadLink">{{ ctaPrimary }}</a>
+            <a class="ok-hero__cta ok-hero__cta--primary" :href="downloadLink">
+              <PlatformIcon
+                class="ok-dl__cta-icon"
+                variant="inline"
+                :os="detectedOs"
+                :size="18"
+              />
+              {{ ctaPrimary }}
+            </a>
             <a class="ok-hero__cta ok-hero__cta--ghost" :href="quickStartLink">{{ ctaSecondary }}</a>
           </div>
         </div>
