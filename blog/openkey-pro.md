@@ -42,6 +42,8 @@ On platforms **without** store in-app purchase (typically Windows / Linux), a Pr
 
 ## Dig deeper
 
+- [Password manager for family](/blog/password-manager-for-family) — household sharing, and what not to share
+- [Password manager for teams](/blog/password-manager-for-teams) — offboarding and org semantics
 - [Pricing](/pricing) — plans, how to buy, cancel
 - [Nearby without a server](/blog/nearby-without-a-server)
 - [Import & export](/guide/import-export)

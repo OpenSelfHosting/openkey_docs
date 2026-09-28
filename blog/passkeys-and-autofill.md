@@ -45,6 +45,9 @@ Autofill runs after unlock on the client. The extension or OS provider decrypts 
 
 ## Learn more
 
+- [What are passkeys?](/blog/what-are-passkeys) — how the credential works before the OpenKey specifics
+- [Autofill passwords](/blog/autofill-passwords) — turning fill on across every platform
+- [Autofill not working](/blog/autofill-not-working) — the troubleshooting checklist
 - [Using the app](/guide/app) — Autofill, browser, and backups
 - [Packages](/guide/packages) — extension setup
 - [Server setup](/guide/server) — connect the extension to your host

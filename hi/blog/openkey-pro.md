@@ -30,7 +30,7 @@ Free tier caps (Pro enforce करने वाले mobile/desktop builds): **
 | entries पर attachments | प्रत्येक ~20 MB, सर्वर पर ciphertext |
 | Custom app icon | जहाँ platform support करे |
 
-पूर्ण matrix: [Pricing](/hi/pricing) · [ऐप का उपयोग → मुफ़्त बनाम Pro](/hi/guide/app#मुफ़्त-बनाम-openkey-pro)।
+पूर्ण matrix: [Pricing](/hi/pricing) · [ऐप का उपयोग → मुफ़्त बनाम Pro](/hi/guide/app#free-vs-openkey-pro)।
 
 ## LAN Pro store receipt नहीं है
 

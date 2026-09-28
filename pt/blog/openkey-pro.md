@@ -30,7 +30,7 @@ Limites do nível grátis (builds mobile/desktop que aplicam Pro): **50** entrad
 | Anexos em entradas | ~20 MB cada, ciphertext no servidor |
 | Ícone personalizado do app | Onde a plataforma suporta |
 
-Matriz completa: [Preços](/pt/pricing) · [Usar o app → Grátis vs Pro](/pt/guide/app#grátis-vs-openkey-pro).
+Matriz completa: [Preços](/pt/pricing) · [Usar o app → Grátis vs Pro](/pt/guide/app#free-vs-openkey-pro).
 
 ## LAN Pro não é recibo da loja
 

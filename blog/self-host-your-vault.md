@@ -47,6 +47,7 @@ You do not need to self-host to use OpenKey locally. You self-host when you want
 
 ## Next steps
 
+- [Self-hosted password manager](/blog/self-hosted-password-manager) — the operational side: hardening, backups, and when it is not worth it
 - [Server setup](/guide/server) — install, configure, and link clients
 - [Using the app](/guide/app) — vault workflows, Nearby, import/export
 - [Security](/guide/security) — hardening checklist and threat model

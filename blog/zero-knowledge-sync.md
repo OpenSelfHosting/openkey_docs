@@ -37,6 +37,8 @@ Cloud password managers ask you to trust their infrastructure and their operator
 
 ## Dig deeper
 
+- [Forgot your master password?](/blog/forgot-master-password) — why recovery is impossible, and how to prevent ever needing it
+- [What is a password manager?](/blog/what-is-a-password-manager) — the fundamentals this model serves
 - [Security](/guide/security) — key derivation, threat model, and operational checklist
 - [Server setup](/guide/server) — install Docker sync and link clients
 - [Using the app](/guide/app) — Nearby, backups, and everyday vault use

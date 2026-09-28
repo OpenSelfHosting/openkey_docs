@@ -604,4 +604,28 @@ export default defineConfig({
       },
     ]),
   ),
+
+  // Blog posts carry a `cover` in frontmatter; use it (and the post's own
+  // title/description) for social cards instead of the site-wide defaults.
+  transformHead({ pageData }) {
+    const fm = pageData?.frontmatter
+    if (!fm?.cover) return []
+    const title = String(fm.title ?? '')
+    const description = String(fm.description ?? '')
+    const image = `https://openkey.openselfhosting.com${String(fm.cover)}`
+    const date = fm.date instanceof Date ? fm.date.toISOString().slice(0, 10) : String(fm.date ?? '').slice(0, 10)
+    return [
+      ['meta', { property: 'og:type', content: 'article' }],
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: description }],
+      ['meta', { property: 'og:image', content: image }],
+      ['meta', { property: 'og:image:width', content: '1440' }],
+      ['meta', { property: 'og:image:height', content: '770' }],
+      ...(date ? [['meta', { property: 'article:published_time', content: date }]] : []),
+      ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: description }],
+      ['meta', { name: 'twitter:image', content: image }],
+    ] as any
+  },
 })

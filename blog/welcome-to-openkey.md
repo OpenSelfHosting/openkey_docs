@@ -31,4 +31,6 @@ You can also sync a vault across devices on the same Wi‑Fi with **Nearby** (Pr
 - [Security](/guide/security) — zero-knowledge model and threat boundaries
 - [Server setup](/guide/server) — install and link your own sync host
 
-Also on the blog: [zero-knowledge sync](/blog/zero-knowledge-sync), [Nearby without a server](/blog/nearby-without-a-server), [self-hosting](/blog/self-host-your-vault), [passkeys & autofill](/blog/passkeys-and-autofill), and the [developer CLI](/blog/cli-for-developers). Code lives under [OpenSelfHosting on GitHub](https://github.com/OpenSelfHosting).
+New here? Start with [What is a password manager?](/blog/what-is-a-password-manager) and [Best password managers](/blog/best-password-managers). Practical how-tos live in [Autofill passwords](/blog/autofill-passwords), [Import passwords from Chrome](/blog/import-passwords-from-chrome), and [Strong password generator](/blog/strong-password-generator).
+
+Also on the blog: [zero-knowledge sync](/blog/zero-knowledge-sync), [Nearby without a server](/blog/nearby-without-a-server), [self-hosting](/blog/self-host-your-vault), [self-hosted password manager](/blog/self-hosted-password-manager), [what are passkeys](/blog/what-are-passkeys), [two-factor authentication](/blog/two-factor-authentication), [passkeys & autofill](/blog/passkeys-and-autofill), and the [developer CLI](/blog/cli-for-developers). Code lives under [OpenSelfHosting on GitHub](https://github.com/OpenSelfHosting).

@@ -30,7 +30,7 @@ Plafonds du niveau gratuit (builds mobile/bureau qui appliquent Pro) : **50** en
 | Pièces jointes sur les entrées | ~20 Mo chacune, ciphertext sur le serveur |
 | Icône d'app personnalisée | Là où la plateforme le supporte |
 
-Matrice complète : [Tarifs](/fr/pricing) · [Utiliser l'application → Gratuit vs Pro](/fr/guide/app#gratuit-vs-openkey-pro).
+Matrice complète : [Tarifs](/fr/pricing) · [Utiliser l'application → Gratuit vs Pro](/fr/guide/app#free-vs-openkey-pro).
 
 ## LAN Pro n'est pas un reçu de magasin
 
