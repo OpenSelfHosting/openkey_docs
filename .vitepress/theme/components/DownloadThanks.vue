@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { inBrowser, useData, withBase } from 'vitepress'
 import {
   artifactUrl,
@@ -7,7 +7,7 @@ import {
   findPlatform,
   findVariant,
   guideSectionHref,
-  isLiveArtifact,
+  isAvailable,
   type DownloadPlatform,
   type DownloadVariant,
   type OsId,
@@ -77,12 +77,21 @@ const guideHref = computed(() => {
 
 const downloadPageHref = computed(() => resolveHref(downloadGuidePath(localePath.value)))
 
+/** True when this build has a public artifact, so a download can actually run. */
+const deliverable = computed(() => !!variant.value && isAvailable(variant.value))
+
+/**
+ * Start the download in the current tab.
+ *
+ * A same-tab navigation is the only form that reliably starts a transfer from
+ * an `onMounted` hook: `window.open` is a popup, and with no user activation
+ * left over from the click that got us here, every popup blocker drops it —
+ * which is how this page used to end up opening a blank tab and downloading
+ * nothing. Release assets answer with `Content-Disposition: attachment`, so the
+ * transfer runs and the visitor stays on the thank-you page.
+ */
 function triggerDownload() {
-  if (!variant.value) {
-    pending.value = true
-    return
-  }
-  const url = artifactUrl(variant.value)
+  const url = variant.value ? artifactUrl(variant.value) : null
   if (!url) {
     pending.value = true
     started.value = false
@@ -90,21 +99,11 @@ function triggerDownload() {
   }
   pending.value = false
   started.value = true
-  if (variant.value.external || isLiveArtifact(variant.value)) {
-    window.open(url, '_blank', 'noopener,noreferrer')
-  } else {
-    window.location.assign(url)
-  }
+  window.location.assign(url)
 }
 
 function retry() {
-  if (!variant.value) {
-    window.location.assign(downloadPageHref.value)
-    return
-  }
-  const url = artifactUrl(variant.value)
-  if (!url) {
-    pending.value = true
+  if (!deliverable.value) {
     window.location.assign(guideHref.value)
     return
   }
@@ -115,13 +114,6 @@ onMounted(() => {
   readQuery()
   triggerDownload()
 })
-
-watch(
-  () => [osParam.value, variantParam.value],
-  () => {
-    /* query is fixed after mount; kept for HMR */
-  },
-)
 </script>
 
 <template>
@@ -130,9 +122,14 @@ watch(
       <span class="ok-dl__mark-wrap ok-thanks__mark" aria-hidden="true">
         <PlatformIcon variant="mark" :os="osId" :size="96" />
       </span>
-      <h1 class="ok-thanks__title">{{ copy.thanksTitle }}</h1>
-      <p class="ok-thanks__lead">
+      <h1 class="ok-thanks__title">
+        {{ deliverable ? copy.thanksTitle : copy.unavailableTitle }}
+      </h1>
+      <p v-if="deliverable" class="ok-thanks__lead">
         {{ copy.thanksLead(platformLabel, buildLabel || '—') }}
+      </p>
+      <p v-else class="ok-thanks__lead">
+        {{ platformLabel }} · {{ buildLabel || '—' }}
       </p>
       <p class="ok-thanks__status" :data-pending="pending ? '1' : '0'">
         {{ pending ? copy.thanksPending : copy.thanksStarted }}
@@ -140,11 +137,20 @@ watch(
     </div>
 
     <div class="ok-thanks__actions">
-      <button type="button" class="ok-hero__cta ok-hero__cta--primary" @click="retry">
+      <button
+        v-if="deliverable"
+        type="button"
+        class="ok-hero__cta ok-hero__cta--primary"
+        @click="retry"
+      >
         <PlatformIcon class="ok-dl__cta-icon" variant="inline" :os="osId" :size="18" />
         {{ copy.retryDownload }}
       </button>
-      <a class="ok-hero__cta ok-hero__cta--ghost" :href="guideHref">
+      <a
+        class="ok-hero__cta"
+        :class="deliverable ? 'ok-hero__cta--ghost' : 'ok-hero__cta--primary'"
+        :href="guideHref"
+      >
         {{ copy.openGuide }}
       </a>
       <a class="ok-home-cta__text-link" :href="downloadPageHref">

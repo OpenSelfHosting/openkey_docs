@@ -7,7 +7,7 @@ export const RELEASE_SOURCE_REPO = "OpenSelfHosting/OpenKey" as const
 export const RELEASE_SYNC = {
   tag: "1.0.6+12",
   publishedAt: "2026-08-28T15:23:19Z",
-  syncedAt: "2026-09-26T09:56:14.098Z",
+  syncedAt: "2026-10-01T17:59:38.508Z",
 } as const
 
 /** Variant id → browser_download_url from the latest GitHub Release on OpenKey. */
@@ -20,4 +20,6 @@ export const RELEASE_ARTIFACT_URLS: Record<string, string> = {
 }
 
 /** Variant id → store listing URL (from scripts/store-urls.config.json). */
-export const STORE_URLS: Record<string, string> = {}
+export const STORE_URLS: Record<string, string> = {
+  "windows-store": "https://apps.microsoft.com/store/detail/9MXNBRPMDT53?cid=DevShareMCLPCS"
+}

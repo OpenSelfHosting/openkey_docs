@@ -2,6 +2,8 @@
   /* Warm paper + deep greens — matched to desktop/tablet/mobile mockups */
   --ok-ink: #0c1512;
   --ok-ink-soft: #5d6f68;
+  /* Deeper than --ok-ink-soft so dimmed build rows still clear AA on paper. */
+  --ok-ink-faint: #4a5a54;
   --ok-paper: #faf9f7;
   --ok-paper-deep: #f3f1ed;
   --ok-teal: #0f5c4c;
@@ -55,6 +57,7 @@
   /* Eye-comfort night: near-neutral charcoal, muted accents, soft ink */
   --ok-ink: #cfd8d3;
   --ok-ink-soft: #8b9a92;
+  --ok-ink-faint: #8b9a92;
   --ok-paper: #121816;
   --ok-paper-deep: #0e1210;
   --ok-teal: #4a9e8a;
@@ -2159,6 +2162,41 @@ html.dark .ok-cta-card {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--ok-teal);
+}
+
+/* A build with no public artifact: still a link to install notes, but never
+   dressed up as a working download. */
+.ok-dl__variant.is-unavailable {
+  border-style: dashed;
+  font-weight: 500;
+  color: var(--ok-ink-faint) !important;
+}
+
+.ok-dl__variant.is-unavailable:hover {
+  border-color: var(--ok-line);
+  background: var(--vp-c-bg-soft);
+  transform: none;
+}
+
+.ok-dl__pill--muted {
+  color: var(--ok-ink-faint);
+  font-weight: 600;
+}
+
+/* Build name inside the download CTA, so the visitor knows what they get. */
+.ok-dl__cta-build {
+  font-weight: 500;
+  font-size: 0.8em;
+  opacity: 0.72;
+  padding-inline-start: 0.4rem;
+  border-inline-start: 1px solid currentColor;
+  border-inline-start-color: color-mix(in srgb, currentColor 34%, transparent);
+}
+
+@media (max-width: 720px) {
+  .ok-dl__cta-build {
+    display: none;
+  }
 }
 
 /* Thank-you after download */

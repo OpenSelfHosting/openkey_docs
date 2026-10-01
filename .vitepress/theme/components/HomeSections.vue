@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useData } from 'vitepress'
+import { variantHref } from '../downloads/catalog'
 import { useHomeRevealRoot } from '../composables/useHomeReveal'
 import { useDetectedPlatform } from '../composables/useDetectedPlatform'
 import PlatformIcon from './PlatformIcon.vue'
@@ -254,7 +255,7 @@ const ctaBody = computed(() => localized.value.ctaBody)
 const ctaPrimary = computed(() => localized.value.ctaPrimary)
 const ctaSecondary = computed(() => localized.value.ctaSecondary)
 const localePrefix = computed(() => (lang.value === 'en' ? '' : `/${lang.value}`))
-const downloadLink = computed(
+const downloadPageLink = computed(
   () => props.downloadLink ?? `${localePrefix.value}/guide/download`,
 )
 const quickStartLink = computed(
@@ -262,7 +263,16 @@ const quickStartLink = computed(
 )
 
 // Matches the hero picker so both download CTAs show the same OS mark.
-const { os: detectedOs } = useDetectedPlatform()
+const { detected, os: detectedOs } = useDetectedPlatform()
+
+// This CTA is labelled just "Download", so it should behave like the hero one
+// and hand over the detected build. It falls back to the download page, which
+// lists every build, when detection has not resolved or has no live artifact.
+const downloadLink = computed(() => {
+  const { platform, variant } = detected.value
+  if (!platform || !variant) return downloadPageLink.value
+  return variantHref(localePrefix.value, platform, variant)
+})
 
 const platformIcons: Array<{ src: string; label: string }> = [
   { src: iconFirefox, label: 'Firefox' },

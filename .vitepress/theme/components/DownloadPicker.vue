@@ -4,6 +4,7 @@ import { useData, withBase } from 'vitepress'
 import {
   DOWNLOAD_PLATFORMS,
   downloadGuidePath,
+  isAvailable,
   variantHref,
   type DownloadPlatform,
   type DownloadVariant,
@@ -58,6 +59,14 @@ const primaryHref = computed(() => {
   const { platform, variant } = detected.value
   if (!platform || !variant) return allPlatformsHref.value
   return resolveHref(variantHref(localePath.value, platform, variant))
+})
+
+/** Name of the build the primary button actually delivers, so the visitor is
+ *  never surprised by a different package than the one they expected. */
+const primaryBuild = computed(() => {
+  const variant = detected.value.variant
+  if (!variant) return ''
+  return copy.value.variant[variant.labelKey] || variant.labelKey
 })
 
 const primaryLabel = computed(() => {
@@ -120,6 +129,7 @@ function isDetected(platform: DownloadPlatform) {
           :size="18"
         />
         {{ primaryLabel }}
+        <span v-if="primaryBuild" class="ok-dl__cta-build">{{ primaryBuild }}</span>
       </a>
       <a class="ok-hero__cta ok-hero__cta--ghost" :href="resolveHref(quickStartLink)">
         {{ secondaryLabel }}
@@ -157,6 +167,7 @@ function isDetected(platform: DownloadPlatform) {
             :size="18"
           />
           {{ primaryLabel }}
+          <span v-if="primaryBuild" class="ok-dl__cta-build">{{ primaryBuild }}</span>
         </a>
         <label class="ok-dl__other ok-dl__other--featured">
           <span class="ok-dl__other-label">{{ copy.otherDownloads }}</span>
@@ -171,7 +182,7 @@ function isDetected(platform: DownloadPlatform) {
               :key="item.variant.id"
               :value="item.href"
             >
-              {{ item.label }}
+              {{ item.label }}{{ isAvailable(item.variant) ? '' : ` — ${copy.notPublishedYet}` }}
             </option>
           </select>
         </label>
@@ -196,16 +207,22 @@ function isDetected(platform: DownloadPlatform) {
         <ul class="ok-dl__variants">
           <li
             v-for="variant in platform.variants"
-            :id="variant.href.startsWith('#') ? variant.href.slice(1) : undefined"
+            :id="variant.id"
             :key="variant.id"
           >
             <a
               class="ok-dl__variant"
-              :class="{ 'is-recommended': variant.recommended && isDetected(platform) }"
+              :class="{
+                'is-recommended': variant.recommended && isDetected(platform),
+                'is-unavailable': !isAvailable(variant),
+              }"
               :href="resolveHref(variantHref(localePath, platform, variant))"
             >
               <span>{{ variantLabel(variant) }}</span>
-              <span v-if="variant.recommended && isDetected(platform)" class="ok-dl__pill">
+              <span v-if="!isAvailable(variant)" class="ok-dl__pill ok-dl__pill--muted">
+                {{ copy.notPublishedYet }}
+              </span>
+              <span v-else-if="variant.recommended && isDetected(platform)" class="ok-dl__pill">
                 {{ copy.yourOs }}
               </span>
             </a>

@@ -1,5 +1,5 @@
 import type { ArchId, DownloadPlatform, DownloadVariant, OsId } from './catalog'
-import { DOWNLOAD_PLATFORMS } from './catalog'
+import { DOWNLOAD_PLATFORMS, resolveDownloadVariant } from './catalog'
 
 export type DetectedPlatform = {
   os: OsId | 'unknown'
@@ -49,14 +49,16 @@ function defaultArch(os: OsId | 'unknown'): ArchId {
   return 'x64'
 }
 
+/**
+ * Resolve the build the download CTAs point at. The catalog owns this so the
+ * hero button, the featured card and this hook can never disagree on which
+ * build a visitor is offered.
+ */
 function pickVariant(
   platform: DownloadPlatform,
   arch: ArchId,
-): DownloadVariant {
-  const byArch = platform.variants.filter((v) => v.arch === arch || v.arch === 'universal')
-  const recommended = byArch.find((v) => v.recommended) || byArch[0]
-  if (recommended) return recommended
-  return platform.variants.find((v) => v.recommended) || platform.variants[0]
+): DownloadVariant | null {
+  return resolveDownloadVariant(platform, arch) ?? null
 }
 
 /** Sync best-effort detect (no high-entropy UA Client Hints). */

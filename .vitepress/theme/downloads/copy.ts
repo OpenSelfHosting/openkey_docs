@@ -12,6 +12,10 @@ export type DownloadCopy = {
   getStarted: string
   unknownCta: string
   thanksTitle: string
+  /** Shown instead of `thanksTitle` when the build has no public artifact. */
+  unavailableTitle: string
+  /** Marks a build that has no public artifact yet. */
+  notPublishedYet: string
   thanksLead: (platformLabel: string, buildLabel: string) => string
   thanksPending: string
   thanksStarted: string
@@ -105,10 +109,12 @@ const en: DownloadCopy = {
   getStarted: 'Get Started',
   unknownCta: 'Download',
   thanksTitle: 'Thanks for downloading OpenKey',
+  unavailableTitle: 'This build is not published yet',
+  notPublishedYet: 'Not published yet',
   thanksLead: (platformLabel, buildLabel) =>
     `You’re set up for ${platformLabel} · ${buildLabel}.`,
   thanksPending:
-    'The binary channel for this build is not public yet. Use Retry when a release is live, or follow the install notes and build guide below.',
+    'There is no public download for this build yet. Follow the install notes below, or pick a published build from the download page.',
   thanksStarted: 'Your download should start automatically. If it did not, use Retry download.',
   installHeading: 'Install next',
   retryDownload: 'Retry download',
@@ -167,10 +173,12 @@ const ar: DownloadCopy = {
   getStarted: 'ابدأ الآن',
   unknownCta: 'التنزيل',
   thanksTitle: 'شكراً لتنزيل OpenKey',
+  unavailableTitle: 'هذا البناء غير منشور بعد',
+  notPublishedYet: 'غير منشور بعد',
   thanksLead: (platformLabel, buildLabel) =>
     `أنت جاهز لـ ${platformLabel} · ${buildLabel}.`,
   thanksPending:
-    'قناة الملف لهذا البناء ليست عامة بعد. استخدم إعادة المحاولة عند توفر الإصدار، أو اتبع ملاحظات التثبيت ودليل البناء أدناه.',
+    'لا يوجد تنزيل عام لهذا البناء بعد. اتبع ملاحظات التثبيت أدناه، أو اختر بناءً منشوراً من صفحة التنزيل.',
   thanksStarted: 'يفترض أن يبدأ التنزيل تلقائياً. إن لم يبدأ، استخدم إعادة محاولة التنزيل.',
   installHeading: 'خطوات التثبيت',
   retryDownload: 'إعادة محاولة التنزيل',
@@ -494,8 +502,10 @@ const zh: DownloadCopy = {
   getStarted: '开始使用',
   unknownCta: '下载',
   thanksTitle: '感谢下载 OpenKey',
+  unavailableTitle: '该构建尚未发布',
+  notPublishedYet: '尚未发布',
   thanksLead: (platformLabel, buildLabel) => `已为 ${platformLabel} · ${buildLabel} 准备就绪。`,
-  thanksPending: '该构建的公开下载通道尚未上线。发布后请重试，或按下方安装说明自行构建。',
+  thanksPending: '该构建目前没有公开下载。请按下方安装说明操作，或在下载页选择一个已发布的构建。',
   thanksStarted: '下载应已自动开始。若没有，请点击重新下载。',
   installHeading: '接下来安装',
   retryDownload: '重新下载',
@@ -538,9 +548,11 @@ const es: DownloadCopy = {
   getStarted: 'Empezar',
   unknownCta: 'Descargar',
   thanksTitle: 'Gracias por descargar OpenKey',
+  unavailableTitle: 'Este build todavía no está publicado',
+  notPublishedYet: 'Aún no publicado',
   thanksLead: (platformLabel, buildLabel) => `Listo para ${platformLabel} · ${buildLabel}.`,
   thanksPending:
-    'El canal binario de este build aún no es público. Reintenta cuando haya release, o sigue la guía abajo.',
+    'Este build aún no tiene descarga pública. Sigue las notas de instalación de abajo o elige un build publicado en la página de descargas.',
   thanksStarted: 'La descarga debería iniciar sola. Si no, usa Reintentar descarga.',
   installHeading: 'Instalación',
   retryDownload: 'Reintentar descarga',
@@ -564,9 +576,11 @@ const fr: DownloadCopy = {
   getStarted: 'Commencer',
   unknownCta: 'Télécharger',
   thanksTitle: 'Merci d’avoir téléchargé OpenKey',
+  unavailableTitle: 'Ce build n’est pas encore publié',
+  notPublishedYet: 'Pas encore publié',
   thanksLead: (platformLabel, buildLabel) => `Prêt pour ${platformLabel} · ${buildLabel}.`,
   thanksPending:
-    'Le canal binaire de ce build n’est pas encore public. Réessayez quand la release est en ligne, ou suivez le guide ci-dessous.',
+    'Ce build n’a pas encore de téléchargement public. Suivez les notes d’installation ci-dessous, ou choisissez un build publié sur la page de téléchargement.',
   thanksStarted: 'Le téléchargement devrait démarrer. Sinon, utilisez Réessayer.',
   installHeading: 'Installation',
   retryDownload: 'Réessayer le téléchargement',
@@ -590,9 +604,11 @@ const hi: DownloadCopy = {
   getStarted: 'शुरू करें',
   unknownCta: 'डाउनलोड',
   thanksTitle: 'OpenKey डाउनलोड के लिए धन्यवाद',
+  unavailableTitle: 'यह बिल्ड अभी प्रकाशित नहीं है',
+  notPublishedYet: 'अभी प्रकाशित नहीं',
   thanksLead: (platformLabel, buildLabel) => `${platformLabel} · ${buildLabel} के लिए तैयार।`,
   thanksPending:
-    'इस बिल्ड का बाइनरी चैनल अभी सार्वजनिक नहीं है। रिलीज़ लाइव होने पर पुनः प्रयास करें, या नीचे की गाइड देखें।',
+    'इस बिल्ड का सार्वजनिक डाउनलोड अभी उपलब्ध नहीं है। नीचे दिए इंस्टॉल नोट्स पढ़ें, या डाउनलोड पेज से कोई प्रकाशित बिल्ड चुनें।',
   thanksStarted: 'डाउनलोड स्वचालित रूप से शुरू होना चाहिए। नहीं हुआ तो पुनः प्रयास करें।',
   installHeading: 'इंस्टॉल करें',
   retryDownload: 'डाउनलोड पुनः प्रयास',
@@ -623,9 +639,11 @@ const bn: DownloadCopy = {
   getStarted: 'শুরু করুন',
   unknownCta: 'ডাউনলোড',
   thanksTitle: 'OpenKey ডাউনলোডের জন্য ধন্যবাদ',
+  unavailableTitle: 'এই বিল্ডটি এখনও প্রকাশিত হয়নি',
+  notPublishedYet: 'এখনও প্রকাশিত নয়',
   thanksLead: (platformLabel, buildLabel) => `${platformLabel} · ${buildLabel}-এর জন্য প্রস্তুত।`,
   thanksPending:
-    'এই বিল্ডের বাইনারি চ্যানেল এখনও সার্বজনীন নয়। রিলিজ লাইভ হলে আবার চেষ্টা করুন, অথবা নিচের গাইড দেখুন।',
+    'এই বিল্ডের কোনো পাবলিক ডাউনলোড এখনও নেই। নিচের ইনস্টল নোটস অনুসরণ করুন, অথবা ডাউনলোড পেজ থেকে একটি প্রকাশিত বিল্ড বেছে নিন।',
   thanksStarted: 'ডাউনলোড স্বয়ংক্রিয়ভাবে শুরু হওয়া উচিত। না হলে আবার চেষ্টা করুন।',
   installHeading: 'ইনস্টল করুন',
   retryDownload: 'ডাউনলোড আবার চেষ্টা',
@@ -656,9 +674,11 @@ const pt: DownloadCopy = {
   getStarted: 'Começar',
   unknownCta: 'Baixar',
   thanksTitle: 'Obrigado por baixar o OpenKey',
+  unavailableTitle: 'Este build ainda não foi publicado',
+  notPublishedYet: 'Ainda não publicado',
   thanksLead: (platformLabel, buildLabel) => `Pronto para ${platformLabel} · ${buildLabel}.`,
   thanksPending:
-    'O canal binário deste build ainda não é público. Tente novamente quando houver release, ou siga o guia abaixo.',
+    'Este build ainda não tem download público. Siga as notas de instalação abaixo ou escolha um build publicado na página de downloads.',
   thanksStarted: 'O download deve iniciar automaticamente. Se não iniciou, tente novamente.',
   installHeading: 'Instalar',
   retryDownload: 'Tentar download novamente',
@@ -682,9 +702,11 @@ const ru: DownloadCopy = {
   getStarted: 'Начать',
   unknownCta: 'Скачать',
   thanksTitle: 'Спасибо за загрузку OpenKey',
+  unavailableTitle: 'Эта сборка ещё не опубликована',
+  notPublishedYet: 'Ещё не опубликована',
   thanksLead: (platformLabel, buildLabel) => `Готово для ${platformLabel} · ${buildLabel}.`,
   thanksPending:
-    'Бинарный канал для этой сборки ещё не публичен. Повторите, когда выйдет релиз, или следуйте гайду ниже.',
+    'Публичной загрузки этой сборки пока нет. Следуйте инструкции по установке ниже или выберите опубликованную сборку на странице загрузки.',
   thanksStarted: 'Загрузка должна начаться автоматически. Если нет — нажмите «Повторить».',
   installHeading: 'Установка',
   retryDownload: 'Повторить загрузку',
@@ -708,9 +730,11 @@ const ur: DownloadCopy = {
   getStarted: 'شروع کریں',
   unknownCta: 'ڈاؤن لوڈ',
   thanksTitle: 'OpenKey ڈاؤن لوڈ کا شکریہ',
+  unavailableTitle: 'یہ بلڈ ابھی شائع نہیں ہوا',
+  notPublishedYet: 'ابھی شائع نہیں',
   thanksLead: (platformLabel, buildLabel) => `${platformLabel} · ${buildLabel} کے لیے تیار۔`,
   thanksPending:
-    'اس بلڈ کا بائنری چینل ابھی عوامی نہیں۔ ریلیز لائیو ہونے پر دوبارہ کوشش کریں، یا نیچے کا گائیڈ دیکھیں۔',
+    'اس بلڈ کا کوئی عوامی ڈاؤن لوڈ ابھی دستیاب نہیں۔ نیچے دیے گئے انسٹال نوٹس پڑھیں، یا ڈاؤن لوڈ صفحے سے کوئی شائع بلڈ منتخب کریں۔',
   thanksStarted: 'ڈاؤن لوڈ خود بخود شروع ہونا چاہیے۔ نہیں ہوا تو دوبارہ کوشش کریں۔',
   installHeading: 'انسٹال کریں',
   retryDownload: 'ڈاؤن لوڈ دوبارہ',

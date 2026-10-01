@@ -29,6 +29,12 @@ export type DownloadPlatform = {
   requirementKey: string
   /** Anchor on the download guide */
   anchor: string
+  /**
+   * Extra architectures this platform can run an existing build on, beyond the
+   * build's own `arch` and `universal`. Windows on Arm runs the x64 installer
+   * under emulation; Linux and macOS have no such story, so they omit this.
+   */
+  runsOn?: ArchId[]
   variants: DownloadVariant[]
 }
 
@@ -54,6 +60,52 @@ export function isLiveArtifact(variant: DownloadVariant): boolean {
 export function artifactUrl(variant: DownloadVariant): string | null {
   if (isLiveArtifact(variant)) return variant.href
   return null
+}
+
+/**
+ * True when this build can be handed to the browser right now, so a download
+ * button pointing at it actually starts a download.
+ */
+export function isAvailable(variant: DownloadVariant): boolean {
+  return artifactUrl(variant) !== null
+}
+
+/** True when `variant` is a build this platform can run on `arch`. */
+function runsOnArch(
+  platform: DownloadPlatform,
+  variant: DownloadVariant,
+  arch: ArchId,
+): boolean {
+  return (
+    variant.arch === arch ||
+    variant.arch === 'universal' ||
+    (platform.runsOn ?? []).includes(arch)
+  )
+}
+
+/**
+ * Best build for a detected OS/arch, preferring one we can actually deliver.
+ *
+ * A "Download for <OS>" button must start a download, so a published artifact
+ * always outranks the hand-picked `recommended` build: store listings are often
+ * unpublished while the release asset right next to them is live (Android is
+ * the case in point — Play is not listed, the APK is).
+ *
+ * Falls through to the best non-published build when the platform has nothing
+ * live, which keeps the caller on the install-guide path instead of guessing.
+ */
+export function resolveDownloadVariant(
+  platform: DownloadPlatform,
+  arch: ArchId,
+): DownloadVariant | undefined {
+  const usable = platform.variants.filter((v) => runsOnArch(platform, v, arch))
+  const pool = usable.length > 0 ? usable : platform.variants
+  return (
+    pool.find((v) => v.recommended && isAvailable(v)) ??
+    pool.find((v) => isAvailable(v)) ??
+    pool.find((v) => v.recommended) ??
+    pool[0]
+  )
 }
 
 /** Thank-you page used when a selected build has no live release asset. */
@@ -129,6 +181,9 @@ const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
     labelKey: 'windows',
     requirementKey: 'windowsReq',
     anchor: 'windows',
+    // Windows on Arm runs the x64 installer under emulation, so Arm64 visitors
+    // get a working download instead of a dead end.
+    runsOn: ['arm64'],
     variants: [
       {
         id: 'windows-x64',

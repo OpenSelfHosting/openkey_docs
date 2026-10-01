@@ -14,8 +14,9 @@
       "comment": "Mac App Store — often same appleId as iOS"
     },
     "windows-store": {
-      "productId": null,
-      "comment": "Microsoft Store product ID (PackageFamilyName or store detail id)"
+      "url": "https://apps.microsoft.com/store/detail/9MXNBRPMDT53?cid=DevShareMCLPCS",
+      "productId": "9MXNBRPMDT53",
+      "comment": "Microsoft Store listing. url takes precedence; productId is the store detail id (used only as a fallback)."
     },
     "linux-flathub": {
       "live": false,
