@@ -8,7 +8,7 @@ OpenKey ऐप प्राप्त करें, फिर वैकल्प�
 
 ऐप id: `com.openselfhosting.openkey` · Org: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-स्टोर लिस्टिंग और GitHub Releases प्रति प्लेटफ़ॉर्म आते हैं। जब तक स्टोर लिंक लाइव न हो, monorepo से बिल्ड करें या अपने `build_all/` रन से डेस्कटॉप आर्टिफैक्ट उपयोग करें।
+स्टोर लिस्टिंग और GitHub Releases प्रति प्लेटफ़ॉर्म आते हैं। **Google Play अब लाइव है** — Android पर OpenKey को [स्टोर लिस्टिंग](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) से इंस्टॉल करें। आधिकारिक ऐप बाइनरी [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases) पर भी उपलब्ध हैं। ऐप का आधिकारिक **सोर्स सार्वजनिक नहीं** है, इसलिए खुद बिल्ड करने के बजाय उन्हीं आर्टिफैक्ट का उपयोग करें। दूसरी स्टोर लिस्टिंग अभी समीक्षा में हो सकती है।
 
 ## मोबाइल
 
@@ -16,7 +16,7 @@ OpenKey ऐप प्राप्त करें, फिर वैकल्प�
 
 | Channel | Notes |
 |---------|--------|
-| Google Play {#android-play} | `com.openselfhosting.openkey` — लिस्टिंग सार्वजनिक होने पर OpenSelfHosting का **OpenKey** खोजें |
+| Google Play {#android-play} | [Google Play पर OpenKey पाएँ](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) — **OpenSelfHosting** द्वारा `com.openselfhosting.openkey` के रूप में लिस्टेड |
 | Sideload APK/AAB {#android-apk} | `build_all/android/` से sideload APK/AAB (`OpenKey-*-android.apk`) |
 
 ### iOS {#ios}

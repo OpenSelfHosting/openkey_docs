@@ -7,7 +7,7 @@ export const RELEASE_SOURCE_REPO = "OpenSelfHosting/OpenKey" as const
 export const RELEASE_SYNC = {
   tag: "1.0.6+12",
   publishedAt: "2026-08-28T15:23:19Z",
-  syncedAt: "2026-10-01T17:59:38.508Z",
+  syncedAt: "2026-10-02T10:52:07.513Z",
 } as const
 
 /** Variant id → browser_download_url from the latest GitHub Release on OpenKey. */
@@ -21,5 +21,6 @@ export const RELEASE_ARTIFACT_URLS: Record<string, string> = {
 
 /** Variant id → store listing URL (from scripts/store-urls.config.json). */
 export const STORE_URLS: Record<string, string> = {
+  "android-play": "https://play.google.com/store/apps/details?id=com.openselfhosting.openkey",
   "windows-store": "https://apps.microsoft.com/store/detail/9MXNBRPMDT53?cid=DevShareMCLPCS"
 }

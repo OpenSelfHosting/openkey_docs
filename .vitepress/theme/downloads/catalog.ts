@@ -88,8 +88,8 @@ function runsOnArch(
  *
  * A "Download for <OS>" button must start a download, so a published artifact
  * always outranks the hand-picked `recommended` build: store listings are often
- * unpublished while the release asset right next to them is live (Android is
- * the case in point — Play is not listed, the APK is).
+ * unpublished while the release asset right next to them is live (Flathub and
+ * Snap are the cases in point — the desktop AppImages are published).
  *
  * Falls through to the best non-published build when the platform has nothing
  * live, which keeps the caller on the install-guide path instead of guessing.

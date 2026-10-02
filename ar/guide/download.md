@@ -8,7 +8,7 @@ title: التنزيل والتثبيت
 
 معرّف التطبيق: `com.openselfhosting.openkey` · المنظمة: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-قوائم المتاجر وإصدارات GitHub تُنشر تدريجياً لكل منصة. الباينري الرسمي على [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). **سورس التطبيق الرسمي ليس عاماً.** إلى أن يصبح رابط المتجر حيّاً استخدم حزم ذلك الإصدار.
+قوائم المتاجر وإصدارات GitHub تُنشر تدريجياً لكل منصة. **Google Play متاح الآن** — ثبّت OpenKey على أندرويد من [صفحة المتجر](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey). الباينري الرسمي متاح أيضاً على [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). **سورس التطبيق الرسمي ليس عاماً**، لذا استخدم تلك الحزم بدلاً من بنائها بنفسك. بقية صفحات المتاجر قد تكون قيد المراجعة.
 
 ## الجوال
 
@@ -16,7 +16,7 @@ title: التنزيل والتثبيت
 
 | القناة | ملاحظات |
 |---------|--------|
-| Google Play {#android-play} | `com.openselfhosting.openkey` — ابحث عن **OpenKey** من OpenSelfHosting بعد نشر القائمة |
+| Google Play {#android-play} | [احصل على OpenKey من Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) — منشور باسم **OpenSelfHosting** بمعرّف `com.openselfhosting.openkey` |
 | تثبيت جانبي APK/AAB {#android-apk} | من [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases) (`OpenKey-*-android.apk`) |
 
 ### iOS {#ios}

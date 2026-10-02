@@ -8,7 +8,7 @@ Obtenez l’application OpenKey, puis connectez optionnellement un [serveur auto
 
 Identifiant d’application : `com.openselfhosting.openkey` · Org : [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-Les fiches magasin et les GitHub Releases se déploient par plateforme. Tant qu’un lien magasin n’est pas en ligne, compilez depuis le monorepo ou utilisez un artefact bureau de votre propre run `build_all/`.
+Les fiches magasin et les GitHub Releases se déploient par plateforme. **Google Play est disponible** : installez OpenKey sur Android depuis [la fiche magasin](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey). Les binaires officiels sont aussi publiés sur [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). Le code source officiel **n’est pas public** : utilisez ces artefacts plutôt que de compiler vous-même. Les autres fiches peuvent encore être en cours de revue.
 
 ## Mobile
 
@@ -16,7 +16,7 @@ Les fiches magasin et les GitHub Releases se déploient par plateforme. Tant qu�
 
 | Channel | Notes |
 |---------|--------|
-| Google Play {#android-play} | `com.openselfhosting.openkey` — Recherchez **OpenKey** par OpenSelfHosting une fois la fiche publique |
+| Google Play {#android-play} | [Obtenir OpenKey sur Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) — publié par **OpenSelfHosting** sous `com.openselfhosting.openkey` |
 | Sideload APK/AAB {#android-apk} | Sideload APK/AAB depuis `build_all/android/` (`OpenKey-*-android.apk`) |
 
 ### iOS {#ios}

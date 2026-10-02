@@ -8,7 +8,7 @@ OpenKey অ্যাপ নিন, তারপর ঐচ্ছিকভাব�
 
 অ্যাপ id: `com.openselfhosting.openkey` · Org: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-স্টোর লিস্টিং ও GitHub Releases প্ল্যাটফর্মভিত্তিক আসে। স্টোর লিঙ্ক লাইভ না হওয়া পর্যন্ত monorepo থেকে বিল্ড করুন বা নিজের `build_all/` রান থেকে ডেস্কটপ আর্টিফ্যাক্ট ব্যবহার করুন।
+স্টোর লিস্টিং ও GitHub Releases প্ল্যাটফর্মভিত্তিক আসে। **Google Play এখন লাইভ** — Android-এ OpenKey ইনস্টল করুন [স্টোর লিস্টিং](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) থেকে। অফিসিয়াল অ্যাপ বাইনারি [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases)-এও পাওয়া যায়। অ্যাপের অফিসিয়াল **সোর্স সর্বজনীন নয়**, তাই নিজে বিল্ড না করে ওই আর্টিফ্যাক্টই ব্যবহার করুন। অন্য স্টোর লিস্টিং এখনও পর্যালোচনায় থাকতে পারে।
 
 ## মোবাইল
 
@@ -16,7 +16,7 @@ OpenKey অ্যাপ নিন, তারপর ঐচ্ছিকভাব�
 
 | Channel | Notes |
 |---------|--------|
-| Google Play {#android-play} | `com.openselfhosting.openkey` — লিস্টিং পাবলিক হলে OpenSelfHosting-এর **OpenKey** খুঁজুন |
+| Google Play {#android-play} | [Google Play-তে OpenKey নিন](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) — **OpenSelfHosting** কর্তৃক `com.openselfhosting.openkey` হিসেবে তালিকাভুক্ত |
 | Sideload APK/AAB {#android-apk} | `build_all/android/` থেকে sideload APK/AAB (`OpenKey-*-android.apk`) |
 
 ### iOS {#ios}

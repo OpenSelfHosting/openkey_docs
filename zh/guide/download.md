@@ -8,7 +8,7 @@ title: 下载与安装
 
 应用 ID：`com.openselfhosting.openkey` · 组织：[OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-各平台的商店上架与 GitHub Releases 会分批推出。在公开商店链接可用之前，可从 monorepo 构建，或使用自己跑出的 `build_all/` 桌面产物。
+各平台的商店上架与 GitHub Releases 会分批推出。**Google Play 已上线** — 在 Android 上可从[商店页面](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey)安装 OpenKey。官方应用二进制文件也发布在 [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases)。应用官方**源码不公开**，请直接使用这些产物，不要自行构建。其他商店页面可能仍在审核中。
 
 ## 移动端
 
@@ -16,7 +16,7 @@ title: 下载与安装
 
 | Channel | Notes |
 |---------|--------|
-| Google Play {#android-play} | `com.openselfhosting.openkey` — 上架后搜索 OpenSelfHosting 的 **OpenKey** |
+| Google Play {#android-play} | [在 Google Play 获取 OpenKey](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) — 由 **OpenSelfHosting** 发布，应用 ID 为 `com.openselfhosting.openkey` |
 | Sideload APK/AAB {#android-apk} | 从 `build_all/android/` 侧载 APK/AAB |
 
 ### iOS {#ios}

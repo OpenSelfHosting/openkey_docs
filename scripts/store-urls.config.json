@@ -2,8 +2,8 @@
   "appId": "com.openselfhosting.openkey",
   "stores": {
     "android-play": {
-      "live": false,
-      "comment": "Set live:true when Google Play listing is public (uses appId)"
+      "live": true,
+      "comment": "Live since 2026-10 — listing is public (uses appId)"
     },
     "ios-appstore": {
       "appleId": null,

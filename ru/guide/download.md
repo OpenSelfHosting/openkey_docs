@@ -8,7 +8,7 @@ title: Скачать и установить
 
 Id приложения: `com.openselfhosting.openkey` · Org: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-Листинги в магазинах и GitHub Releases появляются по платформам. Пока ссылка магазина не активна, соберите из monorepo или используйте артефакт с вашего `build_all/`.
+Листинги в магазинах и GitHub Releases появляются по платформам. **Google Play уже доступен** — установите OpenKey на Android из [карточки магазина](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey). Официальные бинарники также публикуются в [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). Официальный исходный код **не публикуется**, поэтому используйте эти артефакты, а не собирайте приложение сами. Остальные карточки магазинов могут ещё проходить проверку.
 
 ## Мобильные
 
@@ -16,7 +16,7 @@ Id приложения: `com.openselfhosting.openkey` · Org: [OpenSelfHosting]
 
 | Channel | Notes |
 |---------|--------|
-| Google Play {#android-play} | `com.openselfhosting.openkey` — Ищите **OpenKey** от OpenSelfHosting после публикации листинга |
+| Google Play {#android-play} | [Скачать OpenKey из Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) — опубликовано **OpenSelfHosting** как `com.openselfhosting.openkey` |
 | Sideload APK/AAB {#android-apk} | Sideload APK/AAB из `build_all/android/` (`OpenKey-*-android.apk`) |
 
 ### iOS {#ios}

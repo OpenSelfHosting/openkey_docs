@@ -8,7 +8,7 @@ OpenKey ایپ حاصل کریں، پھر اختیاری طور پر [سیلف-�
 
 ایپ id: `com.openselfhosting.openkey` · Org: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-اسٹور لسٹنگز اور GitHub Releases پلیٹ فارم کے حساب سے آتے ہیں۔ جب تک اسٹور لنک لائیو نہ ہو، monorepo سے بلڈ کریں یا اپنے `build_all/` رن سے ڈیسک ٹاپ آرٹیفیکٹ استعمال کریں۔
+اسٹور لسٹنگز اور GitHub Releases پلیٹ فارم کے حساب سے آتے ہیں۔ **Google Play اب لائیو ہے** — Android پر OpenKey کو [اسٹور لسٹنگ](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) سے انسٹال کریں۔ آفیشل ایپ باینریز [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases) پر بھی دستیاب ہیں۔ ایپ کا آفیشل **سورس عوامی نہیں**، اس لیے خود بلڈ کرنے کے بجائے انہی آرٹیفیکٹس استعمال کریں۔ دوسری اسٹور لسٹنگز ابھی جائزے میں ہو سکتی ہیں۔
 
 ## موبائل
 
@@ -16,7 +16,7 @@ OpenKey ایپ حاصل کریں، پھر اختیاری طور پر [سیلف-�
 
 | Channel | Notes |
 |---------|--------|
-| Google Play {#android-play} | `com.openselfhosting.openkey` — لسٹنگ عوامی ہونے پر OpenSelfHosting کا **OpenKey** تلاش کریں |
+| Google Play {#android-play} | [Google Play پر OpenKey حاصل کریں](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) — **OpenSelfHosting** کی طرف سے `com.openselfhosting.openkey` کے نام سے فہرست میں |
 | Sideload APK/AAB {#android-apk} | `build_all/android/` سے sideload APK/AAB (`OpenKey-*-android.apk`) |
 
 ### iOS {#ios}
