@@ -2,7 +2,7 @@
 title: OpenKey Pro — what unlocks (and what doesn’t)
 description: Free vs Pro limits, Nearby and LAN Pro, store IAP vs desktop, and what stays free on every platform.
 date: 2026-08-06
-cover: /blog/covers/openkey-pro.svg
+cover: /blog/covers/openkey-pro.png
 ---
 
 # OpenKey Pro — what unlocks (and what doesn’t)
@@ -42,6 +42,8 @@ On platforms **without** store in-app purchase (typically Windows / Linux), a Pr
 
 ## Dig deeper
 
+- [Password manager for family](/blog/password-manager-for-family) — household sharing, and what not to share
+- [Password manager for teams](/blog/password-manager-for-teams) — offboarding and org semantics
 - [Pricing](/pricing) — plans, how to buy, cancel
 - [Nearby without a server](/blog/nearby-without-a-server)
 - [Import & export](/guide/import-export)

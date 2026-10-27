@@ -8,7 +8,7 @@ Get the OpenKey app, then optionally connect a [self-hosted server](./server), t
 
 Application id: `com.openselfhosting.openkey` · Org: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-Store listings and GitHub Releases roll out per platform. Official app binaries are published on [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). The official app **source is not public**. Until a store link is live, use those release artifacts. Public store pages may still be pending review.
+Store listings and GitHub Releases roll out per platform. **Google Play and the Microsoft Store are live** — install OpenKey on Android from [the Play listing](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) or on Windows from [the Microsoft Store listing](https://apps.microsoft.com/detail/9MXNBRPMDT53). The main download button takes you to that system's store; the one beside it hands over the direct build for your system. Official app binaries are also published on [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). The official app **source is not public**, so use those artifacts instead of building it yourself. The remaining store pages may still be pending review.
 
 ## Mobile
 
@@ -16,7 +16,7 @@ Store listings and GitHub Releases roll out per platform. Official app binaries 
 
 | Channel | Notes |
 |---------|--------|
-| Google Play {#android-play} | `com.openselfhosting.openkey` — search **OpenKey** by OpenSelfHosting once the listing is public |
+| Google Play {#android-play} | [Get OpenKey on Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) — listed by **OpenSelfHosting** as `com.openselfhosting.openkey` |
 | Sideload APK/AAB {#android-apk} | From [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases) (`OpenKey-*-android.apk`) |
 
 ### iOS {#ios}
@@ -37,12 +37,14 @@ Enable **Settings → Security** (Autofill) so OpenKey can fill passwords and pa
 | Apple Silicon {#macos-arm64} | `OpenKey-*-macos-arm64.dmg` / `.zip` from `build_all/macos/` |
 | Intel Chip {#macos-x64} | `OpenKey-*-macos-x64.dmg` / `.zip` |
 | Universal {#macos-universal} | Prefer the arch-matched `.dmg` when available; Mac App Store when listed |
+| Mac App Store {#macos-appstore} | When listed — search **OpenKey** by OpenSelfHosting |
 
 ### Windows {#windows}
 
 | Build | Artifact |
 |-------|----------|
-| x64 installer {#windows-x64} | `OpenKey-*-windows-x64-setup.exe` · portable `.zip` · optional `.msix` |
+| Microsoft Store {#windows-store} | [Get OpenKey on the Microsoft Store](https://apps.microsoft.com/detail/9MXNBRPMDT53) — recommended for Windows visitors; updates itself |
+| x64 installer {#windows-x64} | `OpenKey-*-windows-x64.exe` · portable `.zip` |
 | Arm64 {#windows-arm64} | When published on GitHub Releases / Microsoft Store |
 
 ### Linux {#linux}
@@ -53,6 +55,8 @@ Enable **Settings → Security** (Autofill) so OpenKey can fill passwords and pa
 | AppImage Arm64 {#linux-appimage-arm64} | `OpenKey-*-linux-arm64.AppImage` |
 | `.deb` x64 {#linux-deb-x64} | Debian, Ubuntu, Mint, Pop!_OS (`OpenKey-*-linux-x64.deb`) |
 | `.deb` Arm64 {#linux-deb-arm64} | `OpenKey-*-linux-arm64.deb` |
+| `.rpm` x64 {#linux-rpm-x64} | Fedora, RHEL, openSUSE, Rocky (`OpenKey-*-linux-x64.rpm`) |
+| `.rpm` Arm64 {#linux-rpm-arm64} | `OpenKey-*-linux-arm64.rpm` |
 | `.tar.gz` x64 {#linux-tar-x64} | Portable tarball from `build_all/linux/` |
 | `.tar.gz` Arm64 {#linux-tar-arm64} | Portable tarball (arm64) |
 

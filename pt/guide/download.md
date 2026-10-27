@@ -8,7 +8,7 @@ Obtenha o app OpenKey e, opcionalmente, conecte um [servidor auto-hospedado](./s
 
 Id do aplicativo: `com.openselfhosting.openkey` · Org: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-Listagens nas lojas e GitHub Releases são lançadas por plataforma. Até um link de loja ficar ativo, compile do monorepo ou use um artefato desktop do seu próprio `build_all/`.
+Listagens nas lojas e GitHub Releases são lançadas por plataforma. **O Google Play e a Microsoft Store já estão no ar** — instale o OpenKey no Android pela [listagem do Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) ou no Windows pela [listagem da Microsoft Store](https://apps.microsoft.com/detail/9MXNBRPMDT53). O botão principal de download leva você à loja do seu sistema, e o botão ao lado entrega a compilação direta. Os binários oficiais também são publicados no [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). O código-fonte oficial **não é público**, então use esses artefatos em vez de compilar por conta própria. Outras listagens ainda podem estar em análise.
 
 ## Mobile
 
@@ -16,7 +16,7 @@ Listagens nas lojas e GitHub Releases são lançadas por plataforma. Até um lin
 
 | Channel | Notes |
 |---------|--------|
-| Google Play {#android-play} | `com.openselfhosting.openkey` — Procure **OpenKey** da OpenSelfHosting quando a listagem for pública |
+| Google Play {#android-play} | [Obtenha o OpenKey no Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) — publicado pela **OpenSelfHosting** como `com.openselfhosting.openkey` |
 | Sideload APK/AAB {#android-apk} | Sideload APK/AAB de `build_all/android/` (`OpenKey-*-android.apk`) |
 
 ### iOS {#ios}
@@ -43,9 +43,9 @@ Ative **Configurações → Preenchimento automático** para o OpenKey preencher
 
 | Build | Artifact |
 |-------|----------|
-| x64 installer {#windows-x64} | `OpenKey-*-windows-x64-setup.exe` · portable `.zip` · optional `.msix` |
+| x64 installer {#windows-x64} | `OpenKey-*-windows-x64.exe` · portable `.zip` |
 | Arm64 {#windows-arm64} | When published on GitHub Releases / Microsoft Store |
-| Microsoft Store {#windows-store} | When listed |
+| Microsoft Store {#windows-store} | [Obtenha o OpenKey na Microsoft Store](https://apps.microsoft.com/detail/9MXNBRPMDT53) — recomendado para visitantes do Windows; atualiza-se sozinho |
 
 ### Linux {#linux}
 
@@ -55,6 +55,8 @@ Ative **Configurações → Preenchimento automático** para o OpenKey preencher
 | AppImage Arm64 {#linux-appimage-arm64} | `OpenKey-*-linux-arm64.AppImage` |
 | `.deb` x64 {#linux-deb-x64} | `OpenKey-*-linux-x64.deb` |
 | `.deb` Arm64 {#linux-deb-arm64} | `OpenKey-*-linux-arm64.deb` |
+| `.rpm` x64 {#linux-rpm-x64} | `OpenKey-*-linux-x64.rpm` |
+| `.rpm` Arm64 {#linux-rpm-arm64} | `OpenKey-*-linux-arm64.rpm` |
 | `.tar.gz` x64 {#linux-tar-x64} | Portable tarball from `build_all/linux/` |
 | `.tar.gz` Arm64 {#linux-tar-arm64} | Portable tarball (arm64) |
 

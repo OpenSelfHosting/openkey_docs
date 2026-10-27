@@ -2,7 +2,7 @@
 title: Zero-knowledge sync explained
 description: How OpenKey syncs vaults across devices without giving the server plaintext — Argon2id, auth hashes, and ciphertext-only storage.
 date: 2026-08-04
-cover: /blog/covers/zero-knowledge-sync.svg
+cover: /blog/covers/zero-knowledge-sync.png
 ---
 
 # Zero-knowledge sync explained
@@ -37,6 +37,8 @@ Cloud password managers ask you to trust their infrastructure and their operator
 
 ## Dig deeper
 
+- [Forgot your master password?](/blog/forgot-master-password) — why recovery is impossible, and how to prevent ever needing it
+- [What is a password manager?](/blog/what-is-a-password-manager) — the fundamentals this model serves
 - [Security](/guide/security) — key derivation, threat model, and operational checklist
 - [Server setup](/guide/server) — install Docker sync and link clients
 - [Using the app](/guide/app) — Nearby, backups, and everyday vault use

@@ -2,7 +2,7 @@
 title: Bienvenue sur OpenKey
 description: Pourquoi nous avons construit un gestionnaire de mots de passe auto-hébergé qui ne stocke que du ciphertext — et ce qui est disponible dans l'app, le serveur, l'extension et la CLI.
 date: 2026-08-05
-cover: /blog/covers/welcome-to-openkey.svg
+cover: /blog/covers/welcome-to-openkey.png
 ---
 
 # Bienvenue sur OpenKey

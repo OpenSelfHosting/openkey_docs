@@ -5,7 +5,7 @@
 
 ## 1.0.6 (2026-08-28)
 
-See [English changelog](/guide/changelog#10-06-2026-08-28) — Linux AppImage/RPM, rounded icons, Nearby, Autofill, Termux CLI; app **1.0.6+7**.
+See [English changelog](/guide/changelog#10-06-2026-08-28) — Linux AppImage/RPM, rounded icons, Nearby, Autofill, Termux CLI; app **1.0.6+14**.
 
 ## 1.0.2 (2026-08-13)
 

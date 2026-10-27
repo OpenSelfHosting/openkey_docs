@@ -2,7 +2,7 @@
 title: 无需服务器的 Nearby
 description: 用二维码在 Wi‑Fi 上配对设备、链接保险库，并在局域网同步密文 — 无需自托管 API。
 date: 2026-08-06
-cover: /blog/covers/nearby-without-a-server.svg
+cover: /blog/covers/nearby-without-a-server.png
 ---
 
 # 无需服务器的 Nearby

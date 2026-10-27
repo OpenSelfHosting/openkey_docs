@@ -2,8 +2,8 @@
   "appId": "com.openselfhosting.openkey",
   "stores": {
     "android-play": {
-      "live": false,
-      "comment": "Set live:true when Google Play listing is public (uses appId)"
+      "live": true,
+      "comment": "Live since 2026-10 — listing is public (uses appId)"
     },
     "ios-appstore": {
       "appleId": null,
@@ -14,8 +14,8 @@
       "comment": "Mac App Store — often same appleId as iOS"
     },
     "windows-store": {
-      "productId": null,
-      "comment": "Microsoft Store product ID (PackageFamilyName or store detail id)"
+      "productId": "9MXNBRPMDT53",
+      "comment": "Microsoft Store listing — public detail URL is built from productId. Set url only to override it (do not paste a DevShare cid here: it is a private preview link)."
     },
     "linux-flathub": {
       "live": false,

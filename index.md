@@ -9,12 +9,14 @@ title: OpenKey
 
 <HomeHero
   tagline="Self-hosted password manager. Ciphertext only on the server."
-  cta-primary="Download"
-  cta-secondary="Get started"
+  note="We picked the build that fits your machine — one click and you're in."
   download-link="/guide/download"
   quick-start-link="/guide/quick-start"
 />
 
-<HomeSections />
+<HomeSections
+  download-link="/guide/download"
+  quick-start-link="/guide/quick-start"
+/>
 
 </div>

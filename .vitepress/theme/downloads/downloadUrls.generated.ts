@@ -5,19 +5,26 @@
 export const RELEASE_SOURCE_REPO = "OpenSelfHosting/OpenKey" as const
 
 export const RELEASE_SYNC = {
-  tag: "1.0.6+11",
-  publishedAt: "2026-08-28T15:23:19Z",
-  syncedAt: "2026-09-04T07:56:53.159Z",
+  tag: "1.0.6+14",
+  publishedAt: "2026-10-03T13:16:35Z",
+  syncedAt: "2026-10-04T01:40:06.639Z",
 } as const
 
 /** Variant id → browser_download_url from the latest GitHub Release on OpenKey. */
 export const RELEASE_ARTIFACT_URLS: Record<string, string> = {
-  "windows-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B11/OpenKey-1.0.6%2B10-windows-x64.exe",
-  "linux-deb-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B11/OpenKey-1.0.6%2B11-linux-x64.deb",
-  "linux-appimage-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B11/OpenKey-1.0.6%2B11-linux-x64.AppImage",
-  "linux-tar-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B11/OpenKey-1.0.6%2B11-linux-x64.tar.gz",
-  "android-apk": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B11/OpenKey-1.0.6%2B11-android-arm64-v8a.apk"
+  "windows-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B14/OpenKey-1.0.6%2B14-windows-x64.exe",
+  "macos-arm64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B14/OpenKey-1.0.6%2B14-macos-arm64.dmg",
+  "macos-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B14/OpenKey-1.0.6%2B14-macos-x64.dmg",
+  "macos-universal": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B14/OpenKey-1.0.6%2B14-macos-universal.dmg",
+  "linux-deb-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B14/OpenKey-1.0.6%2B14-linux-x64.deb",
+  "linux-rpm-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B14/OpenKey-1.0.6%2B14-linux-x64.rpm",
+  "linux-appimage-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B14/OpenKey-1.0.6%2B14-linux-x64.AppImage",
+  "linux-tar-x64": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B14/OpenKey-1.0.6%2B14-linux-x64.tar.gz",
+  "android-apk": "https://github.com/OpenSelfHosting/OpenKey/releases/download/1.0.6%2B14/OpenKey-1.0.6%2B14-android.apk"
 }
 
 /** Variant id → store listing URL (from scripts/store-urls.config.json). */
-export const STORE_URLS: Record<string, string> = {}
+export const STORE_URLS: Record<string, string> = {
+  "android-play": "https://play.google.com/store/apps/details?id=com.openselfhosting.openkey",
+  "windows-store": "https://apps.microsoft.com/detail/9MXNBRPMDT53"
+}

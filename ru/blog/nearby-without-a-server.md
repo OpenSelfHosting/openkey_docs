@@ -2,7 +2,7 @@
 title: Nearby без сервера
 description: Сопрягайте устройства в Wi‑Fi по QR-кодам, связывайте хранилища и синхронизируйте шифротекст в LAN — без self-hosted API.
 date: 2026-08-06
-cover: /blog/covers/nearby-without-a-server.svg
+cover: /blog/covers/nearby-without-a-server.png
 ---
 
 # Nearby без сервера

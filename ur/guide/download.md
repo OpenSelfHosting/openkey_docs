@@ -8,7 +8,7 @@ OpenKey ایپ حاصل کریں، پھر اختیاری طور پر [سیلف-�
 
 ایپ id: `com.openselfhosting.openkey` · Org: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-اسٹور لسٹنگز اور GitHub Releases پلیٹ فارم کے حساب سے آتے ہیں۔ جب تک اسٹور لنک لائیو نہ ہو، monorepo سے بلڈ کریں یا اپنے `build_all/` رن سے ڈیسک ٹاپ آرٹیفیکٹ استعمال کریں۔
+اسٹور لسٹنگز اور GitHub Releases پلیٹ فارم کے حساب سے آتے ہیں۔ **Google Play اور Microsoft Store اب لائیو ہیں** — Android پر OpenKey کو [Google Play لسٹنگ](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) سے، یا Windows پر [Microsoft Store لسٹنگ](https://apps.microsoft.com/detail/9MXNBRPMDT53) سے انسٹال کریں۔ مرکزی ڈاؤن لوڈ بٹن آپ کو اپنے سسٹم کے اسٹور پر لے جاتا ہے، اور اس کے ساتھ والا بٹن براہِ راست بلڈ دیتا ہے۔ آفیشل ایپ باینریز [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases) پر بھی دستیاب ہیں۔ ایپ کا آفیشل **سورس عوامی نہیں**، اس لیے خود بلڈ کرنے کے بجائے انہی آرٹیفیکٹس استعمال کریں۔ دوسری اسٹور لسٹنگز ابھی جائزے میں ہو سکتی ہیں۔
 
 ## موبائل
 
@@ -16,7 +16,7 @@ OpenKey ایپ حاصل کریں، پھر اختیاری طور پر [سیلف-�
 
 | Channel | Notes |
 |---------|--------|
-| Google Play {#android-play} | `com.openselfhosting.openkey` — لسٹنگ عوامی ہونے پر OpenSelfHosting کا **OpenKey** تلاش کریں |
+| Google Play {#android-play} | [Google Play پر OpenKey حاصل کریں](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) — **OpenSelfHosting** کی طرف سے `com.openselfhosting.openkey` کے نام سے فہرست میں |
 | Sideload APK/AAB {#android-apk} | `build_all/android/` سے sideload APK/AAB (`OpenKey-*-android.apk`) |
 
 ### iOS {#ios}
@@ -43,9 +43,9 @@ OpenKey ایپ حاصل کریں، پھر اختیاری طور پر [سیلف-�
 
 | Build | Artifact |
 |-------|----------|
-| x64 installer {#windows-x64} | `OpenKey-*-windows-x64-setup.exe` · portable `.zip` · optional `.msix` |
+| x64 installer {#windows-x64} | `OpenKey-*-windows-x64.exe` · portable `.zip` |
 | Arm64 {#windows-arm64} | When published on GitHub Releases / Microsoft Store |
-| Microsoft Store {#windows-store} | When listed |
+| Microsoft Store {#windows-store} | [Microsoft Store پر OpenKey حاصل کریں](https://apps.microsoft.com/detail/9MXNBRPMDT53) — Windows صارفین کے لیے تجویز کردہ؛ خود بخود اپ ڈیٹ ہوتا ہے |
 
 ### Linux {#linux}
 
@@ -55,6 +55,8 @@ OpenKey ایپ حاصل کریں، پھر اختیاری طور پر [سیلف-�
 | AppImage Arm64 {#linux-appimage-arm64} | `OpenKey-*-linux-arm64.AppImage` |
 | `.deb` x64 {#linux-deb-x64} | `OpenKey-*-linux-x64.deb` |
 | `.deb` Arm64 {#linux-deb-arm64} | `OpenKey-*-linux-arm64.deb` |
+| `.rpm` x64 {#linux-rpm-x64} | `OpenKey-*-linux-x64.rpm` |
+| `.rpm` Arm64 {#linux-rpm-arm64} | `OpenKey-*-linux-arm64.rpm` |
 | `.tar.gz` x64 {#linux-tar-x64} | Portable tarball from `build_all/linux/` |
 | `.tar.gz` Arm64 {#linux-tar-arm64} | Portable tarball (arm64) |
 

@@ -563,7 +563,7 @@ export default defineConfig({
       'link',
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;600;700&family=Inconsolata:wght@400;600;700&family=Roboto+Mono:wght@400;500;600&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Figtree:ital,wght@0,400;0,600;0,700;1,400&family=Roboto+Flex:opsz,wght@8..144,400;8..144,600;8..144,700&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;600;700&family=Inconsolata:wght@400;600;700&family=Roboto+Mono:wght@400;500;600&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Figtree:ital,wght@0,400;0,600;0,700;1,400&family=Roboto+Flex:opsz,wght@8..144,400;8..144,600;8..144,700&display=swap',
       },
     ],
     [
@@ -604,4 +604,28 @@ export default defineConfig({
       },
     ]),
   ),
+
+  // Blog posts carry a `cover` in frontmatter; use it (and the post's own
+  // title/description) for social cards instead of the site-wide defaults.
+  transformHead({ pageData }) {
+    const fm = pageData?.frontmatter
+    if (!fm?.cover) return []
+    const title = String(fm.title ?? '')
+    const description = String(fm.description ?? '')
+    const image = `https://openkey.openselfhosting.com${String(fm.cover)}`
+    const date = fm.date instanceof Date ? fm.date.toISOString().slice(0, 10) : String(fm.date ?? '').slice(0, 10)
+    return [
+      ['meta', { property: 'og:type', content: 'article' }],
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: description }],
+      ['meta', { property: 'og:image', content: image }],
+      ['meta', { property: 'og:image:width', content: '1440' }],
+      ['meta', { property: 'og:image:height', content: '770' }],
+      ...(date ? [['meta', { property: 'article:published_time', content: date }]] : []),
+      ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: description }],
+      ['meta', { name: 'twitter:image', content: image }],
+    ] as any
+  },
 })

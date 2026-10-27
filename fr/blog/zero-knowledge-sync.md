@@ -2,7 +2,7 @@
 title: La sync zero-knowledge expliquée
 description: Comment OpenKey synchronise les coffres entre appareils sans donner le texte en clair au serveur — Argon2id, auth hashes et stockage ciphertext uniquement.
 date: 2026-08-04
-cover: /blog/covers/zero-knowledge-sync.svg
+cover: /blog/covers/zero-knowledge-sync.png
 ---
 
 # La sync zero-knowledge expliquée

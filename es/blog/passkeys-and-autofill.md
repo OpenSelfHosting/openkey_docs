@@ -2,7 +2,7 @@
 title: Passkeys y autocompletado en el navegador
 description: Cómo OpenKey rellena inicios de sesión y passkeys en el navegador y como proveedor de credenciales del sistema — manteniendo los datos del vault cifrados en el cliente.
 date: 2026-08-02
-cover: /blog/covers/passkeys-and-autofill.svg
+cover: /blog/covers/passkeys-and-autofill.png
 ---
 
 # Passkeys y autocompletado en el navegador

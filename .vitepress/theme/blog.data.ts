@@ -55,7 +55,7 @@ export default createContentLoader('**/blog/*.md', {
           url: page.url,
           date,
           description: String(fm.description ?? ''),
-          cover: String(fm.cover ?? '/blog/covers/welcome-to-openkey.svg'),
+          cover: String(fm.cover ?? '/blog/covers/welcome-to-openkey.png'),
           lang,
         }
       })

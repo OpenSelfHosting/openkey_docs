@@ -2,7 +2,7 @@
 title: OpenKey Pro — o que desbloqueia (e o que não)
 description: Limites grátis vs Pro, Nearby e LAN Pro, IAP da loja vs desktop, e o que permanece grátis em cada plataforma.
 date: 2026-08-06
-cover: /blog/covers/openkey-pro.svg
+cover: /blog/covers/openkey-pro.png
 ---
 
 # OpenKey Pro — o que desbloqueia (e o que não)
@@ -30,7 +30,7 @@ Limites do nível grátis (builds mobile/desktop que aplicam Pro): **50** entrad
 | Anexos em entradas | ~20 MB cada, ciphertext no servidor |
 | Ícone personalizado do app | Onde a plataforma suporta |
 
-Matriz completa: [Preços](/pt/pricing) · [Usar o app → Grátis vs Pro](/pt/guide/app#grátis-vs-openkey-pro).
+Matriz completa: [Preços](/pt/pricing) · [Usar o app → Grátis vs Pro](/pt/guide/app#free-vs-openkey-pro).
 
 ## LAN Pro não é recibo da loja
 

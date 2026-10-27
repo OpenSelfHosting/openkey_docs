@@ -2,7 +2,7 @@
 title: OpenKey Pro — 解锁什么（与不解锁什么）
 description: 免费与 Pro 限额、Nearby 与 LAN Pro、商店 IAP 与桌面版，以及各平台仍免费的内容。
 date: 2026-08-06
-cover: /blog/covers/openkey-pro.svg
+cover: /blog/covers/openkey-pro.png
 ---
 
 # OpenKey Pro — 解锁什么（与不解锁什么）
@@ -30,7 +30,7 @@ OpenKey 核心保险库可离线使用，无需订阅。**Pro** 提高限额并�
 | 条目附件 | 各约 20 MB，服务器上为密文 |
 | 自定义应用图标 | 在平台支持处 |
 
-完整矩阵：[定价](/zh/pricing) · [使用应用 → 免费与 OpenKey Pro](/zh/guide/app#免费与-openkey-pro)。
+完整矩阵：[定价](/zh/pricing) · [使用应用 → 免费与 OpenKey Pro](/zh/guide/app#free-vs-openkey-pro)。
 
 ## LAN Pro 不是商店收据
 

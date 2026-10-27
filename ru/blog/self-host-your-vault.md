@@ -2,7 +2,7 @@
 title: Зачем self-host своё хранилище паролей
 description: Контроль, приватность и сервер синхронизации, который хранит только шифротекст — как запустить OpenKey на своём железе с Docker.
 date: 2026-08-03
-cover: /blog/covers/self-host-your-vault.svg
+cover: /blog/covers/self-host-your-vault.png
 ---
 
 # Зачем self-host своё хранилище паролей

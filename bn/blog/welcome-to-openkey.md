@@ -2,7 +2,7 @@
 title: OpenKey-এ স্বাগতম
 description: কেন আমরা একটি self-hosted পাসওয়ার্ড ম্যানেজার তৈরি করেছি যা শুধু ciphertext সংরক্ষণ করে — এবং অ্যাপ, সার্ভার, এক্সটেনশন ও CLI-তে কী আছে।
 date: 2026-08-05
-cover: /blog/covers/welcome-to-openkey.svg
+cover: /blog/covers/welcome-to-openkey.png
 ---
 
 # OpenKey-এ স্বাগতম

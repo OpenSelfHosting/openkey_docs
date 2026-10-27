@@ -2,7 +2,7 @@
 title: Sync zero-knowledge explicada
 description: Cómo OpenKey sincroniza vaults entre dispositivos sin dar texto plano al servidor — Argon2id, auth hashes y almacenamiento solo de texto cifrado.
 date: 2026-08-04
-cover: /blog/covers/zero-knowledge-sync.svg
+cover: /blog/covers/zero-knowledge-sync.png
 ---
 
 # Sync zero-knowledge explicada

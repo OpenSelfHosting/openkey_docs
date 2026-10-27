@@ -2,7 +2,7 @@
 title: Uma CLI para segredos de desenvolvedor
 description: Uma visão profissional da CLI do OpenKey — geração offline, ponte nativa do desktop, descoberta, tipos de segredo e sincronização opcional zero-knowledge com servidor.
 date: 2026-08-01
-cover: /blog/covers/cli-for-developers.svg
+cover: /blog/covers/cli-for-developers.png
 ---
 
 # Uma CLI para segredos de desenvolvedor

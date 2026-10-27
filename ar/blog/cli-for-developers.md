@@ -2,7 +2,7 @@
 title: واجهة سطر أوامر لأسرار المطورين
 description: نظرة احترافية على OpenKey CLI — التوليد دون اتصال، جسر سطح المكتب، الاكتشاف، أنواع الأسرار، ومزامنة الخادم الاختيارية بلا معرفة.
 date: 2026-08-01
-cover: /blog/covers/cli-for-developers-ar.svg
+cover: /blog/covers/cli-for-developers.png
 ---
 
 # واجهة سطر أوامر لأسرار المطورين

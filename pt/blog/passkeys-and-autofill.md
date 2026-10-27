@@ -2,7 +2,7 @@
 title: Passkeys e autofill no navegador
 description: Como o OpenKey preenche logins e passkeys no navegador e como provedor de credenciais do sistema — mantendo os dados do cofre criptografados no cliente.
 date: 2026-08-02
-cover: /blog/covers/passkeys-and-autofill.svg
+cover: /blog/covers/passkeys-and-autofill.png
 ---
 
 # Passkeys e autofill no navegador

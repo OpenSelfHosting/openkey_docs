@@ -2,7 +2,7 @@
 title: Sincronização zero-knowledge explicada
 description: Como o OpenKey sincroniza cofres entre dispositivos sem dar plaintext ao servidor — Argon2id, hashes de autenticação e armazenamento apenas ciphertext.
 date: 2026-08-04
-cover: /blog/covers/zero-knowledge-sync.svg
+cover: /blog/covers/zero-knowledge-sync.png
 ---
 
 # Sincronização zero-knowledge explicada

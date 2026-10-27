@@ -2,7 +2,7 @@
 title: Zero-knowledge sync समझाया गया
 description: OpenKey सर्वर को plaintext दिए बिना डिवाइसों में vaults कैसे sync करता है — Argon2id, auth hashes, और ciphertext-only storage।
 date: 2026-08-04
-cover: /blog/covers/zero-knowledge-sync.svg
+cover: /blog/covers/zero-knowledge-sync.png
 ---
 
 # Zero-knowledge sync समझाया गया

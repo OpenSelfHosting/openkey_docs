@@ -2,7 +2,7 @@
 title: OpenKey Pro — کیا کھلتا ہے (اور کیا نہیں)
 description: Free بمقابلہ Pro حدود، Nearby اور LAN Pro، store IAP بمقابلہ desktop، اور ہر پلیٹ فارم پر کیا مفت رہتا ہے۔
 date: 2026-08-06
-cover: /blog/covers/openkey-pro.svg
+cover: /blog/covers/openkey-pro.png
 ---
 
 # OpenKey Pro — کیا کھلتا ہے (اور کیا نہیں)

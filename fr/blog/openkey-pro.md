@@ -2,7 +2,7 @@
 title: OpenKey Pro — ce qui se débloque (et ce qui ne se débloque pas)
 description: Limites Gratuit vs Pro, Nearby et LAN Pro, IAP magasin vs bureau, et ce qui reste gratuit sur chaque plateforme.
 date: 2026-08-06
-cover: /blog/covers/openkey-pro.svg
+cover: /blog/covers/openkey-pro.png
 ---
 
 # OpenKey Pro — ce qui se débloque (et ce qui ne se débloque pas)
@@ -30,7 +30,7 @@ Plafonds du niveau gratuit (builds mobile/bureau qui appliquent Pro) : **50** en
 | Pièces jointes sur les entrées | ~20 Mo chacune, ciphertext sur le serveur |
 | Icône d'app personnalisée | Là où la plateforme le supporte |
 
-Matrice complète : [Tarifs](/fr/pricing) · [Utiliser l'application → Gratuit vs Pro](/fr/guide/app#gratuit-vs-openkey-pro).
+Matrice complète : [Tarifs](/fr/pricing) · [Utiliser l'application → Gratuit vs Pro](/fr/guide/app#free-vs-openkey-pro).
 
 ## LAN Pro n'est pas un reçu de magasin
 

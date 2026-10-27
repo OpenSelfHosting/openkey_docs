@@ -2,7 +2,7 @@
 title: 为何自托管你的密码保险库
 description: 掌控、隐私，以及仅存储密文的同步服务器 — 如何用 Docker 在你自己的硬件上运行 OpenKey。
 date: 2026-08-03
-cover: /blog/covers/self-host-your-vault.svg
+cover: /blog/covers/self-host-your-vault.png
 ---
 
 # 为何自托管你的密码保险库

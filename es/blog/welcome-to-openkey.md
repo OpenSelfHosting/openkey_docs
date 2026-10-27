@@ -2,7 +2,7 @@
 title: Bienvenido a OpenKey
 description: Por qué construimos un gestor de contraseñas autoalojado que solo almacena texto cifrado — y qué ofrece la app, el servidor, la extensión y la CLI.
 date: 2026-08-05
-cover: /blog/covers/welcome-to-openkey.svg
+cover: /blog/covers/welcome-to-openkey.png
 ---
 
 # Bienvenido a OpenKey

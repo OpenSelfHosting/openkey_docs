@@ -18,40 +18,38 @@ export const DEFAULT_REPO = 'OpenSelfHosting/OpenKey'
 const REPO = process.env.OPENKEY_RELEASE_REPO || DEFAULT_REPO
 const RELEASE_API = `https://api.github.com/repos/${REPO}/releases/latest`
 
+/**
+ * Variant id → candidate asset patterns, most-preferred first.
+ *
+ * Order inside a rule is what decides the winner, never the release's asset
+ * ordering, so a variant can never be handed a portable `.zip` in place of its
+ * installer. Keep patterns narrow to a single artifact shape: a loose catch-all
+ * (the old `-macos\.pkg$`) happily matches a stale build number that was
+ * uploaded under a newer tag.
+ */
 const RELEASE_RULES = [
-  {
-    id: 'windows-x64',
-    match: (name) =>
-      /windows-x64-setup\.exe$/i.test(name) ||
-      (/windows/i.test(name) && /x64/i.test(name) && /\.(exe|zip|msix)$/i.test(name)),
-  },
-  {
-    id: 'windows-arm64',
-    match: (name) =>
-      /windows-arm64/i.test(name) && /\.(exe|zip|msix)$/i.test(name),
-  },
-  { id: 'macos-arm64', match: (name) => /macos-arm64.*\.dmg$/i.test(name) },
-  { id: 'macos-x64', match: (name) => /macos-x64.*\.dmg$/i.test(name) },
-  { id: 'macos-universal', match: (name) => /macos-universal.*\.dmg$/i.test(name) },
-  { id: 'linux-deb-x64', match: (name) => /linux-x64\.deb$/i.test(name) },
-  { id: 'linux-deb-arm64', match: (name) => /linux-arm64\.deb$/i.test(name) },
-  { id: 'linux-rpm-x64', match: (name) => /linux-x64\.rpm$/i.test(name) },
-  { id: 'linux-rpm-arm64', match: (name) => /linux-arm64\.rpm$/i.test(name) },
-  { id: 'linux-appimage-x64', match: (name) => /linux-x64\.AppImage$/i.test(name) },
-  { id: 'linux-appimage-arm64', match: (name) => /linux-arm64\.AppImage$/i.test(name) },
-  { id: 'linux-tar-x64', match: (name) => /linux-x64\.tar\.gz$/i.test(name) },
-  { id: 'linux-tar-arm64', match: (name) => /linux-arm64\.tar\.gz$/i.test(name) },
-  {
-    id: 'android-apk',
-    match: (name) => /android.*\.apk$/i.test(name) && !/\.apk\./i.test(name),
-  },
+  { id: 'windows-x64', patterns: [/windows-x64-setup\.exe$/i, /windows-x64\.exe$/i, /windows-x64\.msix$/i] },
+  { id: 'windows-arm64', patterns: [/windows-arm64\.(exe|msix)$/i, /windows-arm64\.zip$/i] },
+  { id: 'macos-arm64', patterns: [/macos-arm64.*\.dmg$/i] },
+  { id: 'macos-x64', patterns: [/macos-x64.*\.dmg$/i] },
+  { id: 'macos-universal', patterns: [/macos-universal.*\.dmg$/i, /macos-universal.*\.pkg$/i, /-macos\.pkg$/i] },
+  { id: 'linux-deb-x64', patterns: [/linux-x64\.deb$/i] },
+  { id: 'linux-deb-arm64', patterns: [/linux-arm64\.deb$/i] },
+  { id: 'linux-rpm-x64', patterns: [/linux-x64\.rpm$/i] },
+  { id: 'linux-rpm-arm64', patterns: [/linux-arm64\.rpm$/i] },
+  { id: 'linux-appimage-x64', patterns: [/linux-x64\.AppImage$/i] },
+  { id: 'linux-appimage-arm64', patterns: [/linux-arm64\.AppImage$/i] },
+  { id: 'linux-tar-x64', patterns: [/linux-x64\.tar\.gz$/i] },
+  { id: 'linux-tar-arm64', patterns: [/linux-arm64\.tar\.gz$/i] },
+  { id: 'android-apk', patterns: [/-android\.apk$/i, /-android-universal\.apk$/i] },
 ]
 
 function isSkippableAsset(name) {
   return (
     /\.(asc|sha256|sha512|sig|checksums?|blockmap)$/i.test(name) ||
     /\.SHA256/i.test(name) ||
-    /checksum/i.test(name)
+    /checksum/i.test(name) ||
+    /sha256sums/i.test(name)
   )
 }
 
@@ -59,8 +57,13 @@ function mapReleaseAssets(assets) {
   const urls = {}
   const usable = assets.filter((a) => a.name && !isSkippableAsset(a.name))
   for (const rule of RELEASE_RULES) {
-    const hit = usable.find((a) => rule.match(a.name))
-    if (hit) urls[rule.id] = hit.browser_download_url
+    for (const pattern of rule.patterns) {
+      const hit = usable.find((a) => pattern.test(a.name))
+      if (hit) {
+        urls[rule.id] = hit.browser_download_url
+        break
+      }
+    }
   }
   return urls
 }

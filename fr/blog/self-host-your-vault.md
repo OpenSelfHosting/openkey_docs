@@ -2,7 +2,7 @@
 title: Pourquoi auto-héberger votre coffre de mots de passe
 description: Contrôle, confidentialité et un serveur de sync qui ne stocke que du ciphertext — comment exécuter OpenKey sur votre propre matériel avec Docker.
 date: 2026-08-03
-cover: /blog/covers/self-host-your-vault.svg
+cover: /blog/covers/self-host-your-vault.png
 ---
 
 # Pourquoi auto-héberger votre coffre de mots de passe

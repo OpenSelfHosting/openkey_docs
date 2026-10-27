@@ -2,7 +2,7 @@
 title: Passkeys и автозаполнение в браузере
 description: Как OpenKey заполняет логины и passkeys в браузере и как системный credential provider — сохраняя данные хранилища зашифрованными на клиенте.
 date: 2026-08-02
-cover: /blog/covers/passkeys-and-autofill.svg
+cover: /blog/covers/passkeys-and-autofill.png
 ---
 
 # Passkeys и автозаполнение в браузере

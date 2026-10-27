@@ -10,8 +10,14 @@ export type DownloadCopy = {
   platformsHeading: string
   channelsNote: string
   getStarted: string
+  /** Label of the quiet second button offering the direct build. */
+  directCta: string
   unknownCta: string
   thanksTitle: string
+  /** Shown instead of `thanksTitle` when the build has no public artifact. */
+  unavailableTitle: string
+  /** Marks a build that has no public artifact yet. */
+  notPublishedYet: string
   thanksLead: (platformLabel: string, buildLabel: string) => string
   thanksPending: string
   thanksStarted: string
@@ -23,6 +29,13 @@ export type DownloadCopy = {
   platform: Record<OsId, string>
   requirement: Record<OsId, string>
   variant: Record<string, string>
+  /**
+   * Eyebrow line above the store name in a store badge ("Get it on"), keyed by
+   * store variant id. The name itself comes from `variant`.
+   */
+  storeEyebrow: Record<string, string>
+  /** Caption above the always-visible store badges on the home page. */
+  storesCaption: string
   installSteps: Record<OsId, string[]>
 }
 
@@ -94,7 +107,7 @@ const arInstall: Record<OsId, string[]> = {
 
 const en: DownloadCopy = {
   detectedLead: 'We picked the build that fits your machine — one click and you’re in.',
-  downloadFor: (platformLabel) => `Download for ${platformLabel}`,
+  downloadFor: (platformLabel) => `Download For ${platformLabel}`,
   otherDownloads: 'Other downloads',
   allPlatforms: 'All platforms',
   yourOs: 'Your OS',
@@ -102,13 +115,16 @@ const en: DownloadCopy = {
   platformsHeading: 'Download OpenKey',
   channelsNote:
     'Store listings and GitHub Releases roll out per platform. Until a channel is live, the guide below covers stores, sideload artifacts, and building from source.',
-  getStarted: 'Get started',
+  getStarted: 'Get Started',
+  directCta: 'Direct download',
   unknownCta: 'Download',
   thanksTitle: 'Thanks for downloading OpenKey',
+  unavailableTitle: 'This build is not published yet',
+  notPublishedYet: 'Not published yet',
   thanksLead: (platformLabel, buildLabel) =>
     `You’re set up for ${platformLabel} · ${buildLabel}.`,
   thanksPending:
-    'The binary channel for this build is not public yet. Use Retry when a release is live, or follow the install notes and build guide below.',
+    'There is no public download for this build yet. Follow the install notes below, or pick a published build from the download page.',
   thanksStarted: 'Your download should start automatically. If it did not, use Retry download.',
   installHeading: 'Install next',
   retryDownload: 'Retry download',
@@ -151,6 +167,11 @@ const en: DownloadCopy = {
     androidApk: 'APK (sideload)',
     iosAppStore: 'App Store',
   },
+  storeEyebrow: {
+    'android-play': 'Get it on',
+    'windows-store': 'Get it from',
+  },
+  storesCaption: 'Or get it from a store',
   installSteps: enInstall,
 }
 
@@ -165,12 +186,15 @@ const ar: DownloadCopy = {
   channelsNote:
     'قوائم المتاجر وإصدارات GitHub تُنشر تدريجياً لكل منصة. إلى أن تصبح القناة حيّة، يغطي الدليل أدناه المتاجر والحزم الجانبية والبناء من المصدر.',
   getStarted: 'ابدأ الآن',
+  directCta: 'تنزيل مباشر',
   unknownCta: 'التنزيل',
   thanksTitle: 'شكراً لتنزيل OpenKey',
+  unavailableTitle: 'هذا البناء غير منشور بعد',
+  notPublishedYet: 'غير منشور بعد',
   thanksLead: (platformLabel, buildLabel) =>
     `أنت جاهز لـ ${platformLabel} · ${buildLabel}.`,
   thanksPending:
-    'قناة الملف لهذا البناء ليست عامة بعد. استخدم إعادة المحاولة عند توفر الإصدار، أو اتبع ملاحظات التثبيت ودليل البناء أدناه.',
+    'لا يوجد تنزيل عام لهذا البناء بعد. اتبع ملاحظات التثبيت أدناه، أو اختر بناءً منشوراً من صفحة التنزيل.',
   thanksStarted: 'يفترض أن يبدأ التنزيل تلقائياً. إن لم يبدأ، استخدم إعادة محاولة التنزيل.',
   installHeading: 'خطوات التثبيت',
   retryDownload: 'إعادة محاولة التنزيل',
@@ -213,6 +237,11 @@ const ar: DownloadCopy = {
     androidApk: 'APK (تثبيت جانبي)',
     iosAppStore: 'App Store',
   },
+  storeEyebrow: {
+    'android-play': 'احصل عليه من',
+    'windows-store': 'احصل عليه من',
+  },
+  storesCaption: 'أو احصل عليه من متجر',
   installSteps: arInstall,
 }
 
@@ -492,10 +521,13 @@ const zh: DownloadCopy = {
   channelsNote:
     '各平台商店与 GitHub Releases 将逐步上线。在渠道可用前，下方指南涵盖商店、侧载包与自行构建。',
   getStarted: '开始使用',
+  directCta: '直接下载',
   unknownCta: '下载',
   thanksTitle: '感谢下载 OpenKey',
+  unavailableTitle: '该构建尚未发布',
+  notPublishedYet: '尚未发布',
   thanksLead: (platformLabel, buildLabel) => `已为 ${platformLabel} · ${buildLabel} 准备就绪。`,
-  thanksPending: '该构建的公开下载通道尚未上线。发布后请重试，或按下方安装说明自行构建。',
+  thanksPending: '该构建目前没有公开下载。请按下方安装说明操作，或在下载页选择一个已发布的构建。',
   thanksStarted: '下载应已自动开始。若没有，请点击重新下载。',
   installHeading: '接下来安装',
   retryDownload: '重新下载',
@@ -521,6 +553,11 @@ const zh: DownloadCopy = {
     linuxFlathub: 'Flathub',
     linuxSnap: 'Snap 商店',
   },
+  storeEyebrow: {
+    'android-play': '从',
+    'windows-store': '从',
+  },
+  storesCaption: '或从应用商店获取',
   installSteps: zhInstall,
 }
 
@@ -536,17 +573,25 @@ const es: DownloadCopy = {
   channelsNote:
     'Las fichas de tienda y las Releases de GitHub se despliegan por plataforma. Hasta que un canal esté activo, la guía abajo cubre tiendas, sideload y compilación desde el código.',
   getStarted: 'Empezar',
+  directCta: 'Descarga directa',
   unknownCta: 'Descargar',
   thanksTitle: 'Gracias por descargar OpenKey',
+  unavailableTitle: 'Este build todavía no está publicado',
+  notPublishedYet: 'Aún no publicado',
   thanksLead: (platformLabel, buildLabel) => `Listo para ${platformLabel} · ${buildLabel}.`,
   thanksPending:
-    'El canal binario de este build aún no es público. Reintenta cuando haya release, o sigue la guía abajo.',
+    'Este build aún no tiene descarga pública. Sigue las notas de instalación de abajo o elige un build publicado en la página de descargas.',
   thanksStarted: 'La descarga debería iniciar sola. Si no, usa Reintentar descarga.',
   installHeading: 'Instalación',
   retryDownload: 'Reintentar descarga',
   otherBuilds: 'Otras plataformas',
   backToDownload: 'Volver a descargas',
   openGuide: 'Notas de instalación',
+  storeEyebrow: {
+    'android-play': 'Consíguelo en',
+    'windows-store': 'Obténgalo en',
+  },
+  storesCaption: 'O consíguelo en una tienda',
   installSteps: esInstall,
 }
 
@@ -562,17 +607,25 @@ const fr: DownloadCopy = {
   channelsNote:
     'Les fiches magasin et les GitHub Releases se déploient par plateforme. Tant qu’un canal n’est pas en ligne, le guide ci-dessous couvre magasins, sideload et compilation depuis les sources.',
   getStarted: 'Commencer',
+  directCta: 'Téléchargement direct',
   unknownCta: 'Télécharger',
   thanksTitle: 'Merci d’avoir téléchargé OpenKey',
+  unavailableTitle: 'Ce build n’est pas encore publié',
+  notPublishedYet: 'Pas encore publié',
   thanksLead: (platformLabel, buildLabel) => `Prêt pour ${platformLabel} · ${buildLabel}.`,
   thanksPending:
-    'Le canal binaire de ce build n’est pas encore public. Réessayez quand la release est en ligne, ou suivez le guide ci-dessous.',
+    'Ce build n’a pas encore de téléchargement public. Suivez les notes d’installation ci-dessous, ou choisissez un build publié sur la page de téléchargement.',
   thanksStarted: 'Le téléchargement devrait démarrer. Sinon, utilisez Réessayer.',
   installHeading: 'Installation',
   retryDownload: 'Réessayer le téléchargement',
   otherBuilds: 'Autres plateformes',
   backToDownload: 'Retour au téléchargement',
   openGuide: 'Notes d’installation',
+  storeEyebrow: {
+    'android-play': 'Disponible sur',
+    'windows-store': 'Télécharger dans',
+  },
+  storesCaption: 'Ou dans une boutique',
   installSteps: frInstall,
 }
 
@@ -588,11 +641,14 @@ const hi: DownloadCopy = {
   channelsNote:
     'स्टोर लिस्टिंग और GitHub Releases धीरे-धीरे आते हैं। जब तक चैनल लाइव न हो, नीचे का गाइड स्टोर, साइडलोड और सोर्स बिल्ड कवर करता है।',
   getStarted: 'शुरू करें',
+  directCta: 'सीधा डाउनलोड',
   unknownCta: 'डाउनलोड',
   thanksTitle: 'OpenKey डाउनलोड के लिए धन्यवाद',
+  unavailableTitle: 'यह बिल्ड अभी प्रकाशित नहीं है',
+  notPublishedYet: 'अभी प्रकाशित नहीं',
   thanksLead: (platformLabel, buildLabel) => `${platformLabel} · ${buildLabel} के लिए तैयार।`,
   thanksPending:
-    'इस बिल्ड का बाइनरी चैनल अभी सार्वजनिक नहीं है। रिलीज़ लाइव होने पर पुनः प्रयास करें, या नीचे की गाइड देखें।',
+    'इस बिल्ड का सार्वजनिक डाउनलोड अभी उपलब्ध नहीं है। नीचे दिए इंस्टॉल नोट्स पढ़ें, या डाउनलोड पेज से कोई प्रकाशित बिल्ड चुनें।',
   thanksStarted: 'डाउनलोड स्वचालित रूप से शुरू होना चाहिए। नहीं हुआ तो पुनः प्रयास करें।',
   installHeading: 'इंस्टॉल करें',
   retryDownload: 'डाउनलोड पुनः प्रयास',
@@ -606,6 +662,11 @@ const hi: DownloadCopy = {
     android: 'Google Play · जरूरत पर APK साइडलोड',
     ios: 'लिस्टिंग के बाद App Store',
   },
+  storeEyebrow: {
+    'android-play': 'Google Play पर उपलब्ध',
+    'windows-store': 'Microsoft Store से पाएँ',
+  },
+  storesCaption: 'या किसी स्टोर से पाएँ',
   installSteps: hiInstall,
 }
 
@@ -621,11 +682,14 @@ const bn: DownloadCopy = {
   channelsNote:
     'স্টোর লিস্টিং ও GitHub Releases ধীরে ধীরে আসে। চ্যানেল লাইভ না হওয়া পর্যন্ত নিচের গাইড স্টোর, সাইডলোড ও সোর্স বিল্ড কভার করে।',
   getStarted: 'শুরু করুন',
+  directCta: 'সরাসরি ডাউনলোড',
   unknownCta: 'ডাউনলোড',
   thanksTitle: 'OpenKey ডাউনলোডের জন্য ধন্যবাদ',
+  unavailableTitle: 'এই বিল্ডটি এখনও প্রকাশিত হয়নি',
+  notPublishedYet: 'এখনও প্রকাশিত নয়',
   thanksLead: (platformLabel, buildLabel) => `${platformLabel} · ${buildLabel}-এর জন্য প্রস্তুত।`,
   thanksPending:
-    'এই বিল্ডের বাইনারি চ্যানেল এখনও সার্বজনীন নয়। রিলিজ লাইভ হলে আবার চেষ্টা করুন, অথবা নিচের গাইড দেখুন।',
+    'এই বিল্ডের কোনো পাবলিক ডাউনলোড এখনও নেই। নিচের ইনস্টল নোটস অনুসরণ করুন, অথবা ডাউনলোড পেজ থেকে একটি প্রকাশিত বিল্ড বেছে নিন।',
   thanksStarted: 'ডাউনলোড স্বয়ংক্রিয়ভাবে শুরু হওয়া উচিত। না হলে আবার চেষ্টা করুন।',
   installHeading: 'ইনস্টল করুন',
   retryDownload: 'ডাউনলোড আবার চেষ্টা',
@@ -639,6 +703,11 @@ const bn: DownloadCopy = {
     android: 'Google Play · প্রয়োজনে APK সাইডলোড',
     ios: 'লিস্টিংয়ের পর App Store',
   },
+  storeEyebrow: {
+    'android-play': 'Google Play-এ পান',
+    'windows-store': 'Microsoft Store থেকে নিন',
+  },
+  storesCaption: 'অথবা একটি স্টোর থেকে নিন',
   installSteps: bnInstall,
 }
 
@@ -654,17 +723,25 @@ const pt: DownloadCopy = {
   channelsNote:
     'Listagens nas lojas e GitHub Releases são lançadas por plataforma. Até o canal ficar ativo, o guia abaixo cobre lojas, sideload e build a partir do código.',
   getStarted: 'Começar',
+  directCta: 'Download direto',
   unknownCta: 'Baixar',
   thanksTitle: 'Obrigado por baixar o OpenKey',
+  unavailableTitle: 'Este build ainda não foi publicado',
+  notPublishedYet: 'Ainda não publicado',
   thanksLead: (platformLabel, buildLabel) => `Pronto para ${platformLabel} · ${buildLabel}.`,
   thanksPending:
-    'O canal binário deste build ainda não é público. Tente novamente quando houver release, ou siga o guia abaixo.',
+    'Este build ainda não tem download público. Siga as notas de instalação abaixo ou escolha um build publicado na página de downloads.',
   thanksStarted: 'O download deve iniciar automaticamente. Se não iniciou, tente novamente.',
   installHeading: 'Instalar',
   retryDownload: 'Tentar download novamente',
   otherBuilds: 'Outras plataformas e builds',
   backToDownload: 'Voltar ao download',
   openGuide: 'Notas de instalação',
+  storeEyebrow: {
+    'android-play': 'Disponível no',
+    'windows-store': 'Obter no',
+  },
+  storesCaption: 'Ou numa loja',
   installSteps: ptInstall,
 }
 
@@ -680,17 +757,25 @@ const ru: DownloadCopy = {
   channelsNote:
     'Листинги в магазинах и GitHub Releases появляются постепенно. Пока канал не активен, ниже — магазины, sideload и сборка из исходников.',
   getStarted: 'Начать',
+  directCta: 'Прямая загрузка',
   unknownCta: 'Скачать',
   thanksTitle: 'Спасибо за загрузку OpenKey',
+  unavailableTitle: 'Эта сборка ещё не опубликована',
+  notPublishedYet: 'Ещё не опубликована',
   thanksLead: (platformLabel, buildLabel) => `Готово для ${platformLabel} · ${buildLabel}.`,
   thanksPending:
-    'Бинарный канал для этой сборки ещё не публичен. Повторите, когда выйдет релиз, или следуйте гайду ниже.',
+    'Публичной загрузки этой сборки пока нет. Следуйте инструкции по установке ниже или выберите опубликованную сборку на странице загрузки.',
   thanksStarted: 'Загрузка должна начаться автоматически. Если нет — нажмите «Повторить».',
   installHeading: 'Установка',
   retryDownload: 'Повторить загрузку',
   otherBuilds: 'Другие платформы и сборки',
   backToDownload: 'Назад к загрузке',
   openGuide: 'Инструкция по установке',
+  storeEyebrow: {
+    'android-play': 'Доступно в',
+    'windows-store': 'Получить в',
+  },
+  storesCaption: 'Или в магазине',
   installSteps: ruInstall,
 }
 
@@ -706,17 +791,25 @@ const ur: DownloadCopy = {
   channelsNote:
     'اسٹور لسٹنگز اور GitHub Releases آہستہ آہستہ آتے ہیں۔ جب تک چینل لائیو نہ ہو، نیچے کا گائیڈ اسٹور، سائیڈلوڈ اور سورس بلڈ کا احاطہ کرتا ہے۔',
   getStarted: 'شروع کریں',
+  directCta: 'براہ راست ڈاؤن لوڈ',
   unknownCta: 'ڈاؤن لوڈ',
   thanksTitle: 'OpenKey ڈاؤن لوڈ کا شکریہ',
+  unavailableTitle: 'یہ بلڈ ابھی شائع نہیں ہوا',
+  notPublishedYet: 'ابھی شائع نہیں',
   thanksLead: (platformLabel, buildLabel) => `${platformLabel} · ${buildLabel} کے لیے تیار۔`,
   thanksPending:
-    'اس بلڈ کا بائنری چینل ابھی عوامی نہیں۔ ریلیز لائیو ہونے پر دوبارہ کوشش کریں، یا نیچے کا گائیڈ دیکھیں۔',
+    'اس بلڈ کا کوئی عوامی ڈاؤن لوڈ ابھی دستیاب نہیں۔ نیچے دیے گئے انسٹال نوٹس پڑھیں، یا ڈاؤن لوڈ صفحے سے کوئی شائع بلڈ منتخب کریں۔',
   thanksStarted: 'ڈاؤن لوڈ خود بخود شروع ہونا چاہیے۔ نہیں ہوا تو دوبارہ کوشش کریں۔',
   installHeading: 'انسٹال کریں',
   retryDownload: 'ڈاؤن لوڈ دوبارہ',
   otherBuilds: 'دیگر پلیٹ فارمز اور بلڈز',
   backToDownload: 'ڈاؤن لوڈ پر واپس',
   openGuide: 'انسٹال نوٹس',
+  storeEyebrow: {
+    'android-play': 'Google Play پر دستیاب',
+    'windows-store': 'Microsoft Store سے حاصل کریں',
+  },
+  storesCaption: 'یا کسی اسٹور سے حاصل کریں',
   installSteps: urInstall,
 }
 

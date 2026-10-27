@@ -2,7 +2,7 @@
 title: কেন নিজের পাসওয়ার্ড ভল্ট self-host করবেন
 description: নিয়ন্ত্রণ, গোপনীয়তা এবং শুধু ciphertext সংরক্ষণ করা sync সার্ভার — Docker দিয়ে নিজের হার্ডওয়্যারে OpenKey চালানোর উপায়।
 date: 2026-08-03
-cover: /blog/covers/self-host-your-vault.svg
+cover: /blog/covers/self-host-your-vault.png
 ---
 
 # কেন নিজের পাসওয়ার্ড ভল্ট self-host করবেন

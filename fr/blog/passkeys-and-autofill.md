@@ -2,7 +2,7 @@
 title: Passkeys et saisie automatique dans le navigateur
 description: Comment OpenKey remplit les connexions et passkeys dans le navigateur et comme fournisseur d'identifiants système — tout en gardant les données du coffre chiffrées sur le client.
 date: 2026-08-02
-cover: /blog/covers/passkeys-and-autofill.svg
+cover: /blog/covers/passkeys-and-autofill.png
 ---
 
 # Passkeys et saisie automatique dans le navigateur

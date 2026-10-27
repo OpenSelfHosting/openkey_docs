@@ -2,7 +2,7 @@
 title: Une CLI pour les secrets développeur
 description: Vue d'ensemble professionnelle de la CLI OpenKey — génération hors ligne, pont bureau natif, découverte, types de secrets et sync serveur zero-knowledge optionnelle.
 date: 2026-08-01
-cover: /blog/covers/cli-for-developers.svg
+cover: /blog/covers/cli-for-developers.png
 ---
 
 # Une CLI pour les secrets développeur

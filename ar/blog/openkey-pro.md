@@ -2,7 +2,7 @@
 title: OpenKey Pro — ماذا يُفتح (وماذا لا)
 description: حدود المجاني مقابل Pro، Nearby وLAN Pro، IAP المتجر مقابل سطح المكتب، وما يبقى مجانياً على كل منصة.
 date: 2026-08-06
-cover: /blog/covers/openkey-pro-ar.svg
+cover: /blog/covers/openkey-pro.png
 ---
 
 # OpenKey Pro — ماذا يُفتح (وماذا لا)

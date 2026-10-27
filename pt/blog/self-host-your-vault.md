@@ -2,7 +2,7 @@
 title: Por que auto-hospedar seu cofre de senhas
 description: Controle, privacidade e um servidor de sincronização que armazena apenas ciphertext — como executar o OpenKey no seu próprio hardware com Docker.
 date: 2026-08-03
-cover: /blog/covers/self-host-your-vault.svg
+cover: /blog/covers/self-host-your-vault.png
 ---
 
 # Por que auto-hospedar seu cofre de senhas

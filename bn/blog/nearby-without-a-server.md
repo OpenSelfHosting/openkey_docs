@@ -2,7 +2,7 @@
 title: সার্ভার ছাড়া Nearby
 description: QR কোডে Wi‑Fi-তে ডিভাইস pair করুন, ভল্ট লিঙ্ক করুন, LAN-এ ciphertext sync করুন — self-hosted API লাগে না।
 date: 2026-08-06
-cover: /blog/covers/nearby-without-a-server.svg
+cover: /blog/covers/nearby-without-a-server.png
 ---
 
 # সার্ভার ছাড়া Nearby
