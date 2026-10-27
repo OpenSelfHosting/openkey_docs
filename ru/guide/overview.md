@@ -27,4 +27,4 @@ OpenKey — **self-hosted менеджер паролей с end-to-end шифр
 
 <img src="/guide/overview-ecosystem.svg" alt="OpenKey ecosystem: app, browser extension, and CLI encrypt on device; optional sync via self-hosted server (ciphertext only) or Nearby LAN pairing" class="ok-diagram" width="920" height="440" />
 
-**Приложение OpenKey** для mobile и desktop описано отдельно. См. [Использование приложения](./app) для использования продукта, [Пакеты](./packages) для setup, [Настройка сервера](./server) для установки sync и [Быстрый старт](./quick-start) для локального запуска.
+Мобильное и настольное приложение OpenKey также открыто под лицензией MIT. Исходный код Flutter и инструкции по сборке находятся в [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey#build-from-source). См. [Использование приложения](./app) для использования продукта, [Пакеты](./packages) для setup, [Настройка сервера](./server) для установки sync и [Быстрый старт](./quick-start) для локального запуска.

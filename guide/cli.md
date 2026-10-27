@@ -215,7 +215,9 @@ openkey run -e DATABASE_URL -e GH="GitHub PAT" -- npm start
 
 ## Discovery (`discover`)
 
-Scans this machine and imports **new** secrets into the device group. Deduplicates against values already in the vault (by kind + name + content fingerprint).
+Scans **this machine** and imports **new** secrets into the device group. Deduplicates against values already in the vault (by kind + name + content fingerprint).
+
+This is **not** [Nearby](./nearby) LAN device discovery. Nearby vault clone / merge sync is app-only (Pro). Attachments are managed in the app (or listed/downloaded in the [extension](./extension) standalone mode) — the CLI has no attachment commands.
 
 <img src="/guide/cli-discover-flow.svg" alt="Discover flow: scan local sources, preview masked values, dedupe fingerprints, then save into the vault device group" class="ok-diagram" width="920" height="280" />
 

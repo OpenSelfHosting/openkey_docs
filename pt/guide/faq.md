@@ -49,12 +49,16 @@ Consulte a matriz em [Usar o app](./app#gratis-vs-openkey-pro). Versão curta: g
 
 ### O Nearby não encontra o outro dispositivo (Pro)
 
-1. Ambos os dispositivos desbloqueados, **Configurações → Dispositivos próximos** iniciado, mesma Wi‑Fi (sem convidados/isolamento de clientes).
-2. Prefira **Escanear QR de emparelhamento** em vez de digitar o código; permita avisos de câmera / rede local.
-3. Desative VPN / private relay temporariamente. No macOS, permita o retorno de conexão do firewall se a conexão QR falhar.
-4. Emparelhe, depois **Vincular cofre** (mesma impressão da chave do cofre). Guia completo: [Nearby](./nearby).
+1. Ambos os dispositivos na mesma Wi‑Fi (sem convidados/isolamento de clientes). Para sync de mesclagem: ambos desbloqueados com **Configurações → Dispositivos próximos** iniciado. Para clonagem na configuração: origem desbloqueada e anunciando; dispositivo novo em **Dispositivo próximo**.
+2. Permita avisos de rede local / firewall (UDP/TCP **47821**, TCP **47822**). Desative VPN / private relay temporariamente.
+3. No macOS, permita o retorno de conexão do firewall se o par não puder conectar de entrada.
+4. Para sync de mesclagem: emparelhe tocando um par descoberto, depois **Vincular cofre** (mesma impressão da chave do cofre). Guia completo: [Nearby](./nearby).
 5. Opcional **Somente redes confiáveis**: adicione seu SSID ou o Nearby pausa em redes desconhecidas.
 6. Plataformas com IAP da loja (Android / iOS / macOS) ignoram **LAN Pro** dos pares — compre/restaure Pro naquela loja se necessário.
+
+### Como copio meu cofre para um dispositivo novo sem servidor nem arquivo de backup?
+
+No dispositivo novo escolha **Dispositivo próximo** na primeira execução. No existente desbloqueie e inicie **Configurações → Dispositivos próximos**. Toque no par → confirme → desbloqueie com a **mesma senha mestra**. É uma **clonagem de cofre** de uma vez, não sync de mesclagem com Vincular cofre. Detalhes: [Nearby → Copiar cofre na configuração](./nearby#copiar-cofre-na-configuração-clonagem-de-cofre).
 
 ### Como envio uma senha para outro dispositivo na LAN?
 
@@ -74,7 +78,7 @@ Ative o OpenKey como provedor do sistema de senhas e passkeys em **Configuraçõ
 
 ### Como funcionam os anexos?
 
-**Pro.** Abra um login → adicione um anexo criptografado (máx. cerca de **20 MB**). Anexos sincronizam como texto cifrado pelo seu servidor. A exportação OpenKey JSON inclui apenas metadados — use `.okbak` para um cofre completo com blobs de anexos.
+**Pro.** Abra um login → adicione um anexo criptografado (máx. cerca de **20 MB**). No app você pode pré-visualizar imagens, texto e áudio; o vídeo reproduz no app em Android / iOS / macOS quando suportado. Anexos sincronizam como texto cifrado pelo seu servidor (metadados `content_type` opcionais). A exportação OpenKey JSON inclui apenas metadados — use `.okbak` ou [clonagem de cofre Nearby](./nearby#copiar-cofre-na-configuração-clonagem-de-cofre) para um cofre completo com blobs de anexos. A [extensão do navegador](./extension) lista e baixa anexos no modo independente (pré-visualizar/adicionar no app).
 
 ### Como adiciono códigos TOTP / autenticador?
 
@@ -136,7 +140,7 @@ Em **Definições → Segurança** — não há uma página Autofill separada. O
 
 ### O Nearby é um backup?
 
-Não. Sincroniza texto cifrado na LAN entre dispositivos emparelhados e com cofre vinculado. Mantenha também backups Pro offline.
+Não. A sync de mesclagem move texto cifrado na LAN entre dispositivos emparelhados e com cofre vinculado. A **clonagem de cofre** na configuração é uma cópia completa de uma vez para um dispositivo novo — útil para migrar, mas não substitui backups Pro `.okbak` offline.
 
 ## Ainda com problemas?
 

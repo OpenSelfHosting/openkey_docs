@@ -52,7 +52,7 @@ Wrong password / key file → unlock failed; no server round-trip (all local).
 
 Round-trip format for OpenKey-native exports. Use when moving between devices without server sync, or as a portable vault dump (**Pro** to create the file).
 
-**Attachments:** OpenKey JSON exports include attachment *metadata* on entries but **omit attachment ciphertext blobs**. For a full vault including attachments, use an encrypted **`.okbak`** backup instead.
+**Attachments:** OpenKey JSON exports include attachment *metadata* on entries but **omit attachment ciphertext blobs**. For a full vault including attachments, use an encrypted **`.okbak`** backup or [Nearby vault clone](./nearby#copy-vault-at-setup-vault-clone) instead.
 
 ## Export walkthrough (Pro)
 
@@ -69,8 +69,9 @@ Available exports: **OpenKey JSON**, **Bitwarden JSON**, **Chrome CSV**, **LastP
 
 - Creates a full-vault `.okbak` (database, settings, attachments) encrypted for restore with your vault credentials.
 - Restore replaces local vault data — confirm before proceeding.
-- On a **new device**, you can pick the `.okbak` on the first-run setup screen instead of creating an empty vault.
-- Nearby / server sync is **not** a backup ([FAQ](./faq)).
+- On a **new device**, pick **Restore backup** on the first-run setup chooser (or restore later under Backup & Restore).
+- **Nearby vault clone** is another first-run path: a session-encrypted archive over Wi‑Fi (same zip layout as the inner `.okbak` payload, plus unlock material in the manifest). It is not written as a `.okbak` file on disk. Guide: [Nearby → Copy vault at setup](./nearby#copy-vault-at-setup-vault-clone).
+- Nearby merge sync / server sync is **not** a backup ([FAQ](./faq)).
 
 ## After migrating from another manager
 

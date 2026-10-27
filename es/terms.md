@@ -1,6 +1,6 @@
 # Términos de servicio
 
-**Última actualización:** 6 de agosto de 2026  
+**Última actualización:** 27 de octubre de 2026<br>
 **Producto:** OpenKey (`com.openselfhosting.openkey`)  
 **Editor:** OpenSelfHosting  
 **Contacto:** [openkey@openselfhosting.com](mailto:openkey@openselfhosting.com)
@@ -13,7 +13,7 @@ Relacionado: [Política de privacidad](/es/privacy) · [Seguridad](/es/guide/sec
 
 OpenKey es un gestor de contraseñas que cifra los datos del vault en tu dispositivo. Una API de sync opcional almacena **solo texto cifrado** cuando apuntas la app a un servidor que controlas (o que otra persona opera para ti). OpenSelfHosting no proporciona una nube de vault alojada obligatoria como parte de la experiencia básica gratuita descrita en la documentación.
 
-Los paquetes abiertos (servidor, extensión, CLI, documentación) suelen estar disponibles bajo la **Licencia MIT** publicada en sus repositorios. La app móvil/de escritorio puede distribuirse bajo términos de tienda además de estos Términos.
+La app OpenKey, la especificación del protocolo, el servidor, la extensión del navegador, la CLI y la documentación son software de código abierto. La app oficial Flutter y la especificación están publicadas bajo la **Licencia MIT** en [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey); el archivo de licencia de cada repositorio rige su software. Las versiones oficiales distribuidas por tiendas también están sujetas a sus condiciones. Estos Términos rigen los servicios y las compras descritos aquí y no sustituyen los derechos concedidos por las licencias de código abierto.
 
 ## 2. Elegibilidad
 
@@ -59,7 +59,7 @@ Esos servicios tienen sus propios términos. No somos responsables de interrupci
 
 ## 7. Propiedad intelectual
 
-Los nombres, logotipos y marcas de OpenKey son propiedad de OpenSelfHosting o sus licenciantes. Los componentes de código abierto permanecen bajo sus respectivas licencias. Recibes una licencia personal, no exclusiva, para usar la app tal como se distribuye — no la propiedad de las marcas de OpenSelfHosting.
+El software de OpenKey se distribuye según la licencia indicada en cada repositorio, incluida la **Licencia MIT** para el código de la app oficial. Esa licencia permite usar, copiar, modificar y redistribuir el software conforme a sus términos. Los nombres, logotipos y marcas de OpenKey pertenecen a OpenSelfHosting o sus licenciantes y no quedan cubiertos por la licencia del software. Estos Términos no limitan los derechos concedidos por las licencias de código abierto.
 
 ## 8. Privacidad
 

@@ -7,7 +7,7 @@ OpenKey Android، iOS، macOS، Linux اور Windows کے لیے موبائل ا
 ## انسٹال
 
 1. اپنے پلیٹ فارم کے سرکاری اسٹور / ڈسٹریبیوٹر سے OpenKey حاصل کریں۔
-2. ایپ کھولیں اور master password سے vault بنائیں یا unlock کریں۔
+2. ایپ کھولیں اور first-run path منتخب کریں (create، sign in، Nearby copy، یا restore)، پھر master password سے unlock کریں۔
 
 اس پروجیکٹ کے اوپن سورس پیکجز صرف [سرور](./server)، [براؤزر ایکسٹینشن](./extension) اور [CLI](./cli) کا احاطہ کرتے ہیں۔
 
@@ -29,25 +29,30 @@ OpenKey Android، iOS، macOS، Linux اور Windows کے لیے موبائل ا
 
 ## Nearby LAN والٹ سنک (Pro)
 
-بغیر سرور مقامی Wi‑Fi پر ایک ہی والٹ سنک کریں:
+بغیر سرور مقامی Wi‑Fi پر vaults سنک یا کاپی کریں۔ مکمل گائیڈ (vault clone، tap-to-pair، send-entry، LAN Pro، firewall): [Nearby](./nearby)۔
 
-1. دونوں ڈیوائسز پر OpenKey انلاک → **Settings → Nearby devices**۔
-2. دونوں پر Nearby شروع کریں، مختصر کوڈ سے جوڑیں، پھر **Link vault**۔
+1. **نئی ڈیوائس:** first-run → **Nearby device** سے unlocked peer کا vault **کاپی** کریں (بعد میں وہی master password)۔
+2. **Ongoing sync:** دونوں پر OpenKey unlock → **Settings → Nearby devices** → Nearby شروع → discovered peer پر ٹیپ کر کے pair → **Link vault**۔
 3. ایک ہی vault key (ایک fingerprint) چاہیے۔ مختلف ہوں تو وصول کنندہ peer کی key اپنا سکتا ہے (ماسٹر پاس ورڈ تصدیق کے بعد مقامی ڈیٹا بدل جاتا ہے)۔
-4. لنک کے بعد دونوں انلاک رہتے ہوئے آٹو سنک؛ دستی کے لیے **Sync now**۔
+4. لنک کے بعد دونوں unlocked اور advertising رہتے ہوئے آٹو سنک؛ دستی کے لیے **Sync now**۔ LAN پر ایک entry کے لیے **Send to device** بھی۔
 5. **Visible on local network** یاد رہتا ہے: ایک بار آن کرنے کے بعد اگلی انلاک پر Nearby واپس آتا ہے۔
 6. اختیاری **Trusted networks only**: SSID شامل کریں؛ نامعلوم نیٹ ورکس پر Nearby رک جاتا ہے۔
 7. **Trusted devices**: ایک pairing + link کے بعد Nearby آن ہونے پر خود بخود جڑتے ہیں۔
 
-LAN سنک صرف **ciphertext** بھیجتا ہے (revision کے مطابق LWW)۔ یہ بیک اپ نہیں۔ دیکھیں [FAQ](./faq) · [شیئرنگ](./sharing) · [امپورٹ/ایکسپورٹ](./import-export)۔
+LAN سنک صرف **ciphertext** بھیجتا ہے (revision کے مطابق LWW)۔ Merge sync بیک اپ نہیں — encrypted local backup بھی رکھیں۔
 
-## Vault بنانا یا unlock کرنا
+## First-run setup
 
-1. مضبوط **master password** منتخب کریں (12+ مخلوط حروف تجویز)۔
-2. vault notices قبول کریں: master password بھولنے پر **کوئی recovery نہیں**؛ ڈیٹا device پر encrypted؛ backups اہم ہیں۔
-3. ایپ کھولنے پر master password سے unlock کریں۔
+نئی install پر ایپ چار paths والا **chooser** دکھاتی ہے:
 
-Master password کبھی plaintext میں device نہیں چھوڑتا۔
+| Path | کب استعمال کریں |
+|------|----------|
+| **Create a vault** | نیا آغاز — مضبوط master password (12+ مخلوط حروف تجویز) |
+| **Sign in** | پہلے سے [self-hosted server](./server) پر account |
+| **Nearby device** | دوسرے unlocked OpenKey سے Wi‑Fi پر vault کاپی (**Pro**) — [Nearby → Setup پر vault کاپی](./nearby#setup-پر-vault-کاپی-کریں-vault-clone) |
+| **Restore backup** | Pro encrypted `.okbak` restore (backup والا ہی master password) |
+
+Vault notices قبول کریں: master password بھولنے پر **کوئی recovery نہیں**؛ ڈیٹا device پر encrypted؛ backups اہم ہیں۔ Setup کے بعد ایپ کھولنے پر master password سے unlock کریں۔ Master password کبھی plaintext میں device نہیں چھوڑتا۔
 
 ## روزمرہ استعمال
 

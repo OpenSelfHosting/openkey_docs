@@ -92,6 +92,6 @@ Incluez le paquet concerné, la version/commit si connue, les étapes de reprodu
 
 ## Note sur le packaging
 
-Les paquets publiés incluent le **serveur**, l’**extension navigateur**, la **CLI** et les **docs** (MIT). Ce monorepo peut contenir un checkout de développement de l’**application OpenKey** mobile/bureau utilisé pour le travail cross-paquet. Voir les guides [aperçu](./overview) et [paquets](./packages).
+Les projets publiés incluent l’application officielle Flutter, la spécification du protocole, le **serveur**, l’**extension navigateur**, la **CLI** et la **documentation**, sous licence MIT selon leurs dépôts. Le code de l’application est dans [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey). Voir les guides [aperçu](./overview) et [paquets](./packages).
 
 Pour les détails API, voir le README du paquet `openkey_server` et `/docs` sur un serveur en cours d’exécution.

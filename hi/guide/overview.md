@@ -27,4 +27,4 @@ OpenKey एक **self-hosted, end-to-end encrypted पासवर्ड मै�
 
 <img src="/guide/overview-ecosystem.svg" alt="OpenKey ecosystem: app, browser extension, and CLI encrypt on device; optional sync via self-hosted server (ciphertext only) or Nearby LAN pairing" class="ok-diagram" width="920" height="440" />
 
-मोबाइल और डेस्कटॉप **OpenKey ऐप** अलग से कवर है। उत्पाद उपयोग के लिए [ऐप का उपयोग](./app), setup के लिए [पैकेज](./packages), sync इंस्टॉल के लिए [सर्वर सेटअप](./server), और स्थानीय रूप से stack चलाने के लिए [Quick start](./quick-start) देखें।
+मोबाइल और डेस्कटॉप **OpenKey ऐप** भी MIT License के तहत open source है। Flutter source और build instructions [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey#build-from-source) में हैं। उत्पाद उपयोग के लिए [ऐप का उपयोग](./app), setup के लिए [पैकेज](./packages), sync इंस्टॉल के लिए [सर्वर सेटअप](./server), और स्थानीय रूप से stack चलाने के लिए [Quick start](./quick-start) देखें।

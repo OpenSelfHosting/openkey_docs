@@ -1,6 +1,6 @@
 # সেবার শর্তাবলী
 
-**Last updated:** 6 August 2026  
+**Last updated:** 27 October 2026<br>
 **Product:** OpenKey (`com.openselfhosting.openkey`)  
 **Publisher:** OpenSelfHosting  
 **Contact:** [openkey@openselfhosting.com](mailto:openkey@openselfhosting.com)
@@ -13,7 +13,7 @@
 
 OpenKey একটি password manager যা vault data আপনার device-এ encrypt করে। Optional sync API **ciphertext only** store করে যখন app আপনার control-এর server (অথবা অন্য কেউ আপনার জন্য operate করে) দেখায়। OpenSelfHosting docs-এ described free core experience-এর অংশ mandatory hosted vault cloud দেয় না।
 
-Open packages (server, extension, CLI, docs) সাধারণত **MIT License**-এ available যেমন repositories-এ published। Mobile/desktop app store terms-এর অধীনেও distribute হতে পারে এই Terms-এর বাইরে।
+OpenKey app, protocol specification, server, browser extension, CLI, এবং docs open-source software। Official Flutter app ও protocol spec [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey)-এ **MIT License**-এর অধীনে প্রকাশিত; প্রতিটি repository-এর license file তার software-এর শর্ত নির্ধারণ করে। App store-এ বিতরণ করা official build-এ সংশ্লিষ্ট store-এর terms প্রযোজ্য। এই Terms এখানে বর্ণিত service ও purchase নিয়ন্ত্রণ করে এবং open-source license-এর অধিকার প্রতিস্থাপন করে না।
 
 ## 2. Eligibility
 
@@ -32,7 +32,7 @@ Open packages (server, extension, CLI, docs) সাধারণত **MIT License
 - OpenKey law বা others’ rights violate করতে ব্যবহার
 - OpenSelfHosting infrastructure, other users’ vaults, বা unauthorized systems compromise করার attempt (except private security research আমাদের [security policy](/bn/guide/security#reporting-vulnerabilities) অনুযায়ী reported)
 - Pro purchase status misrepresent বা store refund/attestation mechanisms abuse
-- Apple, Google, বা Microsoft agreements violate করে proprietary store builds redistribute
+- Apple, Google, বা Microsoft agreements violate করে official store builds redistribute
 
 আপনি যে self-hosted servers run করেন secure করবেন (HTTPS, secrets, access control)। Misconfiguration আপনার responsibility।
 
@@ -58,7 +58,7 @@ OpenKey interact করতে পারে:
 
 ## 7. Intellectual property
 
-OpenKey names, logos, branding OpenSelfHosting বা licensors-এর owned। Open-source components respective licenses-এ রয়ে। App use করার personal, non-exclusive license পাবেন যেমন distributed — OpenSelfHosting trademarks-এর ownership নয়।
+OpenKey software সংশ্লিষ্ট repository license অনুযায়ী licensed; official app source MIT License-এর অধীনে। সেই license-এর শর্ত মেনে software ব্যবহার, copy, modify, এবং redistribute করা যায়। OpenKey names, logos, এবং branding OpenSelfHosting বা licensors-এর; software license এগুলোর trademark rights দেয় না। এই Terms open-source license-এর অধিকার সীমিত করে না।
 
 ## 8. Privacy
 

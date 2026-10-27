@@ -92,6 +92,6 @@ Incluye el paquete afectado, versión/commit si se conoce, pasos para reproducir
 
 ## Nota de empaquetado
 
-Los paquetes publicados incluyen el **servidor**, la **extensión del navegador**, la **CLI** y la **documentación** (MIT). Este monorepo puede contener un checkout de desarrollo de la **app OpenKey** móvil/escritorio usado para trabajo entre paquetes. Consulta las guías de [resumen](./overview) y [paquetes](./packages).
+Los proyectos publicados incluyen la app oficial Flutter, la especificación del protocolo, el **servidor**, la **extensión del navegador**, la **CLI** y la **documentación**, bajo MIT según sus repositorios. El código de la app está en [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey). Consulta las guías de [resumen](./overview) y [paquetes](./packages).
 
 Para detalles de la API, consulta el README del paquete `openkey_server` y `/docs` en un servidor en ejecución.

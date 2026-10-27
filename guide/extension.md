@@ -14,8 +14,10 @@ Host name: `com.openselfhosting.openkey`
 4. **Save / update** — capture new logins from the page into the vault
 5. **Passkeys** — intercept WebAuthn `create` / `get`; store ES256 credentials (extension unlocked)
 6. **Cards, crypto & secrets** — browse, create, edit, fill/copy; card banks and crypto folders; brands match the app (Visa through Mir / Elo / RuPay / UnionPay / Hipercard). Native-bridge mode writes through the unlocked desktop app.
-7. **Attachments** — list and download decrypted attachments for a login (standalone)
+7. **Attachments** — list and download decrypted attachments for a login (standalone). Downloads use stored or filename-guessed MIME type. Add / preview attachments in the [app](./app). Nearby vault clone and LAN pairing are app-only.
 8. **Shares & orgs** — list/accept/revoke shares and org invites (standalone)
+
+First-run vault setup (create / sign in / Nearby copy / restore) happens in the [app](./app), not the extension.
 
 ### Keyboard shortcut
 

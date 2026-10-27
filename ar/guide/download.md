@@ -8,7 +8,7 @@ title: التنزيل والتثبيت
 
 معرّف التطبيق: `com.openselfhosting.openkey` · المنظمة: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-قوائم المتاجر وإصدارات GitHub تُنشر تدريجياً لكل منصة. **Google Play و Microsoft Store متاحان الآن** — ثبّت OpenKey على أندرويد من [صفحة Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) أو على ويندوز من [صفحة Microsoft Store](https://apps.microsoft.com/detail/9MXNBRPMDT53). يأخذك زر التنزيل الرئيسي إلى متجر نظامك، ويتيح الزر المجاور تنزيل الحزمة المباشرة بدلاً منه. الباينري الرسمي متاح أيضاً على [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). **سورس التطبيق الرسمي ليس عاماً**، لذا استخدم تلك الحزم بدلاً من بنائها بنفسك. بقية صفحات المتاجر قد تكون قيد المراجعة.
+قوائم المتاجر وإصدارات GitHub تُنشر تدريجياً لكل منصة. **Google Play و Microsoft Store متاحان الآن** — ثبّت OpenKey على أندرويد من [صفحة Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) أو على ويندوز من [صفحة Microsoft Store](https://apps.microsoft.com/detail/9MXNBRPMDT53). يأخذك زر التنزيل الرئيسي إلى متجر نظامك، ويتيح الزر المجاور تنزيل الحزمة المباشرة بدلاً منه. الباينري الرسمي متاح أيضاً على [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). شيفرة تطبيق Flutter منشورة برخصة MIT في [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey)، وتعليمات البناء في [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source). بقية صفحات المتاجر قد تكون قيد المراجعة.
 
 ## الجوال
 
@@ -64,7 +64,7 @@ title: التنزيل والتثبيت
 
 ملء سطح المكتب يسجّل **مضيف الرسائل الأصلية** الذي يستخدمه [امتداد المتصفح](./extension). أبقِ الخزنة مفتوحة القفل أثناء الملء من المتصفح.
 
-مثبّتات سطح المكتب الرسمية مرفقة بـ [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). سورس تطبيق OpenKey ملكية خاصة — ثبّت الحزم الرسمية، لا تتوقع `flutter build` عاماً.
+مثبّتات سطح المكتب الرسمية متاحة في [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). الشيفرة المصدرية لتطبيق Flutter منشورة برخصة MIT في [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey)، وتجد تعليمات البناء في [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source).
 
 ## امتداد المتصفح
 

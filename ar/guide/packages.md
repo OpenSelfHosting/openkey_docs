@@ -6,7 +6,7 @@
 
 | المسار | المصدر | الوصف |
 |------|--------|-------------|
-| تطبيق **OpenKey** الرسمي | ملكية خاصة | عميل Flutter. ثبّت من [التنزيل](./download) / GitHub Releases — ليس من سورس عام |
+| تطبيق **OpenKey** الرسمي | MIT | عميل Flutter مفتوح المصدر. [الشيفرة وتعليمات البناء](https://github.com/OpenSelfHosting/OpenKey#build-from-source)؛ تتوفر الإصدارات الجاهزة عبر [التنزيل](./download) |
 | `openkey_server` | MIT | واجهة مزامنة FastAPI بلا معرفة + PostgreSQL |
 | `openkey_extension` | MIT | امتداد متصفح MV3 (Chrome / Firefox) |
 | `openkey_cli` | MIT | CLI للمطوّرين — أسرار وتوليد كلمات مرور ومزامنة |

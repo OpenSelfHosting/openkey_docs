@@ -7,7 +7,7 @@ OpenKey হল Android, iOS, macOS, Linux এবং Windows-এর জন্য 
 ## ইনস্টল
 
 1. আপনার প্ল্যাটফর্মের অফিসিয়াল স্টোর / ডিস্ট্রিবিউটর থেকে OpenKey নিন।
-2. অ্যাপ খুলুন এবং মাস্টার পাসওয়ার্ড দিয়ে ভল্ট তৈরি বা আনলক করুন।
+2. অ্যাপ খুলুন এবং first-run path বেছে নিন (create, sign in, Nearby copy, বা restore), তারপর master password দিয়ে unlock করুন।
 
 এই প্রকল্পের ওপেন-সোর্স প্যাকেজ শুধু [সার্ভার](./server), [ব্রাউজার এক্সটেনশন](./extension) এবং [CLI](./cli) কভার করে।
 
@@ -29,25 +29,30 @@ OpenKey হল Android, iOS, macOS, Linux এবং Windows-এর জন্য 
 
 ## Nearby LAN ভল্ট সিঙ্ক (Pro)
 
-সার্ভার ছাড়াই লোকাল Wi‑Fi-তে একই ভল্ট সিঙ্ক করুন:
+সার্ভার ছাড়াই লোকাল Wi‑Fi-তে vaults সিঙ্ক বা কপি করুন। পূর্ণ গাইড (vault clone, tap-to-pair, send-entry, LAN Pro, firewall): [Nearby](./nearby)।
 
-1. দুই ডিভাইসে OpenKey আনলক → **সেটিংস → কাছের ডিভাইস**।
-2. দুদিকে Nearby চালু, ছোট কোডে পেয়ার, তারপর **Link vault**।
+1. **নতুন ডিভাইস:** first-run → **Nearby device** দিয়ে unlocked peer থেকে ভল্ট **কপি** করুন (পরে একই master password)।
+2. **Ongoing sync:** দুই ডিভাইসে OpenKey unlock → **সেটিংস → কাছের ডিভাইস** → Nearby চালু → discovered peer-এ ট্যাপ করে pair → **Link vault**।
 3. একই vault key (একই fingerprint) লাগবে। আলাদা হলে রিসিভার পিয়ারের key নিতে পারে (মাস্টার পাসওয়ার্ড নিশ্চিতের পর লোকাল ডেটা বদলায়)।
-4. লিংকের পর দুই আনলক থাকলে অটো সিঙ্ক; ম্যানুয়ালের জন্য **Sync now**।
+4. লিংকের পর দুই unlocked ও advertising থাকলে অটো সিঙ্ক; ম্যানুয়ালের জন্য **Sync now**। LAN-এ এক entry-এর জন্য **Send to device**-ও।
 5. **লোকাল নেটওয়ার্কে দৃশ্যমান** মনে রাখা হয়: একবার চালু করলে পরের আনলকে Nearby ফিরে আসে।
 6. ঐচ্ছিক **শুধু বিশ্বস্ত নেটওয়ার্ক**: SSID যোগ করুন; অজানা নেটওয়ার্কে Nearby থেমে যায়।
 7. **বিশ্বস্ত ডিভাইস**: এক পেয়ারিং + লিংকের পর Nearby চালু থাকলে নিজে থেকেই যুক্ত হয়।
 
-LAN সিঙ্ক শুধু **ciphertext** পাঠায় (revision অনুযায়ী LWW)। এটি ব্যাকআপ নয়। দেখুন [FAQ](./faq) · [শেয়ারিং](./sharing) · [ইমপোর্ট/এক্সপোর্ট](./import-export)।
+LAN সিঙ্ক শুধু **ciphertext** পাঠায় (revision অনুযায়ী LWW)। Merge sync ব্যাকআপ নয় — encrypted local backupও রাখুন।
 
-## ভল্ট তৈরি বা আনলক
+## First-run setup
 
-1. একটি শক্তিশালী **মাস্টার পাসওয়ার্ড** বেছে নিন (১২+ অক্ষর মিশ্র ধরনের সুপারিশ)।
-2. ভল্ট নোটিশ স্বীকার করুন: মাস্টার পাসওয়ার্ড ভুলে গেলে **কোনো পুনরুদ্ধার নেই**; ডেটা ডিভাইসে এনক্রিপ্টেড; ব্যাকআপ গুরুত্বপূর্ণ।
-3. অ্যাপ খোলার সময় মাস্টার পাসওয়ার্ড দিয়ে আনলক করুন।
+নতুন install-এ অ্যাপ চারটি path-সহ **chooser** দেখায়:
 
-মাস্টার পাসওয়ার্ড কখনো প্লেইনটেক্সটে ডিভাইস ছাড়ে না।
+| Path | কখন ব্যবহার করবেন |
+|------|----------|
+| **Create a vault** | নতুন শুরু — শক্তিশালী master password (১২+ মিশ্র অক্ষর সুপারিশ) |
+| **Sign in** | আগে থেকেই [self-hosted server](./server)-এ account |
+| **Nearby device** | অন্য unlocked OpenKey থেকে Wi‑Fi-তে ভল্ট কপি (**Pro**) — [Nearby → Copy vault at setup](./nearby#setup-এ-ভল্ট-কপি-করুন-vault-clone) |
+| **Restore backup** | Pro encrypted `.okbak` restore (backup-এর একই master password) |
+
+ভল্ট নোটিশ স্বীকার করুন: মাস্টার পাসওয়ার্ড ভুলে গেলে **কোনো পুনরুদ্ধার নেই**; ডেটা ডিভাইসে এনক্রিপ্টেড; ব্যাকআপ গুরুত্বপূর্ণ। Setup-এর পর অ্যাপ খোলার সময় master password দিয়ে unlock করুন। Master password কখনো plaintext-এ ডিভাইস ছাড়ে না।
 
 ## দৈনন্দিন ব্যবহার
 

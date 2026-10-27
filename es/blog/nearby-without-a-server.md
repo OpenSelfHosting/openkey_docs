@@ -1,30 +1,39 @@
 ---
 title: Nearby sin servidor
-description: Empareja dispositivos en tu Wi‑Fi con códigos QR, vincula vaults y sincroniza texto cifrado en la LAN — sin API autoalojada.
+description: Descubre pares en tu Wi‑Fi, copia un vault al configurar o vincula vaults para sync en LAN — sin API autoalojada.
 date: 2026-08-06
 cover: /blog/covers/nearby-without-a-server.png
 ---
 
 # Nearby sin servidor
 
-Autoalojar una API de sync es potente — y opcional. **Nearby** (OpenKey Pro) mantiene la misma postura zero-knowledge en tu red local: los dispositivos se emparejan, **Vinculas vault** de forma explícita, y solo entonces se mueve material de la clave del vault para que los pares sincronicen **texto cifrado**. El emparejamiento solo nunca comparte automáticamente la clave del vault.
+Autoalojar una API de sync es potente — y opcional. **Nearby** (OpenKey Pro) mantiene la misma postura zero-knowledge en tu red local: los dispositivos se descubren, se emparejan para una clave de sesión, y tú o bien **copias un vault** a un dispositivo nuevo en la configuración o **Vinculas vault** de forma explícita para sync de fusión continua. El emparejamiento solo nunca comparte automáticamente la clave del vault.
 
 ## Cuándo usarlo
 
 - Dos o más de tus dispositivos en la misma Wi‑Fi de casa u oficina
 - Quieres sync sin levantar Docker / Postgres aún
+- Un **teléfono o escritorio nuevo** debe recibir una copia completa del vault sin un archivo `.okbak`
 - Necesitas un **Enviar al dispositivo** puntual para un único inicio de sesión sin un pull completo del vault
 
-**No** es una copia de seguridad. Conserva una [`.okbak` cifrada](/es/guide/import-export) Pro sin conexión. Las redes de invitados y el aislamiento de clientes rompen el descubrimiento — usa un segmento LAN normal.
+La sync de fusión **no** es una copia de seguridad. Conserva una [`.okbak` cifrada](/es/guide/import-export) Pro sin conexión. Las redes de invitados y el aislamiento de clientes rompen el descubrimiento — usa un segmento LAN normal.
 
-## Emparejar con QR (preferido)
+## Copiar vault a un dispositivo nuevo
+
+1. Desbloquea el dispositivo existente → **Ajustes → Dispositivos cercanos** → **Visible en la red local**.
+2. En el dispositivo nuevo, elige **Dispositivo cercano** en el selector de configuración de primer arranque.
+3. Toca el par → confirma → desbloquea con la **misma contraseña maestra**.
+
+Eso envía un archivo completo del vault cifrado por sesión (incluidos adjuntos). Detalles: [Nearby → Copiar vault en la configuración](/es/guide/nearby#copiar-vault-en-la-configuración-clonación-de-vault).
+
+## Emparejar para sync continua
 
 1. Desbloquea OpenKey en ambos dispositivos → **Ajustes → Dispositivos cercanos**.
 2. Activa **Visible en la red local**.
-3. En un dispositivo muestra el QR de emparejamiento; en el otro, **Escanear QR de emparejamiento** (o **Pegar QR de emparejamiento** en escritorio Linux/Windows).
+3. Toca un par descubierto para emparejar (el código corto sigue funcionando unos dos minutos cuando el descubrimiento es incómodo).
 4. Toca **Vincular vault** para que ambos compartan la misma huella de la clave del vault.
 
-Escribir el código corto sigue funcionando en unos dos minutos. Si un cortafuegos de Mac bloquea TCP entrante tras un escaneo, OpenKey puede pedir al anfitrión del QR que llame de vuelta — permite los avisos de red del SO.
+Si un cortafuegos de Mac bloquea TCP entrante, OpenKey puede pedir al anfitrión que anuncia que llame de vuelta — permite los avisos de red del SO.
 
 ## Tras vincular
 

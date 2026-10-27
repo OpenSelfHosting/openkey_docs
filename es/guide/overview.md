@@ -27,4 +27,4 @@ OpenKey es un **gestor de contraseñas cifrado de extremo a extremo autoalojado*
 
 <img src="/guide/overview-ecosystem.svg" alt="OpenKey ecosystem: app, browser extension, and CLI encrypt on device; optional sync via self-hosted server (ciphertext only) or Nearby LAN pairing" class="ok-diagram" width="920" height="440" />
 
-La **app OpenKey** móvil y de escritorio se cubre por separado. Consulta [Usar la app](./app) para el uso del producto, [Paquetes](./packages) para la configuración, [Configuración del servidor](./server) para instalar sync, e [Inicio rápido](./quick-start) para ejecutar la pila localmente.
+La app OpenKey móvil y de escritorio también es de código abierto bajo MIT. El código Flutter y las instrucciones de compilación están en [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey#build-from-source). Consulta [Usar la app](./app) para el uso del producto, [Paquetes](./packages) para la configuración, [Configuración del servidor](./server) para instalar sync, e [Inicio rápido](./quick-start) para ejecutar la pila localmente.

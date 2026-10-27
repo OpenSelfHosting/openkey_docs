@@ -49,12 +49,16 @@ Clients authenticated `POST /auth/delete` current `auth_hash` re-prove करन
 
 ### Nearby does not find the other device (Pro)
 
-1. दोनों devices unlocked, **Settings → Nearby devices** started, same Wi‑Fi (guest/client isolation नहीं)।
-2. Code टाइप करने की बजाय **Scan pairing QR** प्राथमिक; camera / local-network permission prompts allow करें।
-3. VPN / private relay temporarily disable। macOS पर QR connection fail हो तो firewall dial-back allow करें।
-4. Pair करें, फिर **Link vault** (same vault key fingerprint)। विवरण: [Nearby](./nearby)।
+1. दोनों devices same Wi‑Fi (guest/client isolation नहीं)। Merge sync: दोनों unlocked और **Settings → Nearby devices** started। Setup clone: source unlocked और advertising; नया device **Nearby device** path पर।
+2. Local-network / firewall prompts allow करें (UDP/TCP **47821**, TCP **47822**)। VPN / private relay temporarily disable।
+3. macOS पर peer inbound connect न कर पाए तो firewall dial-back allow करें।
+4. Merge sync: discovered peer पर टैप करके pair करें, फिर **Link vault** (same vault key fingerprint)। विवरण: [Nearby](./nearby)।
 5. वैकल्पिक **Trusted networks only**: SSID जोड़ें या unknown networks पर Nearby pause।
 6. Store-IAP platforms (Android / iOS / macOS) peers से **LAN Pro** ignore — ज़रूरत हो तो उस store पर Pro buy/restore।
+
+### How do I copy my vault to a new device without a server or backup file?
+
+नए device पर first-run में **Nearby device** चुनें। Existing device पर unlock करें और **Settings → Nearby devices** शुरू करें। Peer पर टैप → confirm → **same master password** से unlock। यह one-shot **vault clone** है, Link vault merge sync नहीं। विवरण: [Nearby → Copy vault at setup](./nearby#setup-पर-vault-कॉपी-करें-vault-clone)।
 
 ### How do I send one password to another device on the LAN?
 
@@ -74,7 +78,7 @@ Windows/Linux पर `Ctrl+Shift+L`, macOS पर `⌘⇧L`। ज़रूर�
 
 ### How do attachments work?
 
-**Pro.** Login खोलें → encrypted attachment जोड़ें (लगभग **20 MB** max)। Attachments server से ciphertext के रूप में sync। OpenKey JSON export केवल metadata — attachment blobs सहित full vault के लिए `.okbak` उपयोग करें।
+**Pro.** Login खोलें → encrypted attachment जोड़ें (लगभग **20 MB** max)। App में images, text, और audio preview; video Android / iOS / macOS पर supported होने पर in-app play। Attachments server से ciphertext के रूप में sync (optional `content_type` metadata)। OpenKey JSON export केवल metadata — attachment blobs सहित full vault के लिए `.okbak` या [Nearby vault clone](./nearby#setup-पर-vault-कॉपी-करें-vault-clone) उपयोग करें। [Browser extension](./extension) standalone में list/download करता है (preview/add app में)।
 
 ### How do I add TOTP / authenticator codes?
 
@@ -133,7 +137,7 @@ Default lock 15 minutes (`openkey config set-lock`)। `eval $(openkey unlock)` 
 
 ### Is Nearby a backup?
 
-नहीं। Paired, vault-linked devices के बीच LAN पर ciphertext sync करता है। Offline Pro backups भी रखें।
+नहीं। Merge sync paired, vault-linked devices के बीच LAN पर ciphertext ले जाता है। Setup पर **vault clone** नए device पर one-shot full copy है — migration के लिए उपयोगी, फिर भी offline Pro `.okbak` backups का विकल्प नहीं।
 
 ## Still stuck?
 

@@ -17,7 +17,7 @@ OpenKey هو **مدير كلمات مرور مشفّر من طرف إلى طرف
 3. محتويات الخزنة تبقى مشفّرة بمفتاح خزنة لا يراه الخادم بنص صريح.
 4. الأسماء والحمولات والمرفقات وأسماء المنظمات وحمولات المشاركة نص مشفّر غير شفاف على الخادم.
 
-## الحزم المفتوحة
+## المشاريع مفتوحة المصدر
 
 | الحزمة | الدور |
 |---------|------|
@@ -27,4 +27,4 @@ OpenKey هو **مدير كلمات مرور مشفّر من طرف إلى طرف
 
 <img src="/guide/overview-ecosystem-ar.svg" alt="منظومة OpenKey: التطبيق وامتداد المتصفح وCLI يشفّرون على الجهاز؛ مزامنة اختيارية عبر خادم مستضاف ذاتياً أو Nearby" class="ok-diagram" width="920" height="440" />
 
-تطبيق OpenKey للجوال وسطح المكتب عميل رسمي ملكية خاصة لهذا البروتوكول. راجع [التنزيل](./download)، [استخدام التطبيق](./app)، [امتداد المتصفح](./extension)، [الحزم](./packages)، [إعداد الخادم](./server)، [الأسئلة الشائعة](./faq)، [سجل التغييرات](./changelog)، و[بداية سريعة](./quick-start). المواصفات: [OpenSelfHosting/OpenKey spec](https://github.com/OpenSelfHosting/OpenKey/tree/main/spec).
+تطبيق OpenKey الرسمي للجوال وسطح المكتب مفتوح المصدر برخصة MIT؛ الشيفرة وتعليمات البناء متاحة في [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey#build-from-source). راجع [التنزيل](./download)، [استخدام التطبيق](./app)، [امتداد المتصفح](./extension)، [الحزم](./packages)، [إعداد الخادم](./server)، [الأسئلة الشائعة](./faq)، [سجل التغييرات](./changelog)، و[بداية سريعة](./quick-start). المواصفات: [مواصفات OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey/tree/main/spec).

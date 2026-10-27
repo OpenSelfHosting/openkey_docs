@@ -7,7 +7,7 @@ OpenKey es el cliente móvil y de escritorio para Android, iOS, macOS, Linux y W
 ## Instalar
 
 1. Obtén OpenKey en la tienda / distribuidor oficial de tu plataforma.
-2. Abre la app y crea o desbloquea un vault con tu contraseña maestra.
+2. Abre la app y elige una ruta de primer uso (crear, iniciar sesión, copia Nearby o restaurar), luego desbloquea con tu contraseña maestra.
 
 Los paquetes relacionados de este proyecto incluyen el [servidor](./server), la [extensión del navegador](./extension) y la [CLI](./cli).
 
@@ -29,25 +29,30 @@ Gestiona la suscripción en **Ajustes → OpenKey Pro** cuando haya facturación
 
 ## Sincronización Nearby en LAN (Pro)
 
-Sincroniza el mismo vault entre tus dispositivos en el Wi‑Fi local sin servidor:
+Sincroniza o copia vaults entre tus dispositivos en el Wi‑Fi local sin servidor. Guía completa (clonación de vault, emparejamiento por toque, envío de entradas, LAN Pro, cortafuegos): [Nearby](./nearby).
 
-1. Desbloquea OpenKey en ambos dispositivos y abre **Ajustes → Dispositivos cercanos**.
-2. Inicia Nearby en ambos, empareja con el código corto y toca **Vincular vault**.
+1. **Dispositivo nuevo:** primer uso → **Dispositivo cercano** para **copiar** un vault desde un par desbloqueado (después la misma contraseña maestra).
+2. **Sync continua:** desbloquea OpenKey en ambos → **Ajustes → Dispositivos cercanos** → inicia Nearby → toca un par descubierto para emparejar → **Vincular vault**.
 3. Deben compartir una misma clave de vault (misma huella). Si difieren, el receptor puede adoptar la del par (reemplaza datos locales tras confirmar la contraseña maestra).
-4. Tras vincular, los cambios se sincronizan mientras ambos estén desbloqueados; usa **Sincronizar ahora** para un alcance manual.
+4. Tras vincular, los cambios se sincronizan mientras ambos estén desbloqueados y anunciando; usa **Sincronizar ahora** para un alcance manual. También puedes **Enviar al dispositivo** para empujar una sola entrada por la LAN.
 5. **Visible en la red local** se recuerda: tras activarlo una vez, Nearby se reanuda al desbloquear (se pausa al bloquear).
 6. Opcional **Solo redes de confianza**: añade SSIDs; Nearby se pausa en redes desconocidas.
 7. **Dispositivos de confianza**: tras un emparejamiento + vínculo, se reconectan solos cuando Nearby está activo.
 
-La sync LAN mueve solo **texto cifrado** (LWW por revision). No es una copia de seguridad. Ver [FAQ](./faq) · [Compartir](./sharing) · [Importar y exportar](./import-export).
+La sync LAN mueve solo **texto cifrado** (LWW por revision). La sync de fusión no es una copia de seguridad — mantén también una copia cifrada local.
 
-## Crear o desbloquear un vault
+## Configuración de primer uso
 
-1. Elige una **contraseña maestra** fuerte (se recomiendan 12+ caracteres con tipos mixtos).
-2. Acepta los avisos del vault: **no hay recuperación** si olvidas la contraseña maestra; los datos están cifrados en el dispositivo; las copias de seguridad importan.
-3. Desbloquea con la contraseña maestra cada vez que abras la app.
+En una instalación nueva la app muestra un **selector** con cuatro rutas:
 
-La contraseña maestra nunca sale del dispositivo en texto plano.
+| Ruta | Úsala cuando |
+|------|----------|
+| **Crear un vault** | Empezar de cero — elige una contraseña maestra fuerte (12+ caracteres con tipos mixtos recomendados) |
+| **Iniciar sesión** | Ya tienes cuenta en un [servidor autoalojado](./server) |
+| **Dispositivo cercano** | Copiar un vault existente por Wi‑Fi desde otro OpenKey desbloqueado (**Pro**) — [Nearby → Copiar vault en la configuración](./nearby#copiar-vault-en-la-configuración-clonación-de-vault) |
+| **Restaurar copia** | Restaurar un `.okbak` Pro cifrado (misma contraseña maestra que la copia) |
+
+Acepta los avisos del vault: **no hay recuperación** si olvidas la contraseña maestra; los datos están cifrados en el dispositivo; las copias importan. Tras la configuración, desbloquea con la contraseña maestra cada vez que abras la app. La contraseña maestra nunca sale del dispositivo en texto plano.
 
 ## Uso diario
 

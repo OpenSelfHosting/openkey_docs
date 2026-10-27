@@ -66,7 +66,7 @@ Desktop Autofill registers the **native messaging host** used by the [browser ex
 
 ### ڈیسک ٹاپ خود بنائیں
 
-Official desktop installers: [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). Official app source is not public.
+OpenKey Flutter app کا source [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey) میں MIT License کے تحت public ہے۔ Build instructions کے لیے [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source) دیکھیں؛ official desktop installers [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases) پر موجود ہیں۔
 
 ## براؤزر ایکسٹینشن
 

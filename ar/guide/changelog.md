@@ -1,6 +1,14 @@
 # سجل التغييرات
 
-ملاحظات الإصدار لـ OpenKey. إصدار التطبيق الرسمي هو وسم GitHub على [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey/releases) (السورس خاص). الحزم المفتوحة تُصدَّر بشكل مستقل. إصدار التوثيق يتبع هذا الموقع.
+ملاحظات الإصدار لـ OpenKey. إصدار التطبيق الرسمي هو وسم GitHub على [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey/releases). مصدر التطبيق متاح علناً برخصة MIT. تتغير إصدارات الحزم المرتبطة بشكل مستقل، وإصدار التوثيق يتبع هذا الموقع.
+
+## مصدر التطبيق متاح علناً
+
+نُشرت شيفرة تطبيق Flutter الرسمي ومواصفات البروتوكول برخصة MIT في [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey). راجع [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source) لبنائه من المصدر؛ وتظل الإصدارات الرسمية الجاهزة متاحة عبر [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases).
+
+## 1.0.6 (2026-09-08)
+
+متوافق مع التطبيق **1.0.6+12**: مختار التشغيل الأول (إنشاء / تسجيل الدخول / **جهاز قريب** استنساخ الخزنة / استعادة)، اقتران Nearby باللمس (إزالة وثائق مسح QR المفضّل)، استنساخ الخزنة الكامل عند الإعداد. التفاصيل: [Changelog](/guide/changelog#10-06-2026-09-08).
 
 ## 1.0.6 (2026-08-28)
 

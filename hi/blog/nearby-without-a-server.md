@@ -1,30 +1,39 @@
 ---
 title: सर्वर के बिना Nearby
-description: QR codes से Wi‑Fi पर डिवाइस पेयर करें, vaults लिंक करें, और LAN पर ciphertext sync करें — self-hosted API आवश्यक नहीं।
+description: Wi‑Fi पर peers खोजें, सेटअप पर vault कॉपी करें या LAN sync के लिए vaults लिंक करें — self-hosted API आवश्यक नहीं।
 date: 2026-08-06
 cover: /blog/covers/nearby-without-a-server.png
 ---
 
 # सर्वर के बिना Nearby
 
-Sync API self-host करना शक्तिशाली है — और वैकल्पिक। **Nearby** (OpenKey Pro) आपके स्थानीय नेटवर्क पर वही zero-knowledge posture रखता है: डिवाइस pair होते हैं, आप स्पष्ट रूप से **Link vault** करते हैं, और तभी vault-key material चलता है ताकि peers **ciphertext** sync कर सकें। केवल pairing vault key auto-share नहीं करता।
+Sync API self-host करना शक्तिशाली है — और वैकल्पिक। **Nearby** (OpenKey Pro) आपके स्थानीय नेटवर्क पर वही zero-knowledge posture रखता है: डिवाइस एक-दूसरे को खोजते हैं, session key के लिए pair होते हैं, और आप या तो सेटअप पर नए डिवाइस पर **vault कॉपी** करते हैं या निरंतर merge sync के लिए स्पष्ट रूप से **Link vault** करते हैं। केवल pairing vault key auto-share नहीं करता।
 
 ## कब उपयोग करें
 
 - एक ही घर या ऑफ़िस Wi‑Fi पर आपके दो या अधिक डिवाइस
 - अभी Docker / Postgres खड़ा किए बिना sync चाहिए
+- **नए फोन या डेस्कटॉप** को `.okbak` फ़ाइल के बिना पूर्ण vault कॉपी मिलनी चाहिए
 - पूर्ण vault pull के बिना एक login के लिए one-off **Send to device** चाहिए
 
-यह **backup नहीं** है। Pro [encrypted `.okbak`](/hi/guide/import-export) ऑफ़लाइन रखें। guest networks और client isolation discovery तोड़ते हैं — सामान्य LAN segment उपयोग करें।
+Merge sync **backup नहीं** है। Pro [encrypted `.okbak`](/hi/guide/import-export) ऑफ़लाइन रखें। guest networks और client isolation discovery तोड़ते हैं — सामान्य LAN segment उपयोग करें।
 
-## QR से पेयर करें (प्राथमिक)
+## नए डिवाइस पर vault कॉपी करें
+
+1. मौजूदा डिवाइस unlock करें → **Settings → Nearby devices** → **Visible on local network**।
+2. नए डिवाइस पर first-run setup chooser में **Nearby device** चुनें।
+3. Peer टैप करें → confirm करें → **उसी master password** से unlock करें।
+
+यह session-encrypted पूर्ण-vault archive भेजता है (attachments सहित)। विवरण: [Nearby → Setup पर vault कॉपी](/hi/guide/nearby#setup-पर-vault-कॉपी-करें-vault-clone)।
+
+## निरंतर sync के लिए पेयर करें
 
 1. दोनों डिवाइस पर OpenKey unlock करें → **Settings → Nearby devices**।
 2. **Visible on local network** चालू करें।
-3. एक डिवाइस पर pairing QR दिखाएँ; दूसरे पर **Scan pairing QR** (या Linux/Windows डेस्कटॉप पर **Paste pairing QR**)।
+3. पेयर करने के लिए discovered peer टैप करें (discovery अजीब हो तो लगभग दो मिनट के भीतर short code अभी भी काम करता है)।
 4. **Link vault** टैप करें ताकि दोनों एक ही vault-key fingerprint साझा करें।
 
-लगभग दो मिनट के भीतर short code टाइप करना अभी भी काम करता है। यदि scan के बाद Mac firewall inbound TCP ब्लॉक करे, OpenKey QR host से dial-back कर सकता है — OS network prompts की अनुमति दें।
+यदि Mac firewall inbound TCP ब्लॉक करे, OpenKey advertising host से dial-back कर सकता है — OS network prompts की अनुमति दें।
 
 ## लिंक के बाद
 

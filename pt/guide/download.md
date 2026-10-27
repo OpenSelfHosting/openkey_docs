@@ -8,7 +8,7 @@ Obtenha o app OpenKey e, opcionalmente, conecte um [servidor auto-hospedado](./s
 
 Id do aplicativo: `com.openselfhosting.openkey` · Org: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-Listagens nas lojas e GitHub Releases são lançadas por plataforma. **O Google Play e a Microsoft Store já estão no ar** — instale o OpenKey no Android pela [listagem do Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) ou no Windows pela [listagem da Microsoft Store](https://apps.microsoft.com/detail/9MXNBRPMDT53). O botão principal de download leva você à loja do seu sistema, e o botão ao lado entrega a compilação direta. Os binários oficiais também são publicados no [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). O código-fonte oficial **não é público**, então use esses artefatos em vez de compilar por conta própria. Outras listagens ainda podem estar em análise.
+Listagens nas lojas e GitHub Releases são lançadas por plataforma. **O Google Play e a Microsoft Store já estão no ar** — instale o OpenKey no Android pela [listagem do Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) ou no Windows pela [listagem da Microsoft Store](https://apps.microsoft.com/detail/9MXNBRPMDT53). O botão principal de download leva você à loja do seu sistema, e o botão ao lado entrega a compilação direta. Os binários oficiais também são publicados no [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). O código Flutter do app está disponível sob a Licença MIT em [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey); consulte o [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source) para compilá-lo. Outras listagens ainda podem estar em análise.
 
 ## Mobile
 
@@ -66,7 +66,7 @@ Desktop Autofill registers the **native messaging host** used by the [browser ex
 
 ### Compilar desktop você mesmo
 
-Instaladores oficiais: [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). O código-fonte do app oficial não é público.
+O código-fonte Flutter do OpenKey está publicado sob a Licença MIT em [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey). Consulte o [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source) para compilar o app; os instaladores oficiais estão em [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases).
 
 ## Extensão do navegador
 

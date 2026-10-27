@@ -3,6 +3,10 @@
 本 monorepo 中 OpenKey 软件包的发行说明。应用版本遵循 `openkey_app`（`pubspec.yaml`）。文档版本跟踪本站点。
 
 
+## 1.0.6 (2026-09-08)
+
+与应用 **1.0.6+12** 对齐：首次运行四路径选择器（创建 / 登录 / **附近设备** 保险库克隆 / 恢复）、Nearby 点按配对（已移除扫码优先文档）、设置时完整保险库克隆。详见英文 [Changelog](/guide/changelog#10-06-2026-09-08)。
+
 ## 1.0.6 (2026-08-28)
 
 See [English changelog](/guide/changelog#10-06-2026-08-28) — Linux AppImage/RPM, rounded icons, Nearby, Autofill, Termux CLI; app **1.0.6+14**.

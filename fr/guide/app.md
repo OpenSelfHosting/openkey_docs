@@ -7,7 +7,7 @@ OpenKey est le client mobile et bureau pour Android, iOS, macOS, Linux et Window
 ## Installation
 
 1. Obtenez OpenKey depuis la boutique / le distributeur officiel de votre plateforme.
-2. Ouvrez l'application et créez ou déverrouillez un coffre avec votre mot de passe principal.
+2. Ouvrez l'application et choisissez un chemin de premier lancement (créer, se connecter, copie Nearby ou restaurer), puis déverrouillez avec votre mot de passe principal.
 
 Les paquets associés de ce projet incluent le [serveur](./server), l'[extension navigateur](./extension) et la [CLI](./cli).
 
@@ -29,25 +29,30 @@ Gérez l’abonnement dans **Réglages → OpenKey Pro** si la facturation magas
 
 ## Sync Nearby sur le LAN (Pro)
 
-Synchronisez le même coffre sur le Wi‑Fi local sans serveur :
+Synchronisez ou copiez des coffres entre vos appareils sur le Wi‑Fi local sans serveur. Guide complet (clonage de coffre, appariement par appui, envoi d’entrée, LAN Pro, pare-feu) : [Nearby](./nearby).
 
-1. Déverrouillez OpenKey sur les deux appareils → **Réglages → Appareils à proximité**.
-2. Démarrez Nearby des deux côtés, appariez avec le code court, puis **Lier le coffre**.
+1. **Nouvel appareil :** premier lancement → **Appareil à proximité** pour **copier** un coffre depuis un pair déverrouillé (ensuite le même mot de passe principal).
+2. **Sync continue :** déverrouillez OpenKey sur les deux → **Réglages → Appareils à proximité** → démarrez Nearby → appuyez sur un pair découvert pour apparier → **Lier le coffre**.
 3. Ils doivent partager la même clé de coffre (même empreinte). Sinon, le receveur peut adopter celle du pair (remplace les données locales après confirmation du mot de passe principal).
-4. Après liaison, sync auto tant que les deux sont déverrouillés ; **Synchroniser maintenant** pour un rattrapage manuel.
+4. Après liaison, sync auto tant que les deux sont déverrouillés et annoncent ; **Synchroniser maintenant** pour un rattrapage manuel. Vous pouvez aussi **Envoyer à l’appareil** pour pousser une seule entrée sur le LAN.
 5. **Visible sur le réseau local** est mémorisé : Nearby reprend au prochain déverrouillage (en pause si verrouillé).
 6. Option **Réseaux de confiance uniquement** : ajoutez des SSID ; Nearby se met en pause ailleurs.
 7. **Appareils de confiance** : après un appariement + liaison, reconnexion auto si Nearby est actif.
 
-La sync LAN n’échange que du **chiffrement** (LWW par revision). Ce n’est pas une sauvegarde. Voir [FAQ](./faq) · [Partage](./sharing) · [Import / export](./import-export).
+La sync LAN n’échange que du **chiffrement** (LWW par revision). La sync de fusion n’est pas une sauvegarde — conservez aussi une sauvegarde chiffrée locale.
 
-## Créer ou déverrouiller un coffre
+## Configuration au premier lancement
 
-1. Choisissez un **mot de passe principal** fort (12+ caractères avec types mixtes recommandés).
-2. Acceptez les avertissements du coffre : **aucune récupération** si vous oubliez le mot de passe principal ; les données sont chiffrées sur l'appareil ; les sauvegardes comptent.
-3. Déverrouillez avec le mot de passe principal à chaque ouverture de l'application.
+À une nouvelle installation l’app affiche un **sélecteur** avec quatre chemins :
 
-Le mot de passe principal ne quitte jamais l'appareil en clair.
+| Chemin | À utiliser quand |
+|------|----------|
+| **Créer un coffre** | Nouveau départ — choisissez un mot de passe principal fort (12+ caractères avec types mixtes recommandés) |
+| **Se connecter** | Vous avez déjà un compte sur un [serveur auto-hébergé](./server) |
+| **Appareil à proximité** | Copier un coffre existant via Wi‑Fi depuis un autre OpenKey déverrouillé (**Pro**) — [Nearby → Copier le coffre à la configuration](./nearby#copier-le-coffre-à-la-configuration-clonage-de-coffre) |
+| **Restaurer une sauvegarde** | Restaurer un `.okbak` Pro chiffré (même mot de passe principal que la sauvegarde) |
+
+Acceptez les avertissements du coffre : **aucune récupération** si vous oubliez le mot de passe principal ; les données sont chiffrées sur l'appareil ; les sauvegardes comptent. Après la configuration, déverrouillez avec le mot de passe principal à chaque ouverture. Le mot de passe principal ne quitte jamais l'appareil en clair.
 
 ## Utilisation quotidienne
 

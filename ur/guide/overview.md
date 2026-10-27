@@ -27,4 +27,4 @@ OpenKey ایک **self-hosted، end-to-end encrypted password manager** ہے۔ cl
 
 <img src="/guide/overview-ecosystem.svg" alt="OpenKey ecosystem: app, browser extension, and CLI encrypt on device; optional sync via self-hosted server (ciphertext only) or Nearby LAN pairing" class="ok-diagram" width="920" height="440" />
 
-Mobile اور desktop **OpenKey app** الگ سے cover ہے۔ product usage کے لیے [ایپ کا استعمال](./app)، setup کے لیے [پیکجز](./packages)، sync install کے لیے [سرور سیٹ اپ](./server)، اور locally stack چلانے کے لیے [Quick start](./quick-start) دیکھیں۔
+Mobile اور desktop OpenKey app بھی MIT License کے تحت open source ہے۔ Flutter source اور build instructions [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey#build-from-source) میں موجود ہیں۔ product usage کے لیے [ایپ کا استعمال](./app)، setup کے لیے [پیکجز](./packages)، sync install کے لیے [سرور سیٹ اپ](./server)، اور locally stack چلانے کے لیے [Quick start](./quick-start) دیکھیں۔

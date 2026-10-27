@@ -1,39 +1,64 @@
 # Changelog
 
-Release notes for OpenKey. Official **app** version is the GitHub Release tag on [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey/releases) (source is private). Open packages version independently. Docs version tracks this site.
+Release notes for OpenKey. Official **app** version is the GitHub Release tag on [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey/releases). The app source is public under MIT. Related packages version independently; docs version tracks this site.
 
-## 1.0.6 (2026-08-28)
+## App source is public
+
+The official Flutter app and protocol specification are now published under the MIT License in [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey). See the repository [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source) to build from source; prebuilt official releases remain available on [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases).
+
+## 1.0.6 (2026-09-08)
 
 Aligned with app **1.0.6+14**.
 
 ### App
 
+- **Setup chooser** — Create vault / Sign in / **Nearby device** (vault clone) / Restore `.okbak` on first run
+- **Nearby vault clone** — copy a full vault (incl. attachments) over Wi‑Fi to an empty device; beacon `vault` flag; session-encrypted chunked archive (`vault_clone` / `vault_clone_push`)
+- **Nearby pairing UX** — tap a discovered peer to pair (QR scanner screen removed); Link vault still required for merge sync
+- **Attachment preview** — in-app preview for image / text / audio; video on Android / iOS / macOS when supported; richer `content_type` on upload
 - **Linux on every distro family** — AppImage (any glibc), `.deb`, `.rpm`, portable `.tar.gz` with Arch `PKGBUILD`; desktop icon uses `com.openselfhosting.openkey`
 - **Rounded app icon** on Windows, Linux, macOS, and this docs site (forest default)
-- **Nearby** — LAN merge while both vaults are unlocked; discovery beacons include the device name on the LAN; lock pauses Nearby; desktop may prompt for UDP/TCP **47821** and TCP **47822**
+- **Nearby merge sync** — LAN LWW while both vaults are unlocked; discovery beacons include the device name on the LAN; lock pauses Nearby; desktop may prompt for UDP/TCP **47821** and TCP **47822**
 - **Autofill** — richer system suggestions (password generate, dataset UI) on Android / iOS / macOS
 - **Payment cards** — Visa, Mastercard, Amex, Discover, UnionPay, RuPay, Elo, Hipercard, Mir; bank grouping
-- **Restore at setup** — pick a Pro `.okbak` on the first-run screen instead of creating an empty vault
 - **Termux / CLI** — Android (and desktop) Settings → Data shows install + connect commands; Termux uses `OPENKEY_NATIVE_PORT` + `OPENKEY_NATIVE_TOKEN`
 - Native messaging also registers **LibreWolf** and **Vivaldi** (plus Chrome Beta)
 
 ### Docs
 
+- Nearby / FAQ / app guides: vault clone, setup chooser, tap-to-pair (QR-first docs removed)
+- Attachment preview and `content_type`; `.okbak` vs Nearby clone in import-export
+- Spec: new [Nearby LAN protocol](https://github.com/OpenSelfHosting/OpenKey/blob/main/spec/nearby.md); sync/vault attachment `content_type`
 - Download picker and install notes for AppImage / RPM / Arch
-- Official app source is proprietary; binaries and protocol spec live in [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey)
-- Nearby, Autofill (under Settings → Security), CLI (Termux), card banks / crypto folders, and extension native-host paths updated
-- Removed stale Password health / HIBP claims (not in the current app)
 
 ### CLI
 
 - Native bridge on Android Termux via `OPENKEY_NATIVE_PORT` / `OPENKEY_NATIVE_TOKEN` (unlock the app, copy the connect block)
 - `cards` / `crypto` list commands; session vault decrypts card and crypto payloads
 - `npm install -g openkey-cli`
+- Docs clarify: `openkey discover` scans this machine for secrets — it is **not** Nearby LAN discovery; attachments and vault clone live in the app
 
 ### Browser extension
 
 - Card brands aligned with the app; toolbar icons use the rounded forest mark
 - Native `createSecret` / `updateSecret` / card and crypto CRUD; card bank and crypto folder fields; LibreWolf / Vivaldi host dirs documented
+- Attachment downloads use stored / guessed MIME `content_type` when saving files (standalone)
+
+### Server
+
+- Attachments: optional multipart `content_type` (already in API); docs note Nearby vault clone is P2P and never hits this API
+
+## 1.0.6 (2026-08-28)
+
+Earlier **1.0.6+7** cut (superseded by the notes above for current docs):
+
+### App
+
+- Linux packaging family, Nearby merge sync, Autofill extras, card banks, restore at setup, Termux / CLI sheet, LibreWolf / Vivaldi native host
+
+### Docs / CLI / extension
+
+- Initial 1.0.6 alignment for download channels, Nearby merge docs, CLI Termux bridge, extension card brands
 
 ## 1.0.2 (2026-08-13)
 

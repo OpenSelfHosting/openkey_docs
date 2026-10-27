@@ -3,6 +3,10 @@
 Notas de publicación de los paquetes OpenKey de este monorepo. La versión de la app sigue `openkey_app` (`pubspec.yaml`). La versión de la documentación sigue este sitio.
 
 
+## 1.0.6 (2026-09-08)
+
+Alineado con la app **1.0.6+12**: selector de primer uso (crear / iniciar sesión / **dispositivo cercano** clonación de vault / restaurar), emparejamiento Nearby por toque (docs de QR preferido eliminadas), clonación completa del vault en la configuración. Ver [Changelog](/guide/changelog#10-06-2026-09-08) en inglés.
+
 ## 1.0.6 (2026-08-28)
 
 See [English changelog](/guide/changelog#10-06-2026-08-28) — Linux AppImage/RPM, rounded icons, Nearby, Autofill, Termux CLI; app **1.0.6+14**.

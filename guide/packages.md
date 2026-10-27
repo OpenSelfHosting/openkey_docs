@@ -1,18 +1,18 @@
 # Packages
 
-Install the official app from [Download](./download) (binaries / stores). Self-host and build the **open** packages below. Day-to-day usage: [Using the app](./app). Browser setup: [Browser extension](./extension).
+Install the official app from [Download](./download), or build it from the public [MIT-licensed Flutter source](https://github.com/OpenSelfHosting/OpenKey). The app, protocol specification, server, browser extension, CLI, and this documentation site are open source; their repositories publish the applicable license. Day-to-day usage: [Using the app](./app). Browser setup: [Browser extension](./extension).
 
 The protocol spec lives in [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey) (`spec/`). Published remotes under [OpenSelfHosting](https://github.com/OpenSelfHosting) ship packages separately.
 
 | Path | Source | Description |
 |------|--------|-------------|
-| Official **OpenKey app** | Proprietary | Flutter client (Android, iOS, desktop). Install from [Download](./download) / GitHub Releases — not from public source |
+| Official **OpenKey app** | MIT | Flutter client (Android, iOS, desktop). [Source and build instructions](https://github.com/OpenSelfHosting/OpenKey#build-from-source); prebuilt releases are on [Download](./download) |
 | `openkey_server` | MIT | FastAPI zero-knowledge sync API + PostgreSQL |
 | `openkey_extension` | MIT | MV3 browser extension (Chrome / Firefox / Edge / Brave / LibreWolf) |
 | `openkey_cli` | MIT | Developer CLI — secrets, password generation, sync; Termux on Android |
 | `openkey_docs` | MIT | This site — product pages and documentation |
 
-Each **open** package has its own README with setup details. Report security issues to **security@openselfhosting.com** — see [Security](./security#reporting-vulnerabilities).
+Each package has its own README with setup details. Report security issues to **security@openselfhosting.com** — see [Security](./security#reporting-vulnerabilities).
 
 ## Server highlights
 

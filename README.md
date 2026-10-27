@@ -2,6 +2,8 @@
 
 Product site and documentation for [OpenKey](https://github.com/OpenSelfHosting) — a self-hosted, end-to-end encrypted password manager.
 
+OpenKey is open source. The official Flutter app and protocol specification are published under the MIT License in [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey); its [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source) explains how to build the app. This documentation project is also MIT licensed (see [LICENSE](./LICENSE)).
+
 Supports the same locales as the Flutter app: English, Chinese, Hindi, Spanish, French, Arabic, Bengali, Portuguese, Russian, and Urdu (RTL for Arabic and Urdu).
 
 ## Develop
@@ -11,7 +13,7 @@ npm install
 npm run dev
 ```
 
-Guide pages cover overview, security, quick start, **download & install**, **server install + client linking**, **using the app**, **Nearby LAN sync**, **browser extension**, **CLI**, **sharing & orgs**, **import & export**, **FAQ & troubleshooting**, **changelog**, and open packages.
+Guide pages cover overview, security, quick start, **download & install**, **server install + client linking**, **using the app**, **Nearby LAN sync**, **browser extension**, **CLI**, **sharing & orgs**, **import & export**, **FAQ & troubleshooting**, **changelog**, and the open-source project packages.
 
 **Translation policy:** English and Arabic are the full references. **Chinese (zh), Spanish (es), and French (fr)** have full major guides (Nearby, extension, FAQ, sharing, import/export, download, security, changelog, server API). **Hindi, Bengali, Portuguese, Russian, and Urdu** have full overview / quick-start / packages / CLI / app / server / download (with stable install anchors), localized home sections, and blog posts; changelog and security remain partial stubs linking to EN/AR. **Pricing, privacy, and terms** are substantive in all locales (zh legal pages are shorter summaries).
 

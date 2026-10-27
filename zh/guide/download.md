@@ -66,7 +66,7 @@ Desktop Autofill registers the **native messaging host** used by the [browser ex
 
 ### 自行构建桌面版
 
-Official desktop installers: [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). The official app source is not public.
+OpenKey Flutter 应用的源代码以 MIT 许可证公开于 [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey)。构建说明见 [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source)；官方桌面安装包可在 [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases) 获取。
 
 ## 浏览器扩展
 

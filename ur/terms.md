@@ -1,6 +1,6 @@
 # سروس کی شرائط
 
-**آخری تازہ کاری:** 6 August 2026  
+**آخری تازہ کاری:** 27 اکتوبر 2026<br>
 **پروڈکٹ:** OpenKey (`com.openselfhosting.openkey`)  
 **ناشر:** OpenSelfHosting  
 **رابطہ:** [openkey@openselfhosting.com](mailto:openkey@openselfhosting.com)
@@ -13,7 +13,7 @@
 
 OpenKey ایک پاس ورڈ مینیجر ہے جو vault ڈیٹا آپ کے device پر encrypt کرتا ہے۔ اختیاری sync API **صرف ciphertext** ذخیرہ کرتا ہے جب آپ ایپ کو اپنے کنٹرول والے سرور (یا کوئی اور آپ کے لیے چلاتا ہو) کی طرف point کریں۔ OpenSelfHosting دستاویزات میں بیان کردہ مفت بنیادی تجربے کا حصہ لازمی hosted vault cloud فراہم نہیں کرتا۔
 
-اوپن پیکجز (سرور، ایکسٹینشن، CLI، docs) عام طور پر اپنے repositories میں شائع **MIT License** کے تحت دستیاب ہیں۔ موبائل/ڈیسک ٹاپ ایپ ان شرائط کے علاوہ اسٹور کی شرائط کے تحت بھی تقسیم ہو سکتی ہے۔
+OpenKey app، protocol specification، server، browser extension، CLI، اور docs open-source software ہیں۔ Official Flutter app اور protocol spec [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey) میں **MIT License** کے تحت شائع ہیں؛ ہر repository کی license file اس کے software کی شرائط بتاتی ہے۔ Stores سے تقسیم کیے گئے official builds پر متعلقہ store terms بھی لاگو ہوتے ہیں۔ یہ Terms یہاں بیان کردہ services اور purchases کو govern کرتی ہیں اور open-source licenses کے حقوق کی جگہ نہیں لیتیں۔
 
 ## 2. اہلیت
 
@@ -32,7 +32,7 @@ OpenKey ایک پاس ورڈ مینیجر ہے جو vault ڈیٹا آپ کے dev
 - OpenKey قانون یا دوسروں کے حقوق کی خلاف ورزی کے لیے
 - OpenSelfHosting infrastructure، دوسرے users کے vaults، یا غیر مجاز systems کو نقصان پہنچانے کی کوشش (سوائے نجی security research جو ہماری [سیکیورٹی پالیسی](/ur/guide/security) کے مطابق رپورٹ ہو)
 - Pro purchase status غلط ظاہر کرنا یا store refund/attestation mechanisms کا غلط استعمال
-- Apple، Google یا Microsoft معاہدوں کی خلاف ورزی میں proprietary store builds دوبارہ تقسیم کرنا
+- Apple، Google یا Microsoft معاہدوں کی خلاف ورزی میں official store builds دوبارہ تقسیم کرنا
 
 آپ جو self-hosted servers چلاتے ہیں انہیں آپ محفوظ کریں (HTTPS، secrets، access control)۔ غلط configuration آپ کی ذمہ داری ہے۔
 
@@ -58,7 +58,7 @@ OpenKey ان کے ساتھ تعامل کر سکتا ہے:
 
 ## 7. Intellectual property
 
-OpenKey names، logos اور branding OpenSelfHosting یا اس کے licensors کی ملکیت ہیں۔ Open-source components اپنی respective licenses کے تحت رہتے ہیں۔ آپ کو distributed ایپ استعمال کرنے کا personal، non-exclusive license ملتا ہے — OpenSelfHosting trademarks کی ملکیت نہیں۔
+OpenKey software متعلقہ repository license کے تحت ہے؛ official app source **MIT License** کے تحت ہے۔ اس license کے مطابق software کو use، copy، modify، اور redistribute کیا جا سکتا ہے۔ OpenKey names، logos اور branding OpenSelfHosting یا اس کے licensors کی ملکیت ہیں، اور software license ان trademark rights کو شامل نہیں کرتا۔ یہ Terms open-source licenses کے حقوق محدود نہیں کرتیں۔
 
 ## 8. رازداری
 

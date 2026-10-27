@@ -27,4 +27,4 @@ OpenKey est un **gestionnaire de mots de passe chiffré de bout en bout auto-hé
 
 <img src="/guide/overview-ecosystem.svg" alt="OpenKey ecosystem: app, browser extension, and CLI encrypt on device; optional sync via self-hosted server (ciphertext only) or Nearby LAN pairing" class="ok-diagram" width="920" height="440" />
 
-L'**application OpenKey** mobile et bureau est traitée séparément. Voir [Utiliser l'application](./app) pour l'usage produit, [Paquets](./packages) pour la configuration, [Configuration du serveur](./server) pour installer la sync, et [Démarrage rapide](./quick-start) pour exécuter la pile localement.
+L’application OpenKey mobile et bureau est également open source sous licence MIT. Le code Flutter et les instructions de compilation sont dans [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey#build-from-source). Voir [Utiliser l’application](./app) pour l’usage produit, [Paquets](./packages) pour la configuration, [Configuration du serveur](./server) pour installer la sync, et [Démarrage rapide](./quick-start) pour exécuter la pile localement.

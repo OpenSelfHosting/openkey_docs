@@ -1,6 +1,6 @@
 # 服务条款
 
-**最后更新：** 2026 年 8 月 6 日  
+**最后更新：** 2026 年 10 月 27 日<br>
 **产品：** OpenKey (`com.openselfhosting.openkey`)  
 **发布者：** OpenSelfHosting  
 **联系：** [openkey@openselfhosting.com](mailto:openkey@openselfhosting.com)
@@ -13,7 +13,7 @@
 
 OpenKey 是在您的设备上加密保险库数据的密码管理器。可选的同步 API 在您将应用指向您控制（或由他人为您运营）的服务器时，仅存储**密文**。OpenSelfHosting 不提供文档中所述免费核心体验的一部分的强制性托管保险库云。
 
-开放软件包（服务器、扩展、CLI、文档）通常按其仓库中发布的 **MIT 许可证**提供。移动/桌面应用除本条款外，还可能受商店条款约束。
+OpenKey 应用、协议规范、服务器、浏览器扩展、CLI 和文档均为开源软件。官方 Flutter 应用和协议规范以 **MIT 许可证**发布于 [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey)；各仓库的许可证文件规定其软件的使用条件。通过应用商店分发的官方版本仍须遵守适用的商店条款。本条款规范此处所述服务和购买，不取代开源许可证授予的权利。
 
 ## 2. 资格
 
@@ -58,7 +58,7 @@ OpenKey 可能与以下服务交互：
 
 ## 7. 知识产权
 
-OpenKey 名称、标识和品牌归 OpenSelfHosting 或其许可方所有。开源组件仍受其各自许可证约束。您获得按分发方式使用应用的个人、非独占许可——并非 OpenSelfHosting 商标的所有权。
+OpenKey 软件依照各仓库注明的许可证授权，官方应用源代码采用 **MIT 许可证**。该许可证依其条款授予使用、复制、修改和再分发软件的权利。OpenKey 名称、标识和品牌归 OpenSelfHosting 或其许可方所有，不包含在软件许可证授予的权利中。本条款不限制开源许可证授予的权利。
 
 ## 8. 隐私
 

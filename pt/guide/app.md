@@ -7,7 +7,7 @@ OpenKey é o cliente móvel e desktop para Android, iOS, macOS, Linux e Windows.
 ## Instalar
 
 1. Obtenha o OpenKey na loja / distribuidor oficial da sua plataforma.
-2. Abra o app e crie ou desbloqueie um cofre com sua senha mestra.
+2. Abra o app e escolha um caminho de primeira execução (criar, entrar, cópia Nearby ou restaurar), depois desbloqueie com sua senha mestra.
 
 Os pacotes relacionados deste projeto incluem o [servidor](./server), a [extensão do navegador](./extension) e a [CLI](./cli).
 
@@ -29,25 +29,30 @@ Gerencie a assinatura em **Configurações → OpenKey Pro** quando houver cobra
 
 ## Sincronização Nearby na LAN (Pro)
 
-Sincronize o mesmo cofre no Wi‑Fi local sem servidor:
+Sincronize ou copie cofres entre seus dispositivos no Wi‑Fi local sem servidor. Guia completo (clonagem de cofre, emparelhamento por toque, envio de entradas, LAN Pro, firewall): [Nearby](./nearby).
 
-1. Desbloqueie o OpenKey nos dois dispositivos → **Configurações → Dispositivos próximos**.
-2. Inicie o Nearby nos dois, emparelhe com o código curto e toque em **Vincular cofre**.
+1. **Dispositivo novo:** primeira execução → **Dispositivo próximo** para **copiar** um cofre de um par desbloqueado (depois a mesma senha mestra).
+2. **Sync contínua:** desbloqueie o OpenKey nos dois → **Configurações → Dispositivos próximos** → inicie o Nearby → toque em um par descoberto para emparelhar → **Vincular cofre**.
 3. Devem compartilhar a mesma chave do cofre (mesma impressão). Se diferirem, o receptor pode adotar a do par (substitui dados locais após confirmar a senha mestra).
-4. Após vincular, as mudanças sincronizam enquanto ambos estiverem desbloqueados; use **Sincronizar agora** para atualização manual.
+4. Após vincular, as mudanças sincronizam enquanto ambos estiverem desbloqueados e anunciando; use **Sincronizar agora** para atualização manual. Você também pode **Enviar para dispositivo** para enviar uma única entrada pela LAN.
 5. **Visível na rede local** é lembrado: após ativar uma vez, o Nearby retoma no próximo desbloqueio.
 6. Opcional **Somente redes confiáveis**: adicione SSIDs; o Nearby pausa em redes desconhecidas.
 7. **Dispositivos confiáveis**: após um emparelhamento + vínculo, reconectam automaticamente com Nearby ativo.
 
-A sync LAN move só **texto cifrado** (LWW por revision). Não é backup. Ver [FAQ](./faq) · [Compartilhamento](./sharing) · [Importar e exportar](./import-export).
+A sync LAN move só **texto cifrado** (LWW por revision). A sync de mesclagem não é backup — mantenha também um backup criptografado local.
 
-## Criar ou desbloquear um cofre
+## Configuração na primeira execução
 
-1. Escolha uma **senha mestra** forte (recomendado 12+ caracteres com tipos mistos).
-2. Aceite os avisos do cofre: **não há recuperação** se esquecer a senha mestra; os dados são criptografados no dispositivo; backups importam.
-3. Desbloqueie com a senha mestra sempre que abrir o app.
+Em uma instalação nova o app mostra um **seletor** com quatro caminhos:
 
-A senha mestra nunca sai do dispositivo em texto claro.
+| Caminho | Use quando |
+|------|----------|
+| **Criar um cofre** | Começar do zero — escolha uma senha mestra forte (12+ caracteres com tipos mistos recomendados) |
+| **Entrar** | Você já tem conta em um [servidor auto-hospedado](./server) |
+| **Dispositivo próximo** | Copiar um cofre existente por Wi‑Fi de outro OpenKey desbloqueado (**Pro**) — [Nearby → Copiar cofre na configuração](./nearby#copiar-cofre-na-configuração-clonagem-de-cofre) |
+| **Restaurar backup** | Restaurar um `.okbak` Pro criptografado (mesma senha mestra do backup) |
+
+Aceite os avisos do cofre: **não há recuperação** se esquecer a senha mestra; os dados são criptografados no dispositivo; backups importam. Após a configuração, desbloqueie com a senha mestra sempre que abrir o app. A senha mestra nunca sai do dispositivo em texto claro.
 
 ## Uso diário
 

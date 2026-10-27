@@ -49,12 +49,16 @@ See the matrix in [Using the app](./app#free-vs-openkey-pro). Short version: fre
 
 ### Nearby does not find the other device (Pro)
 
-1. Both devices unlocked, **Settings → Nearby devices** started, same Wi‑Fi (not guest/client isolation).
-2. Prefer **Scan pairing QR** instead of typing the code; allow camera / local-network permission prompts.
-3. Disable VPN / private relay temporarily. On macOS, allow firewall dial-back if the QR connection fails.
-4. Pair, then **Link vault** (same vault key fingerprint). Full guide: [Nearby](./nearby).
+1. Both devices on the same Wi‑Fi (not guest/client isolation). For merge sync: both unlocked with **Settings → Nearby devices** started. For setup clone: source unlocked and advertising; new device on **Nearby device**.
+2. Allow local-network / firewall prompts (UDP/TCP **47821**, TCP **47822**). Disable VPN / private relay temporarily.
+3. On macOS, allow firewall dial-back if the peer cannot connect inbound.
+4. For merge sync: pair by tapping a discovered peer, then **Link vault** (same vault key fingerprint). Full guide: [Nearby](./nearby).
 5. Optional **Trusted networks only**: add your SSID or Nearby pauses on unknown networks.
 6. Store-IAP platforms (Android / iOS / macOS) ignore **LAN Pro** from peers — buy/restore Pro on that store if required.
+
+### How do I copy my vault to a new device without a server or backup file?
+
+On the new device choose **Nearby device** at first-run. On the existing device unlock and start **Settings → Nearby devices**. Tap the peer → confirm → unlock with the **same master password**. That is a one-shot **vault clone**, not Link vault merge sync. Details: [Nearby → Copy vault at setup](./nearby#copy-vault-at-setup-vault-clone).
 
 ### How do I send one password to another device on the LAN?
 
@@ -88,7 +92,7 @@ Unlock the vault → **Settings → Data → Termux / CLI** → install Node, `n
 
 ### How do attachments work?
 
-**Pro.** Open a login → add an encrypted attachment (about **20 MB** max). Attachments sync as ciphertext through your server. OpenKey JSON export includes metadata only — use `.okbak` for a full vault including attachment blobs.
+**Pro.** Open a login → add an encrypted attachment (about **20 MB** max). In the app you can preview images, text, and audio; video plays in-app on Android / iOS / macOS when supported. Attachments sync as ciphertext through your server (optional `content_type` metadata). OpenKey JSON export includes metadata only — use `.okbak` or [Nearby vault clone](./nearby#copy-vault-at-setup-vault-clone) for a full vault including attachment blobs. The [browser extension](./extension) lists and downloads attachments in standalone mode (preview/add in the app).
 
 ### How do I add TOTP / authenticator codes?
 
@@ -146,7 +150,7 @@ Under **Settings → Security** — there is no separate Autofill page. Toggle t
 
 ### Is Nearby a backup?
 
-No. It syncs ciphertext on the LAN between paired, vault-linked devices. Keep offline Pro backups too.
+No. Merge sync moves ciphertext on the LAN between paired, vault-linked devices. **Vault clone** at setup is a one-shot full copy onto a new device — useful for migration, still not a substitute for offline Pro `.okbak` backups.
 
 ## Still stuck?
 

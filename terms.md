@@ -1,6 +1,6 @@
 # Terms of Service
 
-**Last updated:** 28 August 2026  
+**Last updated:** 27 October 2026<br>
 **Product:** OpenKey (`com.openselfhosting.openkey`)  
 **Publisher:** OpenSelfHosting  
 **Contact:** [openkey@openselfhosting.com](mailto:openkey@openselfhosting.com)
@@ -13,7 +13,7 @@ Related: [Privacy Policy](/privacy) · [Security](/guide/security)
 
 OpenKey is a password manager that encrypts vault data on your device. An optional sync API stores **ciphertext only** when you point the app at a server you control (or that someone else operates for you). OpenSelfHosting does not provide a mandatory hosted vault cloud as part of the free core experience described in the docs.
 
-Open packages (server, extension, CLI, docs, and the protocol spec in [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey)) are generally available under the **MIT License** as published in their repositories. The official mobile/desktop **app source is proprietary** (not licensed for copy, modification, or redistribution). Compiled official builds may be distributed under store terms in addition to these Terms.
+The OpenKey app, protocol specification, server, browser extension, CLI, and documentation are open-source software. The official Flutter app and protocol spec are published under the **MIT License** in [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey); each repository's license file governs its code. Official builds distributed through app stores remain subject to applicable store terms. These Terms govern the services and purchases described here and do not replace rights granted by the open-source licenses.
 
 ## 2. Eligibility
 
@@ -32,7 +32,7 @@ You agree not to:
 - Use OpenKey to violate law or others’ rights
 - Attempt to compromise OpenSelfHosting infrastructure, other users’ vaults, or systems you are not authorized to test (except private security research reported per our [security policy](/guide/security#reporting-vulnerabilities))
 - Misrepresent Pro purchase status or abuse store refund/attestation mechanisms
-- Redistribute proprietary store builds in violation of Apple, Google, or Microsoft agreements
+- Redistribute official store builds in violation of Apple, Google, or Microsoft agreements
 
 Self-hosted servers you run must be secured by you (HTTPS, secrets, access control). Misconfiguration is your responsibility.
 
@@ -57,7 +57,7 @@ Those services have their own terms. We are not responsible for third-party outa
 
 ## 7. Intellectual property
 
-OpenKey names, logos, and branding are owned by OpenSelfHosting or its licensors. Open-source components remain under their respective licenses. You receive a personal, non-exclusive license to **use the official app as distributed** — not a license to the app source, and not ownership of OpenSelfHosting trademarks. Do not reverse-engineer the official client except where mandatory law allows.
+OpenKey software is licensed under the terms in the applicable repository license, including the MIT License for the official app source. Those licenses grant software rights subject to their terms. OpenKey names, logos, and branding are owned by OpenSelfHosting or its licensors and are not licensed by the software license. These Terms do not limit rights granted by an open-source license.
 
 ## 8. Privacy
 

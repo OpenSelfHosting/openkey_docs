@@ -92,6 +92,6 @@ OpenKey 的设计目标是：服务器无法读取你的保险库。
 
 ## 打包说明
 
-已发布包包括 **服务器**、**浏览器扩展**、**CLI** 与 **文档**（MIT）。本 monorepo 可能包含用于跨包协作的移动/桌面 **OpenKey 应用** 开发检出。见 [概览](./overview) 与 [软件包](./packages)。
+官方移动/桌面 **OpenKey 应用**、协议规范、**服务器**、**浏览器扩展**、**CLI** 与 **文档**均为 MIT 开源项目。Flutter 应用源码位于 [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey)，[下载页面](./download)提供官方版本及源码构建说明。见 [概览](./overview) 与 [软件包](./packages)。
 
 API 细节见 `openkey_server` 软件包 README，以及运行中服务器的 `/docs`。

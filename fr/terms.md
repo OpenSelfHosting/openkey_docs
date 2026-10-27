@@ -1,6 +1,6 @@
 # Conditions d’utilisation
 
-**Dernière mise à jour :** 6 août 2026  
+**Dernière mise à jour :** 27 octobre 2026<br>
 **Produit :** OpenKey (`com.openselfhosting.openkey`)  
 **Éditeur :** OpenSelfHosting  
 **Contact :** [openkey@openselfhosting.com](mailto:openkey@openselfhosting.com)
@@ -13,7 +13,7 @@ Voir aussi : [Politique de confidentialité](/fr/privacy) · [Sécurité](/fr/gu
 
 OpenKey est un gestionnaire de mots de passe qui chiffre les données du coffre sur votre appareil. Une API de sync optionnelle ne stocke que du **ciphertext** lorsque vous pointez l’app vers un serveur que vous contrôlez (ou qu’une autre personne exploite pour vous). OpenSelfHosting ne fournit pas de cloud coffre hébergé obligatoire dans le cadre de l’expérience de base gratuite décrite dans la documentation.
 
-Les paquets ouverts (serveur, extension, CLI, docs) sont en général disponibles sous la **licence MIT** publiée dans leurs dépôts. L’app mobile/bureau peut être distribuée sous les conditions des magasins en plus de ces Conditions.
+L’application OpenKey, la spécification du protocole, le serveur, l’extension de navigateur, la CLI et la documentation sont des logiciels open source. L’application officielle Flutter et la spécification sont publiées sous **licence MIT** dans [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey) ; le fichier de licence de chaque dépôt régit son logiciel. Les versions officielles distribuées par les magasins restent soumises à leurs conditions applicables. Ces Conditions régissent les services et achats décrits ici et ne remplacent pas les droits accordés par les licences open source.
 
 ## 2. Éligibilité
 
@@ -59,7 +59,7 @@ Ces services ont leurs propres conditions. Nous ne sommes pas responsables des p
 
 ## 7. Propriété intellectuelle
 
-Les noms, logos et marques OpenKey appartiennent à OpenSelfHosting ou à ses concédants. Les composants open source restent sous leurs licences respectives. Vous recevez une licence personnelle, non exclusive, pour utiliser l’app telle que distribuée — pas la propriété des marques OpenSelfHosting.
+Les logiciels OpenKey sont régis par la licence indiquée dans chaque dépôt, dont la **licence MIT** pour le code de l’application officielle. Cette licence autorise l’utilisation, la copie, la modification et la redistribution du logiciel selon ses conditions. Les noms, logos et marques OpenKey appartiennent à OpenSelfHosting ou à ses concédants et ne sont pas couverts par la licence du logiciel. Ces Conditions ne limitent pas les droits accordés par les licences open source.
 
 ## 8. Confidentialité
 

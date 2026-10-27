@@ -49,12 +49,16 @@ Clients authenticated `POST /auth/delete` current `auth_hash` دوبارہ ثا�
 
 ### Nearby دوسری ڈیوائس نہیں ملتی (Pro)
 
-1. دونوں unlocked، **Settings → Nearby devices** شروع، ایک Wi‑Fi (guest/client isolation نہیں)۔
-2. کوڈ ٹائپ کرنے کی بجائے **Scan pairing QR** ترجیح؛ camera / local-network permission prompts اجازت دیں۔
-3. عارضی طور پر VPN / private relay بند۔ macOS پر QR connection fail ہو تو firewall dial-back اجازت۔
-4. Pair، پھر **Link vault** (ایک vault key fingerprint)۔ مکمل گائیڈ: [Nearby](./nearby)۔
+1. دونوں ایک Wi‑Fi (guest/client isolation نہیں)۔ Merge sync: دونوں unlocked اور **Settings → Nearby devices** شروع۔ Setup clone: source unlocked اور advertising؛ نئی ڈیوائس **Nearby device** path پر۔
+2. Local-network / firewall prompts اجازت دیں (UDP/TCP **47821**, TCP **47822**)۔ عارضی طور پر VPN / private relay بند۔
+3. macOS پر peer inbound connect نہ کر سکے تو firewall dial-back اجازت۔
+4. Merge sync: discovered peer پر ٹیپ کر کے pair، پھر **Link vault** (ایک vault key fingerprint)۔ مکمل گائیڈ: [Nearby](./nearby)۔
 5. اختیاری **Trusted networks only**: SSID شامل یا unknown networks پر Nearby رک جاتا ہے۔
 6. Store-IAP platforms (Android / iOS / macOS) peers سے **LAN Pro** نظرانداز — ضرورت ہو تو اس store پر Pro خریدیں/restore۔
+
+### بغیر سرور یا backup فائل کے نئی ڈیوائس پر vault کیسے کاپی کریں؟
+
+نئی ڈیوائس پر first-run میں **Nearby device** منتخب کریں۔ موجودہ پر unlock کریں اور **Settings → Nearby devices** شروع کریں۔ Peer پر ٹیپ → confirm → **same master password** سے unlock۔ یہ one-shot **vault clone** ہے، Link vault merge sync نہیں۔ تفصیل: [Nearby → Setup پر vault کاپی](./nearby#setup-پر-vault-کاپی-کریں-vault-clone)۔
 
 ### LAN پر ایک password دوسری ڈیوائس کو کیسے بھیجوں؟
 
@@ -74,7 +78,7 @@ Windows/Linux پر `Ctrl+Shift+L`، macOS پر `⌘⇧L`۔ ضرورت ہو تو 
 
 ### Attachments کیسے کام کرتے ہیں؟
 
-**Pro.** Login کھولیں → encrypted attachment شامل (زیادہ سے زیادہ تقریباً **20 MB**)۔ Attachments سرور سے ciphertext کے طور پر سنک۔ OpenKey JSON export صرف metadata — attachment blobs سمیت مکمل vault کے لیے `.okbak`۔
+**Pro.** Login کھولیں → encrypted attachment شامل (زیادہ سے زیادہ تقریباً **20 MB**)۔ App میں images، text، اور audio preview؛ video Android / iOS / macOS پر supported ہو تو in-app play۔ Attachments سرور سے ciphertext کے طور پر سنک (optional `content_type` metadata)۔ OpenKey JSON export صرف metadata — attachment blobs سمیت مکمل vault کے لیے `.okbak` یا [Nearby vault clone](./nearby#setup-پر-vault-کاپی-کریں-vault-clone)۔ [براؤزر ایکسٹینشن](./extension) standalone میں list/download (preview/add app میں)۔
 
 ### TOTP / authenticator codes کیسے شامل کروں؟
 
@@ -133,7 +137,7 @@ Default lock 15 منٹ (`openkey config set-lock`)۔ دوبارہ `eval $(openke
 
 ### کیا Nearby backup ہے؟
 
-نہیں۔ Paired، vault-linked ڈیوائسز کے درمیان LAN پر ciphertext سنک۔ Offline Pro backups بھی رکھیں۔
+نہیں۔ Merge sync paired، vault-linked ڈیوائسز کے درمیان LAN پر ciphertext لے جاتا ہے۔ Setup پر **vault clone** نئی ڈیوائس پر one-shot مکمل کاپی ہے — migration کے لیے مفید، پھر بھی offline Pro `.okbak` backups کا متبادل نہیں۔
 
 ## ابھی بھی پھنسے؟
 

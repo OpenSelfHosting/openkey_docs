@@ -130,7 +130,9 @@ Auth endpoints are rate-limited per client IP. Refresh tokens are hashed at rest
 
 ### Attachments
 
-Ciphertext only. Max size **20 MB**. Prefer multipart `POST /attachments` for uploads; `GET /attachments/{uuid}/content` streams encrypted bytes. Batch sync may still carry base64 blobs for offline catch-up.
+Ciphertext only. Max size **20 MB**. Prefer multipart `POST /attachments` for uploads (`uuid`, `entry_uuid`, `filename`, `size_bytes`, optional `content_type`, optional `revision`, file field `file`); `GET /attachments/{uuid}/content` streams encrypted bytes. Batch sync may still carry base64 blobs for offline catch-up.
+
+**Nearby** vault clone and LAN merge sync are peer-to-peer — they never use these endpoints. First-run **Sign in** uses this API; **Nearby device** / `.okbak` restore do not.
 
 ### Orgs & shares
 
@@ -144,7 +146,7 @@ Point each client at the **same** server URL (for local Docker: `http://localhos
 
 Install the OpenKey app from the [download channels](./download).
 
-1. Unlock or create a local vault with your master password.
+1. Unlock or create a local vault with your master password (or **Sign in** / **Nearby device** / **Restore backup** on first run — [Using the app](./app)).
 2. Open **Settings → Data → Self-hosted server**.
 3. Enter the server URL (example: `https://openkey.example.com`).
 4. **Register** (first device) or **Login** (another device that already has this vault account).

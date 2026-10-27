@@ -8,7 +8,7 @@ Get the OpenKey app, then optionally connect a [self-hosted server](./server), t
 
 Application id: `com.openselfhosting.openkey` · Org: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-Store listings and GitHub Releases roll out per platform. **Google Play and the Microsoft Store are live** — install OpenKey on Android from [the Play listing](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) or on Windows from [the Microsoft Store listing](https://apps.microsoft.com/detail/9MXNBRPMDT53). The main download button takes you to that system's store; the one beside it hands over the direct build for your system. Official app binaries are also published on [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). The official app **source is not public**, so use those artifacts instead of building it yourself. The remaining store pages may still be pending review.
+Store listings and GitHub Releases roll out per platform. **Google Play and the Microsoft Store are live** — install OpenKey on Android from [the Play listing](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) or on Windows from [the Microsoft Store listing](https://apps.microsoft.com/detail/9MXNBRPMDT53). The main download button takes you to that system's store; the one beside it hands over the direct build for your system. Official app binaries are also published on [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). The complete Flutter app source is public under the MIT License in [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey); follow its [build instructions](https://github.com/OpenSelfHosting/OpenKey#build-from-source) to build from source. The remaining store pages may still be pending review.
 
 ## Mobile
 
@@ -64,7 +64,7 @@ Arch users can `makepkg -si` with the `PKGBUILD` inside the tarball.
 
 Desktop Autofill registers the **native messaging host** used by the [browser extension](./extension). Keep the vault unlocked while filling from the browser.
 
-Official desktop installers are attached to [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). The OpenKey app source is proprietary — install the official artifacts, do not expect a public `flutter build`.
+Official desktop installers are attached to [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). The app is open source under MIT; its repository [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source) has Flutter build instructions.
 
 ## Browser extension
 

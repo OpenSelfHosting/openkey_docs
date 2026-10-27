@@ -41,7 +41,7 @@ Soft-deleted vault items remain as **tombstones** until peers sync; last-write-w
 | Browser extension | Trusted with vault plaintext after unlock; untrusted web pages must not receive secrets beyond intentional autofill. `<all_urls>` is required for universal fill/capture/WebAuthn — see [Browser extension](./extension#permissions). |
 | Native messaging host | Local-only bridge to the unlocked desktop app; unlocked-vault responses only |
 | CLI / desktop bridge | Same local trust as the unlocked app session |
-| Nearby / LAN pairing | Paired peers share a session key; after **vault link**, they exchange vault-key material and sync ciphertext. Pairing alone does not share the vault key. Control UDP (`pair_please` / `sync_please`) is unicast; wrong pairing codes are rate-limited; `sync_please` only accepted from known peer endpoints |
+| Nearby / LAN pairing | Paired peers share a session key; after **vault link**, they exchange vault-key material and sync ciphertext. **Vault clone** at setup ships a full vault archive (ciphertext + unlock material) over that session — the receiver still needs the master password. Pairing alone does not share the vault key. Control UDP (`pair_please` / `sync_please`) is unicast; wrong pairing codes are rate-limited; `sync_please` only accepted from known peer endpoints |
 | Desktop native messaging | Unlocked app exposes a local socket to the browser host; requests require a per-unlock `openkey-native.token` (mode 0600). An unlocked desktop session is full vault access for that OS user |
 
 ### What attackers can and cannot do
@@ -54,13 +54,13 @@ Soft-deleted vault items remain as **tombstones** until peers sync; last-write-w
 | Stolen unlocked device | Read vault plaintext from memory / active session | — (out of scope) |
 | Malicious webpage | Trigger autofill UI; attempt phishing | Read the full vault via content scripts without user/extension mediation |
 | Malicious org/share peer | Share ciphertext they can decrypt with keys you wrapped for them | Decrypt unrelated personal vault items |
-| Malicious Nearby peer | Send entries / claim LAN Pro / receive vault ciphertext after link | Unlock Pro on store-IAP platforms (Android/iOS/macOS ignore LAN Pro); decrypt LAN ciphertext without the shared vault key |
+| Malicious Nearby peer | Send entries / claim LAN Pro / receive vault ciphertext after link; after an accepted **vault clone**, receive a full vault copy (still needs the master password to unlock) | Unlock Pro on store-IAP platforms (Android/iOS/macOS ignore LAN Pro); decrypt LAN ciphertext without the shared vault key / master password |
 
 ### Explicit non-goals
 
 - **No master-password recovery** — if you lose it, ciphertext is unrecoverable.
 - **Server cannot decrypt** vault, attachment, org, or share payloads.
-- **Sync is LWW by revision**, not a CRDT — concurrent edits can overwrite; the server echoes winning rows when a stale push loses. **Nearby LAN vault sync** uses the same LWW rule between paired, vault-linked devices (not a substitute for offline backups).
+- **Sync is LWW by revision**, not a CRDT — concurrent edits can overwrite; the server echoes winning rows when a stale push loses. **Nearby LAN vault sync** uses the same LWW rule between paired, vault-linked devices (not a substitute for offline backups). **Vault clone** is a one-shot full copy onto an empty device — still keep `.okbak` backups.
 - **LAN Pro attestation** is a convenience between paired devices on platforms without store IAP — not a cryptographic proof of purchase.
 
 ### Operational hardening checklist
@@ -73,7 +73,7 @@ Soft-deleted vault items remain as **tombstones** until peers sync; last-write-w
 - Prefer keeping the vault **locked when idle**; enable biometric unlock carefully.
 - Enable **Settings → Security → Autofill** so the OS / browser can fill only after you unlock.
 - Treat exports / backups as secret material — store offline and encrypted.
-- Pair Nearby devices only with people/devices you trust; **Link vault** shares vault-key material over the LAN session — unpair to revoke LAN Pro claims and stop sync.
+- Pair Nearby devices only with people/devices you trust; **Link vault** shares vault-key material over the LAN session; accepting a **vault clone** gives the peer a full vault copy. Unpair to revoke LAN Pro claims and stop sync.
 - Report vulnerabilities privately — see [Reporting vulnerabilities](#reporting-vulnerabilities).
 
 App store / About legal pages: [Privacy Policy](/privacy) · [Terms of Service](/terms).
@@ -98,6 +98,6 @@ Include the affected package, version/commit if known, steps to reproduce, and i
 
 ## Packaging note
 
-Published packages include the **server**, **browser extension**, **CLI**, and **docs** (MIT), plus the protocol spec in [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey). The official mobile/desktop **app is proprietary**; install binaries from [Download](./download). See the [overview](./overview) and [packages](./packages) guides.
+The official mobile/desktop app, protocol spec, **server**, **browser extension**, **CLI**, and **docs** are open source under MIT, as shown in their repositories. The Flutter app source is in [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey); see [Download](./download) for official builds and source-build instructions. See the [overview](./overview) and [packages](./packages) guides.
 
 For API details, see the `openkey_server` package README and `/docs` on a running server.

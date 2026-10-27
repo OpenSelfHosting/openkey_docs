@@ -1,6 +1,6 @@
 # Using the app
 
-OpenKey is the mobile and desktop client for Android, iOS, macOS, Linux, and Windows. Core vault features are free; OpenKey Pro unlocks extras. Your vault lives encrypted on the device; a self-hosted [server](./server) is optional for sync. Install it from the official store or download channel for your platform.
+OpenKey is the open-source mobile and desktop client for Android, iOS, macOS, Linux, and Windows. Its Flutter source is available under the MIT License in [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey); see the [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source) to build it. Core vault features are free; OpenKey Pro unlocks extras. Your vault lives encrypted on the device; a self-hosted [server](./server) is optional for sync. Install it from the official store or download channel for your platform.
 
 <p class="ok-app-visual">
   <img
@@ -12,7 +12,7 @@ OpenKey is the mobile and desktop client for Android, iOS, macOS, Linux, and Win
   />
   <img
     src="/landing_page/Section_2_Save_Your_Passwords/password_details_android_screen_light.png"
-    alt="OpenKey first-run onboarding — trust FAQ before vault setup"
+    alt="OpenKey first-run onboarding steps before vault setup"
     class="ok-app-shot ok-app-shot--phone"
     width="390"
     height="844"
@@ -29,7 +29,7 @@ OpenKey is the mobile and desktop client for Android, iOS, macOS, Linux, and Win
 ## Install
 
 1. Get OpenKey from the [download channels](./download) for your platform (stores or official GitHub Release packages).
-2. Open the app and create or unlock a vault with your master password.
+2. Open the app and pick a first-run path (create, sign in, Nearby copy, or restore), then unlock with your master password.
 
 Related packages in this project include the [server](./server), [browser extension](./extension), and [CLI](./cli).
 
@@ -58,13 +58,20 @@ Core vault features work offline without a subscription. On Android, iOS, macOS,
 
 Manage subscription under **Settings → OpenKey Pro** where store billing is available. Public overview: [Pricing](/pricing).
 
-## Create or unlock a vault
+## First-run setup
 
-1. Choose a strong **master password** (12+ characters with mixed types recommended), **or** restore a Pro encrypted `.okbak` from the first-run screen (same master password as the backup).
-2. Acknowledge the vault notices: there is **no recovery** if you forget the master password; data is encrypted on device; backups matter.
-3. Unlock with the master password whenever you open the app.
+On a new install the app shows a **chooser** with four paths:
 
-The master password never leaves the device in plaintext.
+| Path | Use when |
+|------|----------|
+| **Create a vault** | Fresh start — pick a strong master password (12+ characters with mixed types recommended) |
+| **Sign in** | You already have an account on a [self-hosted server](./server) |
+| **Nearby device** | Copy an existing vault over Wi‑Fi from another unlocked OpenKey device (**Pro**) — [Nearby → Copy vault at setup](./nearby#copy-vault-at-setup-vault-clone) |
+| **Restore backup** | Restore a Pro encrypted `.okbak` (same master password as the backup) |
+
+Acknowledge the vault notices: there is **no recovery** if you forget the master password; data is encrypted on device; backups matter. After setup, unlock with the master password whenever you open the app. The master password never leaves the device in plaintext.
+
+Short welcome / onboarding steps (autofill, appearance, and similar) may run before or around setup. The in-app **FAQ** lives under **Settings → Help**, not inside onboarding.
 
 ## Everyday use
 
@@ -74,7 +81,7 @@ The master password never leaves the device in plaintext.
 - Browse **collections** (folders) and password **entries**. Collections can be **nested** (a folder inside another folder).
 - Search, filter by tags, and open an entry to copy username/password or view custom fields.
 - Create entries with URLs, notes, icons, and **TOTP** (paste a secret / `otpauth` URI, or scan an authenticator QR).
-- **Attachments (Pro):** add encrypted files to a login (about **20 MB** per attachment). They sync as ciphertext through your [server](./server); OpenKey JSON export omits attachment blobs — use a [`.okbak` backup](./import-export) for a full copy.
+- **Attachments (Pro):** add encrypted files to a login (about **20 MB** per attachment). Preview images, text, and audio in-app; play video on Android / iOS / macOS when supported; otherwise download or open with another app. They sync as ciphertext through your [server](./server) (optional `content_type` metadata). OpenKey JSON export omits attachment blobs — use a [`.okbak` backup](./import-export) or [Nearby vault clone](./nearby#copy-vault-at-setup-vault-clone) for a full copy.
 
 ### Password generator
 
@@ -117,17 +124,17 @@ Details: [Install the server](./server).
 
 ## Nearby LAN vault sync (Pro)
 
-Sync the same vault across your devices on the local Wi‑Fi without a server. Full walkthrough (QR pairing, send-entry, LAN Pro, firewall tips): [Nearby](./nearby).
+Sync or copy vaults across your devices on the local Wi‑Fi without a server. Full walkthrough (vault clone, tap-to-pair, send-entry, LAN Pro, firewall tips): [Nearby](./nearby).
 
-1. Unlock OpenKey on both devices and open **Settings → Nearby devices**.
-2. Start Nearby on both. Prefer **Scan pairing QR** on one device while the other shows its QR; or type the short code. Then tap **Link vault**.
+1. **New device:** first-run → **Nearby device** to **copy** a vault from an unlocked peer (same master password afterward).
+2. **Ongoing sync:** unlock OpenKey on both devices → **Settings → Nearby devices** → start Nearby → tap a discovered peer to pair → **Link vault**.
 3. Devices must share one vault key (same fingerprint). If keys differ, the receiving device can adopt the peer’s key (replaces local vault data after master-password confirmation).
 4. After linking, changes sync automatically while both are unlocked and advertising; use **Sync now** for a manual catch-up. You can also **Send to device** to push a single entry over the LAN.
 5. **Visible on local network** is remembered: after you enable it once, Nearby resumes automatically the next time you unlock the vault (paused while locked).
 6. Optional **Trusted networks only**: add your home/office Wi‑Fi SSIDs; Nearby pauses on unknown networks and resumes when you return.
 7. **Trusted devices**: after one pairing + vault link, peers reconnect and sync automatically whenever Nearby is on — no re-pairing.
 
-LAN sync moves **ciphertext only** (same LWW-by-revision model as the server). It is not a backup — keep an encrypted local backup as well.
+LAN sync moves **ciphertext only** (same LWW-by-revision model as the server). Merge sync is not a backup — keep an encrypted local backup as well.
 
 ## Autofill and browser
 

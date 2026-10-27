@@ -49,12 +49,16 @@ Consulta la matriz en [Usar la app](./app#gratis-frente-a-openkey-pro). Versión
 
 ### Nearby no encuentra el otro dispositivo (Pro)
 
-1. Ambos dispositivos desbloqueados, **Ajustes → Dispositivos cercanos** iniciado, misma Wi‑Fi (sin invitados/aislamiento de clientes).
-2. Prefiere **Escanear QR de emparejamiento** en lugar de escribir el código; permite avisos de cámara / red local.
-3. Desactiva temporalmente VPN / private relay. En macOS, permite la conexión de vuelta del cortafuegos si falla la conexión QR.
-4. Empareja, luego **Vincular vault** (misma huella de clave del vault). Guía completa: [Nearby](./nearby).
+1. Ambos dispositivos en la misma Wi‑Fi (sin invitados/aislamiento de clientes). Para sync de fusión: ambos desbloqueados con **Ajustes → Dispositivos cercanos** iniciado. Para clonación en la configuración: origen desbloqueado y anunciando; dispositivo nuevo en **Dispositivo cercano**.
+2. Permite avisos de red local / cortafuegos (UDP/TCP **47821**, TCP **47822**). Desactiva temporalmente VPN / private relay.
+3. En macOS, permite la conexión de vuelta del cortafuegos si el par no puede conectar entrante.
+4. Para sync de fusión: empareja tocando un par descubierto, luego **Vincular vault** (misma huella de clave del vault). Guía completa: [Nearby](./nearby).
 5. Opcional **Solo redes de confianza**: añade tu SSID o Nearby se pausa en redes desconocidas.
 6. Las plataformas con IAP de tienda (Android / iOS / macOS) ignoran **LAN Pro** de los pares — compra/restaura Pro en esa tienda si hace falta.
+
+### ¿Cómo copio mi vault a un dispositivo nuevo sin servidor ni archivo de copia?
+
+En el dispositivo nuevo elige **Dispositivo cercano** en el primer uso. En el existente desbloquea e inicia **Ajustes → Dispositivos cercanos**. Toca el par → confirma → desbloquea con la **misma contraseña maestra**. Es una **clonación de vault** de una sola vez, no sync de fusión con Vincular vault. Detalles: [Nearby → Copiar vault en la configuración](./nearby#copiar-vault-en-la-configuración-clonación-de-vault).
 
 ### ¿Cómo envío una sola contraseña a otro dispositivo en la LAN?
 
@@ -74,7 +78,7 @@ Activa OpenKey como proveedor del sistema de contraseñas y passkeys en **Ajuste
 
 ### ¿Cómo funcionan los adjuntos?
 
-**Pro.** Abre un inicio de sesión → añade un adjunto cifrado (máx. unos **20 MB**). Los adjuntos se sincronizan como texto cifrado a través de tu servidor. La exportación JSON de OpenKey incluye solo metadatos — usa `.okbak` para un vault completo con blobs de adjuntos.
+**Pro.** Abre un inicio de sesión → añade un adjunto cifrado (máx. unos **20 MB**). En la app puedes previsualizar imágenes, texto y audio; el vídeo se reproduce en la app en Android / iOS / macOS cuando se admite. Los adjuntos se sincronizan como texto cifrado a través de tu servidor (metadatos `content_type` opcionales). La exportación JSON de OpenKey incluye solo metadatos — usa `.okbak` o [clonación de vault Nearby](./nearby#copiar-vault-en-la-configuración-clonación-de-vault) para un vault completo con blobs de adjuntos. La [extensión del navegador](./extension) lista y descarga adjuntos en modo independiente (previsualizar/añadir en la app).
 
 ### ¿Cómo añado códigos TOTP / autenticador?
 
@@ -136,7 +140,7 @@ En **Ajustes → Seguridad** — no hay una página Autofill aparte. OpenKey no 
 
 ### ¿Nearby es una copia de seguridad?
 
-No. Sincroniza texto cifrado en la LAN entre dispositivos emparejados y con vault vinculado. Mantén también copias Pro sin conexión.
+No. La sync de fusión mueve texto cifrado en la LAN entre dispositivos emparejados y con vault vinculado. La **clonación de vault** en la configuración es una copia completa de una sola vez a un dispositivo nuevo — útil para migrar, pero no sustituye las copias Pro `.okbak` sin conexión.
 
 ## ¿Sigues atascado?
 

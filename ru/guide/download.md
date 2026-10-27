@@ -66,7 +66,7 @@ Desktop Autofill registers the **native messaging host** used by the [browser ex
 
 ### Собрать настольную версию самостоятельно
 
-Official desktop installers: [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). Official app source is not public.
+Исходный код Flutter-приложения OpenKey опубликован по лицензии MIT в [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey). Инструкции по сборке находятся в [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source); официальные установщики доступны в [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases).
 
 ## Расширение браузера
 

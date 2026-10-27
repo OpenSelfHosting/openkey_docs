@@ -49,12 +49,16 @@ Voir la matrice dans [Utiliser l’application](./app#gratuit-vs-openkey-pro). E
 
 ### Nearby ne trouve pas l’autre appareil (Pro)
 
-1. Les deux appareils déverrouillés, **Réglages → Appareils à proximité** démarré, même Wi‑Fi (pas invité / isolation client).
-2. Préférez **Scanner le QR d’appariement** plutôt que de taper le code ; autorisez les invites caméra / réseau local.
-3. Désactivez temporairement VPN / private relay. Sur macOS, autorisez le rappel pare-feu si la connexion QR échoue.
-4. Appariez, puis **Lier le coffre** (même empreinte de clé de coffre). Guide complet : [Nearby](./nearby).
+1. Les deux appareils sur le même Wi‑Fi (pas invité / isolation client). Pour la sync de fusion : les deux déverrouillés avec **Réglages → Appareils à proximité** démarré. Pour le clonage à la configuration : source déverrouillée et annonçant ; nouvel appareil sur **Appareil à proximité**.
+2. Autorisez les invites réseau local / pare-feu (UDP/TCP **47821**, TCP **47822**). Désactivez temporairement VPN / private relay.
+3. Sur macOS, autorisez le rappel pare-feu si le pair ne peut pas se connecter en entrée.
+4. Pour la sync de fusion : appariez en appuyant sur un pair découvert, puis **Lier le coffre** (même empreinte de clé de coffre). Guide complet : [Nearby](./nearby).
 5. Option **Réseaux de confiance uniquement** : ajoutez votre SSID ou Nearby se met en pause sur les réseaux inconnus.
 6. Les plateformes IAP magasin (Android / iOS / macOS) ignorent **LAN Pro** des pairs — achetez/restaurez Pro sur ce magasin si requis.
+
+### Comment copier mon coffre sur un nouvel appareil sans serveur ni fichier de sauvegarde ?
+
+Sur le nouvel appareil choisissez **Appareil à proximité** au premier lancement. Sur l’existant déverrouillez et démarrez **Réglages → Appareils à proximité**. Appuyez sur le pair → confirmez → déverrouillez avec le **même mot de passe principal**. C’est un **clonage de coffre** ponctuel, pas une sync de fusion via Lier le coffre. Détails : [Nearby → Copier le coffre à la configuration](./nearby#copier-le-coffre-à-la-configuration-clonage-de-coffre).
 
 ### Comment envoyer un mot de passe à un autre appareil sur le LAN ?
 
@@ -74,7 +78,7 @@ Activez OpenKey comme fournisseur système de mots de passe et passkeys sous **R
 
 ### Comment fonctionnent les pièces jointes ?
 
-**Pro.** Ouvrez une connexion → ajoutez une pièce jointe chiffrée (environ **20 Mo** max). Les pièces jointes se synchronisent en ciphertext via votre serveur. L’export JSON OpenKey n’inclut que les métadonnées — utilisez `.okbak` pour un coffre complet incluant les blobs de pièces jointes.
+**Pro.** Ouvrez une connexion → ajoutez une pièce jointe chiffrée (environ **20 Mo** max). Dans l’app vous pouvez prévisualiser images, texte et audio ; la vidéo se lit dans l’app sur Android / iOS / macOS quand c’est pris en charge. Les pièces jointes se synchronisent en ciphertext via votre serveur (métadonnées `content_type` optionnelles). L’export JSON OpenKey n’inclut que les métadonnées — utilisez `.okbak` ou le [clonage de coffre Nearby](./nearby#copier-le-coffre-à-la-configuration-clonage-de-coffre) pour un coffre complet incluant les blobs. L’[extension navigateur](./extension) liste et télécharge les pièces jointes en mode autonome (prévisualiser/ajouter dans l’app).
 
 ### Comment ajouter des codes TOTP / authenticator ?
 
@@ -136,7 +140,7 @@ Sous **Réglages → Sécurité** — pas de page Autofill séparée. OpenKey n�
 
 ### Nearby est-il une sauvegarde ?
 
-Non. Il synchronise le ciphertext sur le LAN entre appareils appariés et liés par coffre. Conservez aussi des sauvegardes Pro hors ligne.
+Non. La sync de fusion déplace le ciphertext sur le LAN entre appareils appariés et liés par coffre. Le **clonage de coffre** à la configuration est une copie complète ponctuelle vers un nouvel appareil — utile pour migrer, mais ne remplace pas les sauvegardes Pro `.okbak` hors ligne.
 
 ## Toujours bloqué ?
 
