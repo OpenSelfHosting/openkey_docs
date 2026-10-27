@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useData } from 'vitepress'
 import { variantHref } from '../downloads/catalog'
+import { downloadCopy } from '../downloads/copy'
 import { useHomeRevealRoot } from '../composables/useHomeReveal'
 import { useDetectedPlatform } from '../composables/useDetectedPlatform'
 import PlatformIcon from './PlatformIcon.vue'
@@ -265,9 +266,45 @@ const quickStartLink = computed(
 // Matches the hero picker so both download CTAs show the same OS mark.
 const { detected, os: detectedOs } = useDetectedPlatform()
 
+const downloadStrings = computed(() => downloadCopy(lang.value))
+
+// A live store listing takes the colored button whenever we have one — Windows
+// and Android today. macOS and Linux have no listing, so their direct build
+// keeps it and the second slot stays "Get Started".
+const ctaStore = computed(() =>
+  detected.value.variant?.store ? detected.value.variant : null,
+)
+const ctaStoreEyebrow = computed(() =>
+  ctaStore.value ? downloadStrings.value.storeEyebrow[ctaStore.value.id] || '' : '',
+)
+const ctaStoreName = computed(() =>
+  ctaStore.value ? downloadStrings.value.variant[ctaStore.value.labelKey] || '' : '',
+)
+
+// Direct build for this visitor's OS, offered in the second slot beside the store
+// listing. Empty when the store is not the primary channel or when there is no
+// direct build of ours (iOS), and the slot then keeps "Get Started".
+const ctaDirectHref = computed(() => {
+  const { platform, variant, direct } = detected.value
+  if (!platform || !variant?.store || !direct) return ''
+  return variantHref(localePrefix.value, platform, direct)
+})
+const ctaDirectName = computed(() => {
+  const direct = detected.value.direct
+  if (!direct) return ''
+  return downloadStrings.value.variant[direct.labelKey] || direct.labelKey
+})
+
+// Store mark for the primary button, and only then — a macOS or Linux visitor
+// gets a .dmg or .deb, so an unconditional id here would put a store bag on it.
+// Read from the variant the button serves, since `store` is null for a listing
+// that is still the primary build on iOS.
+const ctaPrimaryMarkId = computed(() => (ctaStore.value ? ctaStore.value.id : ''))
+
 // This CTA is labelled just "Download", so it should behave like the hero one
-// and hand over the detected build. It falls back to the download page, which
-// lists every build, when detection has not resolved or has no live artifact.
+// and hand over the detected build — the store listing where we have one. It
+// falls back to the download page, which lists every build, when detection has
+// not resolved or has no live artifact.
 const downloadLink = computed(() => {
   const { platform, variant } = detected.value
   if (!platform || !variant) return downloadPageLink.value
@@ -532,16 +569,43 @@ const root = useHomeRevealRoot()
           <h2 id="ok-cta-title" class="ok-cta-card__title">{{ ctaTitle }}</h2>
           <p class="ok-cta-card__body">{{ ctaBody }}</p>
           <div class="ok-cta-card__actions">
-            <a class="ok-hero__cta ok-hero__cta--primary" :href="downloadLink">
+            <a
+              class="ok-hero__cta ok-hero__cta--primary"
+              :class="{ 'ok-hero__cta--store': ctaStore }"
+              :href="downloadLink"
+            >
+              <PlatformIcon
+                class="ok-dl__cta-icon"
+                variant="inline"
+                :os="detectedOs"
+                :store="ctaPrimaryMarkId"
+                :size="ctaStore ? 22 : 18"
+              />
+              <span v-if="ctaStore" class="ok-dl__cta-store">
+                <span class="ok-dl__cta-store-eyebrow">{{ ctaStoreEyebrow }}</span>
+                <span class="ok-dl__cta-store-name">{{ ctaStoreName }}</span>
+              </span>
+              <template v-else>{{ ctaPrimary }}</template>
+            </a>
+            <a
+              v-if="ctaDirectHref"
+              class="ok-hero__cta ok-hero__cta--ghost ok-dl__cta--direct"
+              :href="ctaDirectHref"
+            >
               <PlatformIcon
                 class="ok-dl__cta-icon"
                 variant="inline"
                 :os="detectedOs"
                 :size="18"
               />
-              {{ ctaPrimary }}
+              {{ downloadStrings.directCta }}
+              <span v-if="ctaDirectName" class="ok-dl__cta-build">{{ ctaDirectName }}</span>
             </a>
-            <a class="ok-hero__cta ok-hero__cta--ghost" :href="quickStartLink">{{ ctaSecondary }}</a>
+            <a
+              v-else
+              class="ok-hero__cta ok-hero__cta--ghost"
+              :href="quickStartLink"
+            >{{ ctaSecondary }}</a>
           </div>
         </div>
       </div>

@@ -11,6 +11,7 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",
+    "deploy": "scripts/deploy.sh",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

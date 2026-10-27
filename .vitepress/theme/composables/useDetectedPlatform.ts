@@ -23,6 +23,8 @@ const UNKNOWN: DetectedPlatform = {
   arch: 'x64',
   platform: null,
   variant: null,
+  direct: null,
+  store: null,
 }
 
 const detected = ref<DetectedPlatform>(UNKNOWN)

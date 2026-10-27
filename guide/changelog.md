@@ -4,7 +4,7 @@ Release notes for OpenKey. Official **app** version is the GitHub Release tag on
 
 ## 1.0.6 (2026-08-28)
 
-Aligned with app **1.0.6+7**.
+Aligned with app **1.0.6+14**.
 
 ### App
 

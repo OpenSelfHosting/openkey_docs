@@ -8,7 +8,7 @@ OpenKey অ্যাপ নিন, তারপর ঐচ্ছিকভাব�
 
 অ্যাপ id: `com.openselfhosting.openkey` · Org: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-স্টোর লিস্টিং ও GitHub Releases প্ল্যাটফর্মভিত্তিক আসে। **Google Play এখন লাইভ** — Android-এ OpenKey ইনস্টল করুন [স্টোর লিস্টিং](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) থেকে। অফিসিয়াল অ্যাপ বাইনারি [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases)-এও পাওয়া যায়। অ্যাপের অফিসিয়াল **সোর্স সর্বজনীন নয়**, তাই নিজে বিল্ড না করে ওই আর্টিফ্যাক্টই ব্যবহার করুন। অন্য স্টোর লিস্টিং এখনও পর্যালোচনায় থাকতে পারে।
+স্টোর লিস্টিং ও GitHub Releases প্ল্যাটফর্মভিত্তিক আসে। **Google Play ও Microsoft Store লাইভ** — Android-এ OpenKey ইনস্টল করুন [Google Play লিস্টিং](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) থেকে, অথবা Windows-এ [Microsoft Store লিস্টিং](https://apps.microsoft.com/detail/9MXNBRPMDT53) থেকে। প্রধান ডাউনলোড বাটনটি আপনার সিস্টেমের স্টোরে নিয়ে যায়, আর পাশের বাটনটি সরাসরি বিল্ড দেয়। অফিসিয়াল অ্যাপ বাইনারি [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases)-এও পাওয়া যায়। অ্যাপের অফিসিয়াল **সোর্স সর্বজনীন নয়**, তাই নিজে বিল্ড না করে ওই আর্টিফ্যাক্টই ব্যবহার করুন। অন্য স্টোর লিস্টিং এখনও পর্যালোচনায় থাকতে পারে।
 
 ## মোবাইল
 
@@ -43,9 +43,9 @@ OpenKey অ্যাপ নিন, তারপর ঐচ্ছিকভাব�
 
 | Build | Artifact |
 |-------|----------|
-| x64 installer {#windows-x64} | `OpenKey-*-windows-x64-setup.exe` · portable `.zip` · optional `.msix` |
+| x64 installer {#windows-x64} | `OpenKey-*-windows-x64.exe` · portable `.zip` |
 | Arm64 {#windows-arm64} | When published on GitHub Releases / Microsoft Store |
-| Microsoft Store {#windows-store} | When listed |
+| Microsoft Store {#windows-store} | [Microsoft Store-এ OpenKey নিন](https://apps.microsoft.com/detail/9MXNBRPMDT53) — Windows ব্যবহারকারীদের জন্য প্রস্তাবিত; নিজে থেকেই আপডেট হয় |
 
 ### Linux {#linux}
 
@@ -55,6 +55,8 @@ OpenKey অ্যাপ নিন, তারপর ঐচ্ছিকভাব�
 | AppImage Arm64 {#linux-appimage-arm64} | `OpenKey-*-linux-arm64.AppImage` |
 | `.deb` x64 {#linux-deb-x64} | `OpenKey-*-linux-x64.deb` |
 | `.deb` Arm64 {#linux-deb-arm64} | `OpenKey-*-linux-arm64.deb` |
+| `.rpm` x64 {#linux-rpm-x64} | `OpenKey-*-linux-x64.rpm` |
+| `.rpm` Arm64 {#linux-rpm-arm64} | `OpenKey-*-linux-arm64.rpm` |
 | `.tar.gz` x64 {#linux-tar-x64} | Portable tarball from `build_all/linux/` |
 | `.tar.gz` Arm64 {#linux-tar-arm64} | Portable tarball (arm64) |
 

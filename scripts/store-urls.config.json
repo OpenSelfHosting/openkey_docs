@@ -14,9 +14,8 @@
       "comment": "Mac App Store — often same appleId as iOS"
     },
     "windows-store": {
-      "url": "https://apps.microsoft.com/store/detail/9MXNBRPMDT53?cid=DevShareMCLPCS",
       "productId": "9MXNBRPMDT53",
-      "comment": "Microsoft Store listing. url takes precedence; productId is the store detail id (used only as a fallback)."
+      "comment": "Microsoft Store listing — public detail URL is built from productId. Set url only to override it (do not paste a DevShare cid here: it is a private preview link)."
     },
     "linux-flathub": {
       "live": false,

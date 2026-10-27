@@ -8,7 +8,7 @@ Obtenez l’application OpenKey, puis connectez optionnellement un [serveur auto
 
 Identifiant d’application : `com.openselfhosting.openkey` · Org : [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-Les fiches magasin et les GitHub Releases se déploient par plateforme. **Google Play est disponible** : installez OpenKey sur Android depuis [la fiche magasin](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey). Les binaires officiels sont aussi publiés sur [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). Le code source officiel **n’est pas public** : utilisez ces artefacts plutôt que de compiler vous-même. Les autres fiches peuvent encore être en cours de revue.
+Les fiches magasin et les GitHub Releases se déploient par plateforme. **Google Play et le Microsoft Store sont disponibles** : installez OpenKey sur Android depuis [la fiche Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) ou sur Windows depuis [la fiche Microsoft Store](https://apps.microsoft.com/detail/9MXNBRPMDT53). Le bouton principal de téléchargement vous amène à la boutique de votre système, et le bouton voisin vous donne la version directe. Les binaires officiels sont aussi publiés sur [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). Le code source officiel **n’est pas public** : utilisez ces artefacts plutôt que de compiler vous-même. Les autres fiches peuvent encore être en cours de revue.
 
 ## Mobile
 
@@ -43,9 +43,9 @@ Activez **Réglages → Sécurité** pour qu’OpenKey remplisse mots de passe e
 
 | Build | Artifact |
 |-------|----------|
-| x64 installer {#windows-x64} | `OpenKey-*-windows-x64-setup.exe` · portable `.zip` · optional `.msix` |
+| x64 installer {#windows-x64} | `OpenKey-*-windows-x64.exe` · portable `.zip` |
 | Arm64 {#windows-arm64} | When published on GitHub Releases / Microsoft Store |
-| Microsoft Store {#windows-store} | When listed |
+| Microsoft Store {#windows-store} | [Obtenir OpenKey sur le Microsoft Store](https://apps.microsoft.com/detail/9MXNBRPMDT53) — recommandé pour les visiteurs Windows ; se met à jour tout seul |
 
 ### Linux {#linux}
 
@@ -55,6 +55,8 @@ Activez **Réglages → Sécurité** pour qu’OpenKey remplisse mots de passe e
 | AppImage Arm64 {#linux-appimage-arm64} | `OpenKey-*-linux-arm64.AppImage` |
 | `.deb` x64 {#linux-deb-x64} | `OpenKey-*-linux-x64.deb` |
 | `.deb` Arm64 {#linux-deb-arm64} | `OpenKey-*-linux-arm64.deb` |
+| `.rpm` x64 {#linux-rpm-x64} | `OpenKey-*-linux-x64.rpm` |
+| `.rpm` Arm64 {#linux-rpm-arm64} | `OpenKey-*-linux-arm64.rpm` |
 | `.tar.gz` x64 {#linux-tar-x64} | Portable tarball from `build_all/linux/` |
 | `.tar.gz` Arm64 {#linux-tar-arm64} | Portable tarball (arm64) |
 

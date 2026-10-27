@@ -42,7 +42,7 @@ Before each build, `npm run sync:downloads` refreshes `.vitepress/theme/download
 
 | Source | Config | When URLs appear |
 |--------|--------|------------------|
-| **GitHub Releases** | `OpenSelfHosting/OpenKey` (override: `OPENKEY_RELEASE_REPO`) | Matching assets on the latest release (`OpenKey-*-windows-x64-setup.exe`, etc.) |
+| **GitHub Releases** | `OpenSelfHosting/OpenKey` (override: `OPENKEY_RELEASE_REPO`) | Matching assets on the latest release (`OpenKey-*-windows-x64.exe`, etc.) |
 | **App stores** | `scripts/store-urls.config.json` | Set `live: true`, `appleId`, or `productId` when a listing goes public |
 
 **Store config** (`scripts/store-urls.config.json`):

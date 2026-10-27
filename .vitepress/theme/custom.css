@@ -575,6 +575,47 @@ html.dark .ok-cloud {
   background: var(--vp-c-brand-soft);
 }
 
+/* The direct-download escape hatch, sitting in the ghost CTA's slot beside the
+   store button above it. Same quiet shape, with a brand-tinted edge so it never
+   reads as the plain "Get Started" link. */
+.ok-dl__cta--direct {
+  border-color: color-mix(in srgb, var(--ok-teal) 42%, var(--vp-c-border));
+}
+
+/* The "Get it from / Microsoft Store" button wears the shape the platforms' own
+   badges use: the mark at the start edge, eyebrow over store name, both hugging
+   the left. Centring that block made the two lines read as loose words floating
+   in a pill. */
+.ok-hero__cta--store {
+  justify-content: flex-start;
+  gap: 0.9rem;
+  /* Most of the row, never all of it. A store badge has proportions, and one
+     stretched across the whole column stops reading as a badge at all. The rem
+     ceiling matters on the download page, whose featured row is twice as wide as
+     the hero's — a share alone would sprawl there. */
+  width: 100%;
+  max-width: min(70%, 24rem);
+  /* The badge is the page's one main action, so it outgrows the shared CTA:
+     a taller pill and a larger store name than "Download For Windows" gets. */
+  min-height: 4rem;
+  padding-inline: 2rem;
+  font-size: 1.16rem;
+}
+
+/* The direct download below it is held a step under that share. This is what
+   keeps the badge reliably the wider of the two at every row width and in every
+   language, instead of the pair drifting level on a long translation. */
+.ok-hero__cta--ghost {
+  width: auto;
+  max-width: min(65%, 22rem);
+}
+
+/* The badge sets its own rhythm, so it drops the shared icon margin and lets the
+   flex gap do the spacing instead. */
+.ok-hero__cta--store .ok-dl__cta-icon {
+  margin-inline-end: 0;
+}
+
 @keyframes ok-rise {
   from {
     opacity: 0;
@@ -646,8 +687,12 @@ html.dark .ok-cloud {
     text-align: center;
   }
 
-  .ok-dl__actions {
-    justify-content: center;
+  .ok-hero__content .ok-dl__actions {
+    /* This band centres the hero, so the pair centres with it. Replaces a
+       `justify-content` that did nothing here: the main axis is vertical now.
+       Scoped through the hero so it outranks the base rule, which sits later in
+       the file than this breakpoint block. */
+    align-items: center;
   }
 
   .ok-cloud--hero-left {
@@ -706,11 +751,30 @@ html.dark .ok-cloud {
 
   .ok-dl__actions {
     flex-direction: column;
-    align-items: stretch;
+  }
+
+  /* Scoped through the hero so it outranks the 1024px rule above, which centres
+     this row. Unscoped it lost, and the badge — the one child with a max-width —
+     got centred while the direct download escaped via its own `align-self`,
+     leaving a left-aligned stack with two different left edges. */
+  .ok-hero__content .ok-dl__actions {
+    align-items: flex-start;
   }
 
   .ok-dl__actions .ok-hero__cta--primary {
     width: 100%;
+  }
+
+  /* A badge spends its width on the mark, the gap and a one-line store name.
+     The desktop share of 70% cannot hold "Microsoft Store" at handset width: it
+     folded onto a second line while the row still had room spare. So on a
+     handset the badge fills its row and only stops at the same rem ceiling the
+     desktop rule uses — badge proportions, without the share that squeezed the
+     text. */
+  .ok-dl__actions .ok-hero__cta--store {
+    max-width: min(100%, 24rem);
+    padding-inline: 1.5rem;
+    gap: 0.75rem;
   }
 
   .ok-dl__actions .ok-hero__cta--ghost {
@@ -1251,16 +1315,29 @@ html.dark .ok-cta-card {
 
 .ok-cta-card__actions {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 0.9rem 1rem;
+  justify-content: center;
+  /* No cap on the row: it used to be 26rem, which held the badge down to 291px
+     and left it only 21px wider than the direct download. The badge's own
+     min(70%, 24rem) is what keeps it bounded inside the 1080px card. */
+  width: 100%;
+  gap: 0.75rem 1rem;
 }
 
 .ok-cta-card__actions .ok-hero__cta {
   min-height: 2.9rem;
   font-size: 1rem;
   padding: 0 1.5rem;
+}
+
+/* The card shrinks its pair so it reads as a footer nudge, but the badge still
+   has to outgrow its neighbour — otherwise "always bigger" quietly stops being
+   true at the bottom of the page. Has to out-specify the rule above. */
+.ok-cta-card__actions .ok-hero__cta--store {
+  min-height: 3.6rem;
+  font-size: 1.08rem;
+  padding-inline: 1.7rem;
 }
 
 /* Tablet: stack showcases — text on top, media below, like tablet.png */
@@ -1353,9 +1430,13 @@ html.dark .ok-cta-card {
     flex-direction: column;
   }
 
-  .ok-cta-card__actions .ok-hero__cta {
-    width: 100%;
-    max-width: 320px;
+  /* The card's row is tighter than the hero's — the band padding and the card
+     padding both come out of the same handset width — so the badge fills what
+     is left, capped at the same rem ceiling the hero badge stops at. */
+  .ok-cta-card__actions .ok-hero__cta--store {
+    max-width: min(100%, 24rem);
+    padding-inline: 1.25rem;
+    gap: 0.7rem;
   }
 
   .ok-home-band,
@@ -1726,7 +1807,15 @@ html.dark .ok-cta-card {
 
 .ok-dl__actions {
   display: flex;
+  /* Store first, always — above the direct download, and wider than it. A single
+     column makes the reading order and the importance order agree on every
+     breakpoint; the pair's relative widths come from the share each one claims. */
+  flex-direction: column;
+  align-items: flex-start;
   flex-wrap: wrap;
+  /* A definite width, so the badge's percentage has something to resolve
+     against instead of a shrink-to-fit parent. */
+  width: 100%;
   gap: 0.75rem 0.9rem;
 }
 
@@ -1739,8 +1828,9 @@ html.dark .ok-cta-card {
   color: inherit;
 }
 
-/* Raster marks (Linux Tux) stay full-color in cards; flatten to white on solid CTAs */
-.ok-hero__cta--primary .ok-platform-icon--raster {
+/* Raster marks (Linux Tux) stay full-color in cards; flatten to white on solid CTAs.
+   Store marks are excluded — they are the vendors' own full-colour artwork. */
+.ok-hero__cta--primary .ok-platform-icon--raster:not(.ok-platform-icon--store) {
   filter: brightness(0) invert(1);
   opacity: 0.95;
 }
@@ -1782,6 +1872,17 @@ html.dark .ok-cta-card {
   -webkit-mask-image: none !important;
   mask-image: none !important;
   box-shadow: none !important;
+}
+
+/* Store marks are the vendors' own full-colour artwork, kept verbatim. A hairline
+   of contrast keeps the dark Microsoft bag from sinking into a dark background;
+   drop-shadow (not box-shadow) so it traces the triangle on Google Play. */
+.ok-platform-icon--store {
+  filter: drop-shadow(0 0 1px rgb(0 0 0 / 0.3));
+}
+
+.ok-hero__cta--primary .ok-platform-icon--store {
+  filter: drop-shadow(0 0 1px rgb(255 255 255 / 0.55));
 }
 
 .ok-platform-icon--android {
@@ -2043,8 +2144,11 @@ html.dark .ok-cta-card {
 
 .ok-dl__featured-actions {
   display: flex;
+  /* Same stacked badge-then-direct order as the hero picker, so the download
+     page's featured card never contradicts the landing page. */
+  flex-direction: column;
+  align-items: flex-start;
   flex-wrap: wrap;
-  align-items: center;
   gap: 0.75rem 1rem;
 }
 
@@ -2199,6 +2303,111 @@ html.dark .ok-cta-card {
   }
 }
 
+/* App-store badge: eyebrow above the store name, the way the platforms' own
+   badges read. Only shown when the CTA points at a live store listing. */
+.ok-dl__cta-store {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.05rem;
+  line-height: 1.1;
+  text-align: start;
+}
+
+.ok-dl__cta-store-eyebrow {
+  font-size: 0.62em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.ok-dl__cta-store-name {
+  font-size: 1.08em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Always-visible store row on the home page. Quieter than the hero CTA above it:
+   a store badge is a destination, not the page's one main action. */
+.ok-store-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.15rem;
+}
+
+.ok-store-badges__caption {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--ok-ink-faint);
+}
+
+.ok-store-badges__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.ok-store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.95rem;
+  border: 1px solid var(--ok-line);
+  border-radius: 0.6rem;
+  background: var(--vp-c-bg-elv);
+  color: var(--ok-ink) !important;
+  text-decoration: none !important;
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.dark .ok-store-badge {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.ok-store-badge:hover {
+  border-color: var(--ok-teal);
+  background: var(--vp-c-brand-soft);
+  transform: translateY(-1px);
+}
+
+.ok-store-badge:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.ok-store-badge:focus-visible {
+  outline: 2px solid var(--ok-teal);
+  outline-offset: 3px;
+}
+
+.ok-store-badge__text {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.15;
+  text-align: start;
+}
+
+.ok-store-badge__eyebrow {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ok-ink-faint);
+}
+
+.ok-store-badge__name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
 /* Thank-you after download */
 .ok-thanks {
   max-width: 40rem;
@@ -2335,6 +2544,24 @@ button.ok-hero__cta--primary:focus {
   .ok-dl__featured-actions .ok-hero__cta,
   .ok-dl__featured-actions .ok-dl__select {
     width: 100%;
+  }
+
+  /* Same handset squeeze as the hero badge: 70% of this row wrapped "Microsoft
+     Store". It already stretches, so the badge takes the full width, capped at
+     the same rem ceiling — a percentage here would sprawl on the tablet widths
+     this block also covers, where the row is over twice the hero's. */
+  .ok-dl__featured-actions .ok-hero__cta--store {
+    max-width: min(100%, 24rem);
+    padding-inline: 1.5rem;
+    gap: 0.75rem;
+  }
+
+  /* Stretch here would hand the direct download the same 100% as the badge and
+     leave the pair looking like twins, so it keeps the hero's rule instead:
+     shrink to its own label. align-self has to beat the container's stretch. */
+  .ok-dl__featured-actions .ok-hero__cta--ghost {
+    width: auto;
+    align-self: flex-start;
   }
 
   .ok-dl__other--featured {

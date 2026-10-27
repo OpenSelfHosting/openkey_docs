@@ -8,7 +8,7 @@ title: التنزيل والتثبيت
 
 معرّف التطبيق: `com.openselfhosting.openkey` · المنظمة: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-قوائم المتاجر وإصدارات GitHub تُنشر تدريجياً لكل منصة. **Google Play متاح الآن** — ثبّت OpenKey على أندرويد من [صفحة المتجر](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey). الباينري الرسمي متاح أيضاً على [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). **سورس التطبيق الرسمي ليس عاماً**، لذا استخدم تلك الحزم بدلاً من بنائها بنفسك. بقية صفحات المتاجر قد تكون قيد المراجعة.
+قوائم المتاجر وإصدارات GitHub تُنشر تدريجياً لكل منصة. **Google Play و Microsoft Store متاحان الآن** — ثبّت OpenKey على أندرويد من [صفحة Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) أو على ويندوز من [صفحة Microsoft Store](https://apps.microsoft.com/detail/9MXNBRPMDT53). يأخذك زر التنزيل الرئيسي إلى متجر نظامك، ويتيح الزر المجاور تنزيل الحزمة المباشرة بدلاً منه. الباينري الرسمي متاح أيضاً على [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). **سورس التطبيق الرسمي ليس عاماً**، لذا استخدم تلك الحزم بدلاً من بنائها بنفسك. بقية صفحات المتاجر قد تكون قيد المراجعة.
 
 ## الجوال
 
@@ -37,12 +37,14 @@ title: التنزيل والتثبيت
 | Apple Silicon {#macos-arm64} | `OpenKey-*-macos-arm64.dmg` / `.zip` من `build_all/macos/` |
 | Intel {#macos-x64} | `OpenKey-*-macos-x64.dmg` / `.zip` |
 | Universal {#macos-universal} | فضّل `.dmg` المطابق للمعمارية؛ Mac App Store عند الإدراج |
+| Mac App Store {#macos-appstore} | عند الإدراج — ابحث عن **OpenKey** من OpenSelfHosting |
 
 ### Windows {#windows}
 
 | البناء | الحزمة |
 |-------|----------|
-| مثبّت x64 {#windows-x64} | `OpenKey-*-windows-x64-setup.exe` · `.zip` محمول · `.msix` اختياري |
+| Microsoft Store {#windows-store} | [احصل على OpenKey من Microsoft Store](https://apps.microsoft.com/detail/9MXNBRPMDT53) — مُوصى به لزوار ويندوز؛ يُحدّث نفسه تلقائياً |
+| مثبّت x64 {#windows-x64} | `OpenKey-*-windows-x64.exe` · `.zip` محمول |
 | Arm64 {#windows-arm64} | عند النشر على GitHub Releases / Microsoft Store |
 
 ### Linux {#linux}
@@ -53,6 +55,8 @@ title: التنزيل والتثبيت
 | AppImage Arm64 {#linux-appimage-arm64} | `OpenKey-*-linux-arm64.AppImage` |
 | `.deb` x64 {#linux-deb-x64} | `OpenKey-*-linux-x64.deb` |
 | `.deb` Arm64 {#linux-deb-arm64} | `OpenKey-*-linux-arm64.deb` |
+| `.rpm` x64 {#linux-rpm-x64} | `OpenKey-*-linux-x64.rpm` |
+| `.rpm` Arm64 {#linux-rpm-arm64} | `OpenKey-*-linux-arm64.rpm` |
 | `.tar.gz` x64 {#linux-tar-x64} | أرشيف محمول من `build_all/linux/` |
 | `.tar.gz` Arm64 {#linux-tar-arm64} | أرشيف محمول (arm64) |
 

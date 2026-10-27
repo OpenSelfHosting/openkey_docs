@@ -19,6 +19,9 @@ export type DownloadVariant = {
    */
   href: string
   external?: boolean
+  /** Installs from an app store rather than a direct file, so it renders as a
+   *  store badge and can win the primary CTA. */
+  store?: boolean
   /** Preferred pick when OS matches and arch aligns */
   recommended?: boolean
 }
@@ -84,12 +87,55 @@ function runsOnArch(
 }
 
 /**
- * Best build for a detected OS/arch, preferring one we can actually deliver.
+ * Best *direct* build — installer, .dmg, .deb, APK — for a detected OS/arch.
  *
- * A "Download for <OS>" button must start a download, so a published artifact
- * always outranks the hand-picked `recommended` build: store listings are often
- * unpublished while the release asset right next to them is live (Flathub and
- * Snap are the cases in point — the desktop AppImages are published).
+ * Store listings are excluded here: they now take the primary button, leaving
+ * this build in the second slot. Ranking inside the direct set follows what the
+ * visitor expects:
+ *
+ * 1. The hand-picked `recommended` build we can actually deliver.
+ * 2. Any other available direct build.
+ * 3. The hand-picked `recommended` build, unpublished — the caller then lands on
+ *    the install guide rather than a broken link.
+ *
+ * Returns undefined when the platform ships no direct build at all (iOS).
+ */
+export function resolveDirectVariant(
+  platform: DownloadPlatform,
+  arch: ArchId,
+): DownloadVariant | undefined {
+  const usable = platform.variants.filter((v) => runsOnArch(platform, v, arch))
+  const pool = usable.length > 0 ? usable : platform.variants
+  const direct = pool.filter((v) => !v.store)
+  if (direct.length === 0) return undefined
+  return (
+    direct.find((v) => v.recommended && isAvailable(v)) ??
+    direct.find((v) => isAvailable(v)) ??
+    direct.find((v) => v.recommended) ??
+    direct[0]
+  )
+}
+
+/**
+ * Live store listing for a platform — the channel the primary CTA hands over as
+ * soon as we have published one. Store builds are universal, so the detected
+ * architecture is irrelevant. Undefined when we have no listing for this OS, and
+ * the caller then falls back to the direct build.
+ */
+export function resolveStoreVariant(
+  platform: DownloadPlatform,
+): DownloadVariant | undefined {
+  return platform.variants.find((v) => v.store && isAvailable(v))
+}
+
+/**
+ * Build the primary download button hands over: the live store listing first,
+ * then the direct artifact.
+ *
+ * Stores win because they are the self-updating, prompt-free channel — the one
+ * that never trips SmartScreen or a sideload warning — so the direct build drops
+ * to the second button. Platforms with no listing yet (macOS and Linux) keep the
+ * direct build as the primary.
  *
  * Falls through to the best non-published build when the platform has nothing
  * live, which keeps the caller on the install-guide path instead of guessing.
@@ -98,14 +144,24 @@ export function resolveDownloadVariant(
   platform: DownloadPlatform,
   arch: ArchId,
 ): DownloadVariant | undefined {
-  const usable = platform.variants.filter((v) => runsOnArch(platform, v, arch))
-  const pool = usable.length > 0 ? usable : platform.variants
   return (
-    pool.find((v) => v.recommended && isAvailable(v)) ??
-    pool.find((v) => isAvailable(v)) ??
-    pool.find((v) => v.recommended) ??
-    pool[0]
+    resolveStoreVariant(platform) ??
+    resolveDirectVariant(platform, arch) ??
+    platform.variants.find((v) => v.recommended) ??
+    platform.variants[0]
   )
+}
+
+/**
+ * True when `variant` is the channel the primary CTA hands over, so the
+ * "your OS" pill can never sit on a row the button does not point at.
+ */
+export function isPrimaryVariant(
+  platform: DownloadPlatform,
+  variant: DownloadVariant,
+  arch: ArchId,
+): boolean {
+  return resolveDownloadVariant(platform, arch)?.id === variant.id
 }
 
 /** Thank-you page used when a selected build has no live release asset. */
@@ -203,6 +259,7 @@ const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
         labelKey: 'windowsStore',
         arch: 'universal',
         href: '#windows-store',
+        store: true,
       },
     ],
   },
@@ -236,6 +293,7 @@ const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
         labelKey: 'macosAppStore',
         arch: 'universal',
         href: '#macos-appstore',
+        store: true,
       },
     ],
   },
@@ -271,6 +329,18 @@ const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
         href: '#linux-deb-arm64',
       },
       {
+        id: 'linux-rpm-x64',
+        labelKey: 'linuxRpmX64',
+        arch: 'x64',
+        href: '#linux-rpm-x64',
+      },
+      {
+        id: 'linux-rpm-arm64',
+        labelKey: 'linuxRpmArm64',
+        arch: 'arm64',
+        href: '#linux-rpm-arm64',
+      },
+      {
         id: 'linux-tar-x64',
         labelKey: 'linuxTarX64',
         arch: 'x64',
@@ -295,6 +365,7 @@ const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
         labelKey: 'androidPlay',
         arch: 'universal',
         href: '#android-play',
+        store: true,
         recommended: true,
       },
       {
@@ -316,6 +387,7 @@ const DOWNLOAD_PLATFORMS_BASE: DownloadPlatform[] = [
         labelKey: 'iosAppStore',
         arch: 'universal',
         href: '#ios',
+        store: true,
         recommended: true,
       },
     ],

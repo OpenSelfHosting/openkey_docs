@@ -10,6 +10,8 @@ export type DownloadCopy = {
   platformsHeading: string
   channelsNote: string
   getStarted: string
+  /** Label of the quiet second button offering the direct build. */
+  directCta: string
   unknownCta: string
   thanksTitle: string
   /** Shown instead of `thanksTitle` when the build has no public artifact. */
@@ -27,6 +29,13 @@ export type DownloadCopy = {
   platform: Record<OsId, string>
   requirement: Record<OsId, string>
   variant: Record<string, string>
+  /**
+   * Eyebrow line above the store name in a store badge ("Get it on"), keyed by
+   * store variant id. The name itself comes from `variant`.
+   */
+  storeEyebrow: Record<string, string>
+  /** Caption above the always-visible store badges on the home page. */
+  storesCaption: string
   installSteps: Record<OsId, string[]>
 }
 
@@ -107,6 +116,7 @@ const en: DownloadCopy = {
   channelsNote:
     'Store listings and GitHub Releases roll out per platform. Until a channel is live, the guide below covers stores, sideload artifacts, and building from source.',
   getStarted: 'Get Started',
+  directCta: 'Direct download',
   unknownCta: 'Download',
   thanksTitle: 'Thanks for downloading OpenKey',
   unavailableTitle: 'This build is not published yet',
@@ -157,6 +167,11 @@ const en: DownloadCopy = {
     androidApk: 'APK (sideload)',
     iosAppStore: 'App Store',
   },
+  storeEyebrow: {
+    'android-play': 'Get it on',
+    'windows-store': 'Get it from',
+  },
+  storesCaption: 'Or get it from a store',
   installSteps: enInstall,
 }
 
@@ -171,6 +186,7 @@ const ar: DownloadCopy = {
   channelsNote:
     'قوائم المتاجر وإصدارات GitHub تُنشر تدريجياً لكل منصة. إلى أن تصبح القناة حيّة، يغطي الدليل أدناه المتاجر والحزم الجانبية والبناء من المصدر.',
   getStarted: 'ابدأ الآن',
+  directCta: 'تنزيل مباشر',
   unknownCta: 'التنزيل',
   thanksTitle: 'شكراً لتنزيل OpenKey',
   unavailableTitle: 'هذا البناء غير منشور بعد',
@@ -221,6 +237,11 @@ const ar: DownloadCopy = {
     androidApk: 'APK (تثبيت جانبي)',
     iosAppStore: 'App Store',
   },
+  storeEyebrow: {
+    'android-play': 'احصل عليه من',
+    'windows-store': 'احصل عليه من',
+  },
+  storesCaption: 'أو احصل عليه من متجر',
   installSteps: arInstall,
 }
 
@@ -500,6 +521,7 @@ const zh: DownloadCopy = {
   channelsNote:
     '各平台商店与 GitHub Releases 将逐步上线。在渠道可用前，下方指南涵盖商店、侧载包与自行构建。',
   getStarted: '开始使用',
+  directCta: '直接下载',
   unknownCta: '下载',
   thanksTitle: '感谢下载 OpenKey',
   unavailableTitle: '该构建尚未发布',
@@ -531,6 +553,11 @@ const zh: DownloadCopy = {
     linuxFlathub: 'Flathub',
     linuxSnap: 'Snap 商店',
   },
+  storeEyebrow: {
+    'android-play': '从',
+    'windows-store': '从',
+  },
+  storesCaption: '或从应用商店获取',
   installSteps: zhInstall,
 }
 
@@ -546,6 +573,7 @@ const es: DownloadCopy = {
   channelsNote:
     'Las fichas de tienda y las Releases de GitHub se despliegan por plataforma. Hasta que un canal esté activo, la guía abajo cubre tiendas, sideload y compilación desde el código.',
   getStarted: 'Empezar',
+  directCta: 'Descarga directa',
   unknownCta: 'Descargar',
   thanksTitle: 'Gracias por descargar OpenKey',
   unavailableTitle: 'Este build todavía no está publicado',
@@ -559,6 +587,11 @@ const es: DownloadCopy = {
   otherBuilds: 'Otras plataformas',
   backToDownload: 'Volver a descargas',
   openGuide: 'Notas de instalación',
+  storeEyebrow: {
+    'android-play': 'Consíguelo en',
+    'windows-store': 'Obténgalo en',
+  },
+  storesCaption: 'O consíguelo en una tienda',
   installSteps: esInstall,
 }
 
@@ -574,6 +607,7 @@ const fr: DownloadCopy = {
   channelsNote:
     'Les fiches magasin et les GitHub Releases se déploient par plateforme. Tant qu’un canal n’est pas en ligne, le guide ci-dessous couvre magasins, sideload et compilation depuis les sources.',
   getStarted: 'Commencer',
+  directCta: 'Téléchargement direct',
   unknownCta: 'Télécharger',
   thanksTitle: 'Merci d’avoir téléchargé OpenKey',
   unavailableTitle: 'Ce build n’est pas encore publié',
@@ -587,6 +621,11 @@ const fr: DownloadCopy = {
   otherBuilds: 'Autres plateformes',
   backToDownload: 'Retour au téléchargement',
   openGuide: 'Notes d’installation',
+  storeEyebrow: {
+    'android-play': 'Disponible sur',
+    'windows-store': 'Télécharger dans',
+  },
+  storesCaption: 'Ou dans une boutique',
   installSteps: frInstall,
 }
 
@@ -602,6 +641,7 @@ const hi: DownloadCopy = {
   channelsNote:
     'स्टोर लिस्टिंग और GitHub Releases धीरे-धीरे आते हैं। जब तक चैनल लाइव न हो, नीचे का गाइड स्टोर, साइडलोड और सोर्स बिल्ड कवर करता है।',
   getStarted: 'शुरू करें',
+  directCta: 'सीधा डाउनलोड',
   unknownCta: 'डाउनलोड',
   thanksTitle: 'OpenKey डाउनलोड के लिए धन्यवाद',
   unavailableTitle: 'यह बिल्ड अभी प्रकाशित नहीं है',
@@ -622,6 +662,11 @@ const hi: DownloadCopy = {
     android: 'Google Play · जरूरत पर APK साइडलोड',
     ios: 'लिस्टिंग के बाद App Store',
   },
+  storeEyebrow: {
+    'android-play': 'Google Play पर उपलब्ध',
+    'windows-store': 'Microsoft Store से पाएँ',
+  },
+  storesCaption: 'या किसी स्टोर से पाएँ',
   installSteps: hiInstall,
 }
 
@@ -637,6 +682,7 @@ const bn: DownloadCopy = {
   channelsNote:
     'স্টোর লিস্টিং ও GitHub Releases ধীরে ধীরে আসে। চ্যানেল লাইভ না হওয়া পর্যন্ত নিচের গাইড স্টোর, সাইডলোড ও সোর্স বিল্ড কভার করে।',
   getStarted: 'শুরু করুন',
+  directCta: 'সরাসরি ডাউনলোড',
   unknownCta: 'ডাউনলোড',
   thanksTitle: 'OpenKey ডাউনলোডের জন্য ধন্যবাদ',
   unavailableTitle: 'এই বিল্ডটি এখনও প্রকাশিত হয়নি',
@@ -657,6 +703,11 @@ const bn: DownloadCopy = {
     android: 'Google Play · প্রয়োজনে APK সাইডলোড',
     ios: 'লিস্টিংয়ের পর App Store',
   },
+  storeEyebrow: {
+    'android-play': 'Google Play-এ পান',
+    'windows-store': 'Microsoft Store থেকে নিন',
+  },
+  storesCaption: 'অথবা একটি স্টোর থেকে নিন',
   installSteps: bnInstall,
 }
 
@@ -672,6 +723,7 @@ const pt: DownloadCopy = {
   channelsNote:
     'Listagens nas lojas e GitHub Releases são lançadas por plataforma. Até o canal ficar ativo, o guia abaixo cobre lojas, sideload e build a partir do código.',
   getStarted: 'Começar',
+  directCta: 'Download direto',
   unknownCta: 'Baixar',
   thanksTitle: 'Obrigado por baixar o OpenKey',
   unavailableTitle: 'Este build ainda não foi publicado',
@@ -685,6 +737,11 @@ const pt: DownloadCopy = {
   otherBuilds: 'Outras plataformas e builds',
   backToDownload: 'Voltar ao download',
   openGuide: 'Notas de instalação',
+  storeEyebrow: {
+    'android-play': 'Disponível no',
+    'windows-store': 'Obter no',
+  },
+  storesCaption: 'Ou numa loja',
   installSteps: ptInstall,
 }
 
@@ -700,6 +757,7 @@ const ru: DownloadCopy = {
   channelsNote:
     'Листинги в магазинах и GitHub Releases появляются постепенно. Пока канал не активен, ниже — магазины, sideload и сборка из исходников.',
   getStarted: 'Начать',
+  directCta: 'Прямая загрузка',
   unknownCta: 'Скачать',
   thanksTitle: 'Спасибо за загрузку OpenKey',
   unavailableTitle: 'Эта сборка ещё не опубликована',
@@ -713,6 +771,11 @@ const ru: DownloadCopy = {
   otherBuilds: 'Другие платформы и сборки',
   backToDownload: 'Назад к загрузке',
   openGuide: 'Инструкция по установке',
+  storeEyebrow: {
+    'android-play': 'Доступно в',
+    'windows-store': 'Получить в',
+  },
+  storesCaption: 'Или в магазине',
   installSteps: ruInstall,
 }
 
@@ -728,6 +791,7 @@ const ur: DownloadCopy = {
   channelsNote:
     'اسٹور لسٹنگز اور GitHub Releases آہستہ آہستہ آتے ہیں۔ جب تک چینل لائیو نہ ہو، نیچے کا گائیڈ اسٹور، سائیڈلوڈ اور سورس بلڈ کا احاطہ کرتا ہے۔',
   getStarted: 'شروع کریں',
+  directCta: 'براہ راست ڈاؤن لوڈ',
   unknownCta: 'ڈاؤن لوڈ',
   thanksTitle: 'OpenKey ڈاؤن لوڈ کا شکریہ',
   unavailableTitle: 'یہ بلڈ ابھی شائع نہیں ہوا',
@@ -741,6 +805,11 @@ const ur: DownloadCopy = {
   otherBuilds: 'دیگر پلیٹ فارمز اور بلڈز',
   backToDownload: 'ڈاؤن لوڈ پر واپس',
   openGuide: 'انسٹال نوٹس',
+  storeEyebrow: {
+    'android-play': 'Google Play پر دستیاب',
+    'windows-store': 'Microsoft Store سے حاصل کریں',
+  },
+  storesCaption: 'یا کسی اسٹور سے حاصل کریں',
   installSteps: urInstall,
 }
 

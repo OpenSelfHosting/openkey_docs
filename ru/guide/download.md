@@ -8,7 +8,7 @@ title: Скачать и установить
 
 Id приложения: `com.openselfhosting.openkey` · Org: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-Листинги в магазинах и GitHub Releases появляются по платформам. **Google Play уже доступен** — установите OpenKey на Android из [карточки магазина](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey). Официальные бинарники также публикуются в [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). Официальный исходный код **не публикуется**, поэтому используйте эти артефакты, а не собирайте приложение сами. Остальные карточки магазинов могут ещё проходить проверку.
+Листинги в магазинах и GitHub Releases появляются по платформам. **Google Play и Microsoft Store уже доступны** — установите OpenKey на Android из [карточки Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) или на Windows из [карточки Microsoft Store](https://apps.microsoft.com/detail/9MXNBRPMDT53). Основная кнопка загрузки ведёт в магазин вашей системы, а соседняя отдаёт прямую сборку. Официальные бинарники также публикуются в [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). Официальный исходный код **не публикуется**, поэтому используйте эти артефакты, а не собирайте приложение сами. Остальные карточки магазинов могут ещё проходить проверку.
 
 ## Мобильные
 
@@ -43,9 +43,9 @@ Id приложения: `com.openselfhosting.openkey` · Org: [OpenSelfHosting]
 
 | Build | Artifact |
 |-------|----------|
-| x64 installer {#windows-x64} | `OpenKey-*-windows-x64-setup.exe` · portable `.zip` · optional `.msix` |
+| x64 installer {#windows-x64} | `OpenKey-*-windows-x64.exe` · portable `.zip` |
 | Arm64 {#windows-arm64} | When published on GitHub Releases / Microsoft Store |
-| Microsoft Store {#windows-store} | When listed |
+| Microsoft Store {#windows-store} | [Скачать OpenKey из Microsoft Store](https://apps.microsoft.com/detail/9MXNBRPMDT53) — рекомендуется для пользователей Windows; обновляется сам |
 
 ### Linux {#linux}
 
@@ -55,6 +55,8 @@ Id приложения: `com.openselfhosting.openkey` · Org: [OpenSelfHosting]
 | AppImage Arm64 {#linux-appimage-arm64} | `OpenKey-*-linux-arm64.AppImage` |
 | `.deb` x64 {#linux-deb-x64} | `OpenKey-*-linux-x64.deb` |
 | `.deb` Arm64 {#linux-deb-arm64} | `OpenKey-*-linux-arm64.deb` |
+| `.rpm` x64 {#linux-rpm-x64} | `OpenKey-*-linux-x64.rpm` |
+| `.rpm` Arm64 {#linux-rpm-arm64} | `OpenKey-*-linux-arm64.rpm` |
 | `.tar.gz` x64 {#linux-tar-x64} | Portable tarball from `build_all/linux/` |
 | `.tar.gz` Arm64 {#linux-tar-arm64} | Portable tarball (arm64) |
 
