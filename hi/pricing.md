@@ -2,6 +2,8 @@
 
 **OpenKey** sensible limits के साथ पूर्ण encrypted vault के लिए मुफ़्त है। **OpenKey Pro** caps हटाता है और export, backups, Nearby, sharing, और attachments unlock करता है।
 
+OpenKey का official app MIT License के तहत open source है; [source code](https://github.com/OpenSelfHosting/OpenKey) देखें।
+
 Store prices Apple / Google / Microsoft billing में region के अनुसार सेट होते हैं और purchase time पर app में दिखते हैं। यह पेज **आपको क्या मिलता है** और **कैसे खरीदें** समझाता है — fixed USD table नहीं (stores currency और tax localize करते हैं)।
 
 संबंधित: [ऐप का उपयोग](/hi/guide/app#free-vs-openkey-pro) · [OpenKey Pro explained](/hi/blog/openkey-pro) · [Download](/hi/guide/download) · [शर्तें](/hi/terms)

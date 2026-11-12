@@ -2,6 +2,8 @@
 
 **OpenKey** 免费提供完整加密保险库，并设有合理上限。**OpenKey Pro** 取消上限，并解锁导出、备份、Nearby、共享和附件。
 
+OpenKey 官方应用以 MIT 许可证开源；请查看[源代码](https://github.com/OpenSelfHosting/OpenKey)。
+
 商店价格在 Apple / Google / Microsoft 各区域计费中设定，并在应用内购买时显示。本页说明**您能获得什么**以及**如何购买**——并非固定的美元价目表（商店会本地化货币和税费）。
 
 相关：[使用应用](/zh/guide/app#free-vs-openkey-pro) · [OpenKey Pro 说明](/zh/blog/openkey-pro) · [下载](/zh/guide/download) · [服务条款](/zh/terms)

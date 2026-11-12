@@ -58,6 +58,8 @@ OpenKey interact कर सकता है:
 
 ## 7. Intellectual property
 
+OpenKey का official app MIT License के तहत open source है; इसका source code [OpenSelfHosting/OpenKey repository](https://github.com/OpenSelfHosting/OpenKey) में देखा जा सकता है।
+
 OpenKey software संबंधित repository license के तहत है; official app source **MIT License** के तहत है। उस license की शर्तों के अनुसार software को use, copy, modify, और redistribute किया जा सकता है। OpenKey names, logos, और branding OpenSelfHosting या licensors के हैं; software license trademark rights नहीं देता। ये Terms open-source licenses से मिले अधिकारों को सीमित नहीं करते।
 
 ## 8. Privacy

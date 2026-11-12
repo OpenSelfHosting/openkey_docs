@@ -2,6 +2,8 @@
 
 **OpenKey** যুক্তিসঙ্গত সীমার সঙ্গে সম্পূর্ণ encrypted ভল্টের জন্য বিনামূল্যে। **OpenKey Pro** সীমা সরিয়ে export, backups, Nearby, sharing, এবং attachments unlock করে।
 
+OpenKey-এর official app MIT License-এর অধীনে open source; [source code](https://github.com/OpenSelfHosting/OpenKey) দেখুন।
+
 Store prices Apple / Google / Microsoft billing-এ region অনুযায়ী সেট হয় এবং purchase time-এ app-এ দেখায়। এই পৃষ্ঠা **আপনি কী পাবেন** এবং **কীভাবে কিনবেন** ব্যাখ্যা করে — fixed USD table নয় (stores currency ও tax localize করে)।
 
 সম্পর্কিত: [অ্যাপ ব্যবহার](/bn/guide/app#free-vs-openkey-pro) · [OpenKey Pro explained](/bn/blog/openkey-pro) · [Download](/bn/guide/download) · [শর্তাবলী](/bn/terms)

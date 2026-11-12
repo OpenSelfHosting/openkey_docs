@@ -2,6 +2,8 @@
 
 O OpenKey é projetado para que o servidor não possa ler seu cofre.
 
+O app oficial do OpenKey é de código aberto sob a Licença MIT; seu código pode ser consultado no [repositório OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey).
+
 ## Derivação de chaves
 
 <img src="/guide/security-key-derivation.svg" alt="Key derivation: Argon2id turns email and master password into a master key, which yields an auth hash for login and a wrapped vault key for AES-256-GCM ciphertext" class="ok-diagram" width="920" height="400" />

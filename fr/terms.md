@@ -59,6 +59,8 @@ Ces services ont leurs propres conditions. Nous ne sommes pas responsables des p
 
 ## 7. Propriété intellectuelle
 
+L’application officielle OpenKey est open source sous licence MIT ; son code est consultable dans le [dépôt OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey).
+
 Les logiciels OpenKey sont régis par la licence indiquée dans chaque dépôt, dont la **licence MIT** pour le code de l’application officielle. Cette licence autorise l’utilisation, la copie, la modification et la redistribution du logiciel selon ses conditions. Les noms, logos et marques OpenKey appartiennent à OpenSelfHosting ou à ses concédants et ne sont pas couverts par la licence du logiciel. Ces Conditions ne limitent pas les droits accordés par les licences open source.
 
 ## 8. Confidentialité

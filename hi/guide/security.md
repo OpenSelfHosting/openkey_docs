@@ -2,6 +2,8 @@
 
 OpenKey इस तरह डिज़ाइन किया गया है कि सर्वर आपका वॉल्ट पढ़ न सके।
 
+OpenKey का official app MIT License के तहत open source है; इसका source code [OpenSelfHosting/OpenKey repository](https://github.com/OpenSelfHosting/OpenKey) में देखा जा सकता है।
+
 ## कुंजी व्युत्पत्ति
 
 <img src="/guide/security-key-derivation.svg" alt="Key derivation: Argon2id turns email and master password into a master key, which yields an auth hash for login and a wrapped vault key for AES-256-GCM ciphertext" class="ok-diagram" width="920" height="400" />

@@ -59,6 +59,8 @@ Esses serviços têm seus próprios termos. Não somos responsáveis por interru
 
 ## 7. Propriedade intelectual
 
+O app oficial do OpenKey é de código aberto sob a Licença MIT; seu código pode ser consultado no [repositório OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey).
+
 O software OpenKey segue a licença indicada em cada repositório, incluindo a **Licença MIT** para o código do app oficial. Essa licença permite usar, copiar, modificar e redistribuir o software conforme seus termos. Nomes, logotipos e marcas do OpenKey pertencem à OpenSelfHosting ou seus licenciadores e não são cobertos pela licença do software. Estes Termos não limitam os direitos concedidos pelas licenças de código aberto.
 
 ## 8. Privacidade

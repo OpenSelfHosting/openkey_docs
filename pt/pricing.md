@@ -2,6 +2,8 @@
 
 **OpenKey** é gratuito para um cofre criptografado completo com limites sensatos. O **OpenKey Pro** remove os tetos e desbloqueia exportação, backups, Nearby, compartilhamento e anexos.
 
+O app oficial do OpenKey é de código aberto sob a Licença MIT; consulte o [código-fonte](https://github.com/OpenSelfHosting/OpenKey).
+
 Os preços da loja são definidos por região na cobrança da Apple / Google / Microsoft e exibidos no app no momento da compra. Esta página explica **o que você recebe** e **como comprar** — não é uma tabela fixa em USD (as lojas localizam moeda e impostos).
 
 Relacionado: [Usar o app](/pt/guide/app#grátis-vs-openkey-pro) · [OpenKey Pro explicado](/pt/blog/openkey-pro) · [Download](/pt/guide/download) · [Termos](/pt/terms)

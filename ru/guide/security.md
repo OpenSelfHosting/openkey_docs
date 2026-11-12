@@ -2,6 +2,8 @@
 
 OpenKey спроектирован так, чтобы сервер не мог прочитать ваш сейф.
 
+Официальное приложение OpenKey — open source под лицензией MIT; его исходный код можно изучить в [репозитории OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey).
+
 ## Вывод ключей
 
 <img src="/guide/security-key-derivation.svg" alt="Key derivation: Argon2id turns email and master password into a master key, which yields an auth hash for login and a wrapped vault key for AES-256-GCM ciphertext" class="ok-diagram" width="920" height="400" />

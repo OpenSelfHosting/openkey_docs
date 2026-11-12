@@ -2,6 +2,8 @@
 
 **OpenKey** is free for a full encrypted vault with sensible limits. **OpenKey Pro** removes caps and unlocks export, backups, Nearby, sharing, and attachments.
 
+The official OpenKey app is open source under the MIT License; review the [source code](https://github.com/OpenSelfHosting/OpenKey).
+
 Store prices are set per region in Apple / Google / Microsoft billing and shown in the app at purchase time. This page explains **what you get** and **how to buy** — not a fixed USD table (stores localize currency and tax).
 
 Related: [Using the app](/guide/app#free-vs-openkey-pro) · [OpenKey Pro explained](/blog/openkey-pro) · [Download](/guide/download) · [Terms](/terms)

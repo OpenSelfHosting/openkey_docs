@@ -2,6 +2,8 @@
 
 **OpenKey** es gratuito para un vault cifrado completo con límites razonables. **OpenKey Pro** elimina los topes y desbloquea exportación, copias de seguridad, Nearby, compartición y adjuntos.
 
+La app oficial de OpenKey es de código abierto bajo la Licencia MIT; consulta el [código fuente](https://github.com/OpenSelfHosting/OpenKey).
+
 Los precios de la tienda se fijan por región en la facturación de Apple / Google / Microsoft y se muestran en la app al comprar. Esta página explica **qué obtienes** y **cómo comprar** — no es una tabla fija en USD (las tiendas localizan moneda e impuestos).
 
 Relacionado: [Usar la app](/es/guide/app#free-vs-openkey-pro) · [OpenKey Pro explicado](/es/blog/openkey-pro) · [Descargar](/es/guide/download) · [Términos](/es/terms)

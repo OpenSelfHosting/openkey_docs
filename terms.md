@@ -57,6 +57,8 @@ Those services have their own terms. We are not responsible for third-party outa
 
 ## 7. Intellectual property
 
+The official OpenKey app is open source under the MIT License; its source can be reviewed in the [OpenSelfHosting/OpenKey repository](https://github.com/OpenSelfHosting/OpenKey).
+
 OpenKey software is licensed under the terms in the applicable repository license, including the MIT License for the official app source. Those licenses grant software rights subject to their terms. OpenKey names, logos, and branding are owned by OpenSelfHosting or its licensors and are not licensed by the software license. These Terms do not limit rights granted by an open-source license.
 
 ## 8. Privacy

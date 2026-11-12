@@ -58,6 +58,8 @@ OpenKey 可能与以下服务交互：
 
 ## 7. 知识产权
 
+OpenKey 官方应用以 MIT 许可证开源；你可以在 [OpenSelfHosting/OpenKey 仓库](https://github.com/OpenSelfHosting/OpenKey)查看源代码。
+
 OpenKey 软件依照各仓库注明的许可证授权，官方应用源代码采用 **MIT 许可证**。该许可证依其条款授予使用、复制、修改和再分发软件的权利。OpenKey 名称、标识和品牌归 OpenSelfHosting 或其许可方所有，不包含在软件许可证授予的权利中。本条款不限制开源许可证授予的权利。
 
 ## 8. 隐私
