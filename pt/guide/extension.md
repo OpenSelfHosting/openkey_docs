@@ -25,9 +25,9 @@ Nome do host: `com.openselfhosting.openkey`
 
 Os navegadores podem exigir que você confirme ou remapeie o comando em atalhos de teclado da extensão se outra extensão já o tiver reivindicado.
 
-## Instalar (descompactada)
+## Instalar
 
-As listagens das lojas podem ainda não estar publicadas. Compile e carregue localmente:
+Instale a extensão do Chrome pela [Chrome Web Store](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp). Para Edge, Brave, Vivaldi, LibreWolf, Firefox ou instalação manual, compile e carregue a extensão localmente:
 
 ```bash
 cd openkey_extension

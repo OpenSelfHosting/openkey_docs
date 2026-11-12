@@ -27,9 +27,9 @@ First-run vault setup (create / sign in / Nearby copy / restore) happens in the 
 
 Browsers may require you to confirm or remap the command under extension keyboard shortcuts if another extension already claimed it.
 
-## Install (unpacked)
+## Install
 
-Store listings may not be published yet. Build and load locally:
+Install the Chrome extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp). For Edge, Brave, Vivaldi, LibreWolf, Firefox, or manual installation, build and load locally:
 
 ```bash
 cd openkey_extension

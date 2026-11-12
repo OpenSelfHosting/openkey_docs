@@ -25,9 +25,9 @@ Host نام: `com.openselfhosting.openkey`
 
 اگر دوسری ایکسٹینشن نے command پہلے لے لی ہو تو براؤزرز extension keyboard shortcuts میں confirm یا remap مانگ سکتے ہیں۔
 
-## انسٹال (unpacked)
+## انسٹال
 
-Store listings ابھی شائع نہ ہوں۔ مقامی طور پر build اور load کریں:
+Chrome extension [Chrome Web Store سے انسٹال کریں](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp)۔ Edge، Brave، Vivaldi، LibreWolf، Firefox یا manual installation کے لیے extension مقامی طور پر build اور load کریں:
 
 ```bash
 cd openkey_extension

@@ -8,7 +8,7 @@ Get the OpenKey app, then optionally connect a [self-hosted server](./server), t
 
 Application id: `com.openselfhosting.openkey` · Org: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-Store listings and GitHub Releases roll out per platform. **Google Play and the Microsoft Store are live** — install OpenKey on Android from [the Play listing](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) or on Windows from [the Microsoft Store listing](https://apps.microsoft.com/detail/9MXNBRPMDT53). The main download button takes you to that system's store; the one beside it hands over the direct build for your system. Official app binaries are also published on [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). The complete Flutter app source is public under the MIT License in [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey); follow its [build instructions](https://github.com/OpenSelfHosting/OpenKey#build-from-source) to build from source. The remaining store pages may still be pending review.
+Store listings and GitHub Releases roll out per platform. **Google Play and the Microsoft Store are live** — install OpenKey on Android from [the Play listing](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) or on Windows from [the Microsoft Store listing](https://apps.microsoft.com/detail/9MXNBRPMDT53). The main download button takes you to that system's store; the one beside it hands over the direct build for your system. Official app binaries are also published on [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). **OpenKey is open source under the MIT License**; the [source code](https://github.com/OpenSelfHosting/OpenKey) and [build instructions](https://github.com/OpenSelfHosting/OpenKey#build-from-source) are public.
 
 ## Mobile
 
@@ -68,7 +68,7 @@ Official desktop installers are attached to [GitHub Releases](https://github.com
 
 ## Browser extension
 
-Chrome / Edge / Firefox (MV3). Not yet on the public Web Store listings — load an unpacked build:
+MV3 extension for Chrome, Edge, and Firefox. [Install OpenKey from the Chrome Web Store](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp). For Edge, Firefox, or manual installation, build the extension and load the `dist/` folder:
 
 ```bash
 cd openkey_extension

@@ -66,11 +66,11 @@ Desktop Autofill registers the **native messaging host** used by the [browser ex
 
 ### Собрать настольную версию самостоятельно
 
-Исходный код Flutter-приложения OpenKey опубликован по лицензии MIT в [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey). Инструкции по сборке находятся в [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source); официальные установщики доступны в [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases).
+**OpenKey — приложение с открытым исходным кодом** под лицензией MIT; [исходный код](https://github.com/OpenSelfHosting/OpenKey) и [инструкции по сборке](https://github.com/OpenSelfHosting/OpenKey#build-from-source) доступны всем. Официальные установщики опубликованы в [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases).
 
 ## Расширение браузера
 
-Chrome / Edge / Firefox (MV3). Пока нет в публичных магазинах — загрузите распакованную сборку:
+Расширение MV3 для Chrome, Edge и Firefox. [Установите OpenKey из Chrome Web Store](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp). Для Edge, Firefox или ручной установки соберите расширение и загрузите папку `dist/`:
 
 ```bash
 cd openkey_extension

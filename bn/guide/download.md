@@ -66,11 +66,11 @@ Desktop Autofill registers the **native messaging host** used by the [browser ex
 
 ### ডেস্কটপ নিজে বিল্ড করুন
 
-OpenKey Flutter app-এর source [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey)-এ MIT License-এর অধীনে public। Build নির্দেশনার জন্য [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source) দেখুন; official desktop installers পাবেন [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases)-এ।
+**OpenKey MIT License-এর অধীনে open source**; [source code](https://github.com/OpenSelfHosting/OpenKey) এবং [build নির্দেশনা](https://github.com/OpenSelfHosting/OpenKey#build-from-source) সবার জন্য উন্মুক্ত। Official desktop installers পাবেন [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases)-এ।
 
 ## ব্রাউজার এক্সটেনশন
 
-Chrome / Edge / Firefox (MV3). এখনও পাবলিক Web Store লিস্টিং নেই — unpacked build লোড করুন:
+Chrome, Edge ও Firefox-এর জন্য MV3 extension। [Chrome Web Store থেকে OpenKey ইনস্টল করুন](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp)। Edge, Firefox বা manual installation-এর জন্য extension build করে `dist/` folder load করুন:
 
 ```bash
 cd openkey_extension

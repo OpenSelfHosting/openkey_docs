@@ -8,7 +8,7 @@ title: التنزيل والتثبيت
 
 معرّف التطبيق: `com.openselfhosting.openkey` · المنظمة: [OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-قوائم المتاجر وإصدارات GitHub تُنشر تدريجياً لكل منصة. **Google Play و Microsoft Store متاحان الآن** — ثبّت OpenKey على أندرويد من [صفحة Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) أو على ويندوز من [صفحة Microsoft Store](https://apps.microsoft.com/detail/9MXNBRPMDT53). يأخذك زر التنزيل الرئيسي إلى متجر نظامك، ويتيح الزر المجاور تنزيل الحزمة المباشرة بدلاً منه. الباينري الرسمي متاح أيضاً على [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). شيفرة تطبيق Flutter منشورة برخصة MIT في [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey)، وتعليمات البناء في [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source). بقية صفحات المتاجر قد تكون قيد المراجعة.
+قوائم المتاجر وإصدارات GitHub تُنشر تدريجياً لكل منصة. **Google Play و Microsoft Store متاحان الآن** — ثبّت OpenKey على أندرويد من [صفحة Google Play](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey) أو على ويندوز من [صفحة Microsoft Store](https://apps.microsoft.com/detail/9MXNBRPMDT53). يأخذك زر التنزيل الرئيسي إلى متجر نظامك، ويتيح الزر المجاور تنزيل الحزمة المباشرة بدلاً منه. الباينري الرسمي متاح أيضاً على [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases). **OpenKey مفتوح المصدر** برخصة MIT؛ [الشيفرة المصدرية](https://github.com/OpenSelfHosting/OpenKey) وتعليمات البناء متاحة للجميع.
 
 ## الجوال
 
@@ -68,7 +68,7 @@ title: التنزيل والتثبيت
 
 ## امتداد المتصفح
 
-Chrome / Edge / Firefox (MV3). ليس بعد على متاجر الإضافات العامة — حمّل بناءاً غير معبّأ:
+امتداد MV3 لمتصفحات Chrome وEdge وFirefox. [ثبّت امتداد OpenKey من متجر Chrome](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp). لمتصفحات Edge وFirefox أو للتثبيت اليدوي، ابنِ الامتداد وحمّل مجلد `dist/`:
 
 ```bash
 cd openkey_extension

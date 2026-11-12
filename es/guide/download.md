@@ -66,11 +66,11 @@ Desktop Autofill registers the **native messaging host** used by the [browser ex
 
 ### Compilar escritorio tú mismo
 
-El código fuente de Flutter de OpenKey está publicado bajo la licencia MIT en [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey). Consulta el [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source) para compilar la app; los instaladores oficiales están en [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases).
+**OpenKey es de código abierto** bajo la licencia MIT; el [código fuente](https://github.com/OpenSelfHosting/OpenKey) y las [instrucciones de compilación](https://github.com/OpenSelfHosting/OpenKey#build-from-source) están disponibles públicamente. Los instaladores oficiales están en [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases).
 
 ## Extensión del navegador
 
-Chrome / Edge / Firefox (MV3). Aún no en las fichas públicas de Web Store — carga una build descomprimida:
+Extensión MV3 para Chrome, Edge y Firefox. [Instala OpenKey desde Chrome Web Store](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp). Para Edge, Firefox o la instalación manual, compila la extensión y carga la carpeta `dist/`:
 
 ```bash
 cd openkey_extension

@@ -25,9 +25,9 @@
 
 قد يطلب المتصفح تأكيد الاختصار أو إعادة تعيينه إن استخدمته إضافة أخرى.
 
-## التثبيت (غير معبّأ)
+## التثبيت
 
-قد لا تكون قوائم المتاجر منشورة بعد. ابنِ وحمّل محلياً:
+ثبّت الامتداد على Chrome من [متجر Chrome](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp). لمتصفحات Edge وBrave وVivaldi وLibreWolf وFirefox، أو للتثبيت اليدوي، ابنِ وحمّل الامتداد محلياً:
 
 ```bash
 cd openkey_extension

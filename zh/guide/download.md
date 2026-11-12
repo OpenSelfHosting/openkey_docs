@@ -8,7 +8,7 @@ title: 下载与安装
 
 应用 ID：`com.openselfhosting.openkey` · 组织：[OpenSelfHosting](https://github.com/OpenSelfHosting)
 
-各平台的商店上架与 GitHub Releases 会分批推出。**Google Play 和 Microsoft Store 均已上线** — 在 Android 上可从 [Google Play 商店页面](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey)安装，或在 Windows 上从 [Microsoft Store 商店页面](https://apps.microsoft.com/detail/9MXNBRPMDT53)安装。主下载按钮会把你带到该系统的应用商店，旁边那个按钮则提供直接安装包。官方应用二进制文件也发布在 [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases)。应用官方**源码不公开**，请直接使用这些产物，不要自行构建。其他商店页面可能仍在审核中。
+各平台的商店上架与 GitHub Releases 会分批推出。**Google Play 和 Microsoft Store 均已上线** — 在 Android 上可从 [Google Play 商店页面](https://play.google.com/store/apps/details?id=com.openselfhosting.openkey)安装，或在 Windows 上从 [Microsoft Store 商店页面](https://apps.microsoft.com/detail/9MXNBRPMDT53)安装。主下载按钮会把你带到该系统的应用商店，旁边那个按钮则提供直接安装包。官方应用二进制文件也发布在 [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases)。**OpenKey 是 MIT 许可证下的开源应用**；[源代码](https://github.com/OpenSelfHosting/OpenKey)和[构建说明](https://github.com/OpenSelfHosting/OpenKey#build-from-source)均公开可用。其他商店页面可能仍在审核中。
 
 ## 移动端
 
@@ -70,7 +70,7 @@ OpenKey Flutter 应用的源代码以 MIT 许可证公开于 [OpenSelfHosting/Op
 
 ## 浏览器扩展
 
-Chrome / Edge / Firefox（MV3）。尚未上架公共扩展商店 — 加载未打包构建：
+适用于 Chrome、Edge 和 Firefox 的 MV3 扩展。[从 Chrome 网上应用店安装 OpenKey](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp)。对于 Edge、Firefox 或手动安装，请构建扩展并加载 `dist/` 文件夹：
 
 ```bash
 cd openkey_extension

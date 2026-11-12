@@ -66,11 +66,11 @@ Desktop Autofill registers the **native messaging host** used by the [browser ex
 
 ### ڈیسک ٹاپ خود بنائیں
 
-OpenKey Flutter app کا source [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey) میں MIT License کے تحت public ہے۔ Build instructions کے لیے [README](https://github.com/OpenSelfHosting/OpenKey#build-from-source) دیکھیں؛ official desktop installers [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases) پر موجود ہیں۔
+**OpenKey MIT License کے تحت اوپن سورس ہے**؛ [source code](https://github.com/OpenSelfHosting/OpenKey) اور [build instructions](https://github.com/OpenSelfHosting/OpenKey#build-from-source) سب کے لیے دستیاب ہیں۔ Official desktop installers [GitHub Releases](https://github.com/OpenSelfHosting/OpenKey/releases) پر موجود ہیں۔
 
 ## براؤزر ایکسٹینشن
 
-Chrome / Edge / Firefox (MV3). ابھی عوامی Web Store لسٹنگ نہیں — unpacked build لوڈ کریں:
+Chrome، Edge اور Firefox کے لیے MV3 extension۔ [Chrome Web Store سے OpenKey انسٹال کریں](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp)۔ Edge، Firefox یا manual installation کے لیے extension build کرکے `dist/` folder لوڈ کریں:
 
 ```bash
 cd openkey_extension

@@ -25,9 +25,9 @@
 
 若快捷键被其他扩展占用，可在浏览器的扩展快捷键设置中确认或重新映射。
 
-## 安装（未打包）
+## 安装
 
-商店列表可能尚未发布。本地构建并加载：
+从 [Chrome 网上应用店](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp)安装 Chrome 扩展。对于 Edge、Brave、Vivaldi、LibreWolf、Firefox 或手动安装，请在本地构建并加载扩展：
 
 ```bash
 cd openkey_extension

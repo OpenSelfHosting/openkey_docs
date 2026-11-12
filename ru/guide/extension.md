@@ -25,9 +25,9 @@ MV3-расширение для **Chrome**, **Edge**, **Brave** и **Firefox**. 
 
 Браузеры могут потребовать подтвердить или переназначить команду в горячих клавишах расширения, если другая расширение уже заняла её.
 
-## Установка (распакованная)
+## Установка
 
-Листинги в магазинах могут быть ещё не опубликованы. Соберите и загрузите локально:
+Установите расширение Chrome из [Chrome Web Store](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp). Для Edge, Brave, Vivaldi, LibreWolf, Firefox или ручной установки соберите и загрузите расширение локально:
 
 ```bash
 cd openkey_extension

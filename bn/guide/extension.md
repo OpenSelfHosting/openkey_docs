@@ -25,9 +25,9 @@ Host name: `com.openselfhosting.openkey`
 
 অন্য extension command claim করলে browser-এর extension keyboard shortcuts-এ confirm বা remap লাগতে পারে।
 
-## Install (unpacked)
+## Install
 
-Store listings এখনো publish নাও হতে পারে। Locally build ও load করুন:
+Chrome extension [Chrome Web Store থেকে ইনস্টল করুন](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp)। Edge, Brave, Vivaldi, LibreWolf, Firefox বা manual installation-এর জন্য extension build করে locally load করুন:
 
 ```bash
 cd openkey_extension
