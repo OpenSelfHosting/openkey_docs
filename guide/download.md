@@ -68,7 +68,7 @@ Official desktop installers are attached to [GitHub Releases](https://github.com
 
 ## Browser extension
 
-MV3 extension for Chrome, Edge, and Firefox. [Install OpenKey from the Chrome Web Store](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp). For Edge, Firefox, or manual installation, build the extension and load the `dist/` folder:
+MV3 extension for Chrome, Edge, and Firefox. [Install OpenKey from the Chrome Web Store](https://chromewebstore.google.com/detail/openkey/cmebbcnocamcolnedgafbkeelejldoga). For Edge, Firefox, or manual installation, build the extension and load the `dist/` folder:
 
 ```bash
 cd openkey_extension

@@ -29,7 +29,14 @@ Browsers may require you to confirm or remap the command under extension keyboar
 
 ## Install
 
-Install the Chrome extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp). For Edge, Brave, Vivaldi, LibreWolf, Firefox, or manual installation, build and load locally:
+Install the Chrome extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/openkey/cmebbcnocamcolnedgafbkeelejldoga). After opening the listing in Chrome:
+
+1. Select **Add to Chrome**.
+2. Review the requested permissions and select **Add extension**.
+3. Open Chrome's **Extensions** menu (puzzle-piece icon) and optionally pin OpenKey to the toolbar.
+4. Select the OpenKey toolbar icon to open the extension.
+
+For Edge, Brave, Vivaldi, LibreWolf, Firefox, or manual installation, build and load locally:
 
 ```bash
 cd openkey_extension

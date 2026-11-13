@@ -68,7 +68,7 @@ title: التنزيل والتثبيت
 
 ## امتداد المتصفح
 
-امتداد MV3 لمتصفحات Chrome وEdge وFirefox. [ثبّت امتداد OpenKey من متجر Chrome](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp). لمتصفحات Edge وFirefox أو للتثبيت اليدوي، ابنِ الامتداد وحمّل مجلد `dist/`:
+امتداد MV3 لمتصفحات Chrome وEdge وFirefox. [ثبّت امتداد OpenKey من متجر Chrome](https://chromewebstore.google.com/detail/openkey/cmebbcnocamcolnedgafbkeelejldoga). لمتصفحات Edge وFirefox أو للتثبيت اليدوي، ابنِ الامتداد وحمّل مجلد `dist/`:
 
 ```bash
 cd openkey_extension

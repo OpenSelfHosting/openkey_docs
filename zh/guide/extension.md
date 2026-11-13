@@ -27,7 +27,14 @@
 
 ## 安装
 
-从 [Chrome 网上应用店](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp)安装 Chrome 扩展。对于 Edge、Brave、Vivaldi、LibreWolf、Firefox 或手动安装，请在本地构建并加载扩展：
+从 [Chrome 网上应用店](https://chromewebstore.google.com/detail/openkey/cmebbcnocamcolnedgafbkeelejldoga)安装 Chrome 扩展。在电脑上的 Chrome 中打开页面后：
+
+1. 点击 **添加至 Chrome（Add to Chrome）**。
+2. 查看所需权限，然后点击 **添加扩展程序（Add extension）**。
+3. 打开 Chrome 的 **扩展程序**菜单（拼图图标），可选择将 OpenKey 固定到工具栏。
+4. 点击工具栏中的 OpenKey 图标即可打开扩展。
+
+对于 Edge、Brave、Vivaldi、LibreWolf、Firefox 或手动安装，请在本地构建并加载扩展：
 
 ```bash
 cd openkey_extension
