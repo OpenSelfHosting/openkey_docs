@@ -1,6 +1,6 @@
 # الحزم
 
-ثبّت التطبيق الرسمي من [التنزيل](./download) (باينري / متاجر). استضف وابنِ الحزم **المفتوحة** أدناه. الاستخدام اليومي: [استخدام التطبيق](./app). إعداد المتصفح: [امتداد المتصفح](./extension).
+تطبيق OpenKey الرسمي **مفتوح المصدر** ومرخّص برخصة **MIT**؛ الشيفرة المصدرية لتطبيق Flutter ومواصفات البروتوكول متاحة للجميع في [مستودع OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey)، مع [تعليمات البناء من المصدر](https://github.com/OpenSelfHosting/OpenKey#build-from-source). يمكنك تثبيت النسخة الجاهزة من [صفحة التنزيل](./download). استضف وابنِ الحزم **المفتوحة المصدر** أدناه. الاستخدام اليومي: [استخدام التطبيق](./app). إعداد المتصفح: [امتداد المتصفح](./extension).
 
 مواصفات البروتوكول في [OpenSelfHosting/OpenKey](https://github.com/OpenSelfHosting/OpenKey) (`spec/`). قد تنشر المستودعات تحت [OpenSelfHosting](https://github.com/OpenSelfHosting) الحزم بشكل منفصل.
 
