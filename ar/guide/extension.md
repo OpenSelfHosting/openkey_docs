@@ -27,7 +27,14 @@
 
 ## التثبيت
 
-ثبّت الامتداد على Chrome من [متجر Chrome](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp). لمتصفحات Edge وBrave وVivaldi وLibreWolf وFirefox، أو للتثبيت اليدوي، ابنِ وحمّل الامتداد محلياً:
+ثبّت الامتداد من [متجر Chrome](https://chromewebstore.google.com/detail/openkey/cmebbcnocamcolnedgafbkeelejldoga). بعد فتح صفحة الإضافة في متصفح Chrome على الكمبيوتر:
+
+1. اضغط **Add to Chrome (إضافة إلى Chrome)**.
+2. راجع الأذونات المطلوبة ثم اضغط **Add extension (إضافة الامتداد)**.
+3. افتح قائمة **Extensions** (أيقونة القطعة) وثبّت OpenKey في شريط الأدوات اختيارياً عبر **Pin**.
+4. اضغط أيقونة OpenKey في شريط الأدوات لفتح الامتداد.
+
+لمتصفحات Edge وBrave وVivaldi وLibreWolf وFirefox، أو للتثبيت اليدوي، ابنِ وحمّل الامتداد محلياً:
 
 ```bash
 cd openkey_extension
