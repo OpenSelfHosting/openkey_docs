@@ -27,7 +27,14 @@ Les navigateurs peuvent exiger de confirmer ou de remapper la commande sous les 
 
 ## Installation
 
-Installez l’extension Chrome depuis le [Chrome Web Store](https://chromewebstore.google.com/detail/cmebbcnocamcolnedgafbkeelejldoga?utm_source=item-share-cp). Pour Edge, Brave, Vivaldi, LibreWolf, Firefox ou une installation manuelle, compilez et chargez l’extension localement :
+Installez l’extension depuis le [Chrome Web Store](https://chromewebstore.google.com/detail/openkey/cmebbcnocamcolnedgafbkeelejldoga). Après avoir ouvert la fiche dans Chrome sur ordinateur :
+
+1. Sélectionnez **Ajouter à Chrome**.
+2. Vérifiez les autorisations demandées, puis sélectionnez **Ajouter l’extension**.
+3. Ouvrez le menu **Extensions** de Chrome (icône en forme de pièce de puzzle) et épinglez éventuellement OpenKey à la barre d’outils.
+4. Sélectionnez l’icône OpenKey dans la barre d’outils pour ouvrir l’extension.
+
+Pour Edge, Brave, Vivaldi, LibreWolf, Firefox ou une installation manuelle, compilez et chargez l’extension localement :
 
 ```bash
 cd openkey_extension
